@@ -2,6 +2,32 @@
 
 > **Ein modulares Claude-basiertes Ökosystem für wissenschaftlich fundierte Unterrichtsplanung**
 
+[![Lizenz: CC BY-SA 4.0](https://img.shields.io/badge/Lizenz-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
+[![macOS](https://img.shields.io/badge/Platform-macOS%2011+-blue.svg)](https://www.apple.com/de/macos/)
+[![Claude Desktop](https://img.shields.io/badge/Claude-Desktop-purple.svg)](https://claude.ai/download)
+
+**🔗 Repository:** [github.com/trytofly94/LehrClaude](https://github.com/trytofly94/LehrClaude)
+
+---
+
+## 📖 Inhaltsverzeichnis
+
+- [Für wen ist dieses System?](#-für-wen-ist-dieses-system)
+- [Was ist das?](#-was-ist-das)
+- [Architektur-Übersicht](#-architektur-übersicht)
+- [Repository-Struktur](#-repository-struktur)
+- [Quick Start für IT-Admins](#-quick-start-für-it-admins)
+- [Systemvoraussetzungen](#-systemvoraussetzungen)
+- [Was dieses System bietet](#-was-dieses-system-bietet)
+- [Förderschul-Integration](#-förderschul-integration)
+- [Didaktische Grundlagen](#-didaktische-grundlagen)
+- [Für Lehrkräfte: So nutzt du das System](#-für-lehrkräfte-so-nutzt-du-das-system)
+- [FAQ](#-faq)
+- [Weiterführende Dokumentation](#-weiterführende-dokumentation)
+- [Roadmap](#-roadmap)
+- [Support & Community](#-support--community)
+- [Lizenz](#-lizenz)
+
 ---
 
 ## ⚠️ WICHTIG: Ausschließlich deutsche Sprache
@@ -138,13 +164,13 @@ LehrClaude/
 
 ## 🚀 Quick Start für IT-Admins
 
-### Schritt 1: Repository vorbereiten
+### Schritt 0: Repository klonen
 ```bash
-git clone <REPOSITORY_URL>
+git clone https://github.com/trytofly94/LehrClaude.git
 cd LehrClaude
 ```
 
-### Schritt 2: Deployment auf Lehrkraft-Mac
+### Schritt 1: Deployment auf Lehrkraft-Mac
 ```bash
 cd lehrkraft-deployment
 ./setup.sh /Users/[LEHRKRAFT-NAME]/Schul-Materialien
@@ -452,19 +478,86 @@ Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 Inter
 
 ---
 
-## 📞 Support
+## 📞 Support & Community
 
-Bei Problemen während des Setups:
-1. Konsultiere die jeweiligen README-Dateien
-2. Prüfe Checklisten in `skills-checklist.md`
-3. Nutze Claude Code für Fehleranalyse
+### Bei Problemen während des Setups:
+1. **Dokumentation prüfen:**
+   - `claude-desktop-setup/README.md` - Haupt-Setup-Anleitung
+   - `CLAUDE.md` - Technische Details für Entwickler
+   - `MCP_KLASSENVERWALTUNG_SETUP.md` - Förderschul-Setup
+
+2. **Checklisten nutzen:**
+   - `skills-checklist.md` in jedem Projekt-Ordner
+   - Troubleshooting-Sektionen in den READMEs
+
+3. **Issues erstellen:**
+   - [GitHub Issues](https://github.com/trytofly94/LehrClaude/issues)
+   - Beschreibe das Problem detailliert
+   - Füge Screenshots hinzu wenn möglich
+
+### 🤝 Contributing
+
+Beiträge sind willkommen! Dieses Projekt lebt von der Community.
+
+**Wie du beitragen kannst:**
+- 🐛 **Bugs melden** - Erstelle ein Issue mit detaillierter Beschreibung
+- 💡 **Features vorschlagen** - Teile deine Ideen für neue Skills oder Projekte
+- 📝 **Dokumentation verbessern** - Rechtschreibung, Klarheit, Beispiele
+- 🎓 **Neue Skills erstellen** - Besonders für weitere Fächer/Schulformen
+- 🌍 **Bundesländer ergänzen** - Lehrpläne und spezifische Anforderungen
+
+**Pull Requests:**
+1. Forke das Repository
+2. Erstelle einen Feature-Branch (`git checkout -b feature/neue-funktion`)
+3. Committe deine Änderungen (`git commit -m 'feat: Beschreibung'`)
+4. Pushe den Branch (`git push origin feature/neue-funktion`)
+5. Öffne einen Pull Request
+
+**Commit-Konventionen:**
+- `feat:` - Neues Feature
+- `fix:` - Bugfix
+- `docs:` - Dokumentation
+- `refactor:` - Code-Umstrukturierung
 
 ---
 
-**Version:** 1.0
-**Stand:** 2025-01-08
+## 📜 Lizenz
+
+**CC BY-SA 4.0** - Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International
+
+**Das bedeutet:**
+- ✅ Nutzung für beliebige Zwecke (auch kommerziell)
+- ✅ Anpassung und Weitergabe erlaubt
+- ⚠️ Namensnennung erforderlich (Christopher Zimmermann, Universität zu Köln)
+- ⚠️ Weitergabe unter gleicher Lizenz
+
+Vollständiger Lizenztext: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
+
+---
+
+## 🙏 Credits
+
+**Originalarbeit:**
+Christopher Zimmermann
+Universität zu Köln
+Studienprojekt: "Unterrichtsgestaltung mit Hilfe von künstlicher Intelligenz"
+
+**Repository-Transformation & Förderschul-Integration:**
+2025 - Von Prompt-Katalog zum modularen Claude Desktop System
+
+**Didaktische Grundlagen:**
+- Wolfgang Klafki - Bildungstheoretische Didaktik
+- Josef Leisen - Phasierung des Unterrichts
+- Rainer Wember - Differenzierungsmodell
+
+---
+
+**Version:** 1.1
+**Stand:** 2025-01-10
 **Kompatibilität:** macOS 11+, Claude Desktop (aktuell)
 
 ---
 
 *Dieses System macht wissenschaftlich fundierte Unterrichtsplanung zugänglich, effizient und wiederholbar – ohne die didaktische Expertise der Lehrkraft zu ersetzen, sondern sie zu verstärken.*
+
+**⭐ Wenn dir dieses Projekt hilft, gib ihm einen Stern auf GitHub!**
