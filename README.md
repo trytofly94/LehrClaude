@@ -13,7 +13,7 @@
 - **Anpassbarkeit:** Lehrkräfte können Materialien direkt ohne Übersetzung bearbeiten
 - **Durchgängigkeit:** Vom Planungsprozess bis zum fertigen Arbeitsblatt - alles auf Deutsch
 
-Dies gilt für alle 23 Skills, Project Instructions und alle generierten Inhalte.
+Dies gilt für alle 27 Skills, Project Instructions und alle generierten Inhalte.
 
 ---
 
@@ -72,6 +72,7 @@ Jedes Projekt nutzt **Custom Skills** (wiederverwendbare Fähigkeiten) und greif
 
 **Modular:** Skills werden projekt-übergreifend wiederverwendet
 **Ressourcen-basiert:** Zentrale Knowledge Base für alle Projekte
+**Förderschul-Integration:** Spezialisierung auf 7 Förderschwerpunkte mit individuellen Schülerprofilen
 **Export-fähig:** Fertige Dokumente (MD, PDF, DOCX, PPTX)
 
 ---
@@ -119,7 +120,12 @@ LehrClaude/
 │           │   └── Templates/
 │           │       ├── arbeitsblatt-vorlage.md
 │           │       └── praesentation-master.md
-│           └── 3_Projekt_Knowledge_Base/
+│           ├── 3_Projekt_Knowledge_Base/
+│           └── 4_Klassen_und_Schueler/   # Förderschul-Integration
+│               ├── Klasse_5a_LE/
+│               │   ├── Klasseninfo.md
+│               │   └── Schuelerprofile/
+│               └── Klasse_7b_GE/
 │
 └── prompts/                           # Original-Prompts (Basis für Skills)
     ├── 01_debiasing_prompt.md
@@ -200,7 +206,7 @@ open README.md  # Folge der Anleitung
 - Reflexion durchführen
 - Iteration & Optimierung
 
-**Skills:** 11 Planungs-Skills + 3 Material-Skills + 3 Export-Skills
+**Skills:** 11 Planungs-Skills + 3 Material-Skills + 4 Förderschul-Skills (optional) + 3 Export-Skills
 
 ---
 
@@ -213,7 +219,7 @@ open README.md  # Folge der Anleitung
 - Lösungen erstellen (optional)
 - Export (MD, PDF, DOCX)
 
-**Skills:** 4 Material-Skills + 2 Unterstützungs-Skills + 3 Export-Skills
+**Skills:** 4 Material-Skills + 2 Unterstützungs-Skills + 4 Förderschul-Skills (optional) + 3 Export-Skills
 
 ---
 
@@ -225,16 +231,17 @@ open README.md  # Folge der Anleitung
 - Visuelle Elemente vorschlagen (Bilder, Diagramme)
 - Export (MD für manuelle Übernahme, oder PPTX)
 
-**Skills:** 2 Material-Skills + 2 Unterstützungs-Skills + 2 Export-Skills
+**Skills:** 2 Material-Skills + 2 Unterstützungs-Skills + 4 Förderschul-Skills (optional) + 2 Export-Skills
 
 ---
 
-### 23 Custom Skills (Wiederverwendbar)
+### 27 Custom Skills (Wiederverwendbar)
 
 | Kategorie | Anzahl | Beispiele |
 |-----------|--------|-----------|
 | **Planungs-Skills** | 11 | Sachanalyse, Lernziele, Stundenplanung |
 | **Material-Skills** | 8 | Arbeitsblatt erstellen, PowerPoint, Texterstellung |
+| **Förderschul-Skills** | 4 | Schülerprofile laden, Lernziele differenzieren, Piktogramm-Materialien |
 | **Export-Skills** | 4 | Markdown, PDF, DOCX, PPTX |
 
 **Besonderheit:** Ein Skill (z.B. "Lernziele operationalisieren") kann in **mehreren Projekten** verwendet werden.
@@ -254,6 +261,71 @@ open README.md  # Folge der Anleitung
 - Präsentationen
 
 **Sicherheit:** Zugriff nur auf den konfigurierten Ordner `Schul-Materialien/`
+
+---
+
+## 🎓 Förderschul-Integration
+
+Das System bietet **spezialisierte Unterstützung für 7 Förderschwerpunkte** mit individueller Differenzierung:
+
+### Unterstützte Förderschwerpunkte:
+
+1. **Lernen (LE)**: Kleinschrittigkeit, vereinfachte Sprache, mehr Wiederholung
+2. **Emotional-soziale Entwicklung (ESE)**: Klare Strukturen, positive Verstärkung
+3. **Sprache (SQ)**: Unterstützte Kommunikation (UK), Piktogramme, alternative Kommunikationsformen
+4. **Geistige Entwicklung (GE)**: NUR Piktogramme (kein Text!), basale Stimulation, lebenspraktische Bezüge
+5. **Körperlich-motorische Entwicklung (KME)**: Barrierefreie Materialien, große Schrift, angepasste Sozialformen
+6. **Hören und Kommunikation (HK)**: Gebärdensprache-Unterstützung (DGS), verstärkte Visualisierungen
+7. **Sehen (SE)**: Tastmaterialien, Audiodeskriptionen, hoher Kontrast, Braille/Großdruck
+
+### Klassenverwaltung & Schülerprofile:
+
+**Lokale Verwaltung** in `4_Klassen_und_Schueler/`:
+```
+4_Klassen_und_Schueler/
+├── Klasse_5a_LE/              # Förderschwerpunkt Lernen
+│   ├── Klasseninfo.md
+│   └── Schuelerprofile/
+│       ├── Max_Mustermann.md
+│       └── Anna_Beispiel.md
+└── Klasse_7b_GE/              # Förderschwerpunkt Geistige Entwicklung
+    ├── Klasseninfo.md
+    └── Schuelerprofile/
+        └── ...
+```
+
+**Automatische Integration:**
+- Bei Auswahl "Förderschulklasse" werden Schülerprofile automatisch geladen
+- Materialien werden förderschwerpunkt-spezifisch angepasst
+- Differenzierung in 3 Niveaustufen (Basis/Standard/Erweiterung) – außer bei GE
+- **Spezialfall GE**: Ausschließlich bildbasierte, textfreie Materialien
+
+### Beispiel-Workflow Förderschule:
+
+**Arbeitsblatt für Förderschwerpunkt Lernen:**
+```
+Lehrkraft: "Ich brauche ein Arbeitsblatt zu 'Gesunde Ernährung', Klasse 5, Förderschwerpunkt Lernen."
+
+Claude:
+1. Lädt Schülerprofile aus 4_Klassen_und_Schueler/Klasse_5a_LE/
+2. Erstellt DREI differenzierte Versionen:
+   - Basis: 6 Aufgaben, viel Scaffolding, Bildstützen, vereinfachte Sprache
+   - Standard: 8 Aufgaben, mittlere Hilfen
+   - Erweiterung: 10 Aufgaben, Transfer-Aufgabe
+3. Exportiert alle Versionen als PDF
+```
+
+**Präsentation für Förderschwerpunkt Geistige Entwicklung:**
+```
+Lehrkraft: "Ich brauche eine Präsentation zu 'Wetter', Klasse 4, Förderschwerpunkt GE."
+
+Claude:
+1. Lädt Schülerprofile
+2. Erstellt bildbasierte Präsentation (KEIN Text auf Folien!)
+3. Jede Folie = 1 großes, klares Foto oder Piktogramm
+4. Sprechernotizen mit Vorschlägen für Gebärden und Interaktionen
+5. Exportiert als PPTX
+```
 
 ---
 
@@ -360,11 +432,23 @@ Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 Inter
 ## 🔮 Roadmap
 
 **Nächste Schritte:**
-- [ ] Video-Tutorials für IT-Admins
-- [ ] Automatisierte Skill-Erstellung via Script
-- [ ] Support für Windows/Linux
-- [ ] Integration weiterer Bundesländer
-- [ ] Claude Desktop API-basiertes Setup (falls verfügbar)
+
+### Erweiterung der Skills
+- [ ] Weitere Planungs-Skills für spezifische Unterrichtsmethoden
+- [ ] Zusätzliche Material-Skills (z.B. Klausuren, Lernstandserhebungen)
+- [ ] Skills für Elternkommunikation und Zeugniserstellung
+
+### Neue Module für Lehrkräfte
+- [ ] Modul: Jahresplanung & Stoffverteilungsplan
+- [ ] Modul: Leistungsbewertung & Notenverwaltung
+- [ ] Modul: Individualisierung & Förderplanung
+- [ ] Modul: Fächerübergreifende Projekte
+
+### Automatisierungs-Tools
+- [ ] Batch-Verarbeitung: Mehrere Arbeitsblätter auf einmal erstellen
+- [ ] Batch-Export: Automatischer Export in verschiedene Formate
+- [ ] Vorlagen-Management: Eigene Templates verwalten und wiederverwenden
+- [ ] Curriculum-Synchronisation: Automatisches Update von Lehrplan-Ressourcen
 
 ---
 
