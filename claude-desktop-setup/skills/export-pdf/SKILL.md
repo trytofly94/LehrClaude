@@ -232,7 +232,7 @@ toc-title: "Inhaltsverzeichnis"
 ## Optionale Erweiterungen (für zukünftige Versionen)
 
 - Farbcodierung nach Differenzierungsstufen (Basis/Unterstützung/Erweiterung)
-- Wasserzeichen (z.B. "Entwurf" oder "Schul-KI generiert")
+- Wasserzeichen (z.B. "Entwurf" oder "LehrClaude generiert")
 - QR-Codes für Verlinkung zu digitalen Ressourcen
 - Mehrsprachige Inhaltsverzeichnisse
 - Automatische Backup-Speicherung

@@ -17,9 +17,26 @@ Dies gilt für alle 23 Skills, Project Instructions und alle generierten Inhalte
 
 ---
 
+## 👥 Für wen ist dieses System?
+
+### Lehrkräfte
+Sie nutzen das fertig eingerichtete System für ihre tägliche Unterrichtsvorbereitung. **Keine technischen Kenntnisse erforderlich.**
+
+### Einrichtung
+Das System kann **selbst eingerichtet** werden (1-2 Stunden mit Anleitung) oder durch eine **technisch versierte Person** (z.B. IT-Support, Kolleg:in) installiert werden. Die ausführlichen Schritt-für-Schritt-Anleitungen machen den Prozess für alle zugänglich.
+
+**Benötigte Kenntnisse:**
+- Grundlegende Bedienung von macOS
+- Installation von Software (ähnlich wie andere Apps)
+- Folgen einer Anleitung
+
+**Hilfe ist optional, nicht erforderlich!**
+
+---
+
 ## 🎯 Was ist das?
 
-Dieses Repository ist ein **vollständiges Setup-Kit** für IT-Administratoren, um **LehrClaude** auf macOS-Rechnern von Lehrkräften zu installieren.
+Dieses Repository ist ein **vollständiges Setup-Kit** zur Einrichtung von **LehrClaude** auf macOS-Rechnern von Lehrkräften.
 
 ### Kernkonzept
 

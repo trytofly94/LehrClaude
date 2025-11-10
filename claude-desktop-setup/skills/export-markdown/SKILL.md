@@ -70,7 +70,7 @@ title: Unterrichtsreihe: Photosynthese
 subject: Biologie
 grade_level: 7
 duration_hours: 8
-author: [Lehrkraft Name oder "Schul-KI System"]
+author: [Lehrkraft Name oder "LehrClaude System"]
 created_date: 2025-01-08
 curriculum: Lehrplan NRW (oder relevant)
 ---
