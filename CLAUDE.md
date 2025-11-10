@@ -1,4 +1,4 @@
-# Lehrkraft-Copilot-System: Projektanleitung für Claude
+# LehrClaude: Projektanleitung für Claude
 
 ## Projektübersicht
 

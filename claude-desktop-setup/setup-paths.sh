@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ============================================================================
-# Setup-Script für Lehrkraft-Copilot-System: Pfad-Konfiguration
+# Setup-Script für LehrClaude: Pfad-Konfiguration
 # ============================================================================
 #
 # Dieses Script muss EINMAL bei der ersten Installation ausgeführt werden.
@@ -27,7 +27,7 @@ NC='\033[0m' # No Color
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo -e "${BLUE}╔═══════════════════════════════════════════════════════════════╗${NC}"
-echo -e "${BLUE}║     Lehrkraft-Copilot-System: Pfad-Konfiguration            ║${NC}"
+echo -e "${BLUE}║     LehrClaude: Pfad-Konfiguration            ║${NC}"
 echo -e "${BLUE}╚═══════════════════════════════════════════════════════════════╝${NC}"
 echo ""
 echo "Dieses Script konfiguriert zwei wichtige Pfade:"

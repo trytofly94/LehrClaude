@@ -1,12 +1,12 @@
 # Claude Desktop Setup - IT-Admin Anleitung
 
-Dieser Ordner enthält **alle Dateien und Anleitungen**, die du als IT-Admin benötigst, um das Lehrkraft-Copilot-System in Claude Desktop zu konfigurieren.
+Dieser Ordner enthält **alle Dateien und Anleitungen**, die du als IT-Admin benötigst, um das LehrClaude in Claude Desktop zu konfigurieren.
 
 ---
 
 ## Überblick
 
-Das Lehrkraft-Copilot-System besteht aus:
+Das LehrClaude besteht aus:
 - **3 Claude Desktop Projekten** (Unterrichtsreihe planen, Arbeitsblatt erstellen, Präsentation entwerfen)
 - **23 Custom Skills** (wiederverwendbare Fähigkeiten)
 - **MCP Filesystem Server** (Zugriff auf lokale Ressourcen)

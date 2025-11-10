@@ -2,7 +2,7 @@
 
 ## Übersicht
 
-Das Lehrkraft-Copilot-System nutzt ein **zentralisiertes Pfad-Management-System**, um die Installation auf verschiedenen Rechnern zu vereinfachen.
+Das LehrClaude nutzt ein **zentralisiertes Pfad-Management-System**, um die Installation auf verschiedenen Rechnern zu vereinfachen.
 
 ### Kernprinzip
 
@@ -309,4 +309,4 @@ Das Skript findet automatisch alle `.template` Dateien und verarbeitet sie.
 
 **Version:** 1.0
 **Datum:** 2025-01-09
-**Erstellt für:** Lehrkraft-Copilot-System
+**Erstellt für:** LehrClaude

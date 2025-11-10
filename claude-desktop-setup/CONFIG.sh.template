@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ============================================================================
-# Zentrale Pfad-Konfiguration für Lehrkraft-Copilot-System
+# Zentrale Pfad-Konfiguration für LehrClaude
 # ============================================================================
 #
 # Diese Datei wird von setup-paths.sh generiert und enthält alle
@@ -61,7 +61,7 @@ export VALIDATE_SCRIPT PACKAGE_SCRIPT
 
 # Hilfsfunktion zum Anzeigen aller Pfade (für Debugging)
 show_paths() {
-    echo "=== Lehrkraft-Copilot-System: Pfad-Konfiguration ==="
+    echo "=== LehrClaude: Pfad-Konfiguration ==="
     echo ""
     echo "📁 REPOSITORY (IT-Admin / Entwicklung):"
     echo "   Basis:          $REPO_BASE"

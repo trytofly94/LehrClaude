@@ -1,4 +1,4 @@
-# Lehrkraft-Copilot-System
+# LehrClaude
 
 > **Wissenschaftlich fundierte Unterrichtsplanung mit Claude Desktop**
 
@@ -22,7 +22,7 @@ Statt eines monolithischen Tools bietet dieses System **3 spezialisierte Claude 
 
 ```
 ┌─────────────────────────────────────────────┐
-│         Lehrkraft-Copilot-System            │
+│         LehrClaude            │
 │  3 Claude Desktop Projekte + 23 Skills      │
 └─────────────────────────────────────────────┘
                     ↓
@@ -57,7 +57,7 @@ Statt eines monolithischen Tools bietet dieses System **3 spezialisierte Claude 
 ### Schritt 1: Repository klonen
 ```bash
 git clone <REPOSITORY_URL>
-cd Schul-KI
+cd LehrClaude
 ```
 
 ### Schritt 2: Deployment auf Lehrkraft-Mac
@@ -79,7 +79,7 @@ open README.md  # Folge der detaillierten Anleitung
 ## 📂 Repository-Struktur
 
 ```
-Schul-KI/
+LehrClaude/
 ├── README.md                    # Haupt-Dokumentation für IT-Admins
 ├── CLAUDE.md                    # Projekt-Anleitung für Claude & Entwickler
 ├── PROJECT_README.md            # Diese Datei (Projekt-Übersicht)

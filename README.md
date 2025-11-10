@@ -1,6 +1,6 @@
-# Lehrkraft-Copilot-System: Setup-Repository für IT-Admins
+# LehrClaude: KI-Tools für Lehrkräfte
 
-> **Ein modulares Claude Desktop Ökosystem für wissenschaftlich fundierte Unterrichtsplanung**
+> **Ein modulares Claude-basiertes Ökosystem für wissenschaftlich fundierte Unterrichtsplanung**
 
 ---
 
@@ -19,7 +19,7 @@ Dies gilt für alle 23 Skills, Project Instructions und alle generierten Inhalte
 
 ## 🎯 Was ist das?
 
-Dieses Repository ist ein **vollständiges Setup-Kit** für IT-Administratoren, um das **Lehrkraft-Copilot-System** auf macOS-Rechnern von Lehrkräften zu installieren.
+Dieses Repository ist ein **vollständiges Setup-Kit** für IT-Administratoren, um **LehrClaude** auf macOS-Rechnern von Lehrkräften zu installieren.
 
 ### Kernkonzept
 
@@ -37,7 +37,7 @@ Jedes Projekt nutzt **Custom Skills** (wiederverwendbare Fähigkeiten) und greif
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    Lehrkraft-Copilot-System                 │
+│                         LehrClaude                          │
 └─────────────────────────────────────────────────────────────┘
                               │
           ┌───────────────────┴───────────────────┐
@@ -62,7 +62,7 @@ Jedes Projekt nutzt **Custom Skills** (wiederverwendbare Fähigkeiten) und greif
 ## 📂 Repository-Struktur
 
 ```
-Schul-KI/
+LehrClaude/
 ├── README.md                          # Diese Datei
 │
 ├── claude-desktop-setup/              # FÜR IT-ADMIN (manuelles Setup)
@@ -118,7 +118,7 @@ Schul-KI/
 ### Schritt 1: Repository vorbereiten
 ```bash
 git clone <REPOSITORY_URL>
-cd Schul-KI
+cd LehrClaude
 ```
 
 ### Schritt 2: Deployment auf Lehrkraft-Mac
