@@ -122,6 +122,7 @@ mkdir -p "$TARGET_DIR/2_Zentrale_Ressourcen/Lehrplaene"
 mkdir -p "$TARGET_DIR/2_Zentrale_Ressourcen/Didaktik"
 mkdir -p "$TARGET_DIR/2_Zentrale_Ressourcen/Templates"
 mkdir -p "$TARGET_DIR/3_Projekt_Knowledge_Base"
+mkdir -p "$TARGET_DIR/4_Klassen_und_Schueler/_templates"
 
 echo -e "${GREEN}✓ Ordnerstruktur erstellt${NC}"
 
@@ -146,6 +147,12 @@ cp -n "$SOURCE_DIR/2_Zentrale_Ressourcen/Lehrplaene/README.md" "$TARGET_DIR/2_Ze
 cp -n "$SOURCE_DIR/2_Zentrale_Ressourcen/Didaktik/"*.md "$TARGET_DIR/2_Zentrale_Ressourcen/Didaktik/" 2>/dev/null || true
 cp -n "$SOURCE_DIR/2_Zentrale_Ressourcen/Templates/"*.md "$TARGET_DIR/2_Zentrale_Ressourcen/Templates/" 2>/dev/null || true
 cp -n "$SOURCE_DIR/3_Projekt_Knowledge_Base/README.md" "$TARGET_DIR/3_Projekt_Knowledge_Base/" 2>/dev/null || true
+
+# Kopiere Schülerprofil-Templates
+if [ -d "$SOURCE_DIR/4_Klassen_und_Schueler/_templates" ]; then
+    cp -n "$SOURCE_DIR/4_Klassen_und_Schueler/_templates/"*.md "$TARGET_DIR/4_Klassen_und_Schueler/_templates/" 2>/dev/null || true
+    echo -e "${GREEN}✓ Schülerprofil-Templates kopiert (5 Vorlagen)${NC}"
+fi
 
 echo -e "${GREEN}✓ Vorlage-Dateien kopiert${NC}"
 
@@ -193,6 +200,11 @@ echo -e "     • Siehe: ../claude-desktop-setup/skills-platzhalter/"
 echo ""
 echo -e "  4. ${BLUE}Lehrpläne hinzufügen (optional):${NC}"
 echo -e "     • Kopiere Lehrpläne nach: ${TARGET_DIR}/2_Zentrale_Ressourcen/Lehrplaene/"
+echo ""
+echo -e "  5. ${BLUE}Schülerprofile erstellen (für Projekt 5):${NC}"
+echo -e "     • Nutze Templates in: ${TARGET_DIR}/4_Klassen_und_Schueler/_templates/"
+echo -e "     • 5 Vorlagen verfügbar: Allgemein, Lernen, ESE, Sprache, Geistige Entwicklung"
+echo -e "     • Siehe README.md im Template-Ordner für Anleitung"
 echo ""
 
 echo -e "${GREEN}Viel Erfolg mit dem Lehrkraft-Copilot-System! 🎉${NC}"
