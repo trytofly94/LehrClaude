@@ -1,0 +1,17 @@
+# Generierte Dateien durch setup-paths.sh
+# Diese Dateien werden aus den .template Dateien generiert
+CONFIG.sh
+MCP_CONFIG.json
+validate-skill.sh
+package-skills.sh
+PROJECT_INSTRUCTIONS.md
+
+# macOS
+.DS_Store
+
+# Temporäre Dateien
+*.tmp
+*.log
+
+# Skills packages (werden lokal generiert)
+skill-packages/*.zip

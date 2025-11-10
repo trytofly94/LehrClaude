@@ -1,0 +1,93 @@
+#!/bin/bash
+
+# ============================================================================
+# Zentrale Pfad-Konfiguration für Lehrkraft-Copilot-System
+# ============================================================================
+#
+# Diese Datei wird von setup-paths.sh generiert und enthält alle
+# Pfad-Definitionen für das gesamte System.
+#
+# ⚠️  WICHTIG: Diese Datei NICHT manuell bearbeiten!
+#    Wenn Pfade geändert werden müssen, führe setup-paths.sh erneut aus.
+#
+# ============================================================================
+
+# ============================================================================
+# REPOSITORY-PFADE (wo das Git-Repository liegt)
+# ============================================================================
+
+# Basis-Pfad des Repository (claude-desktop-setup/)
+REPO_BASE="{{REPO_BASE}}"
+
+# Repository-interne Pfade (für Entwicklung/Admin)
+SKILLS_PATH="$REPO_BASE/skills"
+PACKAGES_PATH="$REPO_BASE/skill-packages"
+PROJECT_1_PATH="$REPO_BASE/projekt-1-unterrichtsreihe"
+PROJECT_2_PATH="$REPO_BASE/projekt-2-arbeitsblatt"
+PROJECT_3_PATH="$REPO_BASE/projekt-3-praesentation"
+PROJECT_4_PATH="$REPO_BASE/projekt-4-skill-verwaltung"
+
+# Script-Pfade (im Repository)
+VALIDATE_SCRIPT="$REPO_BASE/validate-skill.sh"
+PACKAGE_SCRIPT="$REPO_BASE/package-skills.sh"
+
+# ============================================================================
+# ARBEITSVERZEICHNIS-PFADE (wo die Lehrkraft arbeitet)
+# ============================================================================
+
+# Arbeitsverzeichnis der Lehrkraft (Schul-Materialien/)
+WORKSPACE_BASE="{{WORKSPACE_BASE}}"
+
+# Arbeitsverzeichnis-Pfade (für MCP-Zugriff)
+RESOURCES_PATH="$WORKSPACE_BASE/2_Zentrale_Ressourcen"
+EXPORT_PATH="$WORKSPACE_BASE/1_Exportierte_Ergebnisse"
+
+# ============================================================================
+# LEGACY-KOMPATIBILITÄT
+# ============================================================================
+
+# Für alte Scripts, die noch BASE_PATH nutzen
+BASE_PATH="$REPO_BASE"
+
+# ============================================================================
+# EXPORT
+# ============================================================================
+
+# Export aller Pfade für Nutzung in anderen Scripts
+export REPO_BASE WORKSPACE_BASE BASE_PATH
+export SKILLS_PATH PACKAGES_PATH RESOURCES_PATH EXPORT_PATH
+export PROJECT_1_PATH PROJECT_2_PATH PROJECT_3_PATH PROJECT_4_PATH
+export VALIDATE_SCRIPT PACKAGE_SCRIPT
+
+# Hilfsfunktion zum Anzeigen aller Pfade (für Debugging)
+show_paths() {
+    echo "=== Lehrkraft-Copilot-System: Pfad-Konfiguration ==="
+    echo ""
+    echo "📁 REPOSITORY (IT-Admin / Entwicklung):"
+    echo "   Basis:          $REPO_BASE"
+    echo ""
+    echo "   Skills:         $SKILLS_PATH"
+    echo "   Packages:       $PACKAGES_PATH"
+    echo ""
+    echo "   Projekte:"
+    echo "     - Projekt 1:  $PROJECT_1_PATH"
+    echo "     - Projekt 2:  $PROJECT_2_PATH"
+    echo "     - Projekt 3:  $PROJECT_3_PATH"
+    echo "     - Projekt 4:  $PROJECT_4_PATH"
+    echo ""
+    echo "   Scripts:"
+    echo "     - Validierung: $VALIDATE_SCRIPT"
+    echo "     - Packaging:   $PACKAGE_SCRIPT"
+    echo ""
+    echo "📚 ARBEITSVERZEICHNIS (Lehrkraft):"
+    echo "   Basis:          $WORKSPACE_BASE"
+    echo ""
+    echo "   Ressourcen:     $RESOURCES_PATH"
+    echo "   Export:         $EXPORT_PATH"
+    echo ""
+}
+
+# Wenn direkt ausgeführt, zeige Pfade
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    show_paths
+fi

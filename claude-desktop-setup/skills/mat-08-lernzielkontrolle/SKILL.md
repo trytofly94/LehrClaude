@@ -19,10 +19,10 @@ related_skills:
 
 # Lernzielkontrolle erstellen Skill
 
-**Status:** Production Ready
+**Status:** Produktionsreif
 **Prompt-Vorlage:** `/prompts/mat_08_lernzielkontrolle.md` (wird generiert)
 **Integration:** Direkt nach 05-lernziele-operationalisieren
-**Didaktischer Kern:** Bloom-Taxonomie-aligned Assessment Design
+**Didaktischer Kern:** Bloom-Taxonomie-ausgerichtetes Assessment-Design
 
 ---
 
@@ -49,8 +49,8 @@ Dieser Skill unterstützt Lehrkräfte dabei, **formative und summative Lernzielk
    - Differenzierte Leistungsstufen (nach Wember)
    - Transparent für Schüler*innen und Lehrkraft
 
-4. **Bloom-Taxonomie-Alignment**
-   - Jedes Assessment mapped auf Bloom-Stufe des Lernziels
+4. **Bloom-Taxonomie-Ausrichtung**
+   - Jedes Assessment ist auf Bloom-Stufe des Lernziels abgestimmt
    - Aufgaben-Verben aus KMK-Operatoren
    - Kognitive Anforderungsbereiche strukturiert
 
@@ -63,7 +63,7 @@ Dieser Skill unterstützt Lehrkräfte dabei, **formative und summative Lernzielk
 
 ## Workflow im Unterricht
 
-### Phase 1: Input & Klärung
+### Phase 1: Eingabe & Klärung
 - Lehrkraft gibt operationalisierte Lernziele ein (Output aus 05-lernziele-operationalisieren)
 - Skill fragt nach:
   - **Lerngruppen-Kontext:** Klassenstufe, Schulform, Heterogenität
@@ -162,7 +162,7 @@ ressourcen:
 
 ---
 
-## Output-Struktur
+## Ausgabe-Struktur
 
 Der Skill generiert ein **Assessment-Portfolio**:
 
@@ -207,11 +207,11 @@ Aufgabe 4: Vergleiche Photosynthese und Zellatmung in einer Tabelle.
 
 ## Didaktische Prinzipien (im Skill verankert)
 
-### 1. **Alignment** (Wiggins & McTighe)
-- Assessment-Aufgaben reflect genau die operionalisierten Lernziele
-- Kein Testing von "hidden curriculum"
+### 1. **Ausrichtung** (Wiggins & McTighe)
+- Assessment-Aufgaben spiegeln genau die operationalisierten Lernziele wider
+- Kein Testen von "verborgenem Lehrplan"
 
-### 2. **Bloom-Taxonomie-Mapping**
+### 2. **Bloom-Taxonomie-Zuordnung**
 Jede Aufgabe ist einer Bloom-Stufe zugeordnet:
 - **Erinnern** (K1): Abrufen von Fakten → Aufgaben: "Benenne", "Liste auf"
 - **Verstehen** (K2): Konzepte erfassen → Aufgaben: "Erkläre", "Beschreibe"
@@ -223,7 +223,7 @@ Jede Aufgabe ist einer Bloom-Stufe zugeordnet:
 ### 3. **Wember-Differenzierung**
 Jedes Assessment liegt in 3 Fassungen vor:
 - **Basisstufe** (Kernlehrplan)
-- **Unterstützungsstufe** (scaffold + hints)
+- **Unterstützungsstufe** (Gerüste + Hinweise)
 - **Erweiterungsstufe** (tiefere Anforderungen)
 
 ### 4. **Formative & Summative Balance**
@@ -280,15 +280,15 @@ Formative Assessments haben keinen Notenwert, sondern dienen dem **Feedback**.
 
 ## Technische Anforderungen
 
-- **Input:** Operationalisierte Lernziele (aus 05-lernzielkontrolle)
+- **Eingabe:** Operationalisierte Lernziele (aus 05-lernzielkontrolle)
 - **MCP-Ressourcen:**
   - `@mcp_filesystem 2_Zentrale_Ressourcen/Didaktik/KMK-Operatoren.md`
   - `@mcp_filesystem 2_Zentrale_Ressourcen/Didaktik/Bloom-Taxonomie.md` (falls vorhanden)
-- **Output:** Markdown-Datei oder direkter Textexport
+- **Ausgabe:** Markdown-Datei oder direkter Textexport
 
 ---
 
-## Verwendete Prompt-Templates
+## Verwendete Prompt-Vorlagen
 
 - **Ultimate Prompting Template** (für Komplexität)
 - **Hallucination Reduction** (für didaktische Genauigkeit)
@@ -298,7 +298,7 @@ Formative Assessments haben keinen Notenwert, sondern dienen dem **Feedback**.
 
 ## Version & Änderungshistorie
 
-- **v1.0** (08.11.2024): Initial, auf Grundlage Klafki, Bloom, KMK, Wember
+- **v1.0** (08.11.2024): Erstversion, basierend auf Klafki, Bloom, KMK, Wember
 - **v1.1** (geplant): Integration mit automatisiertem Notenstandardisierungs-Tool
 
 ---
@@ -310,3 +310,18 @@ Fragen zum Skill? Überprüfe:
 2. Sind Assessment-Formate an Lerngruppe angepasst?
 3. Sind Rubriken für Schüler*innen verständlich?
 
+## Resources
+
+Dieser Skill nutzt folgende Ressourcen:
+
+- **Templates:** Vorlagen für Unterrichtsmaterialien (noch nicht implementiert)
+- **Daten:** Beispiele und Referenzmaterialien (noch nicht implementiert)
+
+Zukünftige Erweiterungen werden in `resources/` abgelegt.
+
+## Next Steps
+
+Nach Erstellung des Materials:
+- Der Nutzer kann das Ergebnis überprüfen und anpassen
+- Das Material kann exportiert werden (export-markdown, export-pdf, export-docx)
+- Weitere Materialien können erstellt werden
