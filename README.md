@@ -10,6 +10,11 @@
 
 ---
 
+> 💡 **Basierend auf dem [ZfL-Lernmodul "Unterrichtsreihenplanung mit KI"](https://zfl-lernen.de/lernmodule/methoden/unterrichtsreihenplanung-mit-ki/)** (Universität zu Köln)
+> Dieses Repository ist eine eigenständige Implementierung als modulares Claude Desktop System mit erweiterten Features für Förderschulen.
+
+---
+
 ## 📖 Inhaltsverzeichnis
 
 - [Für wen ist dieses System?](#-für-wen-ist-dieses-system)
@@ -205,7 +210,11 @@ open README.md  # Folge der Anleitung
 
 ### Software:
 - **Node.js** (für MCP Filesystem Server)
-- **Claude Pro/Team/Enterprise** Account (für Custom Skills)
+- **Claude Pro Account** (⚠️ **WICHTIG: Stark empfohlen!**)
+  - Custom Skills sind nur mit Pro/Team/Enterprise verfügbar
+  - Höhere Nutzungslimits für umfangreiche Unterrichtsplanung
+  - Zugriff auf neueste Modelle (Sonnet 4.5)
+  - **Alternative:** Team oder Enterprise Account
 - **Claude Code** (für IT-Admin bei Setup-Prozess empfohlen)
 
 ### Optional:
@@ -535,20 +544,39 @@ Vollständiger Lizenztext: [CC BY-SA 4.0](https://creativecommons.org/licenses/b
 
 ---
 
-## 🙏 Credits
+## 🙏 Credits & Inspiration
 
-**Originalarbeit:**
-Christopher Zimmermann
-Universität zu Köln
-Studienprojekt: "Unterrichtsgestaltung mit Hilfe von künstlicher Intelligenz"
+### Basierend auf:
 
-**Repository-Transformation & Förderschul-Integration:**
-2025 - Von Prompt-Katalog zum modularen Claude Desktop System
+**ZfL Lernmodul: Unterrichtsreihenplanung mit KI**
+- Zentrum für LehrerInnenbildung (ZfL), Universität zu Köln
+- [Online-Lernmodul](https://zfl-lernen.de/lernmodule/methoden/unterrichtsreihenplanung-mit-ki/)
+- **Originalautor:** Christopher Zimmermann
+- **Studienprojekt:** "Unterrichtsgestaltung mit Hilfe von künstlicher Intelligenz"
 
-**Didaktische Grundlagen:**
-- Wolfgang Klafki - Bildungstheoretische Didaktik
-- Josef Leisen - Phasierung des Unterrichts
-- Rainer Wember - Differenzierungsmodell
+⚠️ **Hinweis:** Dieses Repository ist eine **eigenständige Implementierung** der Konzepte aus dem ZfL-Lernmodul als modulares Claude Desktop System. Es handelt sich um einen Versuch, die wissenschaftlich fundierten Methoden in ein praktisch nutzbares Tool-Ökosystem zu überführen.
+
+### Repository-Entwicklung:
+
+**Transformation (2025):**
+- Von Prompt-Katalog zum modularen System
+- Förderschul-Integration mit 7 Förderschwerpunkten
+- 27 Custom Skills für Claude Desktop
+- Automatisierte Deployment-Workflows
+
+**Erweitert um:**
+- MCP Filesystem Server Integration
+- Klassenverwaltung & Schülerprofile
+- Template-basierte Differenzierung
+- Batch-Export-Funktionen
+
+### Didaktische Grundlagen:
+
+- **Wolfgang Klafki** - Bildungstheoretische Didaktik
+- **Josef Leisen** - Phasierung des Unterrichts
+- **Rainer Wember** - Differenzierungsmodell für Förderschulen
+- **Benjamin Bloom** - Taxonomie kognitiver Lernziele
+- **KMK** - Standardisierte Operatoren für Aufgabenstellungen
 
 ---
 

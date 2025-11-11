@@ -216,7 +216,12 @@ Das System basiert auf:
 - Bloom-Taxonomie (6 kognitive Stufen)
 - KMK-Operatoren (standardisierte Aufgaben-Verben)
 
-**Originalarbeit:** Christopher Zimmermann, Universität zu Köln
+**Basierend auf:**
+- **ZfL-Lernmodul:** "Unterrichtsreihenplanung mit KI" (Universität zu Köln)
+- **Originalautor:** Christopher Zimmermann
+- **Link:** https://zfl-lernen.de/lernmodule/methoden/unterrichtsreihenplanung-mit-ki/
+
+Dieses Repository ist eine eigenständige Implementierung der Konzepte als modulares Claude Desktop System.
 
 ## Förderschul-Integration
 
