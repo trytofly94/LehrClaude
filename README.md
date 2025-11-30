@@ -81,6 +81,11 @@ Statt eines monolithischen Tools bietet dieses System **5 spezialisierte Claude 
 
 Jedes Projekt nutzt **6 Custom Skills** (Material & Export) + **Workflow-Anweisungen** und greift via **MCP Filesystem Server** auf zentrale Ressourcen zu.
 
+### Neue Features (2025-11)
+- **Interaktiver 3-Phasen-Workflow:** Jeder Planungsschritt folgt A (Sammeln) → B (Erarbeiten) → C (Abschluss)
+- **Quellenbasierte Planung:** Wissenschaftliche Quellen mit Inline-Zitationen für akademische Abgaben
+- **2-Stufen-Recherche:** Web-Suche (automatisch) + Deep Research (manuell bei Bedarf)
+
 ---
 
 ## 🏗️ Architektur-Übersicht
@@ -147,7 +152,7 @@ LehrClaude/
 │   └── skills/                        # 6 Custom Skills (Material & Export)
 │       ├── mat-02-arbeitsblatt-erstellen/
 │       ├── mat-03-powerpoint-erstellen/
-│       ├── export-markdown/
+│       ├── export-txt/
 │       ├── export-pdf/
 │       ├── export-docx/
 │       └── export-pptx/
@@ -161,11 +166,12 @@ LehrClaude/
 │           ├── 2_Zentrale_Ressourcen/
 │           │   ├── Lehrplaene/
 │           │   ├── Didaktik/
-│           │   │   ├── KMK-Operatoren.md
-│           │   │   └── Bloom-Taxonomie.md
+│           │   │   ├── KMK-Operatoren.txt
+│           │   │   ├── Bloom-Taxonomie.txt
+│           │   │   └── Zitationsrichtlinien.txt   # NEU
 │           │   └── Templates/
-│           │       ├── arbeitsblatt-vorlage.md
-│           │       └── praesentation-master.md
+│           │       ├── arbeitsblatt-vorlage.txt
+│           │       └── praesentation-master.txt
 │           ├── 3_Projekt_Knowledge_Base/
 │           └── 4_Klassen_und_Schueler/   # Förderschul-Integration
 │               ├── Klasse_5a_LE/
@@ -255,6 +261,16 @@ open README.md  # Folge der Anleitung
 - Material zusammenstellen
 - Reflexion durchführen
 - Iteration & Optimierung
+
+**Jeder Schritt folgt dem 3-Phasen-Workflow:**
+- **Phase A:** Informationen sammeln (Rückfragen, Input der Lehrkraft)
+- **Phase B:** Iterative Erarbeitung (Zusammenfassung → Feedback → Anpassung)
+- **Phase C:** Abschluss (Zufriedenheitsprüfung → Export nur auf Wunsch)
+
+**Quellenbasierte Arbeit:**
+- Inline-Zitationen: (Autor, Jahr)
+- Quellenverzeichnis am Dokumentende
+- Quellenvalidierung: Jede Quelle wird vor Zitation per Web-Suche verifiziert
 
 **Skills:** 2 Material-Skills + 4 Export-Skills
 **Workflow:** 11 Schritte in `anweisungen/` (inkl. Förderschul-Differenzierung)
@@ -475,6 +491,7 @@ A: Ja, alle 6 werden empfohlen. Die Workflow-Anweisungen sind bereits in den Pro
 - **`lehrkraft-deployment/README.md`** – Deployment-Details
 - **`claude-desktop-setup/MCP_SETUP_ANLEITUNG.md`** – MCP-Konfiguration
 - **`prompts/`** – Original-Prompts (Basis für Skills)
+- **`2_Zentrale_Ressourcen/Didaktik/Zitationsrichtlinien.txt`** – Richtlinien für wissenschaftliche Quellenarbeit
 
 ---
 

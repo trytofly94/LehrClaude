@@ -98,6 +98,60 @@ Alle Planungs- und Prozess-Funktionen sind jetzt als direkte Anweisungen in den 
 - Skills nur noch für wiederverwendbare Material-Generierung
 - Projekt-spezifische Workflows direkt in den Projekten
 
+## Interaktiver 3-Phasen-Workflow
+
+**Jeder der 11 Planungsschritte folgt einem expliziten 3-Phasen-Workflow:**
+
+### Phase A: Informationen sammeln
+- Rückfragen an die Lehrkraft stellen
+- Auf Antworten warten
+- Bei Unklarheiten: Nachfragen, nicht annehmen
+
+### Phase B: Iterative Erarbeitung
+- Inhalte basierend auf Input erarbeiten
+- **Zusammenfassung** im Chat zeigen (nicht voller Text)
+- Fragen: "Passt diese Richtung? Änderungswünsche?"
+- Anpassen basierend auf Feedback
+- Wiederholen bis Zufriedenheit
+
+### Phase C: Abschluss
+- Finale Zusammenfassung im Chat zeigen
+- Fragen: "Sind Sie mit diesem Ergebnis zufrieden?"
+- **Erst nach Zustimmung:** "Soll ich das als TXT speichern?"
+- Export nur auf expliziten Wunsch
+
+**VERBOTEN:**
+- Direkt TXT-Dateien erstellen ohne vorherige Abstimmung
+- Annehmen, dass die Lehrkraft zufrieden ist
+- Inhalte generieren ohne Rückfragen
+
+## Wissenschaftliche Quellenarbeit
+
+**Für akademische Abgaben ist quellenbasierte Arbeit erforderlich:**
+
+### 2-Stufen-Recherche
+1. **Web-Suche (Standard):** Für begrenzte Anfragen (Fakten, Definitionen, einzelne Quellen)
+2. **Deep Research (manuell):** Bei umfangreichem Recherchebedarf
+   - Claude formuliert Recherche-Prompt
+   - Lehrkraft aktiviert Deep Research manuell
+   - Ergebnisse werden integriert
+
+### Quellenvalidierung (PFLICHT!)
+- **Jede Quelle muss vor Zitation per Web-Suche abgerufen werden**
+- Existenz und Korrektheit prüfen
+- NIEMALS nicht-verifizierte oder halluzinierte Quellen zitieren
+
+### Zitationsformat
+- **Inline im Text:** (Autor, Jahr) oder (Autor, Jahr, S. X)
+- **Quellenverzeichnis am Ende:** Alphabetisch sortiert
+- **Format-Vorlage:** `2_Zentrale_Ressourcen/Didaktik/Zitationsrichtlinien.txt`
+
+### Quellentypen (Priorität)
+1. Hochgeladene Dokumente der Lehrkraft
+2. Lehrpläne via MCP-Filesystem
+3. Fachdidaktische Standardwerke (Klafki, Leisen, Meyer, Helmke)
+4. Aktuelle Fachliteratur via Web-Suche/Deep Research (deutschsprachig bevorzugt)
+
 ### Skill-Struktur
 Jeder Skill-Ordner enthält:
 - `SKILL.md` - YAML Frontmatter + Markdown-Anweisungen

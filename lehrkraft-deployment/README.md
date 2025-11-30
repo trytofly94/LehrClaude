@@ -13,9 +13,10 @@ Schul-Materialien/
 ├── 1_Exportierte_Ergebnisse/        # Fertige Dokumente
 ├── 2_Zentrale_Ressourcen/           # Lehrpläne, Frameworks
 │   ├── Lehrplaene/
-│   ├── Didaktik/
+│   ├── Didaktik/                    # Inkl. Zitationsrichtlinien.txt
 │   └── Templates/
-└── 3_Projekt_Knowledge_Base/        # Projektspezifische Dokumente
+├── 3_Projekt_Knowledge_Base/        # Projektspezifische Dokumente
+└── 4_Klassen_und_Schueler/          # Schülerprofile (Förderschule)
 ```
 
 ---
@@ -62,14 +63,16 @@ Erstellt alle benötigten Ordner:
 - `2_Zentrale_Ressourcen/Didaktik/`
 - `2_Zentrale_Ressourcen/Templates/`
 - `3_Projekt_Knowledge_Base/`
+- `4_Klassen_und_Schueler/`
 
 ### 3. Vorlage-Dateien kopieren
 
 Kopiert Beispiel-Ressourcen:
-- **KMK-Operatoren.md** (Aufgaben-Operatoren)
-- **Bloom-Taxonomie.md** (Lernzielstufen)
-- **arbeitsblatt-vorlage.md** (Layout-Template)
-- **praesentation-master.md** (Präsentations-Richtlinien)
+- **KMK-Operatoren.txt** (Aufgaben-Operatoren)
+- **Bloom-Taxonomie.txt** (Lernzielstufen)
+- **Zitationsrichtlinien.txt** (Akademisches Zitieren)
+- **arbeitsblatt-vorlage.txt** (Layout-Template)
+- **praesentation-master.txt** (Präsentations-Richtlinien)
 - **README-Dateien** für jeden Ordner
 
 ### 4. Berechtigungen setzen
@@ -97,6 +100,31 @@ Das Script zeigt am Ende die **nächsten Schritte** an:
 
 4. **Lehrpläne hinzufügen** (optional)
    - Kopiere Lehrplan-PDFs nach `Schul-Materialien/2_Zentrale_Ressourcen/Lehrplaene/`
+
+---
+
+## Neue Features (November 2025)
+
+### Wissenschaftliche Quellenarbeit
+
+Das System unterstützt akademische Abgaben mit:
+- **Zitationsrichtlinien:** Siehe `2_Zentrale_Ressourcen/Didaktik/Zitationsrichtlinien.txt`
+- **Inline-Zitationen:** Format (Autor, Jahr) im Fließtext
+- **Quellenverzeichnis:** Alphabetisch am Dokumentende
+- **2-Stufen-Recherche:** Web-Suche (automatisch) vs. Deep Research (manuell)
+
+### Förderschul-Integration
+
+Neue Unterstützung für **7 Förderschwerpunkte** mit individueller Differenzierung:
+- Lernen (LE), Emotional-soziale Entwicklung (ESE), Sprache (SQ)
+- Geistige Entwicklung (GE), Körperlich-motorische Entwicklung (KME)
+- Hören und Kommunikation (HK), Sehen (SE)
+
+**Neuer Ordner:** `4_Klassen_und_Schueler/` für Schülerprofile und Klasseninfos.
+
+### TXT-Format für Lehrkraft-Dateien
+
+Alle Ressourcen nutzen jetzt strukturiertes TXT-Format für optimale Mac-Vorschau-Kompatibilität.
 
 ---
 
@@ -152,18 +180,19 @@ Lehrplaene/
 - Baden-Württemberg: [bildungsplaene-bw.de](https://www.bildungsplaene-bw.de/)
 
 #### Didaktik/
-Frameworks, Taxonomien, Operator-Listen
+Frameworks, Taxonomien, Operator-Listen, Zitationsrichtlinien
 
 **Enthält (Beispiele):**
-- `KMK-Operatoren.md` - Standardisierte Aufgaben-Operatoren
-- `Bloom-Taxonomie.md` - Kognitive Lernzielstufen
+- `KMK-Operatoren.txt` - Standardisierte Aufgaben-Operatoren
+- `Bloom-Taxonomie.txt` - Kognitive Lernzielstufen
+- `Zitationsrichtlinien.txt` - Format für akademische Quellen
 
 #### Templates/
 Vorlagen für Arbeitsblätter, Präsentationen
 
 **Enthält:**
-- `arbeitsblatt-vorlage.md` - Layout-Referenz für Arbeitsblätter
-- `praesentation-master.md` - Formatierungsrichtlinien für Präsentationen
+- `arbeitsblatt-vorlage.txt` - Layout-Referenz für Arbeitsblätter
+- `praesentation-master.txt` - Formatierungsrichtlinien für Präsentationen
 
 ---
 
@@ -253,6 +282,10 @@ Dieses Deployment ist **Teil 1** des Gesamtsetups:
 
 ---
 
-**Version:** 1.0
-**Zuletzt aktualisiert:** 2025-01-08
+**Version:** 1.1
+**Zuletzt aktualisiert:** 2025-11-30
 **Geschätzter Zeitaufwand:** 5 Minuten
+
+**Änderungshistorie:**
+- **v1.1 (2025-11-30):** Zitationsrichtlinien, 4_Klassen_und_Schueler/ Ordner, TXT-Format
+- **v1.0 (2025-01-08):** Initial release

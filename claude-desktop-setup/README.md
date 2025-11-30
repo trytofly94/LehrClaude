@@ -114,6 +114,39 @@ Das Setup-Skript:
 
 ---
 
+## Neue Features (November 2025)
+
+### Interaktiver 3-Phasen-Workflow
+
+Die Unterrichtsreihen-Planung (Projekt 1) nutzt jetzt einen interaktiven 3-Phasen-Ansatz:
+
+| Phase | Schritte | Fokus |
+|-------|----------|-------|
+| **A: Sammeln** | 01-03 | Debiasing, Sachanalyse, Didaktische Analyse |
+| **B: Erarbeiten** | 04-09 | Lernziele, Material, Einzelstunden |
+| **C: Abschluss** | 10-11 | Reflexion, Iteration |
+
+**Vorteile:**
+- Aktive Einbindung der Lehrkraft bei jedem Schritt
+- Klare Bestätigungspunkte ("Sollen wir fortfahren?")
+- Möglichkeit zur Überarbeitung vor dem Weitergehen
+
+### Wissenschaftliche Quellenarbeit
+
+Für akademische Abgaben unterstützt das System jetzt:
+- **2-Stufen-Recherche:** Web-Suche (automatisch) vs. Deep Research (manuell aktiviert)
+- **Quellenvalidierung:** Jede Quelle wird vor Zitation per Web-Suche verifiziert
+- **Inline-Zitationen:** Format (Autor, Jahr) im Fließtext
+- **Quellenverzeichnis:** Alphabetisch sortiert am Dokumentende
+
+**Wichtige Ressource:** `2_Zentrale_Ressourcen/Didaktik/Zitationsrichtlinien.txt`
+
+### TXT-Format statt Markdown
+
+Alle Lehrkraft-sichtbaren Dateien nutzen jetzt strukturiertes TXT-Format (statt Markdown) für optimale Mac-Vorschau-Kompatibilität.
+
+---
+
 ## Schritt 1: MCP Filesystem Server konfigurieren
 
 **Zeitaufwand:** 10 Minuten
@@ -620,10 +653,11 @@ nano skills/02-sachanalyse/SKILL.md        # nano
 
 ---
 
-**Version:** 2.0
+**Version:** 2.1
 **Zuletzt aktualisiert:** 2025-11-30
 **Geschätzter Zeitaufwand:** 45-60 Minuten (Setup + 6 Skills)
 
 **Änderungshistorie:**
+- **v2.1 (2025-11-30):** 3-Phasen-Workflow, Quellenbasierter Ansatz, Zitationsrichtlinien.txt
 - **v2.0 (2025-11-30):** Architektur-Überarbeitung - 6 Skills statt 27, Workflows in anweisungen/
 - **v1.0 (2025-11-09):** Initial release mit 23 Skills
