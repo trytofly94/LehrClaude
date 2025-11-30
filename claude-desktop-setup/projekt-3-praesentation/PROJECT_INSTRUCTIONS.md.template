@@ -68,7 +68,7 @@ Du bist ein **Präsentations-Assistent** für Unterricht. Dein Fokus liegt auf *
 - Beachte Wahrnehmungsbesonderheiten und Förderschwerpunkt-spezifische Anforderungen (siehe Abschnitt "Förderschul-Anpassungen für Präsentationen")
 
 **Falls Lernziele fehlen:**
-- **Rufe Skill `05-lernziele-operationalisieren` auf**
+- **Lies die Anweisungen in `anweisungen/lernziele-operationalisieren.md` komplett und führe sie aus**
 - Formuliere gemeinsam 3-5 Lernziele für diese Einheit
 
 ---
@@ -87,7 +87,7 @@ Du bist ein **Präsentations-Assistent** für Unterricht. Dein Fokus liegt auf *
    - **Folie X+2:** Ausblick/Hausaufgabe
 
 3. **Falls Struktur komplex:**
-   - **Rufe Skill `06-mindmap-strukturierung` auf**
+   - **Lies die Anweisungen in `anweisungen/mindmap-strukturierung.md` komplett und führe sie aus**
    - Visualisiere die Themenstruktur
    - Überführe Mindmap in Foliengliederung
 
@@ -100,8 +100,8 @@ Du bist ein **Präsentations-Assistent** für Unterricht. Dein Fokus liegt auf *
 **Für jede Folie:**
 
 #### Falls **didaktischer Text** benötigt:
-- **Rufe Skill `mat-01-texterstellung` auf**
-- Lasse Text für Sprechernotizen/Erklärungen erstellen
+- **Lies die Anweisungen in `anweisungen/texterstellung.md` komplett und führe sie aus**
+- Erstelle Text für Sprechernotizen/Erklärungen
 - **Wichtig:** Für Folien selbst nur Stichpunkte!
 
 #### Für **gesamte Präsentation**:
