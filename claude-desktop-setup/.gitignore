@@ -13,5 +13,4 @@ PROJECT_INSTRUCTIONS.md
 *.tmp
 *.log
 
-# Skills packages (werden lokal generiert)
-skill-packages/*.zip
+# Skills packages werden jetzt im Git getrackt für einfacheres Deployment
