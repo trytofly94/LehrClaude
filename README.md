@@ -44,7 +44,7 @@
 - **Anpassbarkeit:** Lehrkräfte können Materialien direkt ohne Übersetzung bearbeiten
 - **Durchgängigkeit:** Vom Planungsprozess bis zum fertigen Arbeitsblatt - alles auf Deutsch
 
-Dies gilt für alle 27 Skills, Project Instructions und alle generierten Inhalte.
+Dies gilt für alle 6 Skills, Workflow-Anweisungen, Project Instructions und alle generierten Inhalte.
 
 ---
 
@@ -71,13 +71,15 @@ Dieses Repository ist ein **vollständiges Setup-Kit** zur Einrichtung von **Leh
 
 ### Kernkonzept
 
-Statt eines monolithischen Tools bietet dieses System **3 spezialisierte Claude Desktop Projekte**:
+Statt eines monolithischen Tools bietet dieses System **5 spezialisierte Claude Desktop Projekte**:
 
 1. **Unterrichtsreihe planen** – 11-Schritte-Prozess für vollständige Unterrichtsreihen
 2. **Arbeitsblatt erstellen** – Schnelle, fokussierte Arbeitsblatt-Erstellung
 3. **Präsentation entwerfen** – Didaktisch strukturierte Unterrichtspräsentationen
+4. **Skill-Verwaltung** – Für IT-Admins zur Skill-Bearbeitung
+5. **Klassenverwaltung** – Schülerprofile & Förderschul-Differenzierung
 
-Jedes Projekt nutzt **Custom Skills** (wiederverwendbare Fähigkeiten) und greift via **MCP Filesystem Server** auf zentrale Ressourcen (Lehrpläne, didaktische Frameworks) zu.
+Jedes Projekt nutzt **6 Custom Skills** (Material & Export) + **Workflow-Anweisungen** und greift via **MCP Filesystem Server** auf zentrale Ressourcen zu.
 
 ---
 
@@ -93,9 +95,9 @@ Jedes Projekt nutzt **Custom Skills** (wiederverwendbare Fähigkeiten) und greif
 ┌─────────────────────┐               ┌──────────────────────┐
 │ Claude Desktop      │               │ Lokales Dateisystem  │
 │                     │               │                      │
-│ • 3 Projekte        │◄──MCP────────►│ Schul-Materialien/   │
-│ • 23 Custom Skills  │   Server      │ ├─ Lehrpläne         │
-│ • Project Instructions│              │ ├─ Frameworks        │
+│ • 5 Projekte        │◄──MCP────────►│ Schul-Materialien/   │
+│ • 6 Custom Skills   │   Server      │ ├─ Lehrpläne         │
+│ • Workflow-Anweisungen│              │ ├─ Frameworks        │
 └─────────────────────┘               │ └─ Exportierte       │
                                       │    Ergebnisse        │
                                       └──────────────────────┘
@@ -121,21 +123,33 @@ LehrClaude/
 │   │
 │   ├── projekt-1-unterrichtsreihe/
 │   │   ├── PROJECT_INSTRUCTIONS.md    # Instructions für Claude Desktop
-│   │   └── skills-checklist.md        # Benötigte Skills
+│   │   ├── skills-checklist.md        # Benötigte Skills
+│   │   └── anweisungen/               # 11 Workflow-Schritte
+│   │       ├── schritt-01-debiasing.md
+│   │       └── ... (10 weitere)
 │   │
 │   ├── projekt-2-arbeitsblatt/
 │   │   ├── PROJECT_INSTRUCTIONS.md
-│   │   └── skills-checklist.md
+│   │   ├── skills-checklist.md
+│   │   └── anweisungen/               # 4 Workflow-Anweisungen
 │   │
 │   ├── projekt-3-praesentation/
 │   │   ├── PROJECT_INSTRUCTIONS.md
-│   │   └── skills-checklist.md
+│   │   ├── skills-checklist.md
+│   │   └── anweisungen/               # 3 Workflow-Anweisungen
 │   │
-│   └── skills-platzhalter/           # 23 Skill-Templates
-│       ├── 01-debiasing/SKILL.md
-│       ├── 02-sachanalyse/SKILL.md
-│       ├── ... (21 weitere)
-│       └── export-pptx/SKILL.md
+│   ├── projekt-5-klassenverwaltung/
+│   │   ├── PROJECT_INSTRUCTIONS.md
+│   │   ├── skills-checklist.md
+│   │   └── anweisungen/               # 7 Workflow-Anweisungen
+│   │
+│   └── skills/                        # 6 Custom Skills (Material & Export)
+│       ├── mat-02-arbeitsblatt-erstellen/
+│       ├── mat-03-powerpoint-erstellen/
+│       ├── export-markdown/
+│       ├── export-pdf/
+│       ├── export-docx/
+│       └── export-pptx/
 │
 ├── lehrkraft-deployment/              # DEPLOYMENT AUF LEHRKRAFT-MAC
 │   ├── README.md                      # Deployment-Anleitung
@@ -191,10 +205,10 @@ open README.md  # Folge der Anleitung
 
 **→ Manuelles Setup:**
 1. MCP Filesystem Server konfigurieren
-2. 3 Projekte erstellen (Instructions copy-pasten)
-3. 23 Skills mit `skill-creator` erstellen
+2. 5 Projekte erstellen (Instructions copy-pasten)
+3. 6 Skills hochladen (fertige ZIPs in `skill-packages/`)
 
-### Gesamtzeit: 1-2 Stunden
+### Gesamtzeit: 30-60 Minuten
 
 **Detaillierte Schritt-für-Schritt Anleitungen** findest du in:
 - `claude-desktop-setup/README.md` (Hauptanleitung)
@@ -241,7 +255,8 @@ open README.md  # Folge der Anleitung
 - Reflexion durchführen
 - Iteration & Optimierung
 
-**Skills:** 11 Planungs-Skills + 3 Material-Skills + 4 Förderschul-Skills (optional) + 3 Export-Skills
+**Skills:** 2 Material-Skills + 4 Export-Skills
+**Workflow:** 11 Schritte in `anweisungen/` (inkl. Förderschul-Differenzierung)
 
 ---
 
@@ -254,7 +269,8 @@ open README.md  # Folge der Anleitung
 - Lösungen erstellen (optional)
 - Export (MD, PDF, DOCX)
 
-**Skills:** 4 Material-Skills + 2 Unterstützungs-Skills + 4 Förderschul-Skills (optional) + 3 Export-Skills
+**Skills:** 1 Material-Skill + 3 Export-Skills
+**Workflow:** 4 Anweisungen in `anweisungen/`
 
 ---
 
@@ -266,20 +282,25 @@ open README.md  # Folge der Anleitung
 - Visuelle Elemente vorschlagen (Bilder, Diagramme)
 - Export (MD für manuelle Übernahme, oder PPTX)
 
-**Skills:** 2 Material-Skills + 2 Unterstützungs-Skills + 4 Förderschul-Skills (optional) + 2 Export-Skills
+**Skills:** 1 Material-Skill + 2 Export-Skills
+**Workflow:** 3 Anweisungen in `anweisungen/`
 
 ---
 
-### 27 Custom Skills (Wiederverwendbar)
+### 6 Custom Skills + Workflow-Anweisungen
 
-| Kategorie | Anzahl | Beispiele |
-|-----------|--------|-----------|
-| **Planungs-Skills** | 11 | Sachanalyse, Lernziele, Stundenplanung |
-| **Material-Skills** | 8 | Arbeitsblatt erstellen, PowerPoint, Texterstellung |
-| **Förderschul-Skills** | 4 | Schülerprofile laden, Lernziele differenzieren, Piktogramm-Materialien |
+**Neue Architektur:** Statt 27 Skills nutzt das System jetzt eine hybride Architektur:
+
+| Komponente | Anzahl | Beispiele |
+|------------|--------|-----------|
+| **Material-Skills** | 2 | Arbeitsblatt erstellen, PowerPoint erstellen |
 | **Export-Skills** | 4 | Markdown, PDF, DOCX, PPTX |
+| **Workflow-Anweisungen** | 25 | In `anweisungen/`-Ordnern der Projekte |
 
-**Besonderheit:** Ein Skill (z.B. "Lernziele operationalisieren") kann in **mehreren Projekten** verwendet werden.
+**Vorteile:**
+- Unter dem 20-Skill-Limit für Claude Pro
+- Schnelleres Laden (weniger Skills)
+- Workflows direkt im Projekt-Kontext
 
 ---
 
@@ -434,8 +455,8 @@ A: Alle Daten bleiben lokal auf dem Rechner der Lehrkraft. Claude Desktop nutzt 
 **F: Kann ich die Skills anpassen?**
 A: Ja! Die SKILL.md-Dateien sind editierbar. Einfach ZIP neu erstellen und erneut hochladen.
 
-**F: Brauche ich alle 23 Skills?**
-A: Nein. Minimalkonfiguration: 4 Planungs-Skills + 1 Export-Skill (siehe `skills-checklist.md`).
+**F: Brauche ich alle 6 Skills?**
+A: Ja, alle 6 werden empfohlen. Die Workflow-Anweisungen sind bereits in den Projekten integriert.
 
 ---
 
@@ -561,7 +582,7 @@ Vollständiger Lizenztext: [CC BY-SA 4.0](https://creativecommons.org/licenses/b
 **Transformation (2025):**
 - Von Prompt-Katalog zum modularen System
 - Förderschul-Integration mit 7 Förderschwerpunkten
-- 27 Custom Skills für Claude Desktop
+- 6 Custom Skills + Workflow-Anweisungen für Claude Desktop
 - Automatisierte Deployment-Workflows
 
 **Erweitert um:**
@@ -580,9 +601,10 @@ Vollständiger Lizenztext: [CC BY-SA 4.0](https://creativecommons.org/licenses/b
 
 ---
 
-**Version:** 1.1
-**Stand:** 2025-01-10
+**Version:** 2.0
+**Stand:** 2025-11-30
 **Kompatibilität:** macOS 11+, Claude Desktop (aktuell)
+**Architektur:** 6 Skills + Workflow-Anweisungen (unter 20-Skill-Limit)
 
 ---
 
