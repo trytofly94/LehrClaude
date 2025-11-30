@@ -17,9 +17,42 @@ Führe diesen Schritt in **Schritt 6 des 11-Schritte-Planungsprozesses** durch, 
 - Schritt 04: Fachbegriffe geklärt
 - Schritt 05: Lernziele operationalisiert (mit Bloom-Taxonomie und Differenzierung in Basis/Unterstützung/Erweiterung)
 
+## Interaktiver Workflow (WICHTIG!)
+
+**NIEMALS direkt Dateien erstellen ohne Abstimmung mit der Lehrkraft!**
+
+### Phase A: Informationen sammeln
+1. Stelle alle notwendigen Rückfragen
+2. Warte auf Antworten der Lehrkraft
+3. Bei Unklarheiten: Nachfragen, nicht annehmen
+
+### Phase B: Iterative Erarbeitung
+1. Erarbeite die Inhalte basierend auf dem Input
+2. Zeige eine **Zusammenfassung** im Chat (nicht den vollen Text)
+3. Frage explizit: "Passt diese Richtung? Haben Sie Änderungswünsche?"
+4. Passe an basierend auf Feedback
+5. Wiederhole bis die Lehrkraft zufrieden ist
+
+### Phase C: Abschluss
+1. Zeige die **finale Zusammenfassung** im Chat
+2. Frage: "Sind Sie mit diesem Ergebnis zufrieden?"
+3. **Erst nach Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Speichere nur auf expliziten Wunsch
+
+### VERBOTEN:
+- Direkt TXT-Dateien erstellen ohne vorherige Abstimmung
+- Annehmen, dass die Lehrkraft zufrieden ist
+- Inhalte generieren ohne Rückfragen
+
 ## Workflow: Zwei-Mindmap-Ansatz
 
-### Teil A: Lehrkraft-Übersicht
+### Phase A: Informationen sammeln
+1. **Rückfragen stellen:** Klären welche Kernthemen, Lernziele und didaktischen Analysen vorliegen
+2. **Bestätigung einholen:** Warten auf Antworten vor der Erarbeitung
+
+### Phase B: Iterative Erarbeitung
+
+#### Teil A: Lehrkraft-Übersicht
 
 Führe folgende Schritte sequenziell aus und agiere als erstklassiger MindMap-Generator:
 
@@ -32,14 +65,15 @@ Führe folgende Schritte sequenziell aus und agiere als erstklassiger MindMap-Ge
    - **Basisstufe** (unterstützende Variante)
    - **Unterstützungsstufe** (mittleres Anforderungsniveau)
    - **Erweiterungsstufe** (vertiefende Variante)
-7. **Markdown-Export** - Die Mindmap als Markdown-Datei exportieren
+7. **Zusammenfassung zeigen** - Zeige eine Zusammenfassung der Mindmap-Struktur im Chat
+8. **Feedback einholen** - "Passt diese Struktur? Änderungswünsche?"
 
 **Einschränkungen für Lehrkraft-Übersicht:**
 - Keine Informationen zur Lerngruppe oder Lernumgebung hinzufügen
 - Keine Informationen aus anderen Phasen hinzufügen
 - Fokus ausschließlich auf: inhaltliche Kernthemen, Aufgaben, didaktische Analyse und didaktische Reduktion
 
-### Teil B: Schüler*innen-Übersicht
+#### Teil B: Schüler*innen-Übersicht
 
 Führe folgende Schritte sequenziell aus:
 
@@ -49,13 +83,20 @@ Führe folgende Schritte sequenziell aus:
    - **Gegenwartsbedeutung**: Warum ist dieses Thema heute, jetzt relevant?
    - **Zukunftsbedeutung**: Welche Auswirkungen hat dieses Thema für die Zukunft?
 3. **Themenübersicht strukturieren** - Jedem Kernthema einen Ast "Themenübersicht" hinzufügen mit den Qualitätsebenen der Feinziele als **kurze Stichpunkte ohne Operator**
-4. **Markdown-Export** - Die Mindmap als Markdown-Datei exportieren
+4. **Zusammenfassung zeigen** - Zeige eine Zusammenfassung der Mindmap-Struktur im Chat
+5. **Feedback einholen** - "Passt diese Struktur? Änderungswünsche?"
 
 **Einschränkungen für Schüler*innen-Übersicht:**
 - Keine Informationen zur Lerngruppe oder Lernumgebung hinzufügen
 - Fokus ausschließlich auf: inhaltliche Kernthemen und didaktische Analysen
 - Altersgerechte, motivierende Sprache verwenden
 - Bloom-Operatoren und didaktische Fachbegriffe verstecken
+
+### Phase C: Abschluss
+1. **Finale Zusammenfassung:** Zeige die finale Struktur beider Mindmaps im Chat
+2. **Zufriedenheit prüfen:** "Sind Sie mit diesem Ergebnis zufrieden?"
+3. **Export anbieten:** "Soll ich die Mindmaps als Markdown-Dateien speichern?"
+4. **Nur bei Zustimmung:** Beide Mindmaps als `.md`-Dateien exportieren
 
 ## Ausgabeformat
 
@@ -100,6 +141,7 @@ Vor Abschluss des Schritts überprüfen:
 ## Next Steps
 
 Nach Abschluss dieses Schritts:
-- Der Nutzer kann das Ergebnis überprüfen und anpassen
-- Der nächste Planungsschritt kann gestartet werden
-- Das Ergebnis kann für spätere Schritte referenziert werden
+1. **Zusammenfassung im Chat präsentieren** (nicht voller Inhalt)
+2. **Fragen:** "Sind Sie mit diesem Ergebnis zufrieden? Änderungswünsche?"
+3. **Bei Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Der nächste Planungsschritt kann gestartet werden

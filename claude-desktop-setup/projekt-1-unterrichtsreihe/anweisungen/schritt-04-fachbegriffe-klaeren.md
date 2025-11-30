@@ -14,6 +14,33 @@ Führe diesen Schritt durch, wenn:
 - Komplexe Konzepte in handhabbare Komponenten zerlegt werden müssen
 - Die Perspektiven von Lehrkraft und Schülern bei der Inhaltsgewichtung integriert werden müssen
 
+## Interaktiver Workflow (WICHTIG!)
+
+**NIEMALS direkt Dateien erstellen ohne Abstimmung mit der Lehrkraft!**
+
+### Phase A: Informationen sammeln
+1. Stelle alle notwendigen Rückfragen
+2. Warte auf Antworten der Lehrkraft
+3. Bei Unklarheiten: Nachfragen, nicht annehmen
+
+### Phase B: Iterative Erarbeitung
+1. Erarbeite die Inhalte basierend auf dem Input
+2. Zeige eine **Zusammenfassung** im Chat (nicht den vollen Text)
+3. Frage explizit: "Passt diese Richtung? Haben Sie Änderungswünsche?"
+4. Passe an basierend auf Feedback
+5. Wiederhole bis die Lehrkraft zufrieden ist
+
+### Phase C: Abschluss
+1. Zeige die **finale Zusammenfassung** im Chat
+2. Frage: "Sind Sie mit diesem Ergebnis zufrieden?"
+3. **Erst nach Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Speichere nur auf expliziten Wunsch
+
+### VERBOTEN:
+- Direkt TXT-Dateien erstellen ohne vorherige Abstimmung
+- Annehmen, dass die Lehrkraft zufrieden ist
+- Inhalte generieren ohne Rückfragen
+
 ## Übersicht des zweistufigen Prozesses
 
 Didaktische Reduktion besteht aus zwei sequenziellen Phasen, die nacheinander durchgeführt werden:
@@ -30,7 +57,9 @@ Behalte beide Perspektiven durchgehend bei:
 
 ## Kompletter Workflow
 
-### Schritt 1: Kontext und Voraussetzungen sammeln
+### Phase A: Informationen sammeln
+
+**Schritt 1: Kontext und Voraussetzungen sammeln**
 
 Vor Beginn der didaktischen Reduktion sammeln und überprüfen:
 - **Sachanalyse (Schritt 2)**: Vollständige fachwissenschaftliche Analyse mit allen Inhaltsdetails
@@ -38,7 +67,11 @@ Vor Beginn der didaktischen Reduktion sammeln und überprüfen:
 - **Wissen der Lehrkraft**: Vorwissen der Schüler, realistische Zeitbeschränkungen, Lerngruppenzusammensetzung
 - **Schüler-Interessen**: Welche Themen sind für Schüler intrinsisch interessant oder lebensrelevant?
 
-### Schritt 2: Stoffreduktion durchführen (Inhaltsauswahl)
+**Rückfragen stellen:** Bei Unklarheiten nachfragen, bis alle Informationen vorliegen
+
+### Phase B: Iterative Erarbeitung
+
+**Schritt 2: Stoffreduktion durchführen (Inhaltsauswahl)**
 
 Für jedes in der didaktischen Analyse identifizierte Kernthema systematisch arbeiten:
 
@@ -59,7 +92,7 @@ Für jedes in der didaktischen Analyse identifizierte Kernthema systematisch arb
 
 **Ergebnis der Stoffreduktion:** Eine priorisierte Liste essentieller Themen mit Begründungen.
 
-### Schritt 3: Inhaltsreduktion durchführen (Komplexitätsabbau)
+**Schritt 3: Inhaltsreduktion durchführen (Komplexitätsabbau)**
 
 Basierend nur auf den in der Stoffreduktion ausgewählten Themen nun systematisch deren Komplexität reduzieren.
 
@@ -83,9 +116,18 @@ Basierend nur auf den in der Stoffreduktion ausgewählten Themen nun systematisc
 
 - **Relevanz der Inhalte**: Sicherstellen, dass jedes verbleibende Element den Lernzielen dient. Dekorative oder nebensächliche Details entfernen.
 
-### Schritt 4: Ergebnisse synthetisieren und ausgeben
+**Schritt 4: Zusammenfassung präsentieren und Feedback einholen**
 
-Nach Abschluss beider Reduktionsphasen Ergebnisse als **einheitliche Liste** ausgeben (nicht separate Ergebnisse pro Reduktionstyp). Diese Liste stellt die didaktisch reduzierte Inhalt bereit für nachfolgende Planungsschritte.
+- **Zusammenfassung zeigen:** Kernpunkte der didaktischen Reduktion im Chat präsentieren
+- **Fragen:** "Passt diese Richtung? Haben Sie Änderungswünsche?"
+- **Anpassungen vornehmen:** Basierend auf Feedback iterieren
+- **Wiederholung:** Bis die Lehrkraft zufrieden ist
+
+### Phase C: Abschluss
+
+**Schritt 5: Ergebnisse synthetisieren und ausgeben**
+
+Nach Abschluss beider Reduktionsphasen und Zustimmung der Lehrkraft Ergebnisse als **einheitliche Liste** ausgeben (nicht separate Ergebnisse pro Reduktionstyp). Diese Liste stellt die didaktisch reduzierte Inhalt bereit für nachfolgende Planungsschritte.
 
 **Ausgabestruktur:**
 
@@ -110,6 +152,13 @@ Begründung der Reduktion:
 Kernthema 2: [Name]
 [Gleiche Struktur wie Kernthema 1]
 ```
+
+**Schritt 6: Finale Zustimmung und Export**
+
+1. **Finale Zusammenfassung zeigen:** Vollständige didaktische Reduktion im Chat präsentieren
+2. **Zufriedenheit prüfen:** "Sind Sie mit diesem Ergebnis zufrieden?"
+3. **Export anbieten:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. **Nur bei Zustimmung:** TXT-Datei speichern
 
 ## Qualitätssicherungs-Anforderungen
 
@@ -156,6 +205,7 @@ Bei der Arbeit mit diesem Schritt diese Referenzmaterialien bei Bedarf konsultie
 ## Next Steps
 
 Nach Abschluss dieses Schritts:
-- Der Nutzer kann das Ergebnis überprüfen und anpassen
-- Der nächste Planungsschritt kann gestartet werden
-- Das Ergebnis kann für spätere Schritte referenziert werden
+1. **Zusammenfassung im Chat präsentieren** (nicht voller Inhalt)
+2. **Fragen:** "Sind Sie mit diesem Ergebnis zufrieden? Änderungswünsche?"
+3. **Bei Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Der nächste Planungsschritt kann gestartet werden

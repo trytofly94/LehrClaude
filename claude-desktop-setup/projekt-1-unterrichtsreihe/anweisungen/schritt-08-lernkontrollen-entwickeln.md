@@ -11,9 +11,38 @@ Dieser Schritt wird durchgeführt:
 - Nach der Formulierung der Lernziele (Schritt 05) und der Stundenplanung (Schritt 07)
 - Vor der Materialbeschaffung (Schritt 09) und Reflexion (Schritt 10)
 
+## Interaktiver Workflow (WICHTIG!)
+
+**NIEMALS direkt Dateien erstellen ohne Abstimmung mit der Lehrkraft!**
+
+### Phase A: Informationen sammeln
+1. Stelle alle notwendigen Rückfragen
+2. Warte auf Antworten der Lehrkraft
+3. Bei Unklarheiten: Nachfragen, nicht annehmen
+
+### Phase B: Iterative Erarbeitung
+1. Erarbeite die Inhalte basierend auf dem Input
+2. Zeige eine **Zusammenfassung** im Chat (nicht den vollen Text)
+3. Frage explizit: "Passt diese Richtung? Haben Sie Änderungswünsche?"
+4. Passe an basierend auf Feedback
+5. Wiederhole bis die Lehrkraft zufrieden ist
+
+### Phase C: Abschluss
+1. Zeige die **finale Zusammenfassung** im Chat
+2. Frage: "Sind Sie mit diesem Ergebnis zufrieden?"
+3. **Erst nach Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Speichere nur auf expliziten Wunsch
+
+### VERBOTEN:
+- Direkt TXT-Dateien erstellen ohne vorherige Abstimmung
+- Annehmen, dass die Lehrkraft zufrieden ist
+- Inhalte generieren ohne Rückfragen
+
 ## Anwendung
 
-### Schritt 1: Hintergrundinformationen zu Differenzierung
+### Phase A: Informationen sammeln
+
+#### Schritt 1: Hintergrundinformationen zu Differenzierung
 
 **Differenzierung nach Wember (2013):**
 
@@ -48,7 +77,7 @@ Dieser Schritt wird durchgeführt:
 - Sind binnendifferenziert und geben Hilfen
 - Führen zu vielfältigen diskursiven Lernprodukten
 
-### Schritt 2: Rückfragen zur Präzisierung
+#### Schritt 2: Rückfragen zur Präzisierung
 
 Stelle Rückfragen zu:
 - Gibt es fachrelevante Besonderheiten des Themas?
@@ -56,9 +85,11 @@ Stelle Rückfragen zu:
 - Welche Methoden haben sich in dieser Lerngruppe bewährt?
 - Gibt es schulische oder curriculare Vorgaben?
 
-Warte auf Antworten, bevor die Lernproduktplanung beginnt.
+**Warte auf vollständige Antworten, bevor die Lernproduktplanung beginnt.**
 
-### Schritt 3: Differenzierte Lernproduktplanung
+### Phase B: Iterative Erarbeitung
+
+#### Schritt 3: Differenzierte Lernproduktplanung
 
 **Prozess:**
 1. **Feinziele analysieren:** Die Feinziele aus Schritt 05 als Grundlage verwenden
@@ -77,7 +108,7 @@ Warte auf Antworten, bevor die Lernproduktplanung beginnt.
 - Diversität: Verschiedene Medien, Interaktion
 - Sozialformen: Mit Angabe der Schüleranzahl
 
-### Schritt 4: Ausformulierung der Aufgabenstellungen
+#### Schritt 4: Ausformulierung der Aufgabenstellungen
 
 **Prozess:**
 1. Operatoren in **fetter Schrift** markieren
@@ -90,23 +121,41 @@ Warte auf Antworten, bevor die Lernproduktplanung beginnt.
 - **Lies** den Text zum Weg der Nahrung in **Einzelarbeit** (**1 Schüler/in**).
 - **Beschreibe** wofür der Körper Kohlenhydrate nutzt. **Partnerarbeit** (**2 Schüler/innen**)
 
-### Schritt 5: Qualitätssicherung und Iterative Optimierung
+#### Schritt 5: Zusammenfassung und Feedback
 
-APOP-Prinzip anwenden:
-1. Prompt-Optimierung
-2. Zur Bestätigung vorlegen
-3. Nach Bestätigung ausführen
+1. **Zusammenfassung präsentieren:** Zeige eine Zusammenfassung der entwickelten Lernprodukte im Chat (nicht den vollen Text)
+2. **Feedback einholen:** "Passt diese Richtung? Haben Sie Änderungswünsche?"
+3. **Iterative Anpassung:** Basierend auf Feedback anpassen und erneut vorlegen
+4. **Wiederhole** bis Lehrkraft zufrieden ist
 
-Bei Unklarheiten so lange Rückfragen stellen, bis alle Unsicherheiten beseitigt sind.
+### Phase C: Abschluss
+
+#### Schritt 6: Finalisierung
+
+1. **Finale Zusammenfassung:** Zeige die finale Zusammenfassung im Chat
+2. **Zufriedenheit prüfen:** "Sind Sie mit diesem Ergebnis zufrieden?"
+3. **Export anbieten:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. **Nur bei Zustimmung:** TXT-Datei speichern
 
 ## Workflow
 
-1. Hintergrundinformationen bereitstellen
-2. Rückfragen stellen
-3. Lernprodukte planen (drei Niveaustufen)
-4. Aufgabenstellungen ausformulieren
-5. Iterative Optimierung
-6. Qualitätssicherung
+### Phase A: Informationen sammeln
+1. **Hintergrundinformationen bereitstellen** - Differenzierung nach Wember erläutern
+2. **Rückfragen stellen** - Fachliche Besonderheiten, Lerngruppe, Methoden, Vorgaben klären
+3. **Warten auf Antworten** - Vollständige Antworten abwarten
+
+### Phase B: Iterative Erarbeitung
+4. **Lernprodukte planen** - Drei Niveaustufen entwickeln (Unterstützung/Basis/Erweiterung)
+5. **Aufgabenstellungen ausformulieren** - Mit Operatoren, Sozialformen und Methoden
+6. **Zusammenfassung zeigen** - Zusammenfassung der Lernprodukte im Chat präsentieren
+7. **Feedback einholen** - "Passt diese Richtung? Änderungswünsche?"
+8. **Iterative Optimierung** - Basierend auf Feedback anpassen und wiederholen
+
+### Phase C: Abschluss
+9. **Finale Zusammenfassung** - Finale Zusammenfassung im Chat zeigen
+10. **Zufriedenheit prüfen** - "Sind Sie mit diesem Ergebnis zufrieden?"
+11. **Export anbieten** - "Soll ich das Ergebnis als TXT-Datei speichern?"
+12. **Nur bei Zustimmung** - TXT-Datei speichern
 
 ## Output-Format
 
@@ -136,6 +185,7 @@ Erweiterungsstufe:
 ## Next Steps
 
 Nach Abschluss dieses Schritts:
-- Der Nutzer kann das Ergebnis überprüfen und anpassen
-- Der nächste Planungsschritt kann gestartet werden
-- Das Ergebnis kann für spätere Schritte referenziert werden
+1. **Zusammenfassung im Chat präsentieren** (nicht voller Inhalt)
+2. **Fragen:** "Sind Sie mit diesem Ergebnis zufrieden? Änderungswünsche?"
+3. **Bei Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Der nächste Planungsschritt kann gestartet werden

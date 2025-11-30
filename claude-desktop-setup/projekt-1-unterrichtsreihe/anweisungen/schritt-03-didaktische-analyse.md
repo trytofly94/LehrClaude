@@ -13,6 +13,33 @@ Führe diesen Schritt durch, wenn:
 - Du Lebensweltbezug und Aktualität für Lernende etablierst
 - Bevor du zur Klärung von Fachbegriffen (Schritt 04) und Operationalisierung von Lernzielen (Schritt 05) übergehst
 
+## Interaktiver Workflow (WICHTIG!)
+
+**NIEMALS direkt Dateien erstellen ohne Abstimmung mit der Lehrkraft!**
+
+### Phase A: Informationen sammeln
+1. Stelle alle notwendigen Rückfragen
+2. Warte auf Antworten der Lehrkraft
+3. Bei Unklarheiten: Nachfragen, nicht annehmen
+
+### Phase B: Iterative Erarbeitung
+1. Erarbeite die Inhalte basierend auf dem Input
+2. Zeige eine **Zusammenfassung** im Chat (nicht den vollen Text)
+3. Frage explizit: "Passt diese Richtung? Haben Sie Änderungswünsche?"
+4. Passe an basierend auf Feedback
+5. Wiederhole bis die Lehrkraft zufrieden ist
+
+### Phase C: Abschluss
+1. Zeige die **finale Zusammenfassung** im Chat
+2. Frage: "Sind Sie mit diesem Ergebnis zufrieden?"
+3. **Erst nach Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Speichere nur auf expliziten Wunsch
+
+### VERBOTEN:
+- Direkt TXT-Dateien erstellen ohne vorherige Abstimmung
+- Annehmen, dass die Lehrkraft zufrieden ist
+- Inhalte generieren ohne Rückfragen
+
 ## Durchführung
 
 ### Schritt 1: Perspektive der Lernenden einnehmen
@@ -104,12 +131,24 @@ Nach Erstellung der anfänglichen Analyse, schlage Verbesserungen des Analysepro
 
 ## Workflow
 
+### Phase A: Informationen sammeln
 1. **Perspektivwechsel:** Nimm die Perspektive der Lernenden ein
 2. **Kernthemen identifizieren:** Greife auf Sachanalyse-Ergebnisse zu
-3. **Fünf Leitfragen bearbeiten:** Arbeite systematisch alle fünf Fragen für jedes Kernthema ab
-4. **Aktualität und Lebensweltbezug:** Entwickle konkrete zeitnahe Beispiele und Verbindungen
-5. **Rückfragen stellen:** Stelle Klärungsfragen, wenn Unklarheiten auftreten
-6. **Iterative Optimierung:** Schlage Optimierungen vor; warte auf Bestätigung vor der Umsetzung
+3. **Rückfragen stellen:** Stelle Klärungsfragen, wenn Unklarheiten auftreten
+
+### Phase B: Iterative Erarbeitung
+1. **Fünf Leitfragen bearbeiten:** Arbeite systematisch alle fünf Fragen für jedes Kernthema ab
+2. **Aktualität und Lebensweltbezug:** Entwickle konkrete zeitnahe Beispiele und Verbindungen
+3. **Zusammenfassung präsentieren:** Kernpunkte der didaktischen Analyse im Chat zeigen
+4. **Fragen:** "Passt diese Richtung? Haben Sie Änderungswünsche?"
+5. **Iterative Optimierung:** Anpassungen vornehmen basierend auf Feedback
+6. **Wiederholung:** Bis die Lehrkraft zufrieden ist
+
+### Phase C: Abschluss
+1. **Finale Zusammenfassung zeigen:** Vollständige didaktische Analyse im Chat präsentieren
+2. **Zufriedenheit prüfen:** "Sind Sie mit diesem Ergebnis zufrieden?"
+3. **Export anbieten:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. **Nur bei Zustimmung:** TXT-Datei speichern
 
 ## Theoretische Grundlagen
 
@@ -125,6 +164,7 @@ Dieser Ansatz stellt sicher, dass der Lehrplan nicht willkürlich ist, sondern s
 ## Next Steps
 
 Nach Abschluss dieses Schritts:
-- Der Nutzer kann das Ergebnis überprüfen und anpassen
-- Der nächste Planungsschritt kann gestartet werden
-- Das Ergebnis kann für spätere Schritte referenziert werden
+1. **Zusammenfassung im Chat präsentieren** (nicht voller Inhalt)
+2. **Fragen:** "Sind Sie mit diesem Ergebnis zufrieden? Änderungswünsche?"
+3. **Bei Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Der nächste Planungsschritt kann gestartet werden

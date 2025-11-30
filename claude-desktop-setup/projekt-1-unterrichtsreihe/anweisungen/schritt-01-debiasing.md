@@ -11,6 +11,33 @@ Dieser Schritt sollte automatisch durchgeführt werden:
 - Zu Beginn jeder Session, in der Unterrichtsmaterialien erstellt werden
 - Bevor sensible Themen oder diverse Lerngruppen behandelt werden
 
+## Interaktiver Workflow (WICHTIG!)
+
+**NIEMALS direkt Dateien erstellen ohne Abstimmung mit der Lehrkraft!**
+
+### Phase A: Informationen sammeln
+1. Stelle alle notwendigen Rückfragen
+2. Warte auf Antworten der Lehrkraft
+3. Bei Unklarheiten: Nachfragen, nicht annehmen
+
+### Phase B: Iterative Erarbeitung
+1. Erarbeite die Inhalte basierend auf dem Input
+2. Zeige eine **Zusammenfassung** im Chat (nicht den vollen Text)
+3. Frage explizit: "Passt diese Richtung? Haben Sie Änderungswünsche?"
+4. Passe an basierend auf Feedback
+5. Wiederhole bis die Lehrkraft zufrieden ist
+
+### Phase C: Abschluss
+1. Zeige die **finale Zusammenfassung** im Chat
+2. Frage: "Sind Sie mit diesem Ergebnis zufrieden?"
+3. **Erst nach Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Speichere nur auf expliziten Wunsch
+
+### VERBOTEN:
+- Direkt TXT-Dateien erstellen ohne vorherige Abstimmung
+- Annehmen, dass die Lehrkraft zufrieden ist
+- Inhalte generieren ohne Rückfragen
+
 ## Anwendung
 
 ### Ethische Leitprinzipien
@@ -59,10 +86,22 @@ Bei jeder Interaktion oder Generierung von Unterrichtsinhalten befolgen:
 
 ## Workflow
 
+### Phase A: Informationen sammeln
 1. Ethische Rahmenbedingungen für die Session aktivieren
 2. Lehrkraft über die Bedeutung inklusiver Unterrichtsplanung informieren
-3. Bei allen nachfolgenden Schritten diese Prinzipien als Qualitätskriterium anwenden
-4. Proaktiv auf potenzielle Bias-Risiken hinweisen
+3. Bei Bedarf Rückfragen zu sensiblen Themen oder besonderen Lerngruppen stellen
+
+### Phase B: Iterative Erarbeitung
+1. Bei allen nachfolgenden Schritten diese Prinzipien als Qualitätskriterium anwenden
+2. Proaktiv auf potenzielle Bias-Risiken hinweisen
+3. Zusammenfassung präsentieren: "Diese ethischen Leitprinzipien sind nun aktiviert"
+4. Fragen: "Passt diese Richtung? Haben Sie Änderungswünsche?"
+
+### Phase C: Abschluss
+1. Finale Zusammenfassung zeigen
+2. Zufriedenheit prüfen: "Sind Sie mit diesem Ergebnis zufrieden?"
+3. Export anbieten: "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Nur bei Zustimmung: TXT-Datei speichern
 
 ## Output
 
@@ -71,6 +110,7 @@ Dieser Schritt generiert keinen direkten Output, sondern setzt einen ethischen R
 ## Next Steps
 
 Nach Abschluss dieses Schritts:
-- Der Nutzer kann das Ergebnis überprüfen und anpassen
-- Der nächste Planungsschritt kann gestartet werden
-- Das Ergebnis kann für spätere Schritte referenziert werden
+1. **Zusammenfassung im Chat präsentieren** (nicht voller Inhalt)
+2. **Fragen:** "Sind Sie mit diesem Ergebnis zufrieden? Änderungswünsche?"
+3. **Bei Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Der nächste Planungsschritt kann gestartet werden

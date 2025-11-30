@@ -12,89 +12,83 @@ Dieser Schritt wird durchgeführt:
 - Wenn eine kritische Evaluierung und Qualitätssicherung der Gesamtplanung benötigt wird
 - Vor der finalen Iteration und Optimierung (Schritt 11)
 
+## Interaktiver Workflow (WICHTIG!)
+
+**NIEMALS direkt Dateien erstellen ohne Abstimmung mit der Lehrkraft!**
+
+### Phase A: Informationen sammeln
+1. Stelle alle notwendigen Rückfragen
+2. Warte auf Antworten der Lehrkraft
+3. Bei Unklarheiten: Nachfragen, nicht annehmen
+
+### Phase B: Iterative Erarbeitung
+1. Erarbeite die Inhalte basierend auf dem Input
+2. Zeige eine **Zusammenfassung** im Chat (nicht den vollen Text)
+3. Frage explizit: "Passt diese Richtung? Haben Sie Änderungswünsche?"
+4. Passe an basierend auf Feedback
+5. Wiederhole bis die Lehrkraft zufrieden ist
+
+### Phase C: Abschluss
+1. Zeige die **finale Zusammenfassung** im Chat
+2. Frage: "Sind Sie mit diesem Ergebnis zufrieden?"
+3. **Erst nach Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Speichere nur auf expliziten Wunsch
+
+### VERBOTEN:
+- Direkt TXT-Dateien erstellen ohne vorherige Abstimmung
+- Annehmen, dass die Lehrkraft zufrieden ist
+- Inhalte generieren ohne Rückfragen
+
 ## Anwendung
 
-### Phase 1: Informationssammlung
+### Phase A: Informationssammlung
 
-Folgende Informationen vom Nutzer einholen oder aus vorherigen Schritten zusammentragen:
+**Informationen einholen:**
+1. Dokumentierte Ergebnisse aller Schritte 1-9 zusammentragen
+2. Kontextinformationen klären (Lerngruppe, Lernumgebung, Zeitrahmen)
+3. Bei Unklarheiten nachfragen, nicht annehmen
 
-1. **Dokumentierte Ergebnisse aller Schritte 1-9:**
-   - Debiasing-Rahmenbedingungen (Schritt 1)
-   - Sachanalyse (Schritt 2)
-   - Didaktische Analyse (Schritt 3)
-   - Fachbegriffe und Terminologie (Schritt 4)
-   - Operationalisierte Lernziele (Schritt 5)
-   - Strukturierung und MindMaps (Schritt 6)
-   - Unterrichtsverlauf und Stundenplanung (Schritt 7)
-   - Lernkontrollen und Assessment (Schritt 8)
-   - Materialzusammensetzung (Schritt 9)
+### Phase B: Iterative Erarbeitung
 
-2. **Kontextinformationen:**
-   - Lerngruppe und deren Besonderheiten
-   - Lernumgebung und Ressourcenverfügbarkeit
-   - Zeitrahmen und Rahmenbedingungen
+**1. Kritische Evaluierung durchführen**
 
-### Phase 2: Kritische Evaluierung
+Systematische Evaluierung in folgenden Dimensionen:
+- **Kohärenz und Konsistenz:** Lernziele, Stundenplanungen, Lernkontrollen
+- **Fachliche Angemessenheit:** Wissenschaftliche Fundierung, Korrektheit
+- **Didaktische Qualität:** Bloom-Operationalisierung, SMART-Formulierung, Methoden
+- **Schülerorientierung:** Interessen, Inklusion, Differenzierung
+- **Praktische Umsetzbarkeit:** Materialverfügbarkeit, zeitlicher Umfang
+- **Assessment:** Aussagekraft der Lernkontrollen
 
-Die Reflexion umfasst eine systematische Evaluierung in folgenden Dimensionen:
+**2. Stärken und Verbesserungspotenziale identifizieren**
 
-1. **Kohärenz und Konsistenz**
-   - Stimmen die Lernziele mit den Lernprodukten überein?
-   - Sind alle Stundenplanungen auf die Lernziele ausgerichtet?
-   - Passen die Lernkontrollen zu den formulierten Zielen?
+**3. MindMap und Synthesebericht erstellen**
 
-2. **Fachliche Angemessenheit**
-   - Basiert die Sachanalyse auf wissenschaftlich fundierten Quellen?
-   - Sind die fachlichen Inhalte korrekt und vollständig?
+- Übersichts-MindMap generieren (Markdown-Format)
+- Synthesebericht mit Gesamtevaluierung, Hauptstärken, Handlungsfeldern, Empfehlungen, Readiness-Check
 
-3. **Didaktische Qualität**
-   - Sind die Lernziele nach Bloom operationalisiert und SMART formuliert?
-   - Ist die Didaktische Reduktion angemessen?
-   - Sind die Unterrichtsmethoden passend?
+**4. Zusammenfassung präsentieren**
 
-4. **Schülerorientierung und Inklusion**
-   - Werden die Interessen der Lerngruppe berücksichtigt?
-   - Ist die Planung inklusiv?
-   - Gibt es Differenzierungsmöglichkeiten?
+Zeige eine **Zusammenfassung** des Reflexionsberichts im Chat (nicht den vollständigen Bericht):
+- Kernpunkte der Evaluierung
+- Top 3 Stärken
+- Top 3 Verbesserungspotenziale
+- Readiness-Status
 
-5. **Praktische Umsetzbarkeit**
-   - Sind die geplanten Materialien verfügbar?
-   - Ist der zeitliche Umfang realistisch?
+**5. Feedback einholen**
 
-6. **Assessment und Feedback**
-   - Sind die Lernkontrollen aussagekräftig?
-   - Ermöglichen sie genaue Messung des Lernfortschritts?
+Frage explizit: "Passt diese Richtung? Haben Sie Änderungswünsche?"
 
-### Phase 3: Identifikation von Stärken
+**6. Anpassungen vornehmen**
 
-Systematisch erfassen:
-- Was funktioniert besonders gut?
-- Welche Lernziele sind besonders präzise formuliert?
-- Wo zeigt sich innovative Didaktik?
+Basierend auf Feedback anpassen und wiederholen bis Lehrkraft zufrieden
 
-### Phase 4: Identifikation von Verbesserungspotenzialen
+### Phase C: Abschluss
 
-Systematisch erfassen:
-- Wo gibt es Lücken oder Ungereimtheiten?
-- Welche Schritte könnten klarer sein?
-- Wo könnte mehr Differenzierung sinnvoll sein?
-
-### Phase 5: MindMap-Generierung
-
-Eine strukturierte Übersichts-MindMap generieren mit:
-- **Zentrales Element:** Unterrichtsreihe und Thema
-- **Hauptäste:** Kernthemen, Lernziele, Lerngruppe, Unterrichtsverlauf, Lernprodukte, Lernkontrollen, Materialien, Stärken, Verbesserungspotenziale
-
-**Format:** Markdown-Datei (kompatibel mit Markmap-Viewer)
-
-### Phase 6: Synthesebericht
-
-Einen prägnanten Synthesebericht verfassen mit:
-1. **Gesamtevaluierung** - Wie kohärent ist die Planung?
-2. **Hauptstärken** (max. 5 Punkte)
-3. **Handlungsfelder** (max. 5 Punkte)
-4. **Konkrete Empfehlungen**
-5. **Readiness-Check** - Ist die Planung umsetzungsbereit?
+1. Finale Zusammenfassung präsentieren
+2. Zufriedenheit prüfen: "Sind Sie mit diesem Ergebnis zufrieden?"
+3. Export anbieten: "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Nur bei Zustimmung: TXT-Datei speichern
 
 ## Output
 
@@ -137,6 +131,7 @@ Konkrete, priorisierte Handlungsempfehlungen für Schritt 11 (Iteration & Optimi
 ## Next Steps
 
 Nach Abschluss dieses Schritts:
-- Der Nutzer kann das Ergebnis überprüfen und anpassen
-- Der nächste Planungsschritt kann gestartet werden
-- Das Ergebnis kann für spätere Schritte referenziert werden
+1. **Zusammenfassung im Chat präsentieren** (nicht voller Inhalt)
+2. **Fragen:** "Sind Sie mit diesem Ergebnis zufrieden? Änderungswünsche?"
+3. **Bei Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Der nächste Planungsschritt kann gestartet werden

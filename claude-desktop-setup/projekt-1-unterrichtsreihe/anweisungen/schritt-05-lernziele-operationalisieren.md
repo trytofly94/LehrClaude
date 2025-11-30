@@ -17,6 +17,33 @@ Dieser Schritt wird durchgeführt:
 - Wenn klare, überprüfbare Lernergebnisse definiert werden sollen
 - Zur Grundlegung für die Entwicklung von Lernprodukten und Aufgaben
 
+## Interaktiver Workflow (WICHTIG!)
+
+**NIEMALS direkt Dateien erstellen ohne Abstimmung mit der Lehrkraft!**
+
+### Phase A: Informationen sammeln
+1. Stelle alle notwendigen Rückfragen
+2. Warte auf Antworten der Lehrkraft
+3. Bei Unklarheiten: Nachfragen, nicht annehmen
+
+### Phase B: Iterative Erarbeitung
+1. Erarbeite die Inhalte basierend auf dem Input
+2. Zeige eine **Zusammenfassung** im Chat (nicht den vollen Text)
+3. Frage explizit: "Passt diese Richtung? Haben Sie Änderungswünsche?"
+4. Passe an basierend auf Feedback
+5. Wiederhole bis die Lehrkraft zufrieden ist
+
+### Phase C: Abschluss
+1. Zeige die **finale Zusammenfassung** im Chat
+2. Frage: "Sind Sie mit diesem Ergebnis zufrieden?"
+3. **Erst nach Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Speichere nur auf expliziten Wunsch
+
+### VERBOTEN:
+- Direkt TXT-Dateien erstellen ohne vorherige Abstimmung
+- Annehmen, dass die Lehrkraft zufrieden ist
+- Inhalte generieren ohne Rückfragen
+
 ## Zwei-Phasen-Strategie
 
 Dieser Schritt verfolgt eine **Zwei-Phasen-Strategie**:
@@ -116,15 +143,26 @@ Für jedes Kernthema Grob- und Feinziele entwickeln:
 
 ## Workflow
 
+### Phase A: Informationen sammeln
 1. **Hintergrundinformationen vermitteln:** Theorie der Lernzielformulierung erläutern
 2. **Bestätigung einholen:** "Hast du diese Informationen verstanden und möchtest fortfahren?"
 3. **MCP-Ressourcen nutzen:** KMK-Operatoren und Bloom-Taxonomie abrufen
 4. **Kernthemen erfragen:** Nutzer nach Kernthemen und Anforderungsbereich fragen
-5. **Doppelperspektive übernehmen:** Rolle der Lehrkraft und Lernenden einnehmen
-6. **Feinziele formulieren:** Für jedes Kernthema 2-4 Feinziele entwickeln
-7. **Grobziele formulieren:** Aus Feinzielen zusammensetzen
-8. **Rückfragen stellen:** Bei Unklarheiten nachfragen
-9. **Iterative Optimierung (APOP):** Nach jeder Änderung gesamte Antwort neu ausgeben
+5. **Rückfragen stellen:** Bei Unklarheiten nachfragen, warten auf Antworten
+
+### Phase B: Iterative Erarbeitung
+6. **Doppelperspektive übernehmen:** Rolle der Lehrkraft und Lernenden einnehmen
+7. **Feinziele formulieren:** Für jedes Kernthema 2-4 Feinziele entwickeln
+8. **Grobziele formulieren:** Aus Feinzielen zusammensetzen
+9. **Zusammenfassung präsentieren:** Zeige eine Zusammenfassung im Chat (nicht den vollen Text)
+10. **Feedback einholen:** "Passt diese Richtung? Haben Sie Änderungswünsche?"
+11. **Iterative Optimierung:** Nach jeder Änderung anpassen und erneut Feedback einholen
+
+### Phase C: Abschluss
+12. **Finale Zusammenfassung:** Zeige die finale Zusammenfassung im Chat
+13. **Zufriedenheit prüfen:** "Sind Sie mit diesem Ergebnis zufrieden?"
+14. **Export anbieten:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+15. **Nur bei Zustimmung:** TXT-Datei speichern
 
 ## Output
 
@@ -156,6 +194,7 @@ Das Ergebnis dient als Grundlage für die Mindmap-Strukturierung (Schritt 06) un
 ## Next Steps
 
 Nach Abschluss dieses Schritts:
-- Der Nutzer kann das Ergebnis überprüfen und anpassen
-- Der nächste Planungsschritt kann gestartet werden
-- Das Ergebnis kann für spätere Schritte referenziert werden
+1. **Zusammenfassung im Chat präsentieren** (nicht voller Inhalt)
+2. **Fragen:** "Sind Sie mit diesem Ergebnis zufrieden? Änderungswünsche?"
+3. **Bei Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Der nächste Planungsschritt kann gestartet werden

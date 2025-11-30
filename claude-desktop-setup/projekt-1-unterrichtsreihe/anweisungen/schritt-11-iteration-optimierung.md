@@ -21,6 +21,33 @@ Dieser Schritt wird durchgeführt:
 - Bei der Validierung von Inhalten vor dem Export
 - Als kontinuierliche Schleife während und nach der Planungsphase
 
+## Interaktiver Workflow (WICHTIG!)
+
+**NIEMALS direkt Dateien erstellen ohne Abstimmung mit der Lehrkraft!**
+
+### Phase A: Informationen sammeln
+1. Stelle alle notwendigen Rückfragen
+2. Warte auf Antworten der Lehrkraft
+3. Bei Unklarheiten: Nachfragen, nicht annehmen
+
+### Phase B: Iterative Erarbeitung
+1. Erarbeite die Inhalte basierend auf dem Input
+2. Zeige eine **Zusammenfassung** im Chat (nicht den vollen Text)
+3. Frage explizit: "Passt diese Richtung? Haben Sie Änderungswünsche?"
+4. Passe an basierend auf Feedback
+5. Wiederhole bis die Lehrkraft zufrieden ist
+
+### Phase C: Abschluss
+1. Zeige die **finale Zusammenfassung** im Chat
+2. Frage: "Sind Sie mit diesem Ergebnis zufrieden?"
+3. **Erst nach Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Speichere nur auf expliziten Wunsch
+
+### VERBOTEN:
+- Direkt TXT-Dateien erstellen ohne vorherige Abstimmung
+- Annehmen, dass die Lehrkraft zufrieden ist
+- Inhalte generieren ohne Rückfragen
+
 ## Anwendung
 
 ### Schritt 1: Einführung in APOM
@@ -129,15 +156,25 @@ Nach erfolgreichen Optimierungen und Validierung:
 
 ## Workflow
 
+### Phase A: Informationssammlung
 1. APOM-Konzept erklären
-2. Zusammenfassung zeigen
-3. Feedback einholen
-4. Vorschlag-Analyse (APOM-Optimierungsvorschläge)
-5. Bestätigung warten
-6. Verfeinerung durchführen
-7. Validierung
-8. Feedback-Schleife (zurück zu Schritt 3)
-9. Abschluss (finale Zusammenfassung, Export-Option)
+2. Zusammenfassung der Unterrichtsreihe zeigen
+3. Feedback einholen (inhaltlich, didaktisch, praktisch, etc.)
+4. Bei Unklarheiten nachfragen
+
+### Phase B: Iterative Erarbeitung
+1. APOM-Optimierungsvorschläge generieren basierend auf Feedback
+2. **Zusammenfassung** der Optimierungen im Chat zeigen (nicht vollständige neue Versionen)
+3. Frage: "Möchten Sie diese Optimierungen durchführen? Änderungswünsche?"
+4. Verfeinerungen durchführen basierend auf Bestätigung
+5. Validierung durchführen (Qualitätssicherungs-Checkliste)
+6. Wiederholung bis Lehrkraft zufrieden (Feedback-Schleife)
+
+### Phase C: Abschluss
+1. Finale Zusammenfassung präsentieren
+2. Zufriedenheit prüfen: "Sind Sie mit diesem Ergebnis zufrieden?"
+3. Export anbieten: "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Nur bei Zustimmung: TXT-Datei speichern oder Export-Skills nutzen
 
 ## Besonderheiten
 
@@ -172,6 +209,8 @@ Verfügbare Aktionen: Exportieren, weitere Optimierungen, Speichern
 ## Next Steps
 
 Nach Abschluss dieses Schritts:
-- Die Unterrichtsreihe ist optimiert und validiert
-- Export-Optionen stehen zur Verfügung
-- Weitere Optimierungen sind jederzeit möglich
+1. **Zusammenfassung im Chat präsentieren** (nicht voller Inhalt)
+2. **Fragen:** "Sind Sie mit diesem Ergebnis zufrieden? Änderungswünsche?"
+3. **Bei Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Export-Optionen stehen zur Verfügung (PDF, DOCX, Markdown)
+5. Weitere Optimierungen sind jederzeit möglich

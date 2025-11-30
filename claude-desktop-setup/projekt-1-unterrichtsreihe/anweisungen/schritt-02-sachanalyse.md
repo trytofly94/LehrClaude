@@ -12,6 +12,33 @@ Dieser Schritt wird durchgeführt:
 - Wenn eine fachlich fundierte Grundlage für ein Unterrichtsthema benötigt wird
 - Zur wissenschaftlichen Erschließung eines neuen Unterrichtsinhalts
 
+## Interaktiver Workflow (WICHTIG!)
+
+**NIEMALS direkt Dateien erstellen ohne Abstimmung mit der Lehrkraft!**
+
+### Phase A: Informationen sammeln
+1. Stelle alle notwendigen Rückfragen
+2. Warte auf Antworten der Lehrkraft
+3. Bei Unklarheiten: Nachfragen, nicht annehmen
+
+### Phase B: Iterative Erarbeitung
+1. Erarbeite die Inhalte basierend auf dem Input
+2. Zeige eine **Zusammenfassung** im Chat (nicht den vollen Text)
+3. Frage explizit: "Passt diese Richtung? Haben Sie Änderungswünsche?"
+4. Passe an basierend auf Feedback
+5. Wiederhole bis die Lehrkraft zufrieden ist
+
+### Phase C: Abschluss
+1. Zeige die **finale Zusammenfassung** im Chat
+2. Frage: "Sind Sie mit diesem Ergebnis zufrieden?"
+3. **Erst nach Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Speichere nur auf expliziten Wunsch
+
+### VERBOTEN:
+- Direkt TXT-Dateien erstellen ohne vorherige Abstimmung
+- Annehmen, dass die Lehrkraft zufrieden ist
+- Inhalte generieren ohne Rückfragen
+
 ## Anwendung
 
 ### Informationsbeschaffung
@@ -76,12 +103,24 @@ Folgende Einschränkungen strikt beachten:
 
 ## Workflow
 
+### Phase A: Informationen sammeln
 1. **Informationen einholen:** Thema, Schulform, Klassenstufe, Fach erfragen
 2. **Lehrplan konsultieren:** Via MCP auf Lehrpläne zugreifen
 3. **Optionale Quellen erfragen:** Nutzer nach zusätzlichen Materialien fragen
-4. **Sachanalyse durchführen:** Fachliche Grundlagen systematisch analysieren
-5. **Rückfragen stellen:** Bei Unklarheiten nachfragen, bis alle Punkte geklärt sind
-6. **Iterative Optimierung:** APOP-Prinzip anwenden - Prompt-Optimierung vorschlagen und auf Bestätigung warten
+4. **Rückfragen stellen:** Bei Unklarheiten nachfragen, bis alle Punkte geklärt sind
+
+### Phase B: Iterative Erarbeitung
+1. **Sachanalyse durchführen:** Fachliche Grundlagen systematisch analysieren
+2. **Zusammenfassung präsentieren:** Kernpunkte der Sachanalyse im Chat zeigen
+3. **Fragen:** "Passt diese Richtung? Haben Sie Änderungswünsche?"
+4. **Iterative Optimierung:** APOP-Prinzip anwenden - Anpassungen vornehmen basierend auf Feedback
+5. **Wiederholung:** Bis die Lehrkraft zufrieden ist
+
+### Phase C: Abschluss
+1. **Finale Zusammenfassung zeigen:** Vollständige Sachanalyse im Chat präsentieren
+2. **Zufriedenheit prüfen:** "Sind Sie mit diesem Ergebnis zufrieden?"
+3. **Export anbieten:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. **Nur bei Zustimmung:** TXT-Datei speichern
 
 ## Output
 
@@ -116,6 +155,7 @@ Das Ergebnis dient als Grundlage für die nachfolgende didaktische Analyse (Schr
 ## Next Steps
 
 Nach Abschluss dieses Schritts:
-- Der Nutzer kann das Ergebnis überprüfen und anpassen
-- Der nächste Planungsschritt kann gestartet werden
-- Das Ergebnis kann für spätere Schritte referenziert werden
+1. **Zusammenfassung im Chat präsentieren** (nicht voller Inhalt)
+2. **Fragen:** "Sind Sie mit diesem Ergebnis zufrieden? Änderungswünsche?"
+3. **Bei Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Der nächste Planungsschritt kann gestartet werden

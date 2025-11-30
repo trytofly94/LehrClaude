@@ -11,6 +11,33 @@ Führe diesen Schritt durch, wenn:
 - Zuvor entwickelte Lernprodukte (differenzierte Aufgaben nach Lernzielen) den Unterrichtsphasen zugeordnet werden
 - Rückwärts geplante Lektionen entwickelt werden, die von angestrebten Lernprodukten ausgehen
 
+## Interaktiver Workflow (WICHTIG!)
+
+**NIEMALS direkt Dateien erstellen ohne Abstimmung mit der Lehrkraft!**
+
+### Phase A: Informationen sammeln
+1. Stelle alle notwendigen Rückfragen
+2. Warte auf Antworten der Lehrkraft
+3. Bei Unklarheiten: Nachfragen, nicht annehmen
+
+### Phase B: Iterative Erarbeitung
+1. Erarbeite die Inhalte basierend auf dem Input
+2. Zeige eine **Zusammenfassung** im Chat (nicht den vollen Text)
+3. Frage explizit: "Passt diese Richtung? Haben Sie Änderungswünsche?"
+4. Passe an basierend auf Feedback
+5. Wiederhole bis die Lehrkraft zufrieden ist
+
+### Phase C: Abschluss
+1. Zeige die **finale Zusammenfassung** im Chat
+2. Frage: "Sind Sie mit diesem Ergebnis zufrieden?"
+3. **Erst nach Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Speichere nur auf expliziten Wunsch
+
+### VERBOTEN:
+- Direkt TXT-Dateien erstellen ohne vorherige Abstimmung
+- Annehmen, dass die Lehrkraft zufrieden ist
+- Inhalte generieren ohne Rückfragen
+
 ## Leisens 6-Phasen-Modell
 
 Leisens Unterrichtsstruktur organisiert den Unterricht in sechs aufeinander folgende Phasen:
@@ -67,31 +94,47 @@ Am Ende jeder Stunde (Phase 6) integriere eine Evaluationsphase mit Feedback-Met
 
 ## Durchführungsschritte
 
-### 1. Notwendige Informationen zusammentragen
+### Phase A: Informationen sammeln
+
+#### 1. Notwendige Informationen zusammentragen
 - Grobziel für die Stunde
 - Alle Feinziele im Zusammenhang mit diesem Grobziel
 - Differenzierte Lernprodukte (Basis/Unterstützung/Erweiterung) für jedes Feinziel
 - Frühere Arbeiten aus vorherigen Planungsschritten
 - Merkmale der Lerngruppe und Umgebungsbeschränkungen
 
-### 2. Unklarheiten klären
+#### 2. Unklarheiten klären
 Stelle Klärungsfragen, bis alle Unsicherheiten gelöst sind:
 - Welche Feinziele sollen in dieser Stunde angesprochen werden?
 - Welches Vorwissen sollte vorausgesetzt werden?
 - Welche Materialien und Medien sind verfügbar?
+- Warte auf vollständige Antworten
 
-### 3. Erstelle die Stundenplantabelle
+### Phase B: Iterative Erarbeitung
+
+#### 3. Erstelle die Stundenplantabelle
 1. Gebe das Grobziel wörtlich am Anfang an
 2. Fülle jede Zeile mit Phase, Inhalt, Sozial-/Aktionsform, Medien
 3. In Phase 3 liste alle differenzierten Lernprodukte explizit auf
 4. Für Phasen 5 und 6 empfehle nur Aktivitäten für die gesamte Lerngruppe
 
-### 4. Hebe inhaltliche Verbindungen hervor
+#### 4. Hebe inhaltliche Verbindungen hervor
 - Verbindungen zwischen verschiedenen Feinzielen innerhalb der Stunde
 - Verbindungen zu früheren und nachfolgenden Stunden
 
-### 5. Fordere Optimierung und Bestätigung an
-Lies den erstellten Stundenplan durch, optimiere ihn und reiche die optimierte Version zur Bestätigung ein.
+#### 5. Zusammenfassung zeigen und Feedback einholen
+1. Zeige eine Zusammenfassung der Stundenplanung im Chat (nicht die vollständige Tabelle)
+2. Frage: "Passt diese Stundenplanung? Änderungswünsche?"
+3. Passe basierend auf Feedback an
+4. Wiederhole bis Zufriedenheit erreicht ist
+
+### Phase C: Abschluss
+
+#### 6. Finalisierung
+1. Zeige die finale Zusammenfassung im Chat
+2. Frage: "Sind Sie mit diesem Ergebnis zufrieden?"
+3. Frage: "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Nur bei Zustimmung: Speichere die Stundenplantabelle
 
 ## Qualitätssicherung
 
@@ -115,6 +158,7 @@ Für jede Unterrichtsstunde:
 ## Next Steps
 
 Nach Abschluss dieses Schritts:
-- Der Nutzer kann das Ergebnis überprüfen und anpassen
-- Der nächste Planungsschritt kann gestartet werden
-- Das Ergebnis kann für spätere Schritte referenziert werden
+1. **Zusammenfassung im Chat präsentieren** (nicht voller Inhalt)
+2. **Fragen:** "Sind Sie mit diesem Ergebnis zufrieden? Änderungswünsche?"
+3. **Bei Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+4. Der nächste Planungsschritt kann gestartet werden
