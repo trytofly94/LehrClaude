@@ -4,56 +4,66 @@
 
 Diese Checkliste zeigt, welche Skills im Claude Desktop Projekt **"Klassenverwaltung für Förderschullehrkräfte"** aktiviert werden müssen.
 
-### Wie aktiviere ich Skills?
+---
 
-1. Öffne Claude Desktop
-2. Gehe zu **Settings > Capabilities > Skills**
-3. Scrolle zur Sektion "Custom Skills" (falls du eigene hochgeladen hast)
-4. Aktiviere die unten aufgeführten Skills durch Klick auf den Toggle
+## Wichtige Änderung: Neue Architektur
+
+**Alte Architektur (veraltet):** 4 Klassenverwaltungs-Skills + 3 Unterstützungs-Skills
+
+**Neue Architektur (aktuell):**
+- **Workflow-Anweisungen** in `anweisungen/` (Klassenverwaltungs-Workflow direkt in PROJECT_INSTRUCTIONS.md integriert)
+- **6 Custom Skills** nur für Material-Export (optional)
+
+**Warum diese Änderung?**
+- Skills sind teuer und langsam beim Laden
+- Direkte Anweisungen in PROJECT_INSTRUCTIONS.md sind schneller und flexibler
+- Skills nur noch für wiederverwendbare Material-Generierung
+- Klassenverwaltungs-Funktionen sind jetzt Anweisungen, keine Skills
 
 ---
 
 ## Benötigte Skills für dieses Projekt
 
-### ✅ Kern-Klassenverwaltungs-Skills (PFLICHT - alle 4 Skills)
+### ✅ Export-Skills (OPTIONAL)
 
-Diese Skills bilden das Klassenverwaltungs-System ab:
+Diese Skills ermöglichen den Export von Schülerprofilen und Klassenübersichten:
 
-- [ ] **klasse-01-schuelerprofil-erstellen** - Strukturierte Erfassung von Schülerprofilen
-- [ ] **klasse-02-schuelerprofil-validieren** - Automatische Qualitätskontrolle
-- [ ] **klasse-03-klasse-verwalten** - Übersicht über Schülerprofile und Gruppierungen
-- [ ] **klasse-04-differenzierungs-empfehlung** - Unterrichtsbezogene Differenzierungs-Empfehlungen
+- [ ] **export-markdown** - Schülerprofile als Markdown speichern
+- [ ] **export-pdf** - Klassenübersichten als PDF exportieren
+- [ ] **export-docx** - Differenzierungspläne als Word-Dokument
+- [ ] **export-pptx** - (nicht relevant für Klassenverwaltung)
 
-**Status:** [ ] Alle 4 Klassenverwaltungs-Skills aktiviert
+**Status:** [ ] Export-Skills aktiviert (optional)
 
 ---
 
-### ✅ Unterstützende Skills (OPTIONAL, aber empfohlen)
+## Workflow-Anweisungen (keine Skills!)
 
-Diese Skills erweitern die Funktionalität:
+Der Klassenverwaltungs-Workflow ist jetzt direkt in den Anweisungen integriert:
 
-- [ ] **05-lernziele-operationalisieren** - Für adaptive Lernziele pro Schülergruppe
-- [ ] **export-markdown** - Schülerprofile als Markdown speichern
-- [ ] **export-pdf** - Klassenübersichten als PDF exportieren
+**Verfügbar in `anweisungen/`:**
+- Schülerprofile erstellen - Strukturierte Erfassung von Schülerprofilen
+- Schülerprofile validieren - Automatische Qualitätskontrolle
+- Klassenübersichten generieren - Übersicht über Schülerprofile und Gruppierungen
+- Differenzierungs-Empfehlungen - Unterrichtsbezogene Differenzierungs-Empfehlungen
 
-**Status:** [ ] Unterstützende Skills aktiviert (optional)
+Diese werden automatisch durch PROJECT_INSTRUCTIONS.md orchestriert - keine manuelle Aktivierung nötig!
 
 ---
 
 ## Gesamt-Status
 
 **Minimalkonfiguration (funktionsfähig):**
-- [ ] Alle 4 Klassenverwaltungs-Skills (klasse-01 bis klasse-04)
-- [ ] MCP Filesystem Server konfiguriert
+- [ ] MCP Filesystem Server konfiguriert (PFLICHT!)
+- [ ] Keine Skills erforderlich (alles in Anweisungen)
 
 **Empfohlene Konfiguration:**
-- [ ] Alle 4 Klassenverwaltungs-Skills (klasse-01 bis klasse-04)
-- [ ] Mind. 1 Export-Skill (export-markdown)
 - [ ] MCP Filesystem Server konfiguriert
+- [ ] Mind. 1 Export-Skill (export-markdown)
 
 **Vollständige Konfiguration:**
-- [ ] Alle 7 Skills aktiviert (4 Klassenverwaltungs-Skills + 3 Unterstützende)
 - [ ] MCP Filesystem Server konfiguriert
+- [ ] Alle 3 Export-Skills aktiviert (markdown, pdf, docx)
 
 ---
 
@@ -65,15 +75,15 @@ Diese Skills erweitern die Funktionalität:
 
 **Erforderliche Ordner:**
 ```bash
-mkdir -p [INSTALLATIONSPFAD]/1_Exportierte_Ergebnisse/Klassenverwaltung/Schuelerprofile
-mkdir -p [INSTALLATIONSPFAD]/1_Exportierte_Ergebnisse/Klassenverwaltung/Klassenuebersichten
-mkdir -p [INSTALLATIONSPFAD]/1_Exportierte_Ergebnisse/Klassenverwaltung/Differenzierungsplaene
-mkdir -p [INSTALLATIONSPFAD]/2_Zentrale_Ressourcen/Templates
+# 4_Klassen_und_Schueler/ - Speicherort für Schülerprofile
+mkdir -p [INSTALLATIONSPFAD]/4_Klassen_und_Schueler/
+mkdir -p [INSTALLATIONSPFAD]/1_Exportierte_Ergebnisse/Klassenverwaltung/
 ```
 
 **Berechtigungen setzen:**
 ```bash
-chmod -R 755 [INSTALLATIONSPFAD]/1_Exportierte_Ergebnisse/Klassenverwaltung
+chmod -R 755 [INSTALLATIONSPFAD]/4_Klassen_und_Schueler/
+chmod -R 755 [INSTALLATIONSPFAD]/1_Exportierte_Ergebnisse/
 ```
 
 ### Datenschutz-Template
@@ -87,73 +97,60 @@ chmod -R 755 [INSTALLATIONSPFAD]/1_Exportierte_Ergebnisse/Klassenverwaltung
 
 ## Troubleshooting
 
-### Problem: Skill erscheint nicht in der Liste
+### Problem: Workflow-Schritt wird nicht ausgeführt
+
+**Das ist KEIN Skill-Problem!** Die Workflow-Schritte sind Anweisungen in PROJECT_INSTRUCTIONS.md.
 
 **Lösung:**
-1. Prüfe ob der Skill hochgeladen wurde (Settings > Skills > Custom Skills)
-2. Falls nicht: ZIP-Datei aus `claude-desktop-setup/skills/[SKILL-NAME]/` erstellen
-3. Upload via "Upload Custom Skill"
-4. Warte 5-10 Sekunden, dann neu laden
-
-### Problem: Skill ist aktiviert, wird aber nicht aufgerufen
-
-**Lösung:**
-1. Prüfe die `description` im YAML-Frontmatter der SKILL.md
-2. Die Description muss klare Trigger-Keywords enthalten (z.B. "Schülerprofil erstellen")
-3. Teste manuell im Chat: "Bitte nutze den Skill klasse-01-schuelerprofil-erstellen"
+1. Prüfe ob die entsprechende Anweisung in `anweisungen/` existiert
+2. Prüfe ob PROJECT_INSTRUCTIONS.md die Anweisung referenziert
+3. Bei Problemen: Frage Claude explizit nach dem nächsten Schritt
 
 ### Problem: MCP Filesystem Fehler
 
 **Lösung:**
 1. Prüfe ob der MCP Filesystem Server in `claude_desktop_config.json` konfiguriert ist
-2. Prüfe ob der Pfad zu `Schul-Materialien/` oder `[INSTALLATIONSPFAD]/` korrekt ist
-3. Teste MCP-Zugriff: "Zeige mir den Inhalt von 2_Zentrale_Ressourcen/Templates/"
+2. Prüfe ob der Pfad zu `4_Klassen_und_Schueler/` korrekt ist
+3. Teste MCP-Zugriff: "Zeige mir den Inhalt von 4_Klassen_und_Schueler/"
 
 ### Problem: Schülerprofil wird nicht gespeichert
 
 **Lösung:**
-1. Prüfe Schreibrechte: `chmod -R 755 [INSTALLATIONSPFAD]/1_Exportierte_Ergebnisse/`
-2. Prüfe ob der Ordner existiert: `ls [INSTALLATIONSPFAD]/1_Exportierte_Ergebnisse/Klassenverwaltung/Schuelerprofile/`
+1. Prüfe Schreibrechte: `chmod -R 755 [INSTALLATIONSPFAD]/4_Klassen_und_Schueler/`
+2. Prüfe ob der Ordner existiert: `ls [INSTALLATIONSPFAD]/4_Klassen_und_Schueler/`
 3. Teste manuelles Speichern: Erstelle eine Test-Datei im Ordner
 
----
+### Problem: Export-Skill funktioniert nicht
 
-## Reihenfolge der Skill-Erstellung (für IT-Admin)
-
-**Empfohlene Priorisierung:**
-
-1. **Phase 1:** klasse-01-schuelerprofil-erstellen (Basis-Funktionalität)
-2. **Phase 2:** klasse-02-schuelerprofil-validieren (Qualitätssicherung)
-3. **Phase 3:** klasse-03-klasse-verwalten (Übersichtsfunktion)
-4. **Phase 4:** klasse-04-differenzierungs-empfehlung (Erweiterte Funktion)
-5. **Phase 5:** Export-Skills (optional)
-
-**Zeitaufwand:** Ca. 30-45 Minuten für alle 4 Skills (mit skill-creator)
+**Lösung:**
+1. Prüfe MCP-Konfiguration (claude-desktop-setup/MCP_CONFIG.json)
+2. Stelle sicher, dass der Pfad zu `1_Exportierte_Ergebnisse/` korrekt ist
+3. Prüfe Schreibrechte: `chmod -R 755 /Pfad/zu/Schul-Materialien`
 
 ---
 
 ## Test-Checkliste
 
-Nach Installation alle Skills testen:
+Nach Installation alle Workflows testen:
 
 ### Test 1: Schülerprofil erstellen
 - [ ] Prompt: "Ich möchte ein neues Schülerprofil erstellen."
-- [ ] Erwartung: Skill fragt interaktiv alle Daten ab
-- [ ] Ergebnis: Datei wird in `Schuelerprofile/` gespeichert
+- [ ] Erwartung: Claude fragt interaktiv alle Daten ab
+- [ ] Ergebnis: Datei wird in `4_Klassen_und_Schueler/Klasse_X/Schuelerprofile/` gespeichert
 
 ### Test 2: Validierung
-- [ ] Prompt: "Validiere das Schülerprofil Schüler_A."
-- [ ] Erwartung: Skill prüft Vollständigkeit und Konsistenz
+- [ ] Prompt: "Validiere das Schülerprofil Vorname_Nachname."
+- [ ] Erwartung: Claude prüft Vollständigkeit und Konsistenz
 - [ ] Ergebnis: Feedback mit Hinweisen oder Bestätigung
 
 ### Test 3: Klassenübersicht
 - [ ] Prompt: "Zeige mir eine Übersicht meiner Klasse 7a."
-- [ ] Erwartung: Skill liest alle Profile und generiert Übersicht
+- [ ] Erwartung: Claude liest alle Profile und generiert Übersicht
 - [ ] Ergebnis: Strukturierte Übersicht nach Förderbedarf/Differenzierungsstufe
 
 ### Test 4: Differenzierungs-Empfehlung
 - [ ] Prompt: "Erstelle Differenzierungs-Empfehlungen für Klasse 7a zum Thema Photosynthese."
-- [ ] Erwartung: Skill analysiert Profile und generiert Empfehlungen
+- [ ] Erwartung: Claude analysiert Profile und generiert Empfehlungen
 - [ ] Ergebnis: Differenzierungsplan mit 3 Stufen (Unterstützung/Basis/Erweiterung)
 
 ---
@@ -171,4 +168,6 @@ Nach Installation alle Skills testen:
 
 ---
 
-**Zuletzt aktualisiert:** 2025-01-10
+**Version:** 2.0
+**Zuletzt aktualisiert:** 2025-11-30
+**Änderungen:** Umstellung auf Workflow-Anweisungen, nur noch 3 Export-Skills (optional)

@@ -1,22 +1,33 @@
 # Skills Checklist: Projekt "Präsentation entwerfen"
 
+## Anleitung für IT-Admin
+
+Diese Checkliste zeigt, welche Skills im Claude Desktop Projekt **"Präsentation entwerfen"** aktiviert werden müssen.
+
+---
+
+## Wichtige Änderung: Neue Architektur
+
+**Alte Architektur (veraltet):** 2 Material-Skills + 2 Unterstützungs-Skills + 2 Export-Skills
+
+**Neue Architektur (aktuell):**
+- **Workflow-Anweisungen** in `anweisungen/` (Präsentations-Workflow direkt in PROJECT_INSTRUCTIONS.md integriert)
+- **6 Custom Skills** nur für Material-Erstellung und Export
+
+**Warum diese Änderung?**
+- Skills sind teuer und langsam beim Laden
+- Direkte Anweisungen in PROJECT_INSTRUCTIONS.md sind schneller und flexibler
+- Skills nur noch für wiederverwendbare Material-Generierung
+
+---
+
 ## Benötigte Skills für dieses Projekt
 
 ### ✅ Material-Skills (PFLICHT - Kern-Funktionalität)
 
-- [ ] **mat-01-texterstellung** - Texte für Sprechernotizen
 - [ ] **mat-03-powerpoint-erstellen** - Komplette Präsentation
 
-**Status:** [ ] Material-Skills aktiviert
-
----
-
-### ✅ Unterstützende Skills (EMPFOHLEN)
-
-- [ ] **05-lernziele-operationalisieren** - SMART-Lernziele formulieren
-- [ ] **06-mindmap-strukturierung** - Themenstruktur visualisieren
-
-**Status:** [ ] Unterstützende Skills aktiviert
+**Status:** [ ] Material-Skill aktiviert
 
 ---
 
@@ -24,8 +35,24 @@
 
 - [ ] **export-markdown** - Markdown-Export (EMPFOHLEN für manuelle Übernahme)
 - [ ] **export-pptx** - PPTX-Export (erfordert marp CLI)
+- [ ] **export-pdf** - PDF-Export (Handout)
+- [ ] **export-docx** - DOCX-Export (Sprechernotizen)
 
 **Status:** [ ] Export-Skills aktiviert
+
+---
+
+## Workflow-Anweisungen (keine Skills!)
+
+Der Präsentations-Workflow ist jetzt direkt in den Anweisungen integriert:
+
+**Verfügbar in `anweisungen/`:**
+- Lernziele formulieren
+- Themenstruktur visualisieren (Mindmap)
+- Folienstruktur planen
+- Sprechernotizen erstellen
+
+Diese werden automatisch durch PROJECT_INSTRUCTIONS.md orchestriert - keine manuelle Aktivierung nötig!
 
 ---
 
@@ -36,12 +63,11 @@
 - [ ] export-markdown
 
 **Empfohlene Konfiguration:**
-- [ ] Alle 2 Material-Skills
-- [ ] Beide Export-Skills
-- [ ] 05-lernziele-operationalisieren
+- [ ] mat-03-powerpoint-erstellen
+- [ ] export-markdown, export-pptx
 
 **Vollständige Konfiguration:**
-- [ ] Alle 6 Skills aktiviert
+- [ ] Alle 5 Skills aktiviert (mat-03 + 4 Export-Skills)
 
 ---
 
@@ -50,8 +76,36 @@
 1. **Zuerst:** mat-03-powerpoint-erstellen (Kernfunktion)
 2. **Dann:** export-markdown (Ergebnis speichern)
 3. **Optional:** export-pptx (nur wenn marp CLI verfügbar)
-4. **Unterstützend:** 05-lernziele, 06-mindmap
+4. **Optional:** export-pdf, export-docx
 
 ---
 
-**Zuletzt aktualisiert:** 2025-01-08
+## Troubleshooting
+
+### Problem: Workflow-Schritt wird nicht ausgeführt
+
+**Das ist KEIN Skill-Problem!** Die Workflow-Schritte sind Anweisungen in PROJECT_INSTRUCTIONS.md.
+
+**Lösung:**
+1. Prüfe ob die entsprechende Anweisung in `anweisungen/` existiert
+2. Prüfe ob PROJECT_INSTRUCTIONS.md die Anweisung referenziert
+3. Bei Problemen: Frage Claude explizit nach dem nächsten Schritt
+
+### Problem: Export-Skill funktioniert nicht
+
+**Lösung:**
+1. Prüfe MCP-Konfiguration (claude-desktop-setup/MCP_CONFIG.json)
+2. Stelle sicher, dass der Pfad zu `1_Exportierte_Ergebnisse/` korrekt ist
+3. Prüfe Schreibrechte: `chmod -R 755 /Pfad/zu/Schul-Materialien`
+
+### Problem: export-pptx funktioniert nicht
+
+**Lösung:**
+1. Stelle sicher, dass marp CLI installiert ist: `npm install -g @marp-team/marp-cli`
+2. Alternativ: Nutze export-markdown und konvertiere manuell
+
+---
+
+**Version:** 2.0
+**Zuletzt aktualisiert:** 2025-11-30
+**Änderungen:** Umstellung auf Workflow-Anweisungen, nur noch 5 Skills (1 Material + 4 Export)

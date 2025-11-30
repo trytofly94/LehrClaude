@@ -13,35 +13,27 @@ Diese Checkliste zeigt, welche Skills im Claude Desktop Projekt **"Unterrichtsre
 
 ---
 
-## Benötigte Skills für dieses Projekt
+## Wichtige Änderung: Neue Architektur
 
-### ✅ Kern-Planungs-Skills (PFLICHT - alle 11 Skills)
+**Alte Architektur (veraltet):** 11 Planungs-Skills + 3 Material-Skills + 3 Export-Skills
 
-Diese Skills bilden den 11-Schritte-Prozess ab:
+**Neue Architektur (aktuell):**
+- **Workflow-Anweisungen** in `anweisungen/` (11 Schritte direkt in PROJECT_INSTRUCTIONS.md integriert)
+- **6 Custom Skills** nur für Material-Erstellung und Export
 
-- [ ] **01-debiasing** - Bias-Vermeidung
-- [ ] **02-sachanalyse** - Fachliche Analyse
-- [ ] **03-didaktische-analyse** - Didaktische Reduktion
-- [ ] **04-fachbegriffe-klaeren** - Terminologie aufbereiten
-- [ ] **05-lernziele-operationalisieren** - SMART-Lernziele formulieren
-- [ ] **06-mindmap-strukturierung** - Wissensstruktur visualisieren
-- [ ] **07-unterrichtsverlauf-planen** - Stundenplanung
-- [ ] **08-lernkontrollen-entwickeln** - Assessment-Design
-- [ ] **09-material-zusammenstellen** - Ressourcen organisieren
-- [ ] **10-reflexion-durchfuehren** - Evaluation
-- [ ] **11-iteration-optimierung** - Verbesserung
-
-**Status:** [ ] Alle 11 Planungs-Skills aktiviert
+**Warum diese Änderung?**
+- Skills sind teuer und langsam beim Laden
+- Direkte Anweisungen in PROJECT_INSTRUCTIONS.md sind schneller und flexibler
+- Skills nur noch für wiederverwendbare Material-Generierung
 
 ---
 
-### ✅ Material-Skills (OPTIONAL, aber empfohlen)
+## Benötigte Skills für dieses Projekt
 
-Diese Skills erweitern die Funktionalität für konkrete Materialerstellung:
+### ✅ Material-Skills (EMPFOHLEN für Material-Erstellung)
 
-- [ ] **mat-06-pruefungsaufgaben** - Klausuren erstellen
-- [ ] **mat-07-feedbackboegen** - Evaluationsinstrumente
-- [ ] **mat-08-lernzielkontrolle** - Formative Assessments
+- [ ] **mat-02-arbeitsblatt-erstellen** - Arbeitsblätter erstellen
+- [ ] **mat-03-powerpoint-erstellen** - PowerPoint-Präsentationen erstellen
 
 **Status:** [ ] Material-Skills aktiviert (optional)
 
@@ -54,65 +46,88 @@ Diese Skills ermöglichen den Export der fertigen Unterrichtsreihe:
 - [ ] **export-markdown** - Markdown-Export
 - [ ] **export-pdf** - PDF-Export
 - [ ] **export-docx** - Word-Export
+- [ ] **export-pptx** - PPTX-Export
 
 **Status:** [ ] Export-Skills aktiviert
+
+---
+
+## Workflow-Anweisungen (keine Skills!)
+
+Der 11-Schritte-Prozess ist jetzt direkt in den Anweisungen integriert:
+
+**Verfügbar in `anweisungen/`:**
+1. 01-debiasing.md - Bias-Vermeidung
+2. 02-sachanalyse.md - Fachliche Analyse
+3. 03-didaktische-analyse.md - Didaktische Reduktion
+4. 04-fachbegriffe-klaeren.md - Terminologie aufbereiten
+5. 05-lernziele-operationalisieren.md - SMART-Lernziele formulieren
+6. 06-mindmap-strukturierung.md - Wissensstruktur visualisieren
+7. 07-unterrichtsverlauf-planen.md - Stundenplanung
+8. 08-lernkontrollen-entwickeln.md - Assessment-Design
+9. 09-material-zusammenstellen.md - Ressourcen organisieren
+10. 10-reflexion-durchfuehren.md - Evaluation
+11. 11-iteration-optimierung.md - Verbesserung
+
+Diese werden automatisch durch PROJECT_INSTRUCTIONS.md orchestriert - keine manuelle Aktivierung nötig!
 
 ---
 
 ## Gesamt-Status
 
 **Minimalkonfiguration (funktionsfähig):**
-- [ ] Alle 11 Planungs-Skills (01-11)
 - [ ] Mind. 1 Export-Skill (export-markdown)
 
 **Empfohlene Konfiguration:**
-- [ ] Alle 11 Planungs-Skills (01-11)
-- [ ] Alle 3 Export-Skills
-- [ ] Mind. 1 Material-Skill
+- [ ] Alle 4 Export-Skills
+- [ ] Beide Material-Skills (für Material-Erstellung während der Planung)
 
 **Vollständige Konfiguration:**
-- [ ] Alle 17 Skills aktiviert
+- [ ] Alle 6 Skills aktiviert
 
 ---
 
 ## Troubleshooting
 
+### Problem: Workflow-Schritt wird nicht ausgeführt
+
+**Das ist KEIN Skill-Problem!** Die Workflow-Schritte sind Anweisungen in PROJECT_INSTRUCTIONS.md.
+
+**Lösung:**
+1. Prüfe ob die entsprechende Anweisung in `anweisungen/` existiert
+2. Prüfe ob PROJECT_INSTRUCTIONS.md die Anweisung referenziert
+3. Bei Problemen: Frage Claude explizit nach dem nächsten Schritt
+
 ### Problem: Skill erscheint nicht in der Liste
 
 **Lösung:**
 1. Prüfe ob der Skill hochgeladen wurde (Settings > Skills > Custom Skills)
-2. Falls nicht: ZIP-Datei aus `claude-desktop-setup/skills-platzhalter/[SKILL-NAME]/` erstellen
+2. Falls nicht: ZIP-Datei aus `skill-packages/` hochladen
 3. Upload via "Upload Custom Skill"
 4. Warte 5-10 Sekunden, dann neu laden
 
-### Problem: Skill ist aktiviert, wird aber nicht aufgerufen
+### Problem: Export-Skill funktioniert nicht
 
 **Lösung:**
-1. Prüfe die `description` im YAML-Frontmatter der SKILL.md
-2. Die Description muss klare Trigger-Keywords enthalten
-3. Teste manuell im Chat: "Bitte nutze den Skill [NAME]"
-
-### Problem: MCP Filesystem Fehler
-
-**Lösung:**
-1. Das ist KEIN Skill-Problem, sondern MCP-Konfiguration
-2. Siehe `claude-desktop-setup/MCP_CONFIG.json`
-3. Prüfe ob der Pfad zu `Schul-Materialien/` korrekt ist
+1. Prüfe MCP-Konfiguration (claude-desktop-setup/MCP_CONFIG.json)
+2. Stelle sicher, dass der Pfad zu `1_Exportierte_Ergebnisse/` korrekt ist
+3. Prüfe Schreibrechte: `chmod -R 755 /Pfad/zu/Schul-Materialien`
 
 ---
 
-## Reihenfolge der Skill-Erstellung (für IT-Admin)
+## Reihenfolge der Skill-Aktivierung (für IT-Admin)
 
 **Empfohlene Priorisierung:**
 
-1. **Phase 1:** Skills 01-05 (Basis-Planung)
-2. **Phase 2:** export-markdown (für erste Tests)
-3. **Phase 3:** Skills 06-11 (erweiterte Planung)
-4. **Phase 4:** export-pdf, export-docx
-5. **Phase 5:** Material-Skills (optional)
+1. **Phase 1:** export-markdown (für erste Tests)
+2. **Phase 2:** export-pdf, export-docx (für professionelle Outputs)
+3. **Phase 3:** mat-02, mat-03 (für Material-Erstellung)
+4. **Phase 4:** export-pptx (optional)
 
-**Zeitaufwand:** Ca. 30-60 Minuten für alle Skills (mit skill-creator)
+**Zeitaufwand:** Ca. 10 Minuten für alle 6 Skills
 
 ---
 
-**Zuletzt aktualisiert:** 2025-01-08
+**Version:** 2.0
+**Zuletzt aktualisiert:** 2025-11-30
+**Änderungen:** Umstellung auf Workflow-Anweisungen, nur noch 6 Skills
