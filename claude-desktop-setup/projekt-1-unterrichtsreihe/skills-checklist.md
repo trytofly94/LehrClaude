@@ -30,12 +30,14 @@ Diese Checkliste zeigt, welche Skills im Claude Desktop Projekt **"Unterrichtsre
 
 ## Benötigte Skills für dieses Projekt
 
-### ✅ Material-Skills (EMPFOHLEN für Material-Erstellung)
+### ✅ Material-Skills (WICHTIG - für Material-Erstellung im Kontext)
 
-- [ ] **mat-02-arbeitsblatt-erstellen** - Arbeitsblätter erstellen
-- [ ] **mat-03-powerpoint-erstellen** - PowerPoint-Präsentationen erstellen
+Diese Skills ermöglichen die Erstellung von Arbeitsblättern und Präsentationen **direkt im Kontext der Unterrichtsreihe** (Schritt 9) - ohne Projektwechsel!
 
-**Status:** [ ] Material-Skills aktiviert (optional)
+- [ ] **mat-02-arbeitsblatt-erstellen** - Arbeitsblätter mit Lernzielen & Differenzierung aus der Planung
+- [ ] **mat-03-powerpoint-erstellen** - Präsentationen passend zur Stundenplanung
+
+**Status:** [ ] Material-Skills aktiviert (EMPFOHLEN)
 
 ---
 
