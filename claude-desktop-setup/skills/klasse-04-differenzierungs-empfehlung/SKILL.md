@@ -1,5 +1,5 @@
 ---
-name: Differenzierungs-Empfehlung erstellen
+name: differenzierungs-empfehlung-erstellen
 description: Generiert unterrichtsbezogene Differenzierungs-Empfehlungen basierend auf Schülerprofilen. Erstellt nach Wember drei Stufen (Unterstützung/Basis/Erweiterung) mit konkreten Lernzielen, Methoden, Materialien und Sozialformen für ein Unterrichtsthema. Trigger bei "Differenzierung planen", "Differenzierungs-Empfehlung", "Unterricht differenzieren".
 ---
 

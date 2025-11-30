@@ -1,5 +1,5 @@
 ---
-name: "Unterrichtsverlauf planen (nach Leisen)"
+name: unterrichtsverlauf-planen-nach-leisen
 description: "Dieses Skill wird verwendet, wenn detaillierte Unterrichtssequenzen basierend auf Lernprodukten geplant werden. Es leitet die Erstellung strukturierter Stundenpläne nach Leisens 6-Phasen-Modell mit Differenzierung nach Wember an. Das Skill erzeugt umfassende Stundenpläne in Tabellenform und integriert Rückwärtsplanung von Lernprodukten, vielfältige Unterrichtsmethoden und kontinuierliche Evaluationen. Auslöser: Wenn einzelne Unterrichtsstunden innerhalb einer Unterrichtsreihe konzipiert werden, Lernprodukte den Phasen zugeordnet werden oder detaillierte Stundenplanungen erstellt werden."
 ---
 

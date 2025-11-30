@@ -1,5 +1,5 @@
 ---
-name: "Arbeitsblatt erstellen und formatieren"
+name: arbeitsblatt-erstellen-und-formatieren
 description: "Dieser Skill sollte verwendet werden, wenn Arbeitsblätter erstellt und professionell formatiert werden müssen für Schüler und Lehrkräfte. Er transformiert Lerninhalte in strukturierte, differenzierte Arbeitsblätter mit Aufgaben auf verschiedenen Kompetenzstufen (Basis, Unterstützung, Erweiterung), inklusive Lernhilfen und Lehrerlösungen. Dieser Skill wird ausgelöst, wenn professionelle, pädagogisch fundierte Arbeitsblätter aus Unterrichtsmaterial erstellt werden sollen."
 ---
 

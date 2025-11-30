@@ -1,5 +1,5 @@
 ---
-name: Markdown Export
+name: markdown-export
 description: Dieser Skill sollte verwendet werden, wenn fertiggestellte Unterrichtsplanungen, Arbeitsblätter und andere Unterrichtsmaterialien in saubere, gut formatierte Markdown-Dateien exportiert werden sollen. Er stellt saubere Metadaten-Header, konsistente Formatierung und organisierte Struktur für alle Arten von Unterrichtsmaterialien sicher (Unterrichtsreihen, Arbeitsblätter, Präsentationen). Der Skill integriert sich mit MCP, um exportierte Dateien in das Verzeichnis 1_Exportierte_Ergebnisse/ mit standardisierten Benennungskonventionen zu schreiben.
 ---
 

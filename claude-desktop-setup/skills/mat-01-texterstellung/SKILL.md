@@ -1,5 +1,5 @@
 ---
-name: Texterstellung für Unterricht
+name: texterstellung-fuer-unterricht
 description: TODO - Mit skill-creator ausfüllen
 ---
 

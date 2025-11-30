@@ -1,5 +1,5 @@
 ---
-name: Lernkontrollen und Lernprodukte entwickeln
+name: lernkontrollen-und-lernprodukte-entwickeln
 description: Entwickelt differenzierte Lernprodukte und Aufgabenstellungen für Schülerinnen und Schüler nach dem Wember-Differenzierungsmodell (Basis-, Unterstützungs-, Erweiterungsstufe). Formuliert präzise, operationalisierte Aufgabenstellungen mit passenden Methoden und Sozialformen. Dieser Skill wird als Schritt 8 im 11-Schritte-Planungsprozess verwendet.
 ---
 

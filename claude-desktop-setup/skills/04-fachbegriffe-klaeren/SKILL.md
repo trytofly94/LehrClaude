@@ -1,5 +1,5 @@
 ---
-name: "Fachbegriffe klären und didaktisch reduzieren"
+name: fachbegriffe-klaeren-und-didaktisch-reduzieren
 description: "Dieser Skill wendet didaktische Reduktion an, um Fachbegriffe zu klären und die Inhaltskomplexität für Zielgruppen zu reduzieren. Er wird in Schritt 4 des 11-Schritte-Planungsprozesses verwendet, nach der didaktischen Analyse, um komplexe Fachinhalte durch systematische Stoff- und Inhaltsreduktion in altersgerechte, handhabbare Lerninhalte umzuwandeln."
 ---
 

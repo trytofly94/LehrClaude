@@ -1,5 +1,5 @@
 ---
-name: Feedbackbögen erstellen
+name: feedbackboegen-erstellen
 description: Erstellt kriterienbasierte Feedbackbögen für formative Assessments, Peer-Feedback und Selbsteinschätzung, aligned mit Lernzielen und Kompetenzen
 triggers:
   - Feedbackbogen

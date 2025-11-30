@@ -1,5 +1,5 @@
 ---
-name: Schülerprofil erstellen
+name: schuelerprofil-erstellen
 description: Erstellt strukturierte, differenzierte Schülerprofile für Förderschullehrkräfte. Interaktive Erfassung von Lernstand, Förderschwerpunkt, Differenzierungsstufe und Unterstützungsbedarfen mit Datenschutz-First-Ansatz (Pseudonymisierung). Trigger bei Anfragen wie "Schülerprofil erstellen", "neues Schülerprofil", "Schüler anlegen".
 ---
 

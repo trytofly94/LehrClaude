@@ -1,5 +1,5 @@
 ---
-name: Lernziele operationalisieren (SMART + Bloom)
+name: lernziele-operationalisieren-smart-bloom
 description: Formuliert präzise, operationalisierte Lernziele nach SMART-Kriterien und Bloom-Taxonomie. Erstellt Grob- und Feinziele mit klarer Qualitäts- und Handlungsebene unter Verwendung von KMK-Operatoren. Berücksichtigt kognitive, affektive und psychomotorische Lernzieldomänen. Dieser Skill ist Schritt 5 im 11-Schritte-Planungsprozess für Unterrichtsreihen. Auslöser: Wenn operationalisierte, messbare und überprüfbare Lernziele für die Unterrichtsplanung benötigt werden.
 ---
 

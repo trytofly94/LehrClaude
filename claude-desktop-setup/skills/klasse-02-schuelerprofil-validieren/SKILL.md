@@ -1,5 +1,5 @@
 ---
-name: Schülerprofil validieren
+name: schuelerprofil-validieren
 description: Validiert Schülerprofile auf Vollständigkeit, Konsistenz und Plausibilität. Prüft Pflichtfelder, Zusammenhänge zwischen Förderschwerpunkt und Unterstützungsbedarfen sowie Differenzierungsstufe und Lernstand. Trigger bei "Profil validieren", "Schülerprofil prüfen", automatisch nach Profil-Erstellung.
 ---
 

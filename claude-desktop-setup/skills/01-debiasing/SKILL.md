@@ -1,5 +1,5 @@
 ---
-name: Debiasing für Unterrichtsplanung
+name: debiasing-fuer-unterrichtsplanung
 description: Setzt ethische und moralische Rahmenbedingungen für die Unterrichtsplanung, um Diskriminierung, Ausgrenzung und Rassismus vorzubeugen. Dieser Skill sollte zu Beginn jeder Unterrichtsplanungs-Session verwendet werden.
 ---
 

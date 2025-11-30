@@ -1,5 +1,5 @@
 ---
-name: Mindmap-Strukturierung für Unterrichtsreihe
+name: mindmap-strukturierung-fuer-unterrichtsreihe
 description: Dieses Skill sollte verwendet werden, wenn visuelle hierarchische Übersichten einer vollständigen Unterrichtsreihe erstellt werden. Es generiert zwei komplementäre Mindmaps im Markdown-Format – eine umfassende, lehrkraftfokussierte Übersicht mit allen inhaltlichen Strukturen, didaktischen Analysen, Reduktionen und differenzierten Aufgaben sowie eine schülerfreundliche Version, die Lernziele und Schlüsselkonzepte mit Schwerpunkt auf Relevanz hervorhebt. Das Skill integriert vorherige Planungsergebnisse aus Schritten 2–5 in visuelle Mindmap-Strukturen, die mit Standard-Mindmap-Viewern kompatibel sind.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: Iteration und Optimierung der Unterrichtsreihe
+name: iteration-und-optimierung-der-unterrichtsreihe
 description: Aktiviert iterative Verbesserungen und Optimierungen der Unterrichtsreihe basierend auf Lehrkraft-Feedback mittels APOM (Automatisiertes Prompt-Optimierungs-Muster). Ermöglicht kontinuierliche Verfeinerungs-Schleifen für alle vorherigen Planungsschritte, Qualitätssicherung und Validierung. Dieser Skill wird als finaler Schritt 11 im Planungsprozess verwendet.
 ---
 

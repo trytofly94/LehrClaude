@@ -1,5 +1,5 @@
 ---
-name: Didaktische Analyse nach Klafki
+name: didaktische-analyse-nach-klafki
 description: Dieses Skill führt eine umfassende didaktische Analyse gemäß Wolfgang Klafkis bildungstheoretischer Didaktik durch. Es ist der dritte Schritt im 11-Schritte-Prozess der Unterrichtsreihenplanung. Das Skill analysiert jedes Kernthema aus der Perspektive der Schüler und Schülerinnen, um die pädagogische Legitimation durch die Überprüfung von Aktualität (zeitnahe Beispiele), Lebensweltbezug und Exemplarität zu etablieren. Löse dieses Skill aus, nachdem die Sachanalyse (Schritt 02) abgeschlossen ist, wenn die pädagogische Begründung von Unterrichtsthemen benötigt wird.
 ---
 

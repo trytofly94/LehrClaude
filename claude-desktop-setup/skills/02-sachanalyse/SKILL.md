@@ -1,5 +1,5 @@
 ---
-name: Sachanalyse für Unterrichtsplanung
+name: sachanalyse-fuer-unterrichtsplanung
 description: Führt die fachliche Sachanalyse als Grundlage der Unterrichtsplanung durch. Analysiert Kerninhalte, fachliche Zusammenhänge und Besonderheiten eines Unterrichtsthemas unter Berücksichtigung von Lehrplänen und wissenschaftlichen Quellen. Dieser Skill wird als Schritt 2 im Planungsprozess verwendet.
 ---
 

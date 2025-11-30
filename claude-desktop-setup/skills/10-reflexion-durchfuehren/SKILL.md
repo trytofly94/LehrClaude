@@ -1,5 +1,5 @@
 ---
-name: Reflexion der Unterrichtsplanung durchführen
+name: reflexion-der-unterrichtsplanung-durchfuehren
 description: Führt eine kritische Reflexion über die gesamte Unterrichtsplanung durch. Evaluiert alle bisherigen Planungsschritte, identifiziert Stärken und Verbesserungspotenziale, und generiert eine strukturierte MindMap als Übersichtdarstellung. Dieser Skill wird als Schritt 10 im Planungsprozess verwendet, um die Qualität und Kohärenz der Planung zu sichern.
 ---
 

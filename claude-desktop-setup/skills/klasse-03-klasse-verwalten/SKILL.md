@@ -1,5 +1,5 @@
 ---
-name: Klasse verwalten
+name: klasse-verwalten
 description: Erstellt Übersichten über alle Schülerprofile einer Klasse. Gruppiert Schüler*innen nach Förderschwerpunkt, Differenzierungsstufe oder Unterstützungsbedarfen. Exportiert Klassenübersichten für Unterrichtsplanung. Trigger bei "Klassenübersicht", "Klasse anzeigen", "Gruppierung erstellen".
 ---
 

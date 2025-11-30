@@ -1,5 +1,5 @@
 ---
-name: "Material zusammenstellen und organisieren"
+name: material-zusammenstellen-und-organisieren
 description: "Dieser Skill unterstützt Schritt 9 des 11-Schritte-Prozesses zur Unterrichtsplanung. Er identifiziert fehlende Unterrichtsmaterialien, erstellt diese systematisch und organisiert sie für die praktische Nutzung im Unterricht. Der Skill deckt drei Materialphasen ab: Erstellung fehlender Aufgabenmaterialien, Entwicklung differenzierter Hilfsmaterialien (gestufte Lernhilfen) und Erstellung von Materialien für alle Unterrichtsphasen."
 ---
 

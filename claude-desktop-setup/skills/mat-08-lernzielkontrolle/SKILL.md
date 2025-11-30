@@ -1,5 +1,5 @@
 ---
-name: Lernzielkontrollen entwickeln
+name: lernzielkontrollen-entwickeln
 description: Erstellt formative und summative Assessments, die die Erreichung operationalisierter Lernziele überprüfen
 triggers:
   - "Ich möchte Lernzielkontrollen entwickeln"

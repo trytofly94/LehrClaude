@@ -1,5 +1,5 @@
 ---
-name: Musterlösungen erstellen
+name: musterloesungen-erstellen
 description: Dieser Skill erstellt umfassende Musterlösungen und Bewertungskriterien für alle Schüleraufgaben über alle Differenzierungsebenen hinweg. Er sollte verwendet werden, nachdem Aufgaben generiert wurden, um Musterlösungen, Lösungswege und Bewertungsrichtlinien organisiert nach Thema und Schwierigkeitsgrad bereitzustellen.
 ---
 

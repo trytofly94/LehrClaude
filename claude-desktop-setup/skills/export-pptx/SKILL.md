@@ -1,5 +1,5 @@
 ---
-name: PPTX Export (PowerPoint)
+name: pptx-export-powerpoint
 description: Konvertiert Präsentationsinhalte in professionelles PowerPoint-Format mit Sprechernotizen, korrekter Folienstruktur und visuellen Platzhaltern. Transformiert Markdown-formatierte Präsentationen in PPTX-Dateien über MCP-Dateisystem-Integration. Wird bei Export-Anfragen ausgelöst und integriert sich mit mat-03-powerpoint-erstellen Skill-Ausgaben.
 ---
 

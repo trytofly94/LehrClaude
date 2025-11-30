@@ -1,5 +1,5 @@
 ---
-name: Prüfungsaufgaben entwickeln
+name: pruefungsaufgaben-entwickeln
 description: Erstellt differenzierte Prüfungsaufgaben mit Bewertungsschemata und Erwartungshorizonten, die an Lernziele gekoppelt sind. Nutzt KMK-Operatoren und berücksichtigt alle drei Anforderungsbereiche (I-III) sowie Bloom's Taxonomie für kognitiv strukturierte Assessments.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: Aufgaben generieren und differenzieren
+name: aufgaben-generieren-und-differenzieren
 description: Dieses Skill generiert differenzierte Aufgabenstellungen für Schüler*innen basierend auf Lernzielen. Es erstellt Aufgaben auf drei Niveaustufen (Basis, Unterstützung, Erweiterung), wendet KMK-Operatoren korrekt an, spezifiziert Sozialformen und Gruppengrößen sowie wählt passende Methoden aus dem Methodenpool. Das Skill sollte verwendet werden, wenn Aufgabenstellungen für Arbeitsblätter, Lernmodule oder Unterrichtsreihen erstellt werden müssen.
 ---
 
