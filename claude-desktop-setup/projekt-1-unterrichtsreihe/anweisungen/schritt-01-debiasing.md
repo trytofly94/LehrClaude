@@ -38,6 +38,27 @@ Dieser Schritt sollte automatisch durchgeführt werden:
 - Annehmen, dass die Lehrkraft zufrieden ist
 - Inhalte generieren ohne Rückfragen
 
+## Wissenschaftliche Quellenarbeit
+
+### Recherche-Workflow:
+1. **Umfang evaluieren:** Wie viele Quellen werden für diesen Schritt benötigt?
+2. **Hochgeladene Dokumente prüfen:** "Haben Sie relevante Dokumente hochgeladen?"
+3. **MCP-Ressourcen nutzen:** Lehrpläne und Didaktik-Frameworks abrufen
+4. **Web-Suche (bei Bedarf):** Für einzelne Fakten und spezifische Quellen
+5. **Deep Research (bei umfangreicher Recherche):**
+   - Recherche-Prompt formulieren
+   - Lehrkraft bitten, Deep Research zu aktivieren
+   - Auf Ergebnisse warten
+
+### Quellenvalidierung (PFLICHT!):
+- **Jede Quelle vor dem Zitieren abrufen** (Web-Suche)
+- Existenz und Korrektheit der Angaben prüfen
+- NIEMALS nicht-verifizierte Quellen zitieren
+
+### Zitationsformat:
+- **Inline im Text:** (Autor, Jahr) oder (Autor, Jahr, S. X)
+- **Quellenverzeichnis am Ende:** Alphabetisch sortiert
+
 ## Anwendung
 
 ### Ethische Leitprinzipien
@@ -106,6 +127,10 @@ Bei jeder Interaktion oder Generierung von Unterrichtsinhalten befolgen:
 ## Output
 
 Dieser Schritt generiert keinen direkten Output, sondern setzt einen ethischen Rahmen für die gesamte Session. Die Prinzipien werden in allen nachfolgenden Schritten und generierten Inhalten berücksichtigt.
+
+QUELLENVERZEICHNIS
+==================
+[Alphabetisch sortierte Liste aller zitierten Quellen]
 
 ## Next Steps
 

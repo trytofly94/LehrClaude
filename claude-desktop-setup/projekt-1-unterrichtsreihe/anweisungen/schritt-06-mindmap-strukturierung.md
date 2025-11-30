@@ -44,6 +44,27 @@ Führe diesen Schritt in **Schritt 6 des 11-Schritte-Planungsprozesses** durch, 
 - Annehmen, dass die Lehrkraft zufrieden ist
 - Inhalte generieren ohne Rückfragen
 
+## Wissenschaftliche Quellenarbeit
+
+### Recherche-Workflow:
+1. **Umfang evaluieren:** Wie viele Quellen werden für diesen Schritt benötigt?
+2. **Hochgeladene Dokumente prüfen:** "Haben Sie relevante Dokumente hochgeladen?"
+3. **MCP-Ressourcen nutzen:** Lehrpläne und Didaktik-Frameworks abrufen
+4. **Web-Suche (bei Bedarf):** Für einzelne Fakten und spezifische Quellen
+5. **Deep Research (bei umfangreicher Recherche):**
+   - Recherche-Prompt formulieren
+   - Lehrkraft bitten, Deep Research zu aktivieren
+   - Auf Ergebnisse warten
+
+### Quellenvalidierung (PFLICHT!):
+- **Jede Quelle vor dem Zitieren abrufen** (Web-Suche)
+- Existenz und Korrektheit der Angaben prüfen
+- NIEMALS nicht-verifizierte Quellen zitieren
+
+### Zitationsformat:
+- **Inline im Text:** (Autor, Jahr) oder (Autor, Jahr, S. X)
+- **Quellenverzeichnis am Ende:** Alphabetisch sortiert
+
 ## Workflow: Zwei-Mindmap-Ansatz
 
 ### Phase A: Informationen sammeln
@@ -116,6 +137,14 @@ Verwende standardisierte Markdown-Hierarchie für Mindmap-Kompatibilität:
 Exportiere beide Mindmaps als separate `.md`-Dateien:
 - `Mindmap_Lehrkraft_[Unterrichtsreihen-Titel].md`
 - `Mindmap_Schueler_[Unterrichtsreihen-Titel].md`
+
+Jede Datei endet mit:
+
+```
+QUELLENVERZEICHNIS
+==================
+[Alphabetisch sortierte Liste aller zitierten Quellen]
+```
 
 ### Benutzerhinweis
 

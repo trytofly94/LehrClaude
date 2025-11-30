@@ -44,6 +44,27 @@ Dieser Schritt wird durchgeführt, wenn:
 - Annehmen, dass die Lehrkraft zufrieden ist
 - Inhalte generieren ohne Rückfragen
 
+## Wissenschaftliche Quellenarbeit
+
+### Recherche-Workflow:
+1. **Umfang evaluieren:** Wie viele Quellen werden für diesen Schritt benötigt?
+2. **Hochgeladene Dokumente prüfen:** "Haben Sie relevante Dokumente hochgeladen?"
+3. **MCP-Ressourcen nutzen:** Lehrpläne und Didaktik-Frameworks abrufen
+4. **Web-Suche (bei Bedarf):** Für einzelne Fakten und spezifische Quellen
+5. **Deep Research (bei umfangreicher Recherche):**
+   - Recherche-Prompt formulieren
+   - Lehrkraft bitten, Deep Research zu aktivieren
+   - Auf Ergebnisse warten
+
+### Quellenvalidierung (PFLICHT!):
+- **Jede Quelle vor dem Zitieren abrufen** (Web-Suche)
+- Existenz und Korrektheit der Angaben prüfen
+- NIEMALS nicht-verifizierte Quellen zitieren
+
+### Zitationsformat:
+- **Inline im Text:** (Autor, Jahr) oder (Autor, Jahr, S. X)
+- **Quellenverzeichnis am Ende:** Alphabetisch sortiert
+
 ## Ablauf: Drei-Phasen-Materialbeschaffung
 
 ### Phase 1: Fehlende Materialien zu den Aufgaben
@@ -144,6 +165,16 @@ Alle erstellten Materialien müssen folgende Kriterien erfüllen:
 - **Input von:** Schritt 07 (Unterrichtsverlauf planen), Schritt 08 (Lernkontrollen entwickeln)
 - **Output für:** Schritt 10 (Reflexion durchführen), Export-Skills
 - **Nutzt Ergebnisse von:** Schritt 02-05
+
+## Output
+
+Alle Materialien sollten mit folgendem Format abgeschlossen werden:
+
+```
+QUELLENVERZEICHNIS
+==================
+[Alphabetisch sortierte Liste aller zitierten Quellen]
+```
 
 ## Next Steps
 

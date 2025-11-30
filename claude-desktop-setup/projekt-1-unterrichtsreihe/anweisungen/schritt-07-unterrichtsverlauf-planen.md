@@ -38,6 +38,27 @@ Führe diesen Schritt durch, wenn:
 - Annehmen, dass die Lehrkraft zufrieden ist
 - Inhalte generieren ohne Rückfragen
 
+## Wissenschaftliche Quellenarbeit
+
+### Recherche-Workflow:
+1. **Umfang evaluieren:** Wie viele Quellen werden für diesen Schritt benötigt?
+2. **Hochgeladene Dokumente prüfen:** "Haben Sie relevante Dokumente hochgeladen?"
+3. **MCP-Ressourcen nutzen:** Lehrpläne und Didaktik-Frameworks abrufen
+4. **Web-Suche (bei Bedarf):** Für einzelne Fakten und spezifische Quellen
+5. **Deep Research (bei umfangreicher Recherche):**
+   - Recherche-Prompt formulieren
+   - Lehrkraft bitten, Deep Research zu aktivieren
+   - Auf Ergebnisse warten
+
+### Quellenvalidierung (PFLICHT!):
+- **Jede Quelle vor dem Zitieren abrufen** (Web-Suche)
+- Existenz und Korrektheit der Angaben prüfen
+- NIEMALS nicht-verifizierte Quellen zitieren
+
+### Zitationsformat:
+- **Inline im Text:** (Autor, Jahr) oder (Autor, Jahr, S. X)
+- **Quellenverzeichnis am Ende:** Alphabetisch sortiert
+
 ## Leisens 6-Phasen-Modell
 
 Leisens Unterrichtsstruktur organisiert den Unterricht in sechs aufeinander folgende Phasen:
@@ -154,6 +175,13 @@ Für jede Unterrichtsstunde:
 2. Präsentiere die Sechsphasentabelle mit allen ausgefüllten Spalten
 3. Vermerke relevante inhaltliche Verbindungen zu anderen Stunden
 4. Spezifiziere die in Phase 6 verwendete Evaluations-/Feedback-Methode
+5. Füge am Ende hinzu:
+
+```
+QUELLENVERZEICHNIS
+==================
+[Alphabetisch sortierte Liste aller zitierten Quellen]
+```
 
 ## Next Steps
 
