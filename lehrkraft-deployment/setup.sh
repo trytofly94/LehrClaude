@@ -121,6 +121,7 @@ mkdir -p "$TARGET_DIR/1_Exportierte_Ergebnisse"
 mkdir -p "$TARGET_DIR/2_Zentrale_Ressourcen/Lehrplaene"
 mkdir -p "$TARGET_DIR/2_Zentrale_Ressourcen/Didaktik"
 mkdir -p "$TARGET_DIR/2_Zentrale_Ressourcen/Templates"
+mkdir -p "$TARGET_DIR/2_Zentrale_Ressourcen/Piktogramme/METACOM"
 mkdir -p "$TARGET_DIR/3_Projekt_Knowledge_Base"
 mkdir -p "$TARGET_DIR/4_Klassen_und_Schueler/_templates"
 
@@ -152,6 +153,13 @@ cp -n "$SOURCE_DIR/3_Projekt_Knowledge_Base/README.md" "$TARGET_DIR/3_Projekt_Kn
 if [ -d "$SOURCE_DIR/4_Klassen_und_Schueler/_templates" ]; then
     cp -n "$SOURCE_DIR/4_Klassen_und_Schueler/_templates/"*.md "$TARGET_DIR/4_Klassen_und_Schueler/_templates/" 2>/dev/null || true
     echo -e "${GREEN}✓ Schülerprofil-Templates kopiert (5 Vorlagen)${NC}"
+fi
+
+# Kopiere Piktogramme-README
+if [ -d "$SOURCE_DIR/2_Zentrale_Ressourcen/Piktogramme" ]; then
+    cp -n "$SOURCE_DIR/2_Zentrale_Ressourcen/Piktogramme/README.txt" "$TARGET_DIR/2_Zentrale_Ressourcen/Piktogramme/" 2>/dev/null || true
+    cp -n "$SOURCE_DIR/2_Zentrale_Ressourcen/Piktogramme/METACOM/README.txt" "$TARGET_DIR/2_Zentrale_Ressourcen/Piktogramme/METACOM/" 2>/dev/null || true
+    echo -e "${GREEN}✓ Piktogramme-Ordner erstellt (fuer METACOM-Symbole)${NC}"
 fi
 
 echo -e "${GREEN}✓ Vorlage-Dateien kopiert${NC}"
@@ -205,6 +213,11 @@ echo -e "  5. ${BLUE}Schülerprofile erstellen (für Projekt 5):${NC}"
 echo -e "     • Nutze Templates in: ${TARGET_DIR}/4_Klassen_und_Schueler/_templates/"
 echo -e "     • 5 Vorlagen verfügbar: Allgemein, Lernen, ESE, Sprache, Geistige Entwicklung"
 echo -e "     • Siehe README.md im Template-Ordner für Anleitung"
+echo ""
+echo -e "  6. ${BLUE}METACOM-Piktogramme ablegen (für GE-Material):${NC}"
+echo -e "     • Kopiere METACOM-Symbole nach: ${TARGET_DIR}/2_Zentrale_Ressourcen/Piktogramme/METACOM/"
+echo -e "     • Claude kann dann auf diese Symbole verweisen"
+echo -e "     • Siehe README.txt im Piktogramme-Ordner für Anleitung"
 echo ""
 
 echo -e "${GREEN}Viel Erfolg mit dem Lehrkraft-Copilot-System! 🎉${NC}"

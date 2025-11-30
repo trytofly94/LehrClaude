@@ -14,7 +14,9 @@ Schul-Materialien/
 ├── 2_Zentrale_Ressourcen/           # Lehrpläne, Frameworks
 │   ├── Lehrplaene/
 │   ├── Didaktik/                    # Inkl. Zitationsrichtlinien.txt
-│   └── Templates/
+│   ├── Templates/
+│   └── Piktogramme/                 # METACOM-Symbole für GE-Material
+│       └── METACOM/
 ├── 3_Projekt_Knowledge_Base/        # Projektspezifische Dokumente
 └── 4_Klassen_und_Schueler/          # Schülerprofile (Förderschule)
 ```
@@ -62,6 +64,7 @@ Erstellt alle benötigten Ordner:
 - `2_Zentrale_Ressourcen/Lehrplaene/`
 - `2_Zentrale_Ressourcen/Didaktik/`
 - `2_Zentrale_Ressourcen/Templates/`
+- `2_Zentrale_Ressourcen/Piktogramme/METACOM/`
 - `3_Projekt_Knowledge_Base/`
 - `4_Klassen_und_Schueler/`
 
@@ -73,6 +76,7 @@ Kopiert Beispiel-Ressourcen:
 - **Zitationsrichtlinien.txt** (Akademisches Zitieren)
 - **arbeitsblatt-vorlage.txt** (Layout-Template)
 - **praesentation-master.txt** (Präsentations-Richtlinien)
+- **Piktogramme/README.txt** (Anleitung für METACOM-Ablage)
 - **README-Dateien** für jeden Ordner
 
 ### 4. Berechtigungen setzen

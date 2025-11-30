@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Projektübersicht
 
-**LehrClaude** ist ein Setup-Repository zur Implementierung eines modularen Claude Desktop Ökosystems für wissenschaftlich fundierte Unterrichtsplanung. Das System besteht aus 5 spezialisierten Claude Desktop Projekten, 6 Custom Skills und einem MCP Filesystem Server für Ressourcen-Zugriff.
+**LehrClaude** ist ein Setup-Repository zur Implementierung eines modularen Claude Desktop Ökosystems für wissenschaftlich fundierte Unterrichtsplanung. Das System besteht aus 5 spezialisierten Claude Desktop Projekten, 8 Custom Skills und einem MCP Filesystem Server für Ressourcen-Zugriff.
 
 ### Zielgruppe & Sprache
 - **IT-Administratoren**: Für Deployment und Setup
@@ -73,17 +73,27 @@ cd claude-desktop-setup
 
 ## Skill-Architektur
 
-### Neue Architektur: 6 Custom Skills + Workflow-Anweisungen
+### Neue Architektur: 8 Custom Skills + Workflow-Anweisungen
 
 **Wichtige Änderung:** Die alten 27 Skills wurden durch eine hybride Architektur ersetzt:
 
-**Custom Skills (6 - nur für Material-Export):**
+**Custom Skills (8):**
+
+*Material-Erstellung:*
 - `mat-02-arbeitsblatt-erstellen` - Erstellt Arbeitsblätter basierend auf Vorgaben
 - `mat-03-powerpoint-erstellen` - Erstellt PowerPoint-Präsentationen
+
+*Export-Skills:*
 - `export-txt` - Exportiert in strukturiertes TXT-Format (Haupt-Export für Lehrkräfte)
 - `export-pdf` - Exportiert als PDF
 - `export-docx` - Exportiert als DOCX
 - `export-pptx` - Exportiert als PPTX
+
+*Akademische Quellenarbeit:*
+- `quellenrecherche` - Validiert Quellen per Web-Suche und formatiert Zitationen
+
+*Förderschul-Differenzierung:*
+- `differenzierung-ge` - Erstellt piktogramm-unterstützte Materialien für Förderschwerpunkt GE
 
 **Workflow-Anweisungen (in `projekt-*/anweisungen/`):**
 Alle Planungs- und Prozess-Funktionen sind jetzt als direkte Anweisungen in den PROJECT_INSTRUCTIONS.md integriert:
@@ -172,8 +182,10 @@ Schul-Materialien/
 ├── 1_Exportierte_Ergebnisse/     # SCHREIBEN (Export-Skills)
 ├── 2_Zentrale_Ressourcen/        # LESEN (alle Skills)
 │   ├── Lehrplaene/               # Bundeslandspezifisch
-│   ├── Didaktik/                 # KMK-Operatoren, Bloom-Taxonomie
-│   └── Templates/                # Arbeitsblatt/Präsentations-Vorlagen
+│   ├── Didaktik/                 # KMK-Operatoren, Bloom-Taxonomie, Zitationsrichtlinien
+│   ├── Templates/                # Arbeitsblatt/Präsentations-Vorlagen
+│   └── Piktogramme/              # METACOM-Symbole für GE-Material
+│       └── METACOM/              # Lehrkraft legt hier Symbole ab
 ├── 3_Projekt_Knowledge_Base/     # Nur lokales Backup (NICHT via MCP)
 └── 4_Klassen_und_Schueler/       # LESEN (Förderschul-Skills)
     ├── Klasse_5a_LE/             # Förderschwerpunkt Lernen

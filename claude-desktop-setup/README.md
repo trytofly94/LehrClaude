@@ -8,7 +8,7 @@ Dieser Ordner enthält **alle Dateien und Anleitungen**, die du als IT-Admin ben
 
 Das LehrClaude besteht aus:
 - **5 Claude Desktop Projekten** (Unterrichtsreihe, Arbeitsblatt, Präsentation, Skill-Verwaltung, Klassenverwaltung)
-- **6 Custom Skills** (Material-Erstellung und Export)
+- **8 Custom Skills** (Material-Erstellung, Differenzierung und Export)
 - **Workflow-Anweisungen** (in `projekt-*/anweisungen/` für Planungs-Prozesse)
 - **MCP Filesystem Server** (Zugriff auf lokale Ressourcen)
 
@@ -190,7 +190,7 @@ Der Model Context Protocol (MCP) Filesystem Server ermöglicht Claude Desktop de
 **Zeitaufwand:** 25 Minuten (5x 5 Min.)
 
 **Wichtige Änderung:** Die alte Skill-Architektur wurde durch eine hybride Lösung ersetzt:
-- **Custom Skills** nur noch für Material-Erstellung und Export (6 Skills)
+- **Custom Skills** nur noch für Material-Erstellung, Differenzierung und Export (8 Skills)
 - **Workflow-Anweisungen** direkt in den Projekten unter `anweisungen/` (schneller, flexibler)
 
 ### Projekt 1: "Unterrichtsreihe planen"
@@ -207,7 +207,7 @@ Der Model Context Protocol (MCP) Filesystem Server ermöglicht Claude Desktop de
 
 4. **Skills vorbereiten (später aktivieren):**
    - Öffne: `projekt-1-unterrichtsreihe/skills-checklist.md`
-   - Notiere dir die benötigten Skills (6 Skills, werden in Schritt 3 hochgeladen)
+   - Notiere dir die benötigten Skills (8 Skills, werden in Schritt 3 hochgeladen)
 
 **Status:** [ ] Projekt 1 erstellt
 
@@ -299,17 +299,25 @@ Der Model Context Protocol (MCP) Filesystem Server ermöglicht Claude Desktop de
 
 Custom Skills sind wiederverwendbare "Fähigkeiten", die Claude in verschiedenen Projekten nutzen kann.
 
-**Wichtige Änderung:** Statt 23 Skills nutzen wir jetzt nur noch **6 Skills** für Material-Erstellung und Export. Alle Planungs- und Workflow-Schritte sind jetzt direkt in den PROJECT_INSTRUCTIONS.md integriert.
+**Wichtige Änderung:** Statt 23 Skills nutzen wir jetzt nur noch **8 Skills** für Material-Erstellung, Differenzierung und Export. Alle Planungs- und Workflow-Schritte sind jetzt direkt in den PROJECT_INSTRUCTIONS.md integriert.
 
-**Die 6 verbleibenden Skills:**
+**Die 8 Skills:**
+
+**Material-Skills (2):**
 - `mat-02-arbeitsblatt-erstellen` - Arbeitsblätter erstellen
 - `mat-03-powerpoint-erstellen` - PowerPoint-Präsentationen erstellen
+
+**Spezial-Skills (2):**
+- `quellenrecherche` - Wissenschaftliche Quellen validieren und formatieren
+- `differenzierung-ge` - Piktogramm-unterstützte Materialien für Förderschwerpunkt GE
+
+**Export-Skills (4):**
 - `export-txt` - Export als strukturiertes TXT (Haupt-Export für Lehrkräfte)
 - `export-pdf` - Export als PDF
 - `export-docx` - Export als DOCX
 - `export-pptx` - Export als PPTX
 
-**Gute Nachricht:** Alle 6 Skills sind bereits fertig im `skills/` Ordner! Du musst sie nur noch packen und hochladen.
+**Gute Nachricht:** Alle 8 Skills sind bereits fertig im `skills/` Ordner! Du musst sie nur noch packen und hochladen.
 
 ---
 
@@ -325,7 +333,7 @@ cd claude-desktop-setup
 ```
 
 **Was passiert:**
-- ✅ Alle 6 Skills werden automatisch als ZIP gepackt
+- ✅ Alle 8 Skills werden automatisch als ZIP gepackt
 - ✅ Korrekte Ordnerstruktur wird sichergestellt
 - ✅ Ausgabe in `skill-packages/` Ordner
 - ✅ Validierung: Prüft ob SKILL.md existiert
@@ -340,21 +348,23 @@ cd claude-desktop-setup
 **Ergebnis:**
 ```
 skill-packages/
+├── differenzierung-ge.zip
 ├── export-docx.zip
-├── export-txt.zip
 ├── export-pdf.zip
 ├── export-pptx.zip
+├── export-txt.zip
 ├── mat-02-arbeitsblatt-erstellen.zip
-└── mat-03-powerpoint-erstellen.zip
+├── mat-03-powerpoint-erstellen.zip
+└── quellenrecherche.zip
 ```
 
-**Status:** [ ] Skills gepackt (6 ZIP-Dateien erstellt)
+**Status:** [ ] Skills gepackt (8 ZIP-Dateien erstellt)
 
 ---
 
 ### Skills in Claude Desktop hochladen
 
-**Für jeden der 6 Skills:**
+**Für jeden der 8 Skills:**
 
 1. **Öffne Claude Desktop:**
    - Settings > Capabilities > Skills
@@ -375,13 +385,17 @@ skill-packages/
 - [ ] mat-02-arbeitsblatt-erstellen
 - [ ] mat-03-powerpoint-erstellen
 
+**Spezial-Skills (2):**
+- [ ] quellenrecherche
+- [ ] differenzierung-ge
+
 **Export-Skills (4):**
 - [ ] export-txt
 - [ ] export-pdf
 - [ ] export-docx
 - [ ] export-pptx
 
-**Gesamt:** [ ] 6/6 Skills hochgeladen
+**Gesamt:** [ ] 8/8 Skills hochgeladen
 
 ---
 
@@ -655,9 +669,10 @@ nano skills/02-sachanalyse/SKILL.md        # nano
 
 **Version:** 2.1
 **Zuletzt aktualisiert:** 2025-11-30
-**Geschätzter Zeitaufwand:** 45-60 Minuten (Setup + 6 Skills)
+**Geschätzter Zeitaufwand:** 45-60 Minuten (Setup + 8 Skills)
 
 **Änderungshistorie:**
+- **v2.2 (2025-11-30):** Neue Skills: quellenrecherche, differenzierung-ge; Piktogramme-Ordner für METACOM
 - **v2.1 (2025-11-30):** 3-Phasen-Workflow, Quellenbasierter Ansatz, Zitationsrichtlinien.txt
 - **v2.0 (2025-11-30):** Architektur-Überarbeitung - 6 Skills statt 27, Workflows in anweisungen/
 - **v1.0 (2025-11-09):** Initial release mit 23 Skills
