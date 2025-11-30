@@ -9,7 +9,7 @@ description: "Dieser Skill sollte verwendet werden, wenn Arbeitsblätter erstell
 
 Dieser Skill erstellt vollständige, professionell formatierte Arbeitsblätter für den Unterricht. Er nimmt bestehendes Unterrichtsmaterial und verwandelt es in strukturierte Arbeitsblätter, die evidenzbasierten pädagogischen Designprinzipien folgen, einschließlich differenzierter Lernwege für Schüler auf verschiedenen Kompetenzstufen (Wembers Differenzierungsmodell: Basisstufe, Unterstützungsstufe, Erweiterungsstufe).
 
-Der Skill generiert drei Arten von Materialien:
+Der Skill generiert drei Arten von Materialien im strukturierten TXT-Format:
 1. **Schüler-Arbeitsblätter** - Strukturierte Lernmaterialien mit progressiven Aufgaben
 2. **Gestufte Lernhilfen** - Gestaffelte Unterstützung auf drei Kompetenzstufen
 3. **Unterrichtsmaterial** - Dokumentation des Unterrichtsverlaufs mit Lehrerlösungen
@@ -140,13 +140,13 @@ Erstelle umfassende Unterrichtsdokumentation mit dieser Struktur:
 
 Greife auf diese Referenzmaterialien vom MCP Filesystem Server unter `2_Zentrale_Ressourcen/` zu:
 
-- **arbeitsblatt-vorlage.md** - Standard-Arbeitsblatt-Layout-Vorlage
-  - Formatierungsrichtlinien
+- **arbeitsblatt-vorlage.txt** - Standard-Arbeitsblatt-Layout-Vorlage
+  - TXT-Formatierungsrichtlinien
   - Standards zur Abschnittsorganisation
   - Typografie- und Abstandskonventionen
   - Beispiele fertiggestellter Arbeitsblätter
 
-Verwende diese Vorlage, um konsistente Formatierung und professionelles Erscheinungsbild über alle Arbeitsblätter hinweg sicherzustellen.
+Verwende diese Vorlage, um konsistente TXT-Formatierung und professionelles Erscheinungsbild über alle Arbeitsblätter hinweg sicherzustellen.
 
 ## Qualitätsstandards für Inhalte
 
@@ -199,7 +199,46 @@ Dieser Skill arbeitet koordiniert mit:
 
 **Skill-Typ**: Materialerstellung
 **Lerntheoretische Basis**: Wembers Differenzierungsmodell, Bloom-Taxonomie, Leisens Phasenmodell
-**Ausgabeformat**: Markdown-strukturierte Arbeitsblätter (zur weiteren Verarbeitung in Word/anderen Tools)
+**Ausgabeformat**: TXT-strukturierte Arbeitsblätter (zur weiteren Verarbeitung in Word/anderen Tools)
+
+## TXT-Formatierungsregeln
+
+WICHTIG: Alle Outputs MÜSSEN im strukturierten TXT-Format erstellt werden. KEINE Markdown-Syntax verwenden!
+
+**Formatierungsregeln:**
+
+**Überschriften:**
+```
+HAUPTÜBERSCHRIFT (GROSSBUCHSTABEN)
+==================================
+
+Unterüberschrift (Grossbuchstaben)
+----------------------------------
+```
+
+**Listen:**
+```
+- Listenpunkt 1
+- Listenpunkt 2
+  - Unterpunkt (2 Leerzeichen Einrückung)
+```
+
+**Hervorhebungen:**
+```
+WICHTIG: Dieser Text ist wichtig.
+*Dieser Text ist betont*
+```
+
+**Abschnitte:**
+Verwende klare Trennlinien und Leerzeilen zwischen Abschnitten.
+
+**VERBOTEN - NICHT VERWENDEN:**
+- KEINE Markdown Heading-Syntax (#, ##, ###)
+- KEINE Markdown Bold/Italic (**text**, _text_)
+- KEINE Code-Blöcke (```)
+- KEINE Markdown-Links ([text](url))
+
+**Dateiendung:** Alle generierten Dateien erhalten die Endung `.txt`
 
 ## Resources
 
@@ -214,5 +253,5 @@ Zukünftige Erweiterungen werden in `resources/` abgelegt.
 
 Nach Erstellung des Materials:
 - Der Nutzer kann das Ergebnis überprüfen und anpassen
-- Das Material kann exportiert werden (export-markdown, export-pdf, export-docx)
+- Das Material kann exportiert werden (export-txt, export-pdf, export-docx)
 - Weitere Materialien können erstellt werden

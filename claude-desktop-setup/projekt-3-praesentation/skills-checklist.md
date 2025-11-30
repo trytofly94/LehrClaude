@@ -33,7 +33,7 @@ Diese Checkliste zeigt, welche Skills im Claude Desktop Projekt **"Präsentation
 
 ### ✅ Export-Skills (PFLICHT)
 
-- [ ] **export-markdown** - Markdown-Export (EMPFOHLEN für manuelle Übernahme)
+- [ ] **export-txt** - Markdown-Export (EMPFOHLEN für manuelle Übernahme)
 - [ ] **export-pptx** - PPTX-Export (erfordert marp CLI)
 - [ ] **export-pdf** - PDF-Export (Handout)
 - [ ] **export-docx** - DOCX-Export (Sprechernotizen)
@@ -60,11 +60,11 @@ Diese werden automatisch durch PROJECT_INSTRUCTIONS.md orchestriert - keine manu
 
 **Minimalkonfiguration:**
 - [ ] mat-03-powerpoint-erstellen
-- [ ] export-markdown
+- [ ] export-txt
 
 **Empfohlene Konfiguration:**
 - [ ] mat-03-powerpoint-erstellen
-- [ ] export-markdown, export-pptx
+- [ ] export-txt, export-pptx
 
 **Vollständige Konfiguration:**
 - [ ] Alle 5 Skills aktiviert (mat-03 + 4 Export-Skills)
@@ -74,7 +74,7 @@ Diese werden automatisch durch PROJECT_INSTRUCTIONS.md orchestriert - keine manu
 ## Skill-Prioritäten
 
 1. **Zuerst:** mat-03-powerpoint-erstellen (Kernfunktion)
-2. **Dann:** export-markdown (Ergebnis speichern)
+2. **Dann:** export-txt (Ergebnis speichern)
 3. **Optional:** export-pptx (nur wenn marp CLI verfügbar)
 4. **Optional:** export-pdf, export-docx
 
@@ -102,7 +102,7 @@ Diese werden automatisch durch PROJECT_INSTRUCTIONS.md orchestriert - keine manu
 
 **Lösung:**
 1. Stelle sicher, dass marp CLI installiert ist: `npm install -g @marp-team/marp-cli`
-2. Alternativ: Nutze export-markdown und konvertiere manuell
+2. Alternativ: Nutze export-txt und konvertiere manuell
 
 ---
 

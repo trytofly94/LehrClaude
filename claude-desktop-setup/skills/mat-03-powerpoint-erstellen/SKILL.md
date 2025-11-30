@@ -5,7 +5,7 @@ description: Dieser Skill erstellt professionelle, didaktisch strukturierte Powe
 
 ## Zweck
 
-Dieser Skill transformiert umfassende Unterrichtsreihenplanungen in professionelle PowerPoint-Präsentationen, die für den Einsatz im Unterricht geeignet sind. Nach Abschluss einer vollständigen Unterrichtsreihenplanung (unter Verwendung des 11-Schritte-Planungsprozesses) erstellt dieser Skill eine strukturierte Präsentation, die didaktischen Prinzipien folgt, Inhalte aus allen Planungsphasen integriert und klare visuelle Orientierung für die Unterrichtsdurchführung bietet.
+Dieser Skill transformiert umfassende Unterrichtsreihenplanungen in professionelle PowerPoint-Präsentationen im strukturierten TXT-Format, die für den Einsatz im Unterricht geeignet sind. Nach Abschluss einer vollständigen Unterrichtsreihenplanung (unter Verwendung des 11-Schritte-Planungsprozesses) erstellt dieser Skill eine strukturierte Präsentation, die didaktischen Prinzipien folgt, Inhalte aus allen Planungsphasen integriert und klare visuelle Orientierung für die Unterrichtsdurchführung bietet.
 
 ## Wann dieser Skill verwendet werden sollte
 
@@ -55,8 +55,8 @@ Wende diese Richtlinien auf alle Folien an:
 Behandle alle Grafiken, Diagramme und Bilder mit expliziten Platzhaltern:
 
 - Wann immer ein visuelles Element benötigt wird, NICHT versuchen, Bilder einzubetten oder zu generieren
-- Stattdessen einen **Platzhalter in roter, fetter Schrift** einfügen, der beschreibt, welches Bild hinzugefügt werden soll
-  - Format: **"[Grafik: Aufbau einer Blütenknospe]"** oder **"[Schaubild: Kreislauf des Wassers]"**
+- Stattdessen einen **Platzhalter in GROSSBUCHSTABEN** einfügen, der beschreibt, welches Bild hinzugefügt werden soll
+  - Format: **[GRAFIK: Aufbau einer Blütenknospe]** oder **[SCHAUBILD: Kreislauf des Wassers]**
 - Klare, prägnante Beschreibungen verwenden, damit Nutzer später geeignete Bilder beschaffen oder erstellen können
 - Anzahl der Platzhalter in der Präsentationszusammenfassung für Nutzerbewusstsein angeben
 
@@ -64,14 +64,16 @@ Behandle alle Grafiken, Diagramme und Bilder mit expliziten Platzhaltern:
 
 Präsentationen werden geliefert als:
 
-- **Dateiformat**: PPTX (PowerPoint-Format)
+- **Dateiformat**: TXT (strukturiertes Text-Format zur Weiterverarbeitung in PPTX)
+- **Dateiendung**: `.txt`
 - **Notizen für Vortragende**: Umfassende Notizen auf jeder Folie mit:
   - Detaillierter Erklärung des Folieninhalts
   - Vorgeschlagenen Gesprächspunkten und Übergängen
   - Unterrichtstipps und Hinweisen zur Zeiteinteilung
   - Verweis auf adressierte Lernziele
 - **Nutzerfinalisierung**: Präsentationen sind bereit für den Unterrichtseinsatz, erfordern jedoch vom Nutzer:
-  - Hinzufügen aller Grafiken/Diagramme (unter Verwendung der roten Platzhalter als Leitfaden)
+  - Konvertierung in PPTX-Format
+  - Hinzufügen aller Grafiken/Diagramme (unter Verwendung der markierten Platzhalter als Leitfaden)
   - Anpassung von visuellem Design und Farben
   - Hinzufügen von Animationen oder Übergängen nach Wunsch
   - Anpassung von Branding oder schulspezifischer Formatierung
@@ -115,14 +117,14 @@ Vor Erstellung der vollständigen Präsentation:
 
 ### Phase 4: Präsentationserstellung
 
-Erstelle die PowerPoint mit:
+Erstelle die Präsentation im TXT-Format mit:
 
 1. **Strukturiertem Inhalt**: Folge dem Unterrichtsverlauf exakt
 2. **Klaren Titeln**: Inhaltsorientierte Titel für jede Folie
 3. **Aufgabenintegration**: Zeige Aufgaben auf angemessenen Ebenen auf Arbeitsphasenfolien
-4. **Visuellen Platzhaltern**: Markiere alle benötigten Grafiken mit roten, fetten Beschreibungen
+4. **Visuellen Platzhaltern**: Markiere alle benötigten Grafiken in GROSSBUCHSTABEN
 5. **Notizen für Vortragende**: Umfassende Notizen auf jeder Folie
-6. **Formatierung**: Professionelles, übersichtliches Layout zur Unterstützung der Lesbarkeit
+6. **TXT-Formatierung**: Professionelles, übersichtliches TXT-Layout zur Unterstützung der Lesbarkeit
 
 ### Phase 5: Iterative Verfeinerung
 
@@ -138,21 +140,78 @@ Implementiere Nutzerfeedback:
 
 Referenziere diese Ressourcen vom MCP Filesystem Server, wenn verfügbar:
 
-- **`2_Zentrale_Ressourcen/Templates/praesentation-master.md`**: Richtlinien für Formatierung, Layoutstandards und Designkonsistenz
+- **`2_Zentrale_Ressourcen/Templates/praesentation-master.txt`**: Richtlinien für TXT-Formatierung, Layoutstandards und Designkonsistenz
 - **Ausgaben der Unterrichtsreihenplanung**: Inhalte aus den Ausgaben der Skills 01-11, gespeichert im Projektkontext
+
+## TXT-Formatierungsregeln für Präsentationen
+
+WICHTIG: Alle Outputs MÜSSEN im strukturierten TXT-Format erstellt werden. KEINE Markdown-Syntax verwenden!
+
+**Folienseparator:**
+```
+================================================================================
+FOLIE [NUMMER]: [FOLIENTITEL]
+================================================================================
+```
+
+**Folieninhalt:**
+```
+INHALT:
+-------
+- Stichpunkt 1
+- Stichpunkt 2
+
+NOTIZEN FÜR VORTRAGENDE:
+------------------------
+Detaillierte Erklärungen, Hinweise, Timing-Tipps...
+```
+
+**Überschriften auf Folien:**
+```
+HAUPTPUNKT (GROSSBUCHSTABEN)
+----------------------------
+```
+
+**Listen:**
+```
+- Listenpunkt 1
+- Listenpunkt 2
+  - Unterpunkt (2 Leerzeichen Einrückung)
+```
+
+**Hervorhebungen:**
+```
+WICHTIG: Dieser Punkt ist zentral.
+*Dieser Text ist betont*
+```
+
+**Visuelle Platzhalter:**
+```
+[GRAFIK: Beschreibung des Bildes]
+[SCHAUBILD: Beschreibung des Diagramms]
+```
+
+**VERBOTEN - NICHT VERWENDEN:**
+- KEINE Markdown Heading-Syntax (#, ##, ###)
+- KEINE Markdown Bold/Italic (**text**, _text_)
+- KEINE Code-Blöcke (```)
+- KEINE Markdown-Links ([text](url))
+
+**Dateiendung:** Alle generierten Präsentationen erhalten die Endung `.txt`
 
 ## Qualitätscheckliste
 
 Vor Auslieferung der Präsentationen überprüfen:
 
 - [ ] Jede Folie hat einen inhaltsorientierten Titel (keinen Phasennamen)
-- [ ] Alle visuellen Bedarfe sind mit roten, fetten Platzhaltern markiert
+- [ ] Alle visuellen Bedarfe sind mit GROSSBUCHSTABEN-Platzhaltern markiert
 - [ ] Notizen für Vortragende sind umfassend und umsetzbar
 - [ ] Differenzierungsebenen erscheinen auf Aufgabenfolien
 - [ ] Unterrichtsverlauf fließt logisch durch die Präsentation
 - [ ] Alle Inhalte der Unterrichtsreihe sind repräsentiert
-- [ ] Dateiformat ist PPTX und bereit zum Download
+- [ ] Dateiformat ist TXT mit strukturierter Formatierung
 - [ ] Präsentationsstruktur entspricht den Unterrichtsverlaufsphasen
+- [ ] KEINE Markdown-Syntax verwendet (siehe TXT-Formatierungsregeln)
 
 ## Häufige Szenarien
 
@@ -176,7 +235,8 @@ Vor Auslieferung der Präsentationen überprüfen:
 - Dieser Skill wird typischerweise **nach** dem vollständigen 11-Schritte-Planungsprozess verwendet
 - Integration mit Skills 05 (Lernziele), 06 (Mindmap) und 07 (Unterrichtsverlauf) gewährleistet Inhaltsgenauigkeit
 - Nutzer benötigen Zugang zu Grafikerstellungswerkzeugen oder -ressourcen zur Finalisierung visueller Elemente
-- Präsentationen sollten für direkte Unterrichtsprojektion oder Druck geeignet sein
+- Präsentationen im TXT-Format müssen vom Nutzer in PPTX konvertiert werden
+- TXT-Ausgaben sind strukturiert zur einfachen Konvertierung in PowerPoint
 - Konsistenz mit vorhandenen Schul-/Bezirkspräsentationsstandards wahren, die im Projektkontext referenziert sind
 
 ## Resources
@@ -192,5 +252,5 @@ Zukünftige Erweiterungen werden in `resources/` abgelegt.
 
 Nach Erstellung des Materials:
 - Der Nutzer kann das Ergebnis überprüfen und anpassen
-- Das Material kann exportiert werden (export-markdown, export-pdf, export-docx)
+- Das Material kann exportiert werden (export-txt, export-pdf, export-docx)
 - Weitere Materialien können erstellt werden

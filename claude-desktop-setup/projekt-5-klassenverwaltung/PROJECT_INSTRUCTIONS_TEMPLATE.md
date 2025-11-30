@@ -86,7 +86,7 @@ Dieses Projekt nutzt **4 spezialisierte Klassenverwaltungs-Skills**:
 ### Unterstützende Skills (optional, aus anderen Projekten)
 
 - **05-lernziele-operationalisieren** - Für adaptive Lernziele pro Schülergruppe
-- **export-markdown** - Schülerprofile als Markdown speichern
+- **export-txt** - Schülerprofile als Markdown speichern
 - **export-pdf** - Klassenübersichten als PDF exportieren
 
 ---

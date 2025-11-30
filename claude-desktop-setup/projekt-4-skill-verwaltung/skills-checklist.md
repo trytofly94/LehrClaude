@@ -39,7 +39,7 @@ Werden in allen Projekten verwendet.
 
 | # | Skill-Name | Zweck | Pfad | Besonderheit |
 |---|------------|-------|------|--------------|
-| 3 | **export-markdown** | Export nach Markdown mit MCP | `skills/export-markdown/` | ✅ Aktiv, MCP Write |
+| 3 | **export-txt** | Export nach Markdown mit MCP | `skills/export-txt/` | ✅ Aktiv, MCP Write |
 | 4 | **export-pdf** | Export nach PDF via Pandoc | `skills/export-pdf/` | ✅ Aktiv, scripts/ vorhanden |
 | 5 | **export-docx** | Export nach Word (.docx) | `skills/export-docx/` | ✅ Aktiv, scripts/ vorhanden |
 | 6 | **export-pptx** | Export nach PowerPoint (.pptx) | `skills/export-pptx/` | ✅ Aktiv, scripts/ vorhanden |
@@ -160,24 +160,24 @@ Was kommt als nächstes?
 - Workflow in `anweisungen/` (11 Schritte)
 - ✅ mat-02-arbeitsblatt-erstellen (optional)
 - ✅ mat-03-powerpoint-erstellen (optional)
-- ✅ export-markdown, export-pdf, export-docx, export-pptx
+- ✅ export-txt, export-pdf, export-docx, export-pptx
 
 ### Projekt 2: Arbeitsblatt erstellen
 - Workflow in `anweisungen/`
 - ✅ mat-02-arbeitsblatt-erstellen
-- ✅ export-markdown, export-pdf, export-docx
+- ✅ export-txt, export-pdf, export-docx
 
 ### Projekt 3: Präsentation entwerfen
 - Workflow in `anweisungen/`
 - ✅ mat-03-powerpoint-erstellen
-- ✅ export-markdown, export-pptx
+- ✅ export-txt, export-pptx
 
 ### Projekt 4: Skill-Verwaltung (dieses Projekt)
 - Keine Skills aktiviert (arbeitet MIT den Skills, nutzt sie nicht)
 
 ### Projekt 5: Klassenverwaltung
 - Workflow in `anweisungen/`
-- ✅ export-markdown, export-pdf (optional)
+- ✅ export-txt, export-pdf (optional)
 
 ---
 

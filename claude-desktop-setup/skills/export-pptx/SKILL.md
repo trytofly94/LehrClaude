@@ -292,7 +292,7 @@ Wenn verfügbar, referenziere:
 Dieser Skill ist Teil des Export-Toolkits:
 
 - **Erhält von**: mat-03-powerpoint-erstellen (erstellt Inhalte)
-- **Paart sich mit**: export-markdown, export-pdf, export-docx (alternative Exports)
+- **Paart sich mit**: export-txt, export-pdf, export-docx (alternative Exports)
 - **Ergänzt**: 05-lernziele-operationalisieren, 06-mindmap-strukturierung (Inhaltsreferenz)
 
 ---

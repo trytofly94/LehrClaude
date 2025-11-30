@@ -271,7 +271,7 @@ Custom Skills sind wiederverwendbare "Fähigkeiten", die Claude in verschiedenen
 **Die 6 verbleibenden Skills:**
 - `mat-02-arbeitsblatt-erstellen` - Arbeitsblätter erstellen
 - `mat-03-powerpoint-erstellen` - PowerPoint-Präsentationen erstellen
-- `export-markdown` - Export als Markdown
+- `export-txt` - Export als strukturiertes TXT (Haupt-Export für Lehrkräfte)
 - `export-pdf` - Export als PDF
 - `export-docx` - Export als DOCX
 - `export-pptx` - Export als PPTX
@@ -308,7 +308,7 @@ cd claude-desktop-setup
 ```
 skill-packages/
 ├── export-docx.zip
-├── export-markdown.zip
+├── export-txt.zip
 ├── export-pdf.zip
 ├── export-pptx.zip
 ├── mat-02-arbeitsblatt-erstellen.zip
@@ -343,7 +343,7 @@ skill-packages/
 - [ ] mat-03-powerpoint-erstellen
 
 **Export-Skills (4):**
-- [ ] export-markdown
+- [ ] export-txt
 - [ ] export-pdf
 - [ ] export-docx
 - [ ] export-pptx
@@ -407,15 +407,69 @@ Erwartetes Ergebnis:
 ```
 Projekt: Arbeitsblatt erstellen
 (Nach Erstellung eines Arbeitsblatts)
-Prompt: "Exportiere das Arbeitsblatt als Markdown."
+Prompt: "Exportiere das Arbeitsblatt als TXT."
 
 Erwartetes Ergebnis:
-- Claude nutzt export-markdown Skill
+- Claude nutzt export-txt Skill
 - Speichert Datei via MCP in 1_Exportierte_Ergebnisse/
 - Bestätigt Speicherort
+- Datei ist in Mac Vorschau sofort lesbar (strukturiertes TXT, kein Markdown)
 ```
 
 **Status:** [ ] Export funktioniert
+
+---
+
+## TXT-Format für Lehrkraft-Dateien
+
+**Wichtige Information:** Das System verwendet strukturiertes TXT-Format statt Markdown für alle Lehrkraft-sichtbaren Dateien.
+
+### Warum TXT statt Markdown?
+
+- **Mac-Kompatibilität:** Mac Vorschau zeigt TXT sofort korrekt formatiert an
+- **Markdown-Problem:** Mac Vorschau zeigt Markdown als unformatierter Quelltext (`#`, `**`, etc.)
+- **Word-Integration:** TXT-Dateien können ohne Syntax-Artefakte in Word kopiert werden
+- **Keine Vorkenntnisse:** Lehrkräfte müssen kein Markdown kennen
+
+### Was bleibt Markdown (.md)?
+
+**Nur interne Dateien:**
+- `SKILL.md` - Claude Desktop Requirement (muss Markdown sein)
+- `PROJECT_INSTRUCTIONS.md` - Wird nur im Admin-Interface angezeigt
+- `anweisungen/*.md` - Werden nur von Claude gelesen, nicht von Lehrkräften
+
+### Was wird TXT (.txt)?
+
+**Alle Lehrkraft-sichtbaren Dateien:**
+- Exportierte Ergebnisse (`1_Exportierte_Ergebnisse/`)
+- Zentrale Ressourcen (`2_Zentrale_Ressourcen/`)
+- Schülerprofile (`4_Klassen_und_Schueler/`)
+
+### TXT-Formatierung (für Skill-Entwicklung)
+
+**Überschriften:**
+```
+HAUPTÜBERSCHRIFT
+=================
+
+Unterüberschrift
+-----------------
+```
+
+**Listen:**
+```
+- Einfacher Bindestrich
+- Keine Nesting-Levels
+```
+
+**Hervorhebungen:**
+```
+WICHTIG: Großbuchstaben
+*Sternchen* für Betonung
+```
+
+**WICHTIG beim Export-Skill:**
+Der `export-txt` Skill muss Output OHNE Markdown-Syntax erstellen.
 
 ---
 

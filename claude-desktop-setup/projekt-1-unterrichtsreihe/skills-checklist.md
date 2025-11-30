@@ -45,7 +45,7 @@ Diese Skills ermöglichen die Erstellung von Arbeitsblättern und Präsentatione
 
 Diese Skills ermöglichen den Export der fertigen Unterrichtsreihe:
 
-- [ ] **export-markdown** - Markdown-Export
+- [ ] **export-txt** - Markdown-Export
 - [ ] **export-pdf** - PDF-Export
 - [ ] **export-docx** - Word-Export
 - [ ] **export-pptx** - PPTX-Export
@@ -78,7 +78,7 @@ Diese werden automatisch durch PROJECT_INSTRUCTIONS.md orchestriert - keine manu
 ## Gesamt-Status
 
 **Minimalkonfiguration (funktionsfähig):**
-- [ ] Mind. 1 Export-Skill (export-markdown)
+- [ ] Mind. 1 Export-Skill (export-txt)
 
 **Empfohlene Konfiguration:**
 - [ ] Alle 4 Export-Skills
@@ -121,7 +121,7 @@ Diese werden automatisch durch PROJECT_INSTRUCTIONS.md orchestriert - keine manu
 
 **Empfohlene Priorisierung:**
 
-1. **Phase 1:** export-markdown (für erste Tests)
+1. **Phase 1:** export-txt (für erste Tests)
 2. **Phase 2:** export-pdf, export-docx (für professionelle Outputs)
 3. **Phase 3:** mat-02, mat-03 (für Material-Erstellung)
 4. **Phase 4:** export-pptx (optional)

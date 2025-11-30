@@ -29,7 +29,7 @@ Dieses Claude Desktop Projekt ist spezialisiert auf die **schnelle, fokussierte 
 - ✅ foerder-04-piktogramm-materialien
 
 ### Export-Skills:
-- ✅ export-markdown
+- ✅ export-txt
 - ✅ export-pdf
 - ✅ export-docx
 
@@ -201,7 +201,7 @@ Falls ja:
    - DOCX (editierbar in Word)
 
 4. **Rufe entsprechenden Export-Skill auf:**
-   - `export-markdown`
+   - `export-txt`
    - `export-pdf`
    - `export-docx`
 

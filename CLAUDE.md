@@ -80,7 +80,7 @@ cd claude-desktop-setup
 **Custom Skills (6 - nur für Material-Export):**
 - `mat-02-arbeitsblatt-erstellen` - Erstellt Arbeitsblätter basierend auf Vorgaben
 - `mat-03-powerpoint-erstellen` - Erstellt PowerPoint-Präsentationen
-- `export-markdown` - Exportiert in Markdown-Format
+- `export-txt` - Exportiert in strukturiertes TXT-Format (Haupt-Export für Lehrkräfte)
 - `export-pdf` - Exportiert als PDF
 - `export-docx` - Exportiert als DOCX
 - `export-pptx` - Exportiert als PPTX
@@ -137,6 +137,63 @@ Schul-Materialien/
 - Template: `claude-desktop-setup/MCP_CONFIG_TEMPLATE.json`
 - Wird von `setup-paths.sh` automatisch zu `MCP_CONFIG.json` generiert mit korrekten Pfaden
 - Manuell anpassen falls Deployment-Pfad sich ändert
+
+## TXT-Format für Lehrkraft-Dateien
+
+Alle für Lehrkräfte sichtbaren Dateien werden im strukturierten TXT-Format erstellt (nicht Markdown).
+
+### Warum TXT statt Markdown?
+- **Mac-Kompatibilität:** Mac Vorschau zeigt TXT sofort korrekt an (Markdown nur als Quelltext)
+- **Word-Integration:** Kopieren in Word funktioniert ohne Markdown-Syntax-Artefakte (`#`, `*`, etc.)
+- **Keine Vorkenntnisse:** Lehrkräfte müssen kein Markdown kennen oder lernen
+- **Universelle Lesbarkeit:** Jeder Editor kann TXT öffnen und bearbeiten
+
+### Was bleibt .md (intern, für Lehrkraft unsichtbar):
+- `SKILL.md` (Claude Desktop Requirement - muss Markdown sein)
+- `PROJECT_INSTRUCTIONS.md` (in Claude Desktop Settings - nur Admin sieht diese)
+- `anweisungen/*.md` (nur von Claude gelesen, Lehrkraft nutzt nur die Ergebnisse)
+- `Klasseninfo.md` und `Schuelerprofile/*.md` (werden zu .txt migriert)
+
+### Was ist .txt (für Lehrkraft sichtbar):
+- **Exportierte Ergebnisse** (`1_Exportierte_Ergebnisse/`) - Alle fertigen Unterrichtsmaterialien
+- **Zentrale Ressourcen** (`2_Zentrale_Ressourcen/`) - Lehrpläne, Didaktik-Frameworks, Templates
+- **Schülerprofile** (`4_Klassen_und_Schueler/`) - Klasseninfo und individuelle Schülerprofile
+
+### TXT-Formatierungsregeln für Skills:
+
+**Überschriften:**
+```
+HAUPTÜBERSCHRIFT
+=================
+
+Unterüberschrift
+-----------------
+```
+
+**Listen:**
+```
+- Einfache Bindestriche für Listen
+- Keine verschachtelten Listen
+```
+
+**Hervorhebungen:**
+```
+WICHTIG: Großbuchstaben für wichtige Begriffe
+*Sternchen* für moderate Betonung
+```
+
+**Struktur-Elemente:**
+```
+Abschnitte durch Leerzeilen trennen
+
+Längere Trennlinien für visuelle Trennung:
+===================================
+```
+
+**WICHTIG für Export-Skills:**
+- Keine Markdown-Syntax im Output (`#`, `##`, `**bold**`, etc.)
+- Stattdessen strukturierte TXT-Formatierung verwenden
+- Ziel: Datei ist sofort in Mac Vorschau lesbar und in Word kopierbar
 
 ## Entwicklungs-Workflow
 
@@ -323,6 +380,9 @@ Erwartung: Claude führt durch den 11-Schritte-Prozess basierend auf den Anweisu
 ### Export-Test
 Nach Material-Erstellung:
 ```
+Prompt: "Exportiere als TXT."
+Erwartung: Datei in 1_Exportierte_Ergebnisse/ gespeichert (strukturiertes TXT-Format)
+
 Prompt: "Exportiere als PDF."
 Erwartung: Datei in 1_Exportierte_Ergebnisse/ gespeichert
 ```

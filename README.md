@@ -106,7 +106,8 @@ Jedes Projekt nutzt **6 Custom Skills** (Material & Export) + **Workflow-Anweisu
 **Modular:** Skills werden projekt-übergreifend wiederverwendet
 **Ressourcen-basiert:** Zentrale Knowledge Base für alle Projekte
 **Förderschul-Integration:** Spezialisierung auf 7 Förderschwerpunkte mit individuellen Schülerprofilen
-**Export-fähig:** Fertige Dokumente (MD, PDF, DOCX, PPTX)
+**Export-fähig:** Fertige Dokumente (TXT, PDF, DOCX, PPTX)
+**Mac-optimiert:** TXT-Format für sofortige Lesbarkeit in Mac Vorschau (kein Markdown)
 
 ---
 
@@ -294,13 +295,19 @@ open README.md  # Folge der Anleitung
 | Komponente | Anzahl | Beispiele |
 |------------|--------|-----------|
 | **Material-Skills** | 2 | Arbeitsblatt erstellen, PowerPoint erstellen |
-| **Export-Skills** | 4 | Markdown, PDF, DOCX, PPTX |
+| **Export-Skills** | 4 | TXT (Haupt-Export), PDF, DOCX, PPTX |
 | **Workflow-Anweisungen** | 25 | In `anweisungen/`-Ordnern der Projekte |
 
 **Vorteile:**
 - Unter dem 20-Skill-Limit für Claude Pro
 - Schnelleres Laden (weniger Skills)
 - Workflows direkt im Projekt-Kontext
+
+**TXT-Export (empfohlen für Lehrkräfte):**
+- Strukturiertes TXT-Format statt Markdown
+- Sofort lesbar in Mac Vorschau (kein Markdown-Viewer nötig)
+- Kopieren in Word ohne Syntax-Artefakte (`#`, `*`, etc.)
+- Universell kompatibel mit allen Editoren
 
 ---
 
@@ -420,8 +427,10 @@ Nach der Installation durch den IT-Admin:
    - Erstellt strukturierte Planung
 
 5. **Am Ende: Export**
-   > "Bitte als PDF exportieren."
+   > "Bitte als TXT exportieren."
    → Datei wird automatisch gespeichert in `Schul-Materialien/1_Exportierte_Ergebnisse/`
+
+   **Tipp:** TXT-Export ist empfohlen für Mac - Datei ist sofort in Vorschau lesbar!
 
 ### Arbeitsblatt erstellen (Beispiel)
 
@@ -434,7 +443,7 @@ Nach der Installation durch den IT-Admin:
    - Basis/Standard/Erweiterung
    - Optional: Lösungen
 
-4. **Export als PDF** → Druckfertig
+4. **Export als TXT oder PDF** → Sofort nutzbar (TXT in Vorschau öffnen, PDF drucken)
 
 ---
 

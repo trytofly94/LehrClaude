@@ -210,5 +210,5 @@ Zukünftige Erweiterungen werden in `resources/` abgelegt.
 
 Nach Erstellung des Materials:
 - Der Nutzer kann das Ergebnis überprüfen und anpassen
-- Das Material kann exportiert werden (export-markdown, export-pdf, export-docx)
+- Das Material kann exportiert werden (export-txt, export-pdf, export-docx)
 - Weitere Materialien können erstellt werden

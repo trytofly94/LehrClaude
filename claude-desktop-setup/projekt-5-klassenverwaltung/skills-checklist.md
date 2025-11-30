@@ -28,7 +28,7 @@ Diese Checkliste zeigt, welche Skills im Claude Desktop Projekt **"Klassenverwal
 
 Diese Skills ermöglichen den Export von Schülerprofilen und Klassenübersichten:
 
-- [ ] **export-markdown** - Schülerprofile als Markdown speichern
+- [ ] **export-txt** - Schülerprofile als Markdown speichern
 - [ ] **export-pdf** - Klassenübersichten als PDF exportieren
 - [ ] **export-docx** - Differenzierungspläne als Word-Dokument
 - [ ] **export-pptx** - (nicht relevant für Klassenverwaltung)
@@ -59,7 +59,7 @@ Diese werden automatisch durch PROJECT_INSTRUCTIONS.md orchestriert - keine manu
 
 **Empfohlene Konfiguration:**
 - [ ] MCP Filesystem Server konfiguriert
-- [ ] Mind. 1 Export-Skill (export-markdown)
+- [ ] Mind. 1 Export-Skill (export-txt)
 
 **Vollständige Konfiguration:**
 - [ ] MCP Filesystem Server konfiguriert

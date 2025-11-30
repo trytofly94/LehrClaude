@@ -189,7 +189,7 @@ ls claude-desktop-setup/skills/
 3. ...
 
 ## Export-Skills (4)
-1. export-markdown - Markdown-Export
+1. export-txt - Markdown-Export
 2. export-pdf - PDF-Export
 3. export-docx - Word-Export
 4. export-pptx - PowerPoint-Export
