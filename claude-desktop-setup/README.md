@@ -7,8 +7,9 @@ Dieser Ordner enthält **alle Dateien und Anleitungen**, die du als IT-Admin ben
 ## Überblick
 
 Das LehrClaude besteht aus:
-- **3 Claude Desktop Projekten** (Unterrichtsreihe planen, Arbeitsblatt erstellen, Präsentation entwerfen)
-- **23 Custom Skills** (wiederverwendbare Fähigkeiten)
+- **5 Claude Desktop Projekten** (Unterrichtsreihe, Arbeitsblatt, Präsentation, Skill-Verwaltung, Klassenverwaltung)
+- **6 Custom Skills** (Material-Erstellung und Export)
+- **Workflow-Anweisungen** (in `projekt-*/anweisungen/` für Planungs-Prozesse)
 - **MCP Filesystem Server** (Zugriff auf lokale Ressourcen)
 
 **Deine Aufgabe:** Diese Komponenten manuell in Claude Desktop einrichten (mit Unterstützung von Claude Code).
@@ -45,13 +46,13 @@ Das LehrClaude besteht aus:
 └──────────────────────────────────────────────────┘
                     ↓
 ┌──────────────────────────────────────────────────┐
-│ 2. Drei Projekte in Claude Desktop erstellen    │
-│    (15 Minuten)                                  │
+│ 2. Fünf Projekte in Claude Desktop erstellen    │
+│    (25 Minuten)                                  │
 └──────────────────────────────────────────────────┘
                     ↓
 ┌──────────────────────────────────────────────────┐
-│ 3. Skills mit skill-creator erstellen           │
-│    (30-60 Minuten für alle 23 Skills)           │
+│ 3. Skills packen und hochladen                  │
+│    (10 Minuten für 6 Skills)                    │
 └──────────────────────────────────────────────────┘
                     ↓
 ┌──────────────────────────────────────────────────┐
@@ -59,7 +60,7 @@ Das LehrClaude besteht aus:
 │    (10 Minuten)                                  │
 └──────────────────────────────────────────────────┘
 
-Gesamtzeit: ca. 1-2 Stunden
+Gesamtzeit: ca. 45-60 Minuten
 ```
 
 ---
@@ -153,7 +154,11 @@ Der Model Context Protocol (MCP) Filesystem Server ermöglicht Claude Desktop de
 
 ## Schritt 2: Claude Desktop Projekte erstellen
 
-**Zeitaufwand:** 20 Minuten (4x 5 Min.)
+**Zeitaufwand:** 25 Minuten (5x 5 Min.)
+
+**Wichtige Änderung:** Die alte Skill-Architektur wurde durch eine hybride Lösung ersetzt:
+- **Custom Skills** nur noch für Material-Erstellung und Export (6 Skills)
+- **Workflow-Anweisungen** direkt in den Projekten unter `anweisungen/` (schneller, flexibler)
 
 ### Projekt 1: "Unterrichtsreihe planen"
 
@@ -169,7 +174,7 @@ Der Model Context Protocol (MCP) Filesystem Server ermöglicht Claude Desktop de
 
 4. **Skills vorbereiten (später aktivieren):**
    - Öffne: `projekt-1-unterrichtsreihe/skills-checklist.md`
-   - Notiere dir die benötigten Skills (werden in Schritt 3 erstellt)
+   - Notiere dir die benötigten Skills (6 Skills, werden in Schritt 3 hochgeladen)
 
 **Status:** [ ] Projekt 1 erstellt
 
@@ -223,18 +228,6 @@ Der Model Context Protocol (MCP) Filesystem Server ermöglicht Claude Desktop de
    - Suche "skill-creator"
    - Aktiviere in diesem Projekt
 
-4. **Verwendung:**
-   ```
-   Admin: "Ich möchte die description von 02-sachanalyse verbessern"
-
-   Claude:
-   - Liest aktuelle SKILL.md via MCP
-   - Öffnet skill-creator für Bearbeitung
-   - Validiert automatisch nach Speichern
-   - Packt Skill neu
-   - Bestätigt: "ZIP-Datei ready für Upload"
-   ```
-
 **Vorteile:**
 - ✅ Skills direkt in Claude Desktop bearbeiten
 - ✅ Automatische Validierung
@@ -245,15 +238,45 @@ Der Model Context Protocol (MCP) Filesystem Server ermöglicht Claude Desktop de
 
 ---
 
-## Schritt 3: Custom Skills erstellen und packen
+### Projekt 5: "Klassenverwaltung für Förderschullehrkräfte"
 
-**Zeitaufwand:** 5 Minuten (mit automatischem Packaging-Skript)
+**Zweck:** Schülerprofile verwalten und Material differenzieren
+
+1. **Erstelle neues Projekt:** "Klassenverwaltung für Förderschullehrkräfte"
+
+2. **Kopiere Project Instructions:**
+   - Öffne: `projekt-5-klassenverwaltung/PROJECT_INSTRUCTIONS.md`
+   - Kopiere **kompletten** Inhalt
+   - In Claude Desktop: Project Settings > Instructions > Einfügen
+
+3. **Workflow:**
+   - Schülerprofile erstellen und verwalten
+   - Automatische Differenzierung nach Förderschwerpunkt
+   - Materialien an individuelle Bedürfnisse anpassen
+
+**Status:** [ ] Projekt 5 erstellt
+
+---
+
+## Schritt 3: Custom Skills packen und hochladen
+
+**Zeitaufwand:** 10 Minuten
 
 ### Was sind Custom Skills?
 
-Custom Skills sind wiederverwendbare "Fähigkeiten", die Claude in verschiedenen Projekten nutzen kann. Sie enthalten spezialisierte Anweisungen für bestimmte Aufgaben (z.B. "Sachanalyse durchführen").
+Custom Skills sind wiederverwendbare "Fähigkeiten", die Claude in verschiedenen Projekten nutzen kann.
 
-**Gute Nachricht:** Alle 23 Skills sind bereits fertig erstellt im `skills/` Ordner! Du musst sie nur noch packen und hochladen.
+**Wichtige Änderung:** Statt 23 Skills nutzen wir jetzt nur noch **6 Skills** für Material-Erstellung und Export. Alle Planungs- und Workflow-Schritte sind jetzt direkt in den PROJECT_INSTRUCTIONS.md integriert.
+
+**Die 6 verbleibenden Skills:**
+- `mat-02-arbeitsblatt-erstellen` - Arbeitsblätter erstellen
+- `mat-03-powerpoint-erstellen` - PowerPoint-Präsentationen erstellen
+- `export-markdown` - Export als Markdown
+- `export-pdf` - Export als PDF
+- `export-docx` - Export als DOCX
+- `export-pptx` - Export als PPTX
+
+**Gute Nachricht:** Alle 6 Skills sind bereits fertig im `skills/` Ordner! Du musst sie nur noch packen und hochladen.
 
 ---
 
@@ -269,7 +292,7 @@ cd claude-desktop-setup
 ```
 
 **Was passiert:**
-- ✅ Alle 23 Skills werden automatisch als ZIP gepackt
+- ✅ Alle 6 Skills werden automatisch als ZIP gepackt
 - ✅ Korrekte Ordnerstruktur wird sichergestellt
 - ✅ Ausgabe in `skill-packages/` Ordner
 - ✅ Validierung: Prüft ob SKILL.md existiert
@@ -284,79 +307,40 @@ cd claude-desktop-setup
 **Ergebnis:**
 ```
 skill-packages/
-├── 01-debiasing.zip
-├── 02-sachanalyse.zip
-├── 03-didaktische-analyse.zip
-└── ... (23 ZIP-Dateien)
+├── export-docx.zip
+├── export-markdown.zip
+├── export-pdf.zip
+├── export-pptx.zip
+├── mat-02-arbeitsblatt-erstellen.zip
+└── mat-03-powerpoint-erstellen.zip
 ```
 
-**Status:** [ ] Skills gepackt (23 ZIP-Dateien erstellt)
+**Status:** [ ] Skills gepackt (6 ZIP-Dateien erstellt)
 
 ---
 
 ### Skills in Claude Desktop hochladen
 
-**Für jeden Skill (Beispiel: 02-sachanalyse):**
+**Für jeden der 6 Skills:**
 
 1. **Öffne Claude Desktop:**
    - Settings > Capabilities > Skills
 
 2. **Upload Custom Skill:**
    - Klicke "Upload custom skill"
-   - Wähle `skill-packages/02-sachanalyse.zip`
+   - Wähle die entsprechende ZIP aus `skill-packages/`
 
-3. **Skill aktivieren im Projekt:**
-   - Öffne Projekt "Unterrichtsreihe planen"
-   - Im Skills-Bereich: Aktiviere "Sachanalyse für Unterrichtsplanung"
-
-**Wiederhole für alle 23 Skills** (siehe Skill-Zuordnung unten)
-
----
-
-### Empfohlene Reihenfolge (Priorisierung)
-
-**Phase 1: Kern-Skills (Projekt 1 testbar machen)**
-1. 01-debiasing
-2. 02-sachanalyse
-3. 05-lernziele-operationalisieren
-4. export-markdown
-
-**Nach Phase 1 → Test Projekt 1** (mindestens diese 4 Skills funktionieren)
-
-**Phase 2: Vollständiges Projekt 1**
-5-11. Restliche Planungs-Skills
-12. export-pdf, export-docx
-
-**Phase 3: Projekt 2 & 3**
-13-19. Material-Skills
-20. export-pptx
+3. **Skill aktivieren in den Projekten:**
+   - Die Skills werden automatisch in allen relevanten Projekten verfügbar
+   - Aktiviere sie bei Bedarf
 
 ---
 
 ### Fortschritt-Tracking
 
-**Planungs-Skills (11):**
-- [ ] 01-debiasing
-- [ ] 02-sachanalyse
-- [ ] 03-didaktische-analyse
-- [ ] 04-fachbegriffe-klaeren
-- [ ] 05-lernziele-operationalisieren
-- [ ] 06-mindmap-strukturierung
-- [ ] 07-unterrichtsverlauf-planen
-- [ ] 08-lernkontrollen-entwickeln
-- [ ] 09-material-zusammenstellen
-- [ ] 10-reflexion-durchfuehren
-- [ ] 11-iteration-optimierung
-
-**Material-Skills (8):**
-- [ ] mat-01-texterstellung
+**Material-Skills (2):**
 - [ ] mat-02-arbeitsblatt-erstellen
 - [ ] mat-03-powerpoint-erstellen
-- [ ] mat-04-aufgaben-generieren
-- [ ] mat-05-loesungen-erstellen
-- [ ] mat-06-pruefungsaufgaben
-- [ ] mat-07-feedbackboegen
-- [ ] mat-08-lernzielkontrolle
 
 **Export-Skills (4):**
 - [ ] export-markdown
@@ -364,7 +348,7 @@ skill-packages/
 - [ ] export-docx
 - [ ] export-pptx
 
-**Gesamt:** [ ] 23/23 Skills erstellt
+**Gesamt:** [ ] 6/6 Skills hochgeladen
 
 ---
 
@@ -395,7 +379,7 @@ Erwartetes Ergebnis:
 - Claude begrüßt dich
 - Erklärt den 11-Schritte-Prozess
 - Fragt nach Details (Fach, Stunden, etc.)
-- Startet mit Skill "01-debiasing"
+- Führt durch die Schritte basierend auf den Anweisungen in anweisungen/
 ```
 
 **Status:** [ ] Projekt 1 funktioniert
@@ -410,7 +394,7 @@ Prompt: "Ich brauche ein Arbeitsblatt zu Bruchrechnung, Klasse 6."
 
 Erwartetes Ergebnis:
 - Claude fragt nach Details
-- Nutzt mat-02-arbeitsblatt-erstellen oder mat-04-aufgaben-generieren
+- Nutzt mat-02-arbeitsblatt-erstellen Skill
 - Erstellt strukturiertes Arbeitsblatt
 ```
 
@@ -447,6 +431,8 @@ Erwartetes Ergebnis:
 2. Test: "Bitte nutze den Skill [NAME]" (manueller Aufruf)
 3. Falls das funktioniert: `description` verbessern
 
+**Hinweis:** Für Workflow-Schritte nutze die `anweisungen/` Ordner in den Projekten statt Skills!
+
 ---
 
 ### Problem: MCP "Permission Denied"
@@ -458,12 +444,12 @@ chmod -R 755 /Users/[LEHRKRAFT-NAME]/Schul-Materialien
 
 ---
 
-### Problem: skill-creator generiert fehlerhafte SKILL.md
+### Problem: Workflow-Schritt wird nicht erkannt
 
 **Lösung:**
-- Prüfe ob Prompt-Vorlage komplett kopiert wurde
-- Versuche Prompt in kleinere Teile zu zerlegen
-- Alternativ: Erstelle SKILL.md manuell basierend auf Prompt
+- Prüfe ob die entsprechende Anweisung in `projekt-*/anweisungen/` existiert
+- Prüfe ob die Anweisung in PROJECT_INSTRUCTIONS.md referenziert ist
+- Bei Bedarf: Füge explizite Trigger in PROJECT_INSTRUCTIONS.md hinzu
 
 ---
 
@@ -580,6 +566,10 @@ nano skills/02-sachanalyse/SKILL.md        # nano
 
 ---
 
-**Version:** 1.0
-**Zuletzt aktualisiert:** 2025-11-09
-**Geschätzter Zeitaufwand:** 1-2 Stunden (Setup + Skills)
+**Version:** 2.0
+**Zuletzt aktualisiert:** 2025-11-30
+**Geschätzter Zeitaufwand:** 45-60 Minuten (Setup + 6 Skills)
+
+**Änderungshistorie:**
+- **v2.0 (2025-11-30):** Architektur-Überarbeitung - 6 Skills statt 27, Workflows in anweisungen/
+- **v1.0 (2025-11-09):** Initial release mit 23 Skills

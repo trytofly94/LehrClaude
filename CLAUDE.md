@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Projektübersicht
 
-**LehrClaude** ist ein Setup-Repository zur Implementierung eines modularen Claude Desktop Ökosystems für wissenschaftlich fundierte Unterrichtsplanung. Das System besteht aus 3 spezialisierten Claude Desktop Projekten, 23 Custom Skills und einem MCP Filesystem Server für Ressourcen-Zugriff.
+**LehrClaude** ist ein Setup-Repository zur Implementierung eines modularen Claude Desktop Ökosystems für wissenschaftlich fundierte Unterrichtsplanung. Das System besteht aus 5 spezialisierten Claude Desktop Projekten, 6 Custom Skills und einem MCP Filesystem Server für Ressourcen-Zugriff.
 
 ### Zielgruppe & Sprache
 - **IT-Administratoren**: Für Deployment und Setup
@@ -19,8 +19,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Enthält Dateien für manuelle Claude Desktop Konfiguration:
 - `README.md` - Haupt-Setup-Anleitung (1-2h)
 - `MCP_CONFIG.json` - MCP Filesystem Server Template
-- `projekt-{1,2,3}-*/PROJECT_INSTRUCTIONS.md` - Claude Desktop Project Instructions
-- `skills-platzhalter/` - 23 Skill-Ordner (Platzhalter für skill-creator)
+- `projekt-{1,2,3,4,5}/PROJECT_INSTRUCTIONS.md` - Claude Desktop Project Instructions
+- `projekt-{1,2,3}/anweisungen/` - Detaillierte Workflow-Anweisungen (ersetzt alte Planungs-Skills)
+- `skills/` - 6 Skill-Ordner (Material-Export-Skills)
 - `package-skills.sh` - Erstellt ZIP-Pakete aus Skills
 - `validate-skill.sh` - Validiert Skill-Struktur
 - `CONFIG.sh` - Zentrale Pfad-Konfiguration (generiert von setup-paths.sh)
@@ -29,8 +30,8 @@ Enthält Dateien für manuelle Claude Desktop Konfiguration:
 - `setup.sh` - Erstellt Ordnerstruktur auf Lehrkraft-Mac
 - `ordnerstruktur-vorlage/` - Template mit Ressourcen
 
-#### 3. `/prompts/` - Original-Prompts
-29 Prompt-Vorlagen als Basis für Skill-Generierung mit skill-creator
+#### 3. `/prompts/` - Archivierte Original-Prompts
+29 Original-Prompt-Vorlagen (archiviert - jetzt in `projekt-*/anweisungen/` integriert)
 
 ## Wichtige Befehle
 
@@ -72,23 +73,30 @@ cd claude-desktop-setup
 
 ## Skill-Architektur
 
-### 27 Custom Skills in 4 Kategorien
+### Neue Architektur: 6 Custom Skills + Workflow-Anweisungen
 
-**Planungs-Skills (11):** 01-debiasing bis 11-iteration-optimierung
-- Sequenzieller 11-Schritte-Prozess für vollständige Unterrichtsreihen
-- Basierend auf Klafki, Leisen, Wember
+**Wichtige Änderung:** Die alten 27 Skills wurden durch eine hybride Architektur ersetzt:
 
-**Material-Skills (8):** mat-01 bis mat-08
-- Texterstellung, Arbeitsblätter, PowerPoint, Aufgaben, Lösungen, Prüfungen, Feedback, Lernzielkontrollen
+**Custom Skills (6 - nur für Material-Export):**
+- `mat-02-arbeitsblatt-erstellen` - Erstellt Arbeitsblätter basierend auf Vorgaben
+- `mat-03-powerpoint-erstellen` - Erstellt PowerPoint-Präsentationen
+- `export-markdown` - Exportiert in Markdown-Format
+- `export-pdf` - Exportiert als PDF
+- `export-docx` - Exportiert als DOCX
+- `export-pptx` - Exportiert als PPTX
 
-**Förderschul-Skills (4):** foerder-01 bis foerder-04
-- foerder-01-schuelerprofile-laden: Lädt Schülerprofile aus Klassenverwaltung
-- foerder-02-lernziele-differenzieren: Differenziert Lernziele nach individuellen Profilen
-- foerder-03-materialien-anpassen: Passt Materialien an Förderschwerpunkte an
-- foerder-04-piktogramm-materialien: Erstellt ausschließlich bildbasierte Materialien (für GE)
+**Workflow-Anweisungen (in `projekt-*/anweisungen/`):**
+Alle Planungs- und Prozess-Funktionen sind jetzt als direkte Anweisungen in den PROJECT_INSTRUCTIONS.md integriert:
+- **Projekt 1 (Unterrichtsreihe):** 11-Schritte-Prozess in `anweisungen/01-debiasing.md` bis `11-iteration.md`
+- **Projekt 2 (Arbeitsblatt):** Arbeitsblatt-Workflow in `anweisungen/`
+- **Projekt 3 (Präsentation):** Präsentations-Workflow in `anweisungen/`
+- **Projekt 5 (Klassenverwaltung):** Förderschul-Workflows für Schülerprofile und Differenzierung
 
-**Export-Skills (4):** export-markdown, export-pdf, export-docx, export-pptx
-- Exportieren in `1_Exportierte_Ergebnisse/`
+**Warum diese Änderung?**
+- Skills sind teuer und langsam beim Laden
+- Direkte Anweisungen in PROJECT_INSTRUCTIONS.md sind schneller und flexibler
+- Skills nur noch für wiederverwendbare Material-Generierung
+- Projekt-spezifische Workflows direkt in den Projekten
 
 ### Skill-Struktur
 Jeder Skill-Ordner enthält:
@@ -96,10 +104,11 @@ Jeder Skill-Ordner enthält:
 - Format: `name`, `description` (mit Trigger-Keywords), Markdown-Body
 
 ### Projekt-Zuordnungen
-- **Projekt 1 (Unterrichtsreihe)**: 11 Planungs-Skills + 3 Material-Skills + 4 Förderschul-Skills (optional) + 3 Export-Skills
-- **Projekt 2 (Arbeitsblatt)**: 4 Material-Skills + 2 Unterstützungs-Skills + 4 Förderschul-Skills (optional) + 3 Export-Skills
-- **Projekt 3 (Präsentation)**: 2 Material-Skills + 2 Unterstützungs-Skills + 4 Förderschul-Skills (optional) + 2 Export-Skills
+- **Projekt 1 (Unterrichtsreihe)**: Workflow in `anweisungen/` + 2 Material-Skills + 4 Export-Skills
+- **Projekt 2 (Arbeitsblatt)**: Workflow in `anweisungen/` + 1 Material-Skill + 4 Export-Skills
+- **Projekt 3 (Präsentation)**: Workflow in `anweisungen/` + 1 Material-Skill + 4 Export-Skills
 - **Projekt 4 (Skill-Verwaltung)**: Für IT-Admins - Skills direkt in Claude Desktop bearbeiten, validieren, packen
+- **Projekt 5 (Klassenverwaltung)**: Workflow in `anweisungen/` für Schülerprofile und Differenzierung
 
 ## MCP Filesystem Server Integration
 
@@ -131,10 +140,11 @@ Schul-Materialien/
 
 ## Entwicklungs-Workflow
 
-### Neuen Skill hinzufügen
-1. Erstelle Prompt-Vorlage in `/prompts/` (z.B. `12_neue_funktion.md`)
-2. Erstelle Skill-Ordner: `mkdir claude-desktop-setup/skills/12-neue-funktion`
-3. Erstelle `SKILL.md` mit YAML Frontmatter + Anweisungen:
+### Neuen Skill hinzufügen (nur für Material-Export!)
+**Hinweis:** Skills sollten nur noch für wiederverwendbare Material-Generierung erstellt werden. Für Workflows nutze `projekt-*/anweisungen/`.
+
+1. Erstelle Skill-Ordner: `mkdir claude-desktop-setup/skills/neue-funktion`
+2. Erstelle `SKILL.md` mit YAML Frontmatter + Anweisungen:
    ```markdown
    ---
    name: Skill Name
@@ -149,11 +159,19 @@ Schul-Materialien/
    ## Wann wird dieser Skill verwendet?
    ...
    ```
-4. Validiere: `./validate-skill.sh 12-neue-funktion`
-5. Packe: `./package-skills.sh`
-6. Aktualisiere entsprechende `skills-checklist.md` in Projekt-Ordnern
-7. Aktualisiere `PROJECT_INSTRUCTIONS_TEMPLATE.md` wo der Skill orchestriert wird
-8. Führe `./setup-paths.sh` aus um `PROJECT_INSTRUCTIONS.md` neu zu generieren
+3. Validiere: `./validate-skill.sh neue-funktion`
+4. Packe: `./package-skills.sh`
+5. Aktualisiere entsprechende `skills-checklist.md` in Projekt-Ordnern
+6. Füge Skill zu `PROJECT_INSTRUCTIONS_TEMPLATE.md` hinzu
+7. Führe `./setup-paths.sh` aus um `PROJECT_INSTRUCTIONS.md` neu zu generieren
+
+### Neuen Workflow hinzufügen (empfohlen!)
+Für Planungs- und Prozess-Schritte nutze die `anweisungen/` Ordner:
+
+1. Erstelle `projekt-X/anweisungen/neue-anweisung.md`
+2. Schreibe klare, schrittweise Anweisungen in Markdown
+3. Referenziere die Anweisung in `PROJECT_INSTRUCTIONS_TEMPLATE.md`
+4. Führe `./setup-paths.sh` aus
 
 ### Neues Projekt hinzufügen
 1. Erstelle `claude-desktop-setup/projekt-5-neue-aufgabe/`
@@ -273,9 +291,9 @@ Klasse_[STUFE][BUCHSTABE]_[FÖRDERSCHWERPUNKT]/
 ```
 
 **Integration in Workflow:**
-- Skill `foerder-01-schuelerprofile-laden` liest alle Profile einer Klasse
-- Skills `foerder-02` und `foerder-03` nutzen Profile für Differenzierung
-- Bei GE: Automatische Aktivierung von `foerder-04-piktogramm-materialien`
+- Projekt 5 (Klassenverwaltung) enthält Anweisungen zum Laden und Verarbeiten von Schülerprofilen
+- Automatische Differenzierung basierend auf Förderschwerpunkt
+- Bei GE: Ausschließlich bildbasierte Materialien (keine Texte)
 
 ## Script-Übersicht
 
@@ -299,7 +317,7 @@ Erwartung: Inhalt wird angezeigt
 In "Unterrichtsreihe planen":
 ```
 Prompt: "Ich möchte eine Unterrichtsreihe zum Thema Klimawandel, Klasse 9 planen."
-Erwartung: Claude startet 11-Schritte-Prozess automatisch
+Erwartung: Claude führt durch den 11-Schritte-Prozess basierend auf den Anweisungen
 ```
 
 ### Export-Test
@@ -318,6 +336,8 @@ Erwartung: Datei in 1_Exportierte_Ergebnisse/ gespeichert
 1. Prüfe YAML `description` - muss klare Trigger-Keywords enthalten
 2. Test manueller Aufruf: "Bitte nutze den Skill [NAME]"
 3. Falls das funktioniert: `description` in SKILL.md verbessern und neu packen
+
+**Hinweis:** Für Workflow-Schritte nutze jetzt die `anweisungen/` Ordner statt Skills!
 
 ### Problem: MCP "Permission Denied"
 **Lösung:**
