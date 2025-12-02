@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Projektübersicht
 
-**LehrClaude** ist ein Setup-Repository zur Implementierung eines modularen Claude Desktop Ökosystems für wissenschaftlich fundierte Unterrichtsplanung. Das System besteht aus 5 spezialisierten Claude Desktop Projekten, 8 Custom Skills und einem MCP Filesystem Server für Ressourcen-Zugriff.
+**LehrClaude** ist ein Setup-Repository zur Implementierung eines modularen Claude Desktop Ökosystems für wissenschaftlich fundierte Unterrichtsplanung. Das System besteht aus 5 spezialisierten Claude Desktop Projekten, 9 Custom Skills und einem MCP Filesystem Server für Ressourcen-Zugriff.
 
 ### Zielgruppe & Sprache
 - **IT-Administratoren**: Für Deployment und Setup
@@ -73,11 +73,11 @@ cd claude-desktop-setup
 
 ## Skill-Architektur
 
-### Neue Architektur: 8 Custom Skills + Workflow-Anweisungen
+### Neue Architektur: 9 Custom Skills + Workflow-Anweisungen
 
 **Wichtige Änderung:** Die alten 27 Skills wurden durch eine hybride Architektur ersetzt:
 
-**Custom Skills (8):**
+**Custom Skills (9):**
 
 *Material-Erstellung:*
 - `mat-02-arbeitsblatt-erstellen` - Erstellt Arbeitsblätter basierend auf Vorgaben
@@ -94,6 +94,9 @@ cd claude-desktop-setup
 
 *Förderschul-Differenzierung:*
 - `differenzierung-ge` - Erstellt piktogramm-unterstützte Materialien für Förderschwerpunkt GE
+
+*Design & Styling:*
+- `export-stile` - Definiert Schulfarben, Themes und PowerPoint-Vorlagen für einheitliches Design
 
 **Workflow-Anweisungen (in `projekt-*/anweisungen/`):**
 Alle Planungs- und Prozess-Funktionen sind jetzt als direkte Anweisungen in den PROJECT_INSTRUCTIONS.md integriert:
@@ -187,16 +190,20 @@ Schul-Materialien/
 │   └── Piktogramme/              # METACOM-Symbole für GE-Material
 │       └── METACOM/              # Lehrkraft legt hier Symbole ab
 ├── 3_Projekt_Knowledge_Base/     # Nur lokales Backup (NICHT via MCP)
-└── 4_Klassen_und_Schueler/       # LESEN (Förderschul-Skills)
-    ├── Klasse_5a_LE/             # Förderschwerpunkt Lernen
-    │   ├── Klasseninfo.md
-    │   └── Schuelerprofile/
-    │       ├── Max_Mustermann.md
-    │       └── ...
-    ├── Klasse_7b_GE/             # Förderschwerpunkt Geistige Entwicklung
-    │   ├── Klasseninfo.md
-    │   └── Schuelerprofile/
-    └── ...
+├── 4_Klassen_und_Schueler/       # LESEN (Förderschul-Skills)
+│   ├── Klasse_5a_LE/             # Förderschwerpunkt Lernen
+│   │   ├── Klasseninfo.md
+│   │   └── Schuelerprofile/
+│   │       ├── Max_Mustermann.md
+│   │       └── ...
+│   ├── Klasse_7b_GE/             # Förderschwerpunkt Geistige Entwicklung
+│   │   ├── Klasseninfo.md
+│   │   └── Schuelerprofile/
+│   └── ...
+└── 5_Export_Stile/               # LESEN (Design-Skill)
+    ├── schulfarben.txt           # Optional: Custom Schulfarben (Hex-Codes)
+    ├── schullogo.png             # Optional: Schullogo
+    └── powerpoint-vorlage.pptx   # Optional: PowerPoint-Template
 ```
 
 ### MCP-Konfiguration

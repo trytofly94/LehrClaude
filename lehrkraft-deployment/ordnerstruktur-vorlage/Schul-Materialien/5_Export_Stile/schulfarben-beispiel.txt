@@ -1,0 +1,80 @@
+BEISPIEL: SCHULFARBEN-DEFINITION
+=================================
+
+Kopieren Sie diese Datei und benennen Sie sie um in "schulfarben.txt".
+Ersetzen Sie dann die Werte durch Ihre eigenen Schulfarben.
+
+
+------- KOPIEREN AB HIER -------
+
+SCHULNAME: Muster-Gymnasium Musterstadt
+PRIMAER: #1A5F7A
+SEKUNDAER: #F5F5F5
+AKZENT: #FFC857
+SCHRIFT: Arial
+
+------- KOPIEREN BIS HIER -------
+
+
+ERKLAERUNG DER FELDER
+=====================
+
+SCHULNAME:
+- Name Ihrer Schule
+- Wird in Kopf-/Fusszeilen verwendet
+- Beispiel: Heinrich-Heine-Gesamtschule Duesseldorf
+
+PRIMAER:
+- Hauptfarbe Ihrer Schule
+- Wird fuer Ueberschriften und wichtige Elemente verwendet
+- Hex-Code mit # am Anfang
+- Beispiel: #1A5F7A (ein dunkles Blaugruen)
+
+SEKUNDAER:
+- Hintergrundfarbe
+- Wird fuer Flaechen und Hintergruende verwendet
+- Sollte hell sein fuer gute Lesbarkeit
+- Beispiel: #F5F5F5 (ein helles Grau)
+
+AKZENT:
+- Hervorhebungsfarbe
+- Wird fuer wichtige Markierungen und Buttons verwendet
+- Sollte sich von Primaer abheben
+- Beispiel: #FFC857 (ein warmes Gelb)
+
+SCHRIFT:
+- Bevorzugte Schriftart
+- Wird fuer alle Texte verwendet
+- Waehlen Sie eine gut lesbare Schrift
+- Beispiele: Arial, Verdana, Open Sans, Calibri
+
+
+HAEUFIG VERWENDETE FARBKOMBINATIONEN
+====================================
+
+BLAU-TOeNE (serioes, vertrauenswuerdig):
+PRIMAER: #2C3E50
+SEKUNDAER: #ECF0F1
+AKZENT: #3498DB
+
+GRUEN-TOeNE (natuerlich, beruhigend):
+PRIMAER: #27AE60
+SEKUNDAER: #F9FBF9
+AKZENT: #F39C12
+
+ROT-AKZENT (dynamisch, aufmerksamkeitsstark):
+PRIMAER: #34495E
+SEKUNDAER: #FAFAFA
+AKZENT: #E74C3C
+
+VIOLETT-TOeNE (kreativ, modern):
+PRIMAER: #8E44AD
+SEKUNDAER: #F8F4FC
+AKZENT: #F1C40F
+
+
+HINWEIS
+=======
+
+Loeschen Sie diese Datei NICHT - sie dient als Referenz.
+Erstellen Sie stattdessen eine NEUE Datei "schulfarben.txt".

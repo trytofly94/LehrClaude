@@ -124,6 +124,7 @@ mkdir -p "$TARGET_DIR/2_Zentrale_Ressourcen/Templates"
 mkdir -p "$TARGET_DIR/2_Zentrale_Ressourcen/Piktogramme/METACOM"
 mkdir -p "$TARGET_DIR/3_Projekt_Knowledge_Base"
 mkdir -p "$TARGET_DIR/4_Klassen_und_Schueler/_templates"
+mkdir -p "$TARGET_DIR/5_Export_Stile"
 
 echo -e "${GREEN}✓ Ordnerstruktur erstellt${NC}"
 
@@ -160,6 +161,13 @@ if [ -d "$SOURCE_DIR/2_Zentrale_Ressourcen/Piktogramme" ]; then
     cp -n "$SOURCE_DIR/2_Zentrale_Ressourcen/Piktogramme/README.txt" "$TARGET_DIR/2_Zentrale_Ressourcen/Piktogramme/" 2>/dev/null || true
     cp -n "$SOURCE_DIR/2_Zentrale_Ressourcen/Piktogramme/METACOM/README.txt" "$TARGET_DIR/2_Zentrale_Ressourcen/Piktogramme/METACOM/" 2>/dev/null || true
     echo -e "${GREEN}✓ Piktogramme-Ordner erstellt (fuer METACOM-Symbole)${NC}"
+fi
+
+# Kopiere Export-Stile Dateien
+if [ -d "$SOURCE_DIR/5_Export_Stile" ]; then
+    cp -n "$SOURCE_DIR/5_Export_Stile/README.txt" "$TARGET_DIR/5_Export_Stile/" 2>/dev/null || true
+    cp -n "$SOURCE_DIR/5_Export_Stile/schulfarben-beispiel.txt" "$TARGET_DIR/5_Export_Stile/" 2>/dev/null || true
+    echo -e "${GREEN}✓ Export-Stile Ordner erstellt (fuer Schulfarben und Templates)${NC}"
 fi
 
 echo -e "${GREEN}✓ Vorlage-Dateien kopiert${NC}"
@@ -218,6 +226,12 @@ echo -e "  6. ${BLUE}METACOM-Piktogramme ablegen (für GE-Material):${NC}"
 echo -e "     • Kopiere METACOM-Symbole nach: ${TARGET_DIR}/2_Zentrale_Ressourcen/Piktogramme/METACOM/"
 echo -e "     • Claude kann dann auf diese Symbole verweisen"
 echo -e "     • Siehe README.txt im Piktogramme-Ordner für Anleitung"
+echo ""
+echo -e "  7. ${BLUE}Schulfarben und Design anpassen (optional):${NC}"
+echo -e "     • Definiere Schulfarben in: ${TARGET_DIR}/5_Export_Stile/schulfarben.txt"
+echo -e "     • Lege Schullogo ab: ${TARGET_DIR}/5_Export_Stile/schullogo.png"
+echo -e "     • PowerPoint-Vorlage: ${TARGET_DIR}/5_Export_Stile/powerpoint-vorlage.pptx"
+echo -e "     • Siehe README.txt im Export-Stile-Ordner für Anleitung"
 echo ""
 
 echo -e "${GREEN}Viel Erfolg mit dem Lehrkraft-Copilot-System! 🎉${NC}"
