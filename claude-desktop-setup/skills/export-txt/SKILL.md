@@ -5,6 +5,19 @@ description: Dieser Skill sollte verwendet werden, wenn fertiggestellte Unterric
 
 # TXT Export Skill
 
+## WICHTIG: Stil-Check vor Export (PFLICHT)
+
+**Bevor du ein Material exportierst, MUSS der `export-stile` Skill konsultiert werden!**
+
+1. Prüfe `5_Export_Stile/` auf vorhandene `.ki.txt` Dateien
+2. Falls Original-Vorlage neuer als `.ki.txt` → Neu analysieren lassen
+3. Wende die Vorgaben aus `.ki.txt` auf das Material an (Kopfzeilen-Format, Schulname)
+4. Erst dann: Export durchführen
+
+**Relevante Dateien:** `schulfarben.ki.txt` (für Kopfzeilen und Schulname)
+
+---
+
 ## Zweck
 
 Dieser Skill standardisiert den Export von fertiggestellten Unterrichtsmaterialien (Unterrichtsplanungen, Arbeitsblätter, Präsentationen, Lernzielkontrollen) in ein sauberes, strukturiertes TXT-Format. Er gewährleistet:

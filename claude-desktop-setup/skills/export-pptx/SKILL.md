@@ -5,6 +5,21 @@ description: Konvertiert Präsentationsinhalte in professionelles PowerPoint-For
 
 # PPTX Export Skill
 
+## WICHTIG: Stil-Check vor Export (PFLICHT)
+
+**Bevor du ein Material exportierst, MUSS der `export-stile` Skill konsultiert werden!**
+
+1. Prüfe `5_Export_Stile/` auf vorhandene `.ki.txt` Dateien
+2. Falls Original-Vorlage neuer als `.ki.txt` → Neu analysieren lassen
+3. Wende die Vorgaben aus `.ki.txt` auf das Material an (Layouts, Farben, Schriften)
+4. Erst dann: Export durchführen
+
+**Relevante Dateien:**
+- `powerpoint-vorlage.ki.txt` (für Layouts und Foliendesign)
+- `schulfarben.ki.txt` (für Farben und Schriften)
+
+---
+
 **Typ:** Export / Styleguide-Skill
 **Projekte:** Projekt 3 (Präsentation entwerfen) - primär
 **Funktion:** Transformiert Präsentationsinhalte in professionelle PowerPoint-Dateien mit vollständiger Struktur, Sprechernotizen und visuellen Platzhaltern

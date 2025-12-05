@@ -5,6 +5,19 @@ description: Konvertiert strukturierte Unterrichtsmaterialien in professionelle 
 
 # PDF Export Skill
 
+## WICHTIG: Stil-Check vor Export (PFLICHT)
+
+**Bevor du ein Material exportierst, MUSS der `export-stile` Skill konsultiert werden!**
+
+1. Prüfe `5_Export_Stile/` auf vorhandene `.ki.txt` Dateien
+2. Falls Original-Vorlage neuer als `.ki.txt` → Neu analysieren lassen
+3. Wende die Vorgaben aus `.ki.txt` auf das Material an (Farben, Schriften, Logo)
+4. Erst dann: Export durchführen
+
+**Relevante Dateien:** `schulfarben.ki.txt` (für Farben und Schriften)
+
+---
+
 **Typ:** Export / Styleguide-Skill
 **Projekte:** Alle Projekte (Unterrichtsreihe planen, Arbeitsblatt erstellen, Präsentation entwerfen)
 **Funktion:** Konvertiert Markdown-Inhalte in professionelle, druckfähige PDF-Dokumente mit vollständiger Formatierung
