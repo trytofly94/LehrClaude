@@ -30,11 +30,11 @@ Führe diesen Schritt durch, wenn:
 ### Phase C: Abschluss
 1. Zeige die **finale Zusammenfassung** im Chat
 2. Frage: "Sind Sie mit diesem Ergebnis zufrieden?"
-3. **Erst nach Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+3. **Erst nach Zustimmung:** "Soll ich das Ergebnis als Markdown-Datei speichern?"
 4. Speichere nur auf expliziten Wunsch
 
 ### VERBOTEN:
-- Direkt TXT-Dateien erstellen ohne vorherige Abstimmung
+- Direkt Markdown-Dateien erstellen ohne vorherige Abstimmung
 - Annehmen, dass die Lehrkraft zufrieden ist
 - Inhalte generieren ohne Rückfragen
 
@@ -154,7 +154,7 @@ Stelle Klärungsfragen, bis alle Unsicherheiten gelöst sind:
 #### 6. Finalisierung
 1. Zeige die finale Zusammenfassung im Chat
 2. Frage: "Sind Sie mit diesem Ergebnis zufrieden?"
-3. Frage: "Soll ich das Ergebnis als TXT-Datei speichern?"
+3. Frage: "Soll ich das Ergebnis als Markdown-Datei speichern?"
 4. Nur bei Zustimmung: Speichere die Stundenplantabelle
 
 ## Qualitätssicherung
@@ -183,10 +183,24 @@ QUELLENVERZEICHNIS
 [Alphabetisch sortierte Liste aller zitierten Quellen]
 ```
 
+## Speichern
+
+**Nach Zustimmung der Lehrkraft das Ergebnis speichern:**
+
+Speicherpfad: `@mcp_filesystem /Users/lennart/Schul-Materialien/1_Exportierte_Ergebnisse/Unterrichtsreihe_[THEMA]_[STARTDATUM]/07-Unterrichtsverlauf-Planen.md`
+
+Dabei:
+- `[THEMA]`: Kurzer Titel ohne Sonderzeichen
+- `[STARTDATUM]`: Format YYYY-MM-DD
+- `[XX]`: Schritt-Nummer (z.B. 02, 03, 05)
+- `[SCHRITT-NAME]`: Name des Schritts (z.B. Sachanalyse, Didaktische-Analyse)
+
+**Beispiel:** `1_Exportierte_Ergebnisse/Unterrichtsreihe_Photosynthese_2025-01-15/07-Unterrichtsverlauf-Planen.md`
+
 ## Next Steps
 
 Nach Abschluss dieses Schritts:
 1. **Zusammenfassung im Chat präsentieren** (nicht voller Inhalt)
 2. **Fragen:** "Sind Sie mit diesem Ergebnis zufrieden? Änderungswünsche?"
-3. **Bei Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+3. **Bei Zustimmung:** "Soll ich das Ergebnis als Markdown-Datei speichern?"
 4. Der nächste Planungsschritt kann gestartet werden

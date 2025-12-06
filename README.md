@@ -30,6 +30,7 @@
 - [FAQ](#-faq)
 - [Weiterführende Dokumentation](#-weiterführende-dokumentation)
 - [Roadmap](#-roadmap)
+- [Updates & Wartung](#-updates--wartung)
 - [Support & Community](#-support--community)
 - [Lizenz](#-lizenz)
 
@@ -534,6 +535,81 @@ Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 Inter
 
 ---
 
+## 🔄 Updates & Wartung
+
+### Update-Strategie für Lehrkräfte
+
+**Wichtig:** Das System ist so konzipiert, dass Lehrkräfte Updates erhalten können, **ohne ihre eigenen Inhalte zu verlieren**.
+
+#### Was wird bei Updates betroffen?
+
+| Bereich | Update-Verhalten | Eigene Daten sicher? |
+|---------|------------------|----------------------|
+| `skills/` | Skills werden überschrieben | ✅ Ja (keine eigenen Daten hier) |
+| `projekt-*/PROJECT_INSTRUCTIONS.md` | Werden aktualisiert | ✅ Ja (keine eigenen Daten hier) |
+| `projekt-*/anweisungen/` | Werden aktualisiert | ✅ Ja (keine eigenen Daten hier) |
+| `lehrkraft-deployment/ordnerstruktur-vorlage/` | Wird aktualisiert | ✅ Ja (Vorlage, nicht Zielordner) |
+| `Schul-Materialien/1_Exportierte_Ergebnisse/` | **NICHT betroffen** | ✅ Eigene Arbeit bleibt erhalten |
+| `Schul-Materialien/4_Klassen_und_Schueler/` | **NICHT betroffen** | ✅ Schülerprofile bleiben erhalten |
+| `Schul-Materialien/2_Zentrale_Ressourcen/` | Ressourcen werden ergänzt | ⚠️ Eigene Ergänzungen bleiben |
+
+#### Update-Prozess für IT-Admins
+
+```bash
+# 1. Zum Repository wechseln
+cd /pfad/zu/LehrClaude
+
+# 2. Status prüfen (keine lokalen Änderungen an System-Dateien?)
+git status
+
+# 3. Updates holen
+git pull origin main
+
+# 4. Neue Skills packen
+cd claude-desktop-setup
+./package-skills.sh --force
+
+# 5. Skills in Claude Desktop aktualisieren
+# → Settings > Skills > Custom Skills
+# → Alte ZIPs löschen
+# → Neue ZIPs aus skill-packages/ hochladen
+```
+
+#### Was Lehrkräfte nach einem Update tun müssen
+
+1. **Skills neu hochladen** (vom IT-Admin bereitgestellt)
+   - In Claude Desktop: Settings > Skills > Custom Skills
+   - Alte Skills löschen, neue hochladen
+
+2. **Bestehende Projekte funktionieren weiter**
+   - Alle gespeicherten Unterrichtsreihen in `1_Exportierte_Ergebnisse/` bleiben erhalten
+   - Schülerprofile in `4_Klassen_und_Schueler/` bleiben erhalten
+
+3. **Keine Daten gehen verloren**
+   - Das Repository enthält nur System-Dateien
+   - Lehrkraft-Inhalte liegen außerhalb des Repositories
+
+#### Empfohlene Ordnerstruktur
+
+**Für saubere Trennung:**
+```
+/Users/[LEHRKRAFT]/
+├── LehrClaude/                    # Git-Repository (System-Dateien)
+│   ├── claude-desktop-setup/
+│   ├── lehrkraft-deployment/
+│   └── ...
+│
+└── Schul-Materialien/             # AUSSERHALB des Repositories!
+    ├── 1_Exportierte_Ergebnisse/  # Eigene Arbeit
+    ├── 2_Zentrale_Ressourcen/     # Ressourcen + eigene Ergänzungen
+    ├── 3_Projekt_Knowledge_Base/  # Eigene Dokumente
+    └── 4_Klassen_und_Schueler/    # Schülerprofile
+```
+
+**Wichtig:** Der `Schul-Materialien/`-Ordner liegt AUSSERHALB des Git-Repositories. Er wird vom `lehrkraft-deployment/setup.sh` erstellt und ist komplett unabhängig von Updates.
+
+---
+
 ## 📞 Support & Community
 
 ### Bei Problemen während des Setups:
@@ -627,10 +703,10 @@ Vollständiger Lizenztext: [CC BY-SA 4.0](https://creativecommons.org/licenses/b
 
 ---
 
-**Version:** 2.0
-**Stand:** 2025-11-30
+**Version:** 2.1
+**Stand:** 2025-12-06
 **Kompatibilität:** macOS 11+, Claude Desktop (aktuell)
-**Architektur:** 6 Skills + Workflow-Anweisungen (unter 20-Skill-Limit)
+**Architektur:** 9 Skills + Workflow-Anweisungen (unter 20-Skill-Limit)
 
 ---
 

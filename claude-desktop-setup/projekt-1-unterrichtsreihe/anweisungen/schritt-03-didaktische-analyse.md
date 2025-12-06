@@ -32,11 +32,11 @@ Führe diesen Schritt durch, wenn:
 ### Phase C: Abschluss
 1. Zeige die **finale Zusammenfassung** im Chat
 2. Frage: "Sind Sie mit diesem Ergebnis zufrieden?"
-3. **Erst nach Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+3. **Erst nach Zustimmung:** "Soll ich das Ergebnis als Markdown-Datei speichern?"
 4. Speichere nur auf expliziten Wunsch
 
 ### VERBOTEN:
-- Direkt TXT-Dateien erstellen ohne vorherige Abstimmung
+- Direkt Markdown-Dateien erstellen ohne vorherige Abstimmung
 - Annehmen, dass die Lehrkraft zufrieden ist
 - Inhalte generieren ohne Rückfragen
 
@@ -172,8 +172,8 @@ Nach Erstellung der anfänglichen Analyse, schlage Verbesserungen des Analysepro
 ### Phase C: Abschluss
 1. **Finale Zusammenfassung zeigen:** Vollständige didaktische Analyse im Chat präsentieren
 2. **Zufriedenheit prüfen:** "Sind Sie mit diesem Ergebnis zufrieden?"
-3. **Export anbieten:** "Soll ich das Ergebnis als TXT-Datei speichern?"
-4. **Nur bei Zustimmung:** TXT-Datei speichern
+3. **Export anbieten:** "Soll ich das Ergebnis als Markdown-Datei speichern?"
+4. **Nur bei Zustimmung:** Markdown-Datei speichern
 
 ## Theoretische Grundlagen
 
@@ -186,10 +186,24 @@ Dieser Schritt basiert auf **Wolfgang Klafkis bildungstheoretischer Didaktik**, 
 
 Dieser Ansatz stellt sicher, dass der Lehrplan nicht willkürlich ist, sondern sowohl in pädagogischem Zweck als auch in der Realität der Lernenden verankert ist.
 
+## Speichern
+
+**Nach Zustimmung der Lehrkraft das Ergebnis speichern:**
+
+Speicherpfad: `@mcp_filesystem /Users/lennart/Schul-Materialien/1_Exportierte_Ergebnisse/Unterrichtsreihe_[THEMA]_[STARTDATUM]/03-Didaktische-Analyse.md`
+
+Dabei:
+- `[THEMA]`: Kurzer Titel ohne Sonderzeichen
+- `[STARTDATUM]`: Format YYYY-MM-DD
+- `[XX]`: Schritt-Nummer (z.B. 02, 03, 05)
+- `[SCHRITT-NAME]`: Name des Schritts (z.B. Sachanalyse, Didaktische-Analyse)
+
+**Beispiel:** `1_Exportierte_Ergebnisse/Unterrichtsreihe_Photosynthese_2025-01-15/03-Didaktische-Analyse.md`
+
 ## Next Steps
 
 Nach Abschluss dieses Schritts:
 1. **Zusammenfassung im Chat präsentieren** (nicht voller Inhalt)
 2. **Fragen:** "Sind Sie mit diesem Ergebnis zufrieden? Änderungswünsche?"
-3. **Bei Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+3. **Bei Zustimmung:** "Soll ich das Ergebnis als Markdown-Datei speichern?"
 4. Der nächste Planungsschritt kann gestartet werden

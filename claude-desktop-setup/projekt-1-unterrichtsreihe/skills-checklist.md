@@ -54,6 +54,16 @@ Diese Skills ermöglichen den Export der fertigen Unterrichtsreihe:
 
 ---
 
+### ✅ Spezial-Skills (OPTIONAL)
+
+Diese Skills bieten erweiterte Funktionalität:
+
+- [ ] **quellenrecherche** - Validiert Quellen per Web-Suche und formatiert Zitationen (für akademische Abgaben)
+
+**Status:** [ ] Spezial-Skills aktiviert (OPTIONAL)
+
+---
+
 ## Workflow-Anweisungen (keine Skills!)
 
 Der 11-Schritte-Prozess ist jetzt direkt in den Anweisungen integriert:
@@ -130,6 +140,6 @@ Diese werden automatisch durch PROJECT_INSTRUCTIONS.md orchestriert - keine manu
 
 ---
 
-**Version:** 2.0
-**Zuletzt aktualisiert:** 2025-11-30
-**Änderungen:** Umstellung auf Workflow-Anweisungen, nur noch 6 Skills
+**Version:** 2.1
+**Zuletzt aktualisiert:** 2025-12-06
+**Änderungen:** quellenrecherche hinzugefügt, Kontext-Laden dokumentiert

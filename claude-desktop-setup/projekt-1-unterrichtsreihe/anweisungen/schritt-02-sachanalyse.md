@@ -31,11 +31,11 @@ Dieser Schritt wird durchgeführt:
 ### Phase C: Abschluss
 1. Zeige die **finale Zusammenfassung** im Chat
 2. Frage: "Sind Sie mit diesem Ergebnis zufrieden?"
-3. **Erst nach Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+3. **Erst nach Zustimmung:** "Soll ich das Ergebnis als Markdown-Datei speichern?"
 4. Speichere nur auf expliziten Wunsch
 
 ### VERBOTEN:
-- Direkt TXT-Dateien erstellen ohne vorherige Abstimmung
+- Direkt Markdown-Dateien erstellen ohne vorherige Abstimmung
 - Annehmen, dass die Lehrkraft zufrieden ist
 - Inhalte generieren ohne Rückfragen
 
@@ -140,8 +140,8 @@ Folgende Einschränkungen strikt beachten:
 ### Phase C: Abschluss
 1. **Finale Zusammenfassung zeigen:** Vollständige Sachanalyse im Chat präsentieren
 2. **Zufriedenheit prüfen:** "Sind Sie mit diesem Ergebnis zufrieden?"
-3. **Export anbieten:** "Soll ich das Ergebnis als TXT-Datei speichern?"
-4. **Nur bei Zustimmung:** TXT-Datei speichern
+3. **Export anbieten:** "Soll ich das Ergebnis als Markdown-Datei speichern?"
+4. **Nur bei Zustimmung:** Markdown-Datei speichern
 
 ## Output
 
@@ -177,10 +177,24 @@ QUELLENVERZEICHNIS
 
 Das Ergebnis dient als Grundlage für die nachfolgende didaktische Analyse (Schritt 03).
 
+## Speichern
+
+**Nach Zustimmung der Lehrkraft das Ergebnis speichern:**
+
+Speicherpfad: `@mcp_filesystem /Users/lennart/Schul-Materialien/1_Exportierte_Ergebnisse/Unterrichtsreihe_[THEMA]_[STARTDATUM]/02-Sachanalyse.md`
+
+Dabei:
+- `[THEMA]`: Kurzer Titel ohne Sonderzeichen
+- `[STARTDATUM]`: Format YYYY-MM-DD
+- `[XX]`: Schritt-Nummer (z.B. 02, 03, 05)
+- `[SCHRITT-NAME]`: Name des Schritts (z.B. Sachanalyse, Didaktische-Analyse)
+
+**Beispiel:** `1_Exportierte_Ergebnisse/Unterrichtsreihe_Photosynthese_2025-01-15/02-Sachanalyse.md`
+
 ## Next Steps
 
 Nach Abschluss dieses Schritts:
 1. **Zusammenfassung im Chat präsentieren** (nicht voller Inhalt)
 2. **Fragen:** "Sind Sie mit diesem Ergebnis zufrieden? Änderungswünsche?"
-3. **Bei Zustimmung:** "Soll ich das Ergebnis als TXT-Datei speichern?"
+3. **Bei Zustimmung:** "Soll ich das Ergebnis als Markdown-Datei speichern?"
 4. Der nächste Planungsschritt kann gestartet werden

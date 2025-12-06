@@ -21,7 +21,7 @@ Enthält Dateien für manuelle Claude Desktop Konfiguration:
 - `MCP_CONFIG.json` - MCP Filesystem Server Template
 - `projekt-{1,2,3,4,5}/PROJECT_INSTRUCTIONS.md` - Claude Desktop Project Instructions
 - `projekt-{1,2,3}/anweisungen/` - Detaillierte Workflow-Anweisungen (ersetzt alte Planungs-Skills)
-- `skills/` - 6 Skill-Ordner (Material-Export-Skills)
+- `skills/` - 9 Skill-Ordner (Material + Export + Spezial-Skills)
 - `package-skills.sh` - Erstellt ZIP-Pakete aus Skills
 - `validate-skill.sh` - Validiert Skill-Struktur
 - `CONFIG.sh` - Zentrale Pfad-Konfiguration (generiert von setup-paths.sh)
@@ -499,6 +499,29 @@ chmod -R 755 /Users/[LEHRKRAFT]/Schul-Materialien
 
 ---
 
-**Version:** 1.2
-**Stand:** 2025-01-10
+## Kontext-Laden bei bestehenden Projekten
+
+**Wichtige Funktionalität (seit Dezember 2025):**
+
+Alle PROJECT_INSTRUCTIONS.md enthalten jetzt einen "Initialisierung"-Abschnitt, der Claude anweist:
+
+1. **IMMER zuerst fragen:** Ob die Lehrkraft an einem bestehenden Projekt weiterarbeitet
+2. **Kontext laden:** Falls ja, automatisch alle bisherigen Ergebnisse aus `1_Exportierte_Ergebnisse/` laden
+3. **Keine Doppel-Fragen:** Basis-Informationen (Thema, Klasse, Bundesland) aus geladenen Dateien übernehmen
+
+**Dateinamen-Konvention für Zwischenergebnisse:**
+```
+1_Exportierte_Ergebnisse/Unterrichtsreihe_[THEMA]_[STARTDATUM]/
+├── 01-Debiasing.md
+├── 02-Sachanalyse.md
+├── ...
+└── FINAL_Unterrichtsreihe.md
+```
+
+Dies ermöglicht nahtloses Weiterarbeiten über mehrere Chat-Sessions hinweg.
+
+---
+
+**Version:** 2.0
+**Stand:** 2025-12-06
 **Zielgruppe:** IT-Admins, Claude Code Nutzer, Entwickler

@@ -13,7 +13,7 @@ Schul-Materialien/
 ├── 1_Exportierte_Ergebnisse/        # Fertige Dokumente
 ├── 2_Zentrale_Ressourcen/           # Lehrpläne, Frameworks
 │   ├── Lehrplaene/
-│   ├── Didaktik/                    # Inkl. Zitationsrichtlinien.txt
+│   ├── Didaktik/                    # Inkl. Zitationsrichtlinien.md
 │   ├── Templates/
 │   └── Piktogramme/                 # METACOM-Symbole für GE-Material
 │       └── METACOM/
@@ -71,13 +71,13 @@ Erstellt alle benötigten Ordner:
 ### 3. Vorlage-Dateien kopieren
 
 Kopiert Beispiel-Ressourcen:
-- **KMK-Operatoren.txt** (Aufgaben-Operatoren)
-- **Bloom-Taxonomie.txt** (Lernzielstufen)
-- **Zitationsrichtlinien.txt** (Akademisches Zitieren)
-- **arbeitsblatt-vorlage.txt** (Layout-Template)
-- **praesentation-master.txt** (Präsentations-Richtlinien)
-- **Piktogramme/README.txt** (Anleitung für METACOM-Ablage)
-- **README-Dateien** für jeden Ordner
+- **KMK-Operatoren.md** (Aufgaben-Operatoren)
+- **Bloom-Taxonomie.md** (Lernzielstufen)
+- **Zitationsrichtlinien.md** (Akademisches Zitieren)
+- **arbeitsblatt-vorlage.md** (Layout-Template)
+- **praesentation-master.md** (Präsentations-Richtlinien)
+- **Piktogramme/README.md** (Anleitung für METACOM-Ablage)
+- **README.md-Dateien** für jeden Ordner
 
 ### 4. Berechtigungen setzen
 
@@ -112,7 +112,7 @@ Das Script zeigt am Ende die **nächsten Schritte** an:
 ### Wissenschaftliche Quellenarbeit
 
 Das System unterstützt akademische Abgaben mit:
-- **Zitationsrichtlinien:** Siehe `2_Zentrale_Ressourcen/Didaktik/Zitationsrichtlinien.txt`
+- **Zitationsrichtlinien:** Siehe `2_Zentrale_Ressourcen/Didaktik/Zitationsrichtlinien.md`
 - **Inline-Zitationen:** Format (Autor, Jahr) im Fließtext
 - **Quellenverzeichnis:** Alphabetisch am Dokumentende
 - **2-Stufen-Recherche:** Web-Suche (automatisch) vs. Deep Research (manuell)
@@ -187,16 +187,16 @@ Lehrplaene/
 Frameworks, Taxonomien, Operator-Listen, Zitationsrichtlinien
 
 **Enthält (Beispiele):**
-- `KMK-Operatoren.txt` - Standardisierte Aufgaben-Operatoren
-- `Bloom-Taxonomie.txt` - Kognitive Lernzielstufen
-- `Zitationsrichtlinien.txt` - Format für akademische Quellen
+- `KMK-Operatoren.md` - Standardisierte Aufgaben-Operatoren
+- `Bloom-Taxonomie.md` - Kognitive Lernzielstufen
+- `Zitationsrichtlinien.md` - Format für akademische Quellen
 
 #### Templates/
 Vorlagen für Arbeitsblätter, Präsentationen
 
 **Enthält:**
-- `arbeitsblatt-vorlage.txt` - Layout-Referenz für Arbeitsblätter
-- `praesentation-master.txt` - Formatierungsrichtlinien für Präsentationen
+- `arbeitsblatt-vorlage.md` - Layout-Referenz für Arbeitsblätter
+- `praesentation-master.md` - Formatierungsrichtlinien für Präsentationen
 
 ---
 

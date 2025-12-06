@@ -52,7 +52,7 @@ Das LehrClaude besteht aus:
                     ↓
 ┌──────────────────────────────────────────────────┐
 │ 3. Skills packen und hochladen                  │
-│    (10 Minuten für 6 Skills)                    │
+│    (10 Minuten für 9 Skills)                    │
 └──────────────────────────────────────────────────┘
                     ↓
 ┌──────────────────────────────────────────────────┐
@@ -139,11 +139,11 @@ Für akademische Abgaben unterstützt das System jetzt:
 - **Inline-Zitationen:** Format (Autor, Jahr) im Fließtext
 - **Quellenverzeichnis:** Alphabetisch sortiert am Dokumentende
 
-**Wichtige Ressource:** `2_Zentrale_Ressourcen/Didaktik/Zitationsrichtlinien.txt`
+**Wichtige Ressource:** `2_Zentrale_Ressourcen/Didaktik/Zitationsrichtlinien.md`
 
-### TXT-Format statt Markdown
+### Markdown-Format
 
-Alle Lehrkraft-sichtbaren Dateien nutzen jetzt strukturiertes TXT-Format (statt Markdown) für optimale Mac-Vorschau-Kompatibilität.
+Alle Dateien (Ressourcen, Templates, Exports) nutzen einheitliches Markdown-Format (.md) für beste Kompatibilität und Lesbarkeit.
 
 ---
 
@@ -649,12 +649,13 @@ nano skills/02-sachanalyse/SKILL.md        # nano
 
 ---
 
-**Version:** 2.1
-**Zuletzt aktualisiert:** 2025-11-30
+**Version:** 2.3
+**Zuletzt aktualisiert:** 2025-12-06
 **Geschätzter Zeitaufwand:** 45-60 Minuten (Setup + 9 Skills)
 
 **Änderungshistorie:**
+- **v2.3 (2025-12-06):** Kontext-Laden bei bestehenden Projekten, Markdown-Migration, Dokumentations-Update
 - **v2.2 (2025-11-30):** Neue Skills: quellenrecherche, differenzierung-ge; Piktogramme-Ordner für METACOM
-- **v2.1 (2025-11-30):** 3-Phasen-Workflow, Quellenbasierter Ansatz, Zitationsrichtlinien.txt
-- **v2.0 (2025-11-30):** Architektur-Überarbeitung - 6 Skills statt 27, Workflows in anweisungen/
+- **v2.1 (2025-11-30):** 3-Phasen-Workflow, Quellenbasierter Ansatz, Zitationsrichtlinien
+- **v2.0 (2025-11-30):** Architektur-Überarbeitung - 9 Skills statt 27, Workflows in anweisungen/
 - **v1.0 (2025-11-09):** Initial release mit 23 Skills
