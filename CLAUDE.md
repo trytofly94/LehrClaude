@@ -84,7 +84,7 @@ cd claude-desktop-setup
 - `mat-03-powerpoint-erstellen` - Erstellt PowerPoint-Präsentationen
 
 *Export-Skills:*
-- `export-txt` - Exportiert in strukturiertes TXT-Format (Haupt-Export für Lehrkräfte)
+- `export-md` - Exportiert als Markdown-Datei (Haupt-Export für Lehrkräfte)
 - `export-pdf` - Exportiert als PDF
 - `export-docx` - Exportiert als DOCX
 - `export-pptx` - Exportiert als PPTX
@@ -130,11 +130,11 @@ Alle Planungs- und Prozess-Funktionen sind jetzt als direkte Anweisungen in den 
 ### Phase C: Abschluss
 - Finale Zusammenfassung im Chat zeigen
 - Fragen: "Sind Sie mit diesem Ergebnis zufrieden?"
-- **Erst nach Zustimmung:** "Soll ich das als TXT speichern?"
+- **Erst nach Zustimmung:** "Soll ich das als Markdown speichern?"
 - Export nur auf expliziten Wunsch
 
 **VERBOTEN:**
-- Direkt TXT-Dateien erstellen ohne vorherige Abstimmung
+- Direkt Dateien erstellen ohne vorherige Abstimmung
 - Annehmen, dass die Lehrkraft zufrieden ist
 - Inhalte generieren ohne Rückfragen
 
@@ -157,7 +157,7 @@ Alle Planungs- und Prozess-Funktionen sind jetzt als direkte Anweisungen in den 
 ### Zitationsformat
 - **Inline im Text:** (Autor, Jahr) oder (Autor, Jahr, S. X)
 - **Quellenverzeichnis am Ende:** Alphabetisch sortiert
-- **Format-Vorlage:** `2_Zentrale_Ressourcen/Didaktik/Zitationsrichtlinien.txt`
+- **Format-Vorlage:** `2_Zentrale_Ressourcen/Didaktik/Zitationsrichtlinien.md`
 
 ### Quellentypen (Priorität)
 1. Hochgeladene Dokumente der Lehrkraft
@@ -201,7 +201,7 @@ Schul-Materialien/
 │   │   └── Schuelerprofile/
 │   └── ...
 └── 5_Export_Stile/               # LESEN (Design-Skill)
-    ├── schulfarben.txt           # Optional: Custom Schulfarben (Hex-Codes)
+    ├── schulfarben.md            # Optional: Custom Schulfarben (Hex-Codes)
     ├── schullogo.png             # Optional: Schullogo
     └── powerpoint-vorlage.pptx   # Optional: PowerPoint-Template
 ```
@@ -211,62 +211,29 @@ Schul-Materialien/
 - Wird von `setup-paths.sh` automatisch zu `MCP_CONFIG.json` generiert mit korrekten Pfaden
 - Manuell anpassen falls Deployment-Pfad sich ändert
 
-## TXT-Format für Lehrkraft-Dateien
+## Markdown-Format für alle Dateien
 
-Alle für Lehrkräfte sichtbaren Dateien werden im strukturierten TXT-Format erstellt (nicht Markdown).
+Alle Dateien im System verwenden **Markdown-Format (.md)**. Dies bietet:
 
-### Warum TXT statt Markdown?
-- **Mac-Kompatibilität:** Mac Vorschau zeigt TXT sofort korrekt an (Markdown nur als Quelltext)
-- **Word-Integration:** Kopieren in Word funktioniert ohne Markdown-Syntax-Artefakte (`#`, `*`, etc.)
-- **Keine Vorkenntnisse:** Lehrkräfte müssen kein Markdown kennen oder lernen
-- **Universelle Lesbarkeit:** Jeder Editor kann TXT öffnen und bearbeiten
+### Vorteile von Markdown:
+- **Strukturierte Formatierung:** Überschriften, Listen, Tabellen
+- **KI-optimiert:** Besser lesbar für Claude und andere KI-Systeme
+- **Flexible Konvertierung:** Einfach nach PDF, DOCX, PPTX exportierbar
+- **Standard-Format:** In allen Editoren unterstützt
 
-### Was bleibt .md (intern, für Lehrkraft unsichtbar):
-- `SKILL.md` (Claude Desktop Requirement - muss Markdown sein)
-- `PROJECT_INSTRUCTIONS.md` (in Claude Desktop Settings - nur Admin sieht diese)
-- `anweisungen/*.md` (nur von Claude gelesen, Lehrkraft nutzt nur die Ergebnisse)
-- `Klasseninfo.md` und `Schuelerprofile/*.md` (werden zu .txt migriert)
+### KI-optimierte Templates (.ki.md)
+Für Design und Styling werden spezielle `.ki.md` Dateien verwendet:
 
-### Was ist .txt (für Lehrkraft sichtbar):
-- **Exportierte Ergebnisse** (`1_Exportierte_Ergebnisse/`) - Alle fertigen Unterrichtsmaterialien
+- `schulfarben.ki.md` - KI-optimierte Schulfarben-Vorlage
+- `powerpoint-vorlage.ki.md` - Template für Präsentationen
+
+Diese werden vom `export-stile` Skill automatisch aus den Originaldateien generiert.
+
+### Datei-Struktur:
+- **Exportierte Ergebnisse** (`1_Exportierte_Ergebnisse/`) - Alle fertigen Materialien als `.md`
 - **Zentrale Ressourcen** (`2_Zentrale_Ressourcen/`) - Lehrpläne, Didaktik-Frameworks, Templates
-- **Schülerprofile** (`4_Klassen_und_Schueler/`) - Klasseninfo und individuelle Schülerprofile
-
-### TXT-Formatierungsregeln für Skills:
-
-**Überschriften:**
-```
-HAUPTÜBERSCHRIFT
-=================
-
-Unterüberschrift
------------------
-```
-
-**Listen:**
-```
-- Einfache Bindestriche für Listen
-- Keine verschachtelten Listen
-```
-
-**Hervorhebungen:**
-```
-WICHTIG: Großbuchstaben für wichtige Begriffe
-*Sternchen* für moderate Betonung
-```
-
-**Struktur-Elemente:**
-```
-Abschnitte durch Leerzeilen trennen
-
-Längere Trennlinien für visuelle Trennung:
-===================================
-```
-
-**WICHTIG für Export-Skills:**
-- Keine Markdown-Syntax im Output (`#`, `##`, `**bold**`, etc.)
-- Stattdessen strukturierte TXT-Formatierung verwenden
-- Ziel: Datei ist sofort in Mac Vorschau lesbar und in Word kopierbar
+- **Schülerprofile** (`4_Klassen_und_Schueler/`) - Klasseninfo und Profile als `.md`
+- **Export-Stile** (`5_Export_Stile/`) - Schulfarben und Design-Templates
 
 ## Entwicklungs-Workflow
 
@@ -453,8 +420,8 @@ Erwartung: Claude führt durch den 11-Schritte-Prozess basierend auf den Anweisu
 ### Export-Test
 Nach Material-Erstellung:
 ```
-Prompt: "Exportiere als TXT."
-Erwartung: Datei in 1_Exportierte_Ergebnisse/ gespeichert (strukturiertes TXT-Format)
+Prompt: "Exportiere als Markdown."
+Erwartung: Datei in 1_Exportierte_Ergebnisse/ gespeichert (.md Format)
 
 Prompt: "Exportiere als PDF."
 Erwartung: Datei in 1_Exportierte_Ergebnisse/ gespeichert

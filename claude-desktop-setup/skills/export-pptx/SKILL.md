@@ -9,14 +9,14 @@ description: Konvertiert Präsentationsinhalte in professionelles PowerPoint-For
 
 **Bevor du ein Material exportierst, MUSS der `export-stile` Skill konsultiert werden!**
 
-1. Prüfe `5_Export_Stile/` auf vorhandene `.ki.txt` Dateien
-2. Falls Original-Vorlage neuer als `.ki.txt` → Neu analysieren lassen
-3. Wende die Vorgaben aus `.ki.txt` auf das Material an (Layouts, Farben, Schriften)
+1. Prüfe `5_Export_Stile/` auf vorhandene `.ki.md` Dateien
+2. Falls Original-Vorlage neuer als `.ki.md` → Neu analysieren lassen
+3. Wende die Vorgaben aus `.ki.md` auf das Material an (Layouts, Farben, Schriften)
 4. Erst dann: Export durchführen
 
 **Relevante Dateien:**
-- `powerpoint-vorlage.ki.txt` (für Layouts und Foliendesign)
-- `schulfarben.ki.txt` (für Farben und Schriften)
+- `powerpoint-vorlage.ki.md` (für Layouts und Foliendesign)
+- `schulfarben.ki.md` (für Farben und Schriften)
 
 ---
 
@@ -307,7 +307,7 @@ Wenn verfügbar, referenziere:
 Dieser Skill ist Teil des Export-Toolkits:
 
 - **Erhält von**: mat-03-powerpoint-erstellen (erstellt Inhalte)
-- **Paart sich mit**: export-txt, export-pdf, export-docx (alternative Exports)
+- **Paart sich mit**: export-md, export-pdf, export-docx (alternative Exports)
 - **Ergänzt**: 05-lernziele-operationalisieren, 06-mindmap-strukturierung (Inhaltsreferenz)
 
 ---

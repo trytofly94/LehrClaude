@@ -9,7 +9,7 @@ description: "Intelligentes Template-Management für einheitliches Design. MUSS 
 
 Dieser Skill ist der **zentrale Design-Manager** für alle Unterrichtsmaterialien. Er sorgt für konsistentes Design durch:
 
-1. Automatische Analyse von Vorlagen → KI-optimierte `.ki.txt` Dateien
+1. Automatische Analyse von Vorlagen → KI-optimierte `.ki.md` Dateien
 2. Versionsprüfung: Original-Vorlage neuer? → Automatische Neuanalyse
 3. Fallback auf 5 vordefinierte Themes wenn keine Vorlagen existieren
 
@@ -23,14 +23,14 @@ Alle Design-Vorlagen liegen in einem zentralen Ordner:
 
 ```
 5_Export_Stile/
-├── README.txt                      # Anleitung für Lehrkraft
-├── schulfarben.txt                 # Original: Lehrkraft-Definition
-├── schulfarben.ki.txt              # KI-Version (automatisch erstellt)
+├── README.md                       # Anleitung für Lehrkraft
+├── schulfarben.md                  # Original: Lehrkraft-Definition
+├── schulfarben.ki.md               # KI-Version (automatisch erstellt)
 ├── schullogo.png                   # Schullogo
 ├── powerpoint-vorlage.pptx         # Original: PowerPoint-Template
-├── powerpoint-vorlage.ki.txt       # KI-Version (automatisch erstellt)
+├── powerpoint-vorlage.ki.md        # KI-Version (automatisch erstellt)
 ├── arbeitsblatt-vorlage.docx       # Original: Word-Template
-└── arbeitsblatt-vorlage.ki.txt     # KI-Version (automatisch erstellt)
+└── arbeitsblatt-vorlage.ki.md      # KI-Version (automatisch erstellt)
 ```
 
 ---
@@ -43,8 +43,8 @@ Prüfe den Ordner `5_Export_Stile/` auf vorhandene Dateien:
 
 ```
 Für jede Datei:
-  1. Ist es eine Original-Vorlage? (.pptx, .docx, .txt ohne .ki, .png)
-  2. Existiert eine zugehörige .ki.txt?
+  1. Ist es eine Original-Vorlage? (.pptx, .docx, .md ohne .ki, .png)
+  2. Existiert eine zugehörige .ki.md?
   3. Vergleiche Änderungsdatum: Original vs. KI-Version
 ```
 
@@ -54,7 +54,7 @@ Für jede Datei:
 Falls Original neuer als KI-Version ODER KI-Version fehlt:
 
   1. Original-Datei analysieren
-  2. Strukturierte .ki.txt erstellen
+  2. Strukturierte .ki.md erstellen
   3. Im Ordner 5_Export_Stile/ speichern
   4. Lehrkraft informieren: "Ich habe Ihre Vorlage [NAME] analysiert und
      eine optimierte Version erstellt."
@@ -64,7 +64,7 @@ Falls Original neuer als KI-Version ODER KI-Version fehlt:
 
 ```
 Für Material-Erstellung:
-  1. Lese relevante .ki.txt Datei(en)
+  1. Lese relevante .ki.md Datei(en)
   2. Wende extrahierte Vorgaben an
   3. Erstelle Material mit korrektem Design
 ```
@@ -72,7 +72,7 @@ Für Material-Erstellung:
 ### Schritt 4: Fallback auf vordefinierte Themes
 
 ```
-Falls KEINE .ki.txt Dateien vorhanden:
+Falls KEINE .ki.md Dateien vorhanden:
   1. Frage Lehrkraft: "Welches Theme soll ich verwenden?"
   2. Zeige die 5 vordefinierten Themes
   3. Nutze gewähltes Theme
@@ -80,95 +80,103 @@ Falls KEINE .ki.txt Dateien vorhanden:
 
 ---
 
-## Format der .ki.txt Dateien
+## Format der .ki.md Dateien
 
-### schulfarben.ki.txt
+### schulfarben.ki.md
 
-```
-TEMPLATE_TYP: Schulfarben
-ANALYSIERT_AM: [Datum]
-QUELL_DATEI: schulfarben.txt
-QUELL_DATUM: [Datum der Original-Datei]
-
+```markdown
+---
+template_typ: Schulfarben
+analysiert_am: [Datum]
+quell_datei: schulfarben.md
+quell_datum: [Datum der Original-Datei]
 ---
 
-SCHULNAME: [Name der Schule]
+# Schulfarben
 
-FARBEN:
-  PRIMAER: #XXXXXX
-  SEKUNDAER: #XXXXXX
-  AKZENT: #XXXXXX
+## Schulname
+[Name der Schule]
 
-TYPOGRAFIE:
-  SCHRIFT: [Schriftart]
-  FALLBACK: [Alternative Schrift]
+## Farben
+- **Primär:** #XXXXXX
+- **Sekundär:** #XXXXXX
+- **Akzent:** #XXXXXX
 
-ANWENDUNG:
-  - Ueberschriften: PRIMAER
-  - Hintergruende: SEKUNDAER
-  - Hervorhebungen: AKZENT
+## Typografie
+- **Schrift:** [Schriftart]
+- **Fallback:** [Alternative Schrift]
+
+## Anwendung
+- Überschriften: Primär
+- Hintergründe: Sekundär
+- Hervorhebungen: Akzent
 ```
 
-### powerpoint-vorlage.ki.txt
+### powerpoint-vorlage.ki.md
 
-```
-TEMPLATE_TYP: PowerPoint
-ANALYSIERT_AM: [Datum]
-QUELL_DATEI: powerpoint-vorlage.pptx
-QUELL_DATUM: [Datum der Original-Datei]
-
+```markdown
+---
+template_typ: PowerPoint
+analysiert_am: [Datum]
+quell_datei: powerpoint-vorlage.pptx
+quell_datum: [Datum der Original-Datei]
 ---
 
-LAYOUTS:
-  1. [Layout-Name]
-     - Platzhalter: [Beschreibung]
-     - Hintergrund: [Farbe/Stil]
+# PowerPoint-Vorlage Analyse
 
-  2. [Layout-Name]
-     - Platzhalter: [Beschreibung]
-     - Besonderheiten: [Details]
+## Layouts
 
-FARBEN:
-  PRIMAER: #XXXXXX
-  SEKUNDAER: #XXXXXX
-  AKZENT: #XXXXXX
+### 1. [Layout-Name]
+- **Platzhalter:** [Beschreibung]
+- **Hintergrund:** [Farbe/Stil]
 
-SCHRIFTEN:
-  UEBERSCHRIFTEN: [Schrift, Groesse]
-  TEXT: [Schrift, Groesse]
+### 2. [Layout-Name]
+- **Platzhalter:** [Beschreibung]
+- **Besonderheiten:** [Details]
 
-LOGO:
-  POSITION: [Position]
-  PLATZHALTER: [SCHULLOGO]
+## Farben
+- **Primär:** #XXXXXX
+- **Sekundär:** #XXXXXX
+- **Akzent:** #XXXXXX
+
+## Schriften
+- **Überschriften:** [Schrift, Größe]
+- **Text:** [Schrift, Größe]
+
+## Logo
+- **Position:** [Position]
+- **Platzhalter:** `[SCHULLOGO]`
 ```
 
-### arbeitsblatt-vorlage.ki.txt
+### arbeitsblatt-vorlage.ki.md
 
-```
-TEMPLATE_TYP: Arbeitsblatt
-ANALYSIERT_AM: [Datum]
-QUELL_DATEI: arbeitsblatt-vorlage.docx
-QUELL_DATUM: [Datum der Original-Datei]
-
+```markdown
+---
+template_typ: Arbeitsblatt
+analysiert_am: [Datum]
+quell_datei: arbeitsblatt-vorlage.docx
+quell_datum: [Datum der Original-Datei]
 ---
 
-LAYOUT:
-  SEITENRAENDER: [Werte]
-  KOPFZEILE: [Beschreibung]
-  FUSSZEILE: [Beschreibung]
+# Arbeitsblatt-Vorlage Analyse
 
-STRUKTUR:
-  TITEL: [Format-Beschreibung]
-  UEBERSCHRIFTEN: [Format-Beschreibung]
-  FLIESSTEXT: [Format-Beschreibung]
-  AUFGABEN: [Format-Beschreibung]
+## Layout
+- **Seitenränder:** [Werte]
+- **Kopfzeile:** [Beschreibung]
+- **Fußzeile:** [Beschreibung]
 
-FARBEN:
-  (uebernommen aus schulfarben.ki.txt falls vorhanden)
+## Struktur
+- **Titel:** [Format-Beschreibung]
+- **Überschriften:** [Format-Beschreibung]
+- **Fließtext:** [Format-Beschreibung]
+- **Aufgaben:** [Format-Beschreibung]
 
-LOGO:
-  POSITION: [Position]
-  PLATZHALTER: [SCHULLOGO]
+## Farben
+*(übernommen aus schulfarben.ki.md falls vorhanden)*
+
+## Logo
+- **Position:** [Position]
+- **Platzhalter:** `[SCHULLOGO]`
 ```
 
 ---
@@ -254,16 +262,16 @@ Falls keine Custom-Vorlagen existieren, biete diese 5 Themes an:
 
 ### Automatische Erkennung
 
-| Export-Typ | Relevante .ki.txt |
-|------------|-------------------|
-| PPTX | powerpoint-vorlage.ki.txt + schulfarben.ki.txt |
-| DOCX | arbeitsblatt-vorlage.ki.txt + schulfarben.ki.txt |
-| PDF | schulfarben.ki.txt |
-| TXT | schulfarben.ki.txt (fuer Kopfzeilen) |
+| Export-Typ | Relevante .ki.md |
+|------------|------------------|
+| PPTX | powerpoint-vorlage.ki.md + schulfarben.ki.md |
+| DOCX | arbeitsblatt-vorlage.ki.md + schulfarben.ki.md |
+| PDF | schulfarben.ki.md |
+| Markdown | schulfarben.ki.md (für Kopfzeilen) |
 
 ### Workflow bei Export
 
-1. **Pruefen:** Gibt es relevante .ki.txt Dateien?
+1. **Prüfen:** Gibt es relevante .ki.md Dateien?
 2. **Aktualisieren:** Ist Original neuer? → Neu analysieren
 3. **Anwenden:** Design-Vorgaben auf Material anwenden
 4. **Exportieren:** Fertiges Material speichern
@@ -286,22 +294,22 @@ Falls `schullogo.png` im Ordner vorhanden:
 
 ## Beispiel-Dialog
 
-**Situation:** Lehrkraft moechte Praesentation exportieren, keine Vorlagen vorhanden
+**Situation:** Lehrkraft möchte Präsentation exportieren, keine Vorlagen vorhanden
 
 **Claude:**
-"Bevor ich die Praesentation exportiere, moechte ich sicherstellen, dass das Design Ihren Wuenschen entspricht.
+"Bevor ich die Präsentation exportiere, möchte ich sicherstellen, dass das Design Ihren Wünschen entspricht.
 
 Ich habe keine Design-Vorlagen in Ihrem Ordner `5_Export_Stile/` gefunden.
 
 Welches Theme soll ich verwenden?
 
-1. **Klassisch Schulisch** - Serioes, traditionell (dunkelblau/grau)
-2. **Modern Freundlich** - Einladend, zeitgemaess (hellblau/gruen)
-3. **Foerderschule Klar** - Hoher Kontrast, grosse Schrift (schwarz/weiss)
-4. **Grundschule Bunt** - Kindgerecht, froehlich (pink/gruen)
+1. **Klassisch Schulisch** - Seriös, traditionell (dunkelblau/grau)
+2. **Modern Freundlich** - Einladend, zeitgemäß (hellblau/grün)
+3. **Förderschule Klar** - Hoher Kontrast, große Schrift (schwarz/weiß)
+4. **Grundschule Bunt** - Kindgerecht, fröhlich (pink/grün)
 5. **Oberstufe Professionell** - Minimalistisch, sachlich (anthrazit)
 
-Sie koennen auch eigene Schulfarben definieren, indem Sie eine `schulfarben.txt` in `5_Export_Stile/` ablegen."
+Sie können auch eigene Schulfarben definieren, indem Sie eine `schulfarben.md` in `5_Export_Stile/` ablegen."
 
 ---
 
@@ -310,11 +318,11 @@ Sie koennen auch eigene Schulfarben definieren, indem Sie eine `schulfarben.txt`
 **Situation:** Lehrkraft hat Vorlagen, Original wurde aktualisiert
 
 **Claude:**
-"Ich habe festgestellt, dass Ihre PowerPoint-Vorlage kuerzlich aktualisiert wurde.
+"Ich habe festgestellt, dass Ihre PowerPoint-Vorlage kürzlich aktualisiert wurde.
 
 Ich analysiere die Vorlage neu...
 
-Fertig! Die aktualisierte Version `powerpoint-vorlage.ki.txt` wurde erstellt mit:
+Fertig! Die aktualisierte Version `powerpoint-vorlage.ki.md` wurde erstellt mit:
 - 4 Folienlayouts erkannt
 - Farbschema: Blau (#1A5F7A) / Weiss / Gelb (#FFC857)
 - Schrift: Arial

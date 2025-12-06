@@ -33,7 +33,7 @@ Diese Checkliste zeigt, welche Skills im Claude Desktop Projekt **"Arbeitsblatt 
 
 ### ✅ Export-Skills (PFLICHT)
 
-- [ ] **export-txt** - Markdown-Export
+- [ ] **export-md** - Markdown-Export
 - [ ] **export-pdf** - PDF-Export (für Druck)
 - [ ] **export-docx** - Word-Export (editierbar)
 - [ ] **export-pptx** - PPTX-Export (optional)
@@ -76,7 +76,7 @@ Diese werden automatisch durch PROJECT_INSTRUCTIONS.md orchestriert - keine manu
 1. **Zuerst:** mat-02-arbeitsblatt-erstellen (Kernfunktion)
 2. **Dann:** export-pdf (Ergebnis speichern und drucken)
 3. **Danach:** export-docx (für Nachbearbeitung)
-4. **Optional:** export-txt, export-pptx
+4. **Optional:** export-md, export-pptx
 
 ---
 

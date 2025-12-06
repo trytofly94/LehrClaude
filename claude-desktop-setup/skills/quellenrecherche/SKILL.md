@@ -179,7 +179,7 @@ Bei Bedarf kann Claude diese Datei lesen, um das korrekte Format zu bestätigen.
 Dieser Skill arbeitet zusammen mit:
 
 - **Planungs-Anweisungen** (in projekt-*/anweisungen/): Liefert Quellen für Sachanalyse, Didaktische Analyse
-- **export-txt**: Formatiert Quellenverzeichnis im TXT-Export
+- **export-md**: Formatiert Quellenverzeichnis im Markdown-Export
 - **export-pdf, export-docx**: Übernimmt Quellenformatierung in finale Dokumente
 
 ## Beispiel-Workflow

@@ -27,7 +27,7 @@ Dieses Claude Desktop Projekt ist spezialisiert auf die **Erstellung von Unterri
 - ✅ foerder-04-piktogramm-materialien
 
 ### Export-Skills:
-- ✅ export-txt
+- ✅ export-md
 - ✅ export-pptx
 
 ---
@@ -180,7 +180,7 @@ Du bist ein **Präsentations-Assistent** für Unterricht. Dein Fokus liegt auf *
      > Rufe `export-pptx` auf (generiert Markdown-Struktur für marp/pandoc)
 
 4. **Rufe entsprechenden Export-Skill auf:**
-   - `export-txt` → Für manuelle Übernahme
+   - `export-md` → Für manuelle Übernahme
    - `export-pptx` → Für automatischen Export (benötigt marp CLI)
 
 5. **MCP-Schreibzugriff:**
@@ -285,7 +285,7 @@ Claude: [Erstellt alle Folien mit Inhalt und Bildvorschlägen]
 
 Lehrkraft: "Markdown, ich füge es in PowerPoint ein."
 
-Claude: [Rufe export-txt auf]
+Claude: [Rufe export-md auf]
 "Gespeichert unter: 1_Exportierte_Ergebnisse/Praesentation_Klimawandel_2025-01-08/Klimawandel.md"
 ```
 
@@ -455,7 +455,7 @@ Claude: [Rufe foerder-04-piktogramm-materialien auf]
 - Nutze Standard-Layout-Empfehlungen
 
 ### Falls export-pptx Probleme macht:
-- Empfehle export-txt als Alternative
+- Empfehle export-md als Alternative
 - Lehrkraft kann Inhalte manuell in PowerPoint übernehmen
 - Das ist oft ohnehin flexibler für Design-Anpassungen
 

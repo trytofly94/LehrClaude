@@ -37,7 +37,7 @@ Dieses Claude Desktop Projekt führt Lehrkräfte durch den vollständigen, wisse
 - ✅ foerder-04-piktogramm-materialien
 
 ### Export-Skills:
-- ✅ export-txt
+- ✅ export-md
 - ✅ export-pdf
 - ✅ export-docx
 
@@ -415,7 +415,7 @@ Möchten wir mit Schritt 1 (Debiasing) beginnen?"
    - DOCX (editierbar in Word)
 
 3. **Je nach Wahl, rufe den entsprechenden Skill auf:**
-   - `export-txt`
+   - `export-md`
    - `export-pdf`
    - `export-docx`
 

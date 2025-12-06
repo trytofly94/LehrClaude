@@ -111,8 +111,8 @@ Jedes Projekt nutzt **6 Custom Skills** (Material & Export) + **Workflow-Anweisu
 **Modular:** Skills werden projekt-übergreifend wiederverwendet
 **Ressourcen-basiert:** Zentrale Knowledge Base für alle Projekte
 **Förderschul-Integration:** Spezialisierung auf 7 Förderschwerpunkte mit individuellen Schülerprofilen
-**Export-fähig:** Fertige Dokumente (TXT, PDF, DOCX, PPTX)
-**Mac-optimiert:** TXT-Format für sofortige Lesbarkeit in Mac Vorschau (kein Markdown)
+**Export-fähig:** Fertige Dokumente (Markdown, PDF, DOCX, PPTX)
+**Standard-Format:** Markdown für alle Dateien - strukturiert und konvertierbar
 
 ---
 
@@ -152,7 +152,7 @@ LehrClaude/
 │   └── skills/                        # 6 Custom Skills (Material & Export)
 │       ├── mat-02-arbeitsblatt-erstellen/
 │       ├── mat-03-powerpoint-erstellen/
-│       ├── export-txt/
+│       ├── export-md/
 │       ├── export-pdf/
 │       ├── export-docx/
 │       └── export-pptx/
@@ -166,12 +166,12 @@ LehrClaude/
 │           ├── 2_Zentrale_Ressourcen/
 │           │   ├── Lehrplaene/
 │           │   ├── Didaktik/
-│           │   │   ├── KMK-Operatoren.txt
-│           │   │   ├── Bloom-Taxonomie.txt
-│           │   │   └── Zitationsrichtlinien.txt   # NEU
+│           │   │   ├── KMK-Operatoren.md
+│           │   │   ├── Bloom-Taxonomie.md
+│           │   │   └── Zitationsrichtlinien.md   # NEU
 │           │   └── Templates/
-│           │       ├── arbeitsblatt-vorlage.txt
-│           │       └── praesentation-master.txt
+│           │       ├── arbeitsblatt-vorlage.md
+│           │       └── praesentation-master.md
 │           ├── 3_Projekt_Knowledge_Base/
 │           └── 4_Klassen_und_Schueler/   # Förderschul-Integration
 │               ├── Klasse_5a_LE/
@@ -311,7 +311,7 @@ open README.md  # Folge der Anleitung
 | Komponente | Anzahl | Beispiele |
 |------------|--------|-----------|
 | **Material-Skills** | 2 | Arbeitsblatt erstellen, PowerPoint erstellen |
-| **Export-Skills** | 4 | TXT (Haupt-Export), PDF, DOCX, PPTX |
+| **Export-Skills** | 4 | Markdown (Haupt-Export), PDF, DOCX, PPTX |
 | **Workflow-Anweisungen** | 25 | In `anweisungen/`-Ordnern der Projekte |
 
 **Vorteile:**
@@ -319,10 +319,10 @@ open README.md  # Folge der Anleitung
 - Schnelleres Laden (weniger Skills)
 - Workflows direkt im Projekt-Kontext
 
-**TXT-Export (empfohlen für Lehrkräfte):**
-- Strukturiertes TXT-Format statt Markdown
-- Sofort lesbar in Mac Vorschau (kein Markdown-Viewer nötig)
-- Kopieren in Word ohne Syntax-Artefakte (`#`, `*`, etc.)
+**Markdown-Export (empfohlen für Lehrkräfte):**
+- Strukturiertes Markdown-Format mit Überschriften, Listen, Tabellen
+- Einfach konvertierbar nach PDF, DOCX, PPTX
+- KI-optimiert für bessere Weiterverarbeitung
 - Universell kompatibel mit allen Editoren
 
 ---
@@ -443,10 +443,10 @@ Nach der Installation durch den IT-Admin:
    - Erstellt strukturierte Planung
 
 5. **Am Ende: Export**
-   > "Bitte als TXT exportieren."
+   > "Bitte als Markdown exportieren."
    → Datei wird automatisch gespeichert in `Schul-Materialien/1_Exportierte_Ergebnisse/`
 
-   **Tipp:** TXT-Export ist empfohlen für Mac - Datei ist sofort in Vorschau lesbar!
+   **Tipp:** Markdown-Export ist das empfohlene Format - strukturiert und konvertierbar!
 
 ### Arbeitsblatt erstellen (Beispiel)
 
@@ -459,7 +459,7 @@ Nach der Installation durch den IT-Admin:
    - Basis/Standard/Erweiterung
    - Optional: Lösungen
 
-4. **Export als TXT oder PDF** → Sofort nutzbar (TXT in Vorschau öffnen, PDF drucken)
+4. **Export als Markdown oder PDF** → Sofort nutzbar (Markdown weiterverarbeiten, PDF drucken)
 
 ---
 
@@ -491,7 +491,7 @@ A: Ja, alle 6 werden empfohlen. Die Workflow-Anweisungen sind bereits in den Pro
 - **`lehrkraft-deployment/README.md`** – Deployment-Details
 - **`claude-desktop-setup/MCP_SETUP_ANLEITUNG.md`** – MCP-Konfiguration
 - **`prompts/`** – Original-Prompts (Basis für Skills)
-- **`2_Zentrale_Ressourcen/Didaktik/Zitationsrichtlinien.txt`** – Richtlinien für wissenschaftliche Quellenarbeit
+- **`2_Zentrale_Ressourcen/Didaktik/Zitationsrichtlinien.md`** – Richtlinien für wissenschaftliche Quellenarbeit
 
 ---
 

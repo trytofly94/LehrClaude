@@ -315,7 +315,7 @@ Custom Skills sind wiederverwendbare "Fähigkeiten", die Claude in verschiedenen
 - `export-stile` - Schulfarben, Themes und PowerPoint-Vorlagen für einheitliches Design
 
 **Export-Skills (4):**
-- `export-txt` - Export als strukturiertes TXT (Haupt-Export für Lehrkräfte)
+- `export-md` - Export als Markdown (Haupt-Export für Lehrkräfte)
 - `export-pdf` - Export als PDF
 - `export-docx` - Export als DOCX
 - `export-pptx` - Export als PPTX
@@ -356,7 +356,7 @@ skill-packages/
 ├── export-pdf.zip
 ├── export-pptx.zip
 ├── export-stile.zip
-├── export-txt.zip
+├── export-md.zip
 ├── mat-02-arbeitsblatt-erstellen.zip
 ├── mat-03-powerpoint-erstellen.zip
 └── quellenrecherche.zip
@@ -397,7 +397,7 @@ skill-packages/
 - [ ] export-stile
 
 **Export-Skills (4):**
-- [ ] export-txt
+- [ ] export-md
 - [ ] export-pdf
 - [ ] export-docx
 - [ ] export-pptx
@@ -461,69 +461,44 @@ Erwartetes Ergebnis:
 ```
 Projekt: Arbeitsblatt erstellen
 (Nach Erstellung eines Arbeitsblatts)
-Prompt: "Exportiere das Arbeitsblatt als TXT."
+Prompt: "Exportiere das Arbeitsblatt als Markdown."
 
 Erwartetes Ergebnis:
-- Claude nutzt export-txt Skill
+- Claude nutzt export-md Skill
 - Speichert Datei via MCP in 1_Exportierte_Ergebnisse/
 - Bestätigt Speicherort
-- Datei ist in Mac Vorschau sofort lesbar (strukturiertes TXT, kein Markdown)
+- Datei ist strukturiert und konvertierbar
 ```
 
 **Status:** [ ] Export funktioniert
 
 ---
 
-## TXT-Format für Lehrkraft-Dateien
+## Markdown-Format für alle Dateien
 
-**Wichtige Information:** Das System verwendet strukturiertes TXT-Format statt Markdown für alle Lehrkraft-sichtbaren Dateien.
+**Wichtige Information:** Das System verwendet **Markdown (.md)** für alle Dateien.
 
-### Warum TXT statt Markdown?
+### Vorteile von Markdown
 
-- **Mac-Kompatibilität:** Mac Vorschau zeigt TXT sofort korrekt formatiert an
-- **Markdown-Problem:** Mac Vorschau zeigt Markdown als unformatierter Quelltext (`#`, `**`, etc.)
-- **Word-Integration:** TXT-Dateien können ohne Syntax-Artefakte in Word kopiert werden
-- **Keine Vorkenntnisse:** Lehrkräfte müssen kein Markdown kennen
+- **Strukturierte Formatierung:** Überschriften, Listen, Tabellen, Hervorhebungen
+- **KI-optimiert:** Besser lesbar und verarbeitbar für Claude
+- **Flexible Konvertierung:** Einfach nach PDF, DOCX, PPTX exportierbar
+- **Standard-Format:** In allen Editoren unterstützt
 
-### Was bleibt Markdown (.md)?
+### KI-optimierte Templates (.ki.md)
 
-**Nur interne Dateien:**
-- `SKILL.md` - Claude Desktop Requirement (muss Markdown sein)
-- `PROJECT_INSTRUCTIONS.md` - Wird nur im Admin-Interface angezeigt
-- `anweisungen/*.md` - Werden nur von Claude gelesen, nicht von Lehrkräften
+Für Design und Styling werden spezielle `.ki.md` Dateien verwendet:
+- `schulfarben.ki.md` - KI-optimierte Schulfarben-Vorlage
+- `powerpoint-vorlage.ki.md` - Template für Präsentationen
 
-### Was wird TXT (.txt)?
+Diese werden vom `export-stile` Skill automatisch aus den Originaldateien generiert.
 
-**Alle Lehrkraft-sichtbaren Dateien:**
-- Exportierte Ergebnisse (`1_Exportierte_Ergebnisse/`)
-- Zentrale Ressourcen (`2_Zentrale_Ressourcen/`)
-- Schülerprofile (`4_Klassen_und_Schueler/`)
+### Datei-Struktur
 
-### TXT-Formatierung (für Skill-Entwicklung)
-
-**Überschriften:**
-```
-HAUPTÜBERSCHRIFT
-=================
-
-Unterüberschrift
------------------
-```
-
-**Listen:**
-```
-- Einfacher Bindestrich
-- Keine Nesting-Levels
-```
-
-**Hervorhebungen:**
-```
-WICHTIG: Großbuchstaben
-*Sternchen* für Betonung
-```
-
-**WICHTIG beim Export-Skill:**
-Der `export-txt` Skill muss Output OHNE Markdown-Syntax erstellen.
+- **Exportierte Ergebnisse** (`1_Exportierte_Ergebnisse/`) - Alle fertigen Materialien als `.md`
+- **Zentrale Ressourcen** (`2_Zentrale_Ressourcen/`) - Lehrpläne, Didaktik-Frameworks, Templates
+- **Schülerprofile** (`4_Klassen_und_Schueler/`) - Klasseninfo und Profile als `.md`
+- **Export-Stile** (`5_Export_Stile/`) - Schulfarben und Design-Templates
 
 ---
 

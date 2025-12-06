@@ -276,7 +276,7 @@ Dieser Skill nutzt folgende MCP-Ressourcen:
 Dieser Skill arbeitet zusammen mit:
 
 - **mat-02-arbeitsblatt-erstellen**: Liefert Grundstruktur für Arbeitsblätter
-- **export-txt**: Exportiert GE-Materialien im TXT-Format
+- **export-md**: Exportiert GE-Materialien im Markdown-Format
 - **projekt-5-klassenverwaltung/anweisungen/**: Liefert Schülerprofile für Differenzierung
 
 ## Qualitätsprüfung

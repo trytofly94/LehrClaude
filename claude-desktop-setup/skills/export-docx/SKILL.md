@@ -9,14 +9,14 @@ description: Dieser Skill konvertiert Bildungsinhalte (Unterrichtsreihen, Arbeit
 
 **Bevor du ein Material exportierst, MUSS der `export-stile` Skill konsultiert werden!**
 
-1. Prüfe `5_Export_Stile/` auf vorhandene `.ki.txt` Dateien
-2. Falls Original-Vorlage neuer als `.ki.txt` → Neu analysieren lassen
-3. Wende die Vorgaben aus `.ki.txt` auf das Material an (Farben, Schriften, Layout)
+1. Prüfe `5_Export_Stile/` auf vorhandene `.ki.md` Dateien
+2. Falls Original-Vorlage neuer als `.ki.md` → Neu analysieren lassen
+3. Wende die Vorgaben aus `.ki.md` auf das Material an (Farben, Schriften, Layout)
 4. Erst dann: Export durchführen
 
 **Relevante Dateien:**
-- `arbeitsblatt-vorlage.ki.txt` (für Layout und Struktur)
-- `schulfarben.ki.txt` (für Farben und Schriften)
+- `arbeitsblatt-vorlage.ki.md` (für Layout und Struktur)
+- `schulfarben.ki.md` (für Farben und Schriften)
 
 ---
 
