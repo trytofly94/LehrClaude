@@ -5,7 +5,7 @@ description: Dieser Skill erstellt professionelle, didaktisch strukturierte Powe
 
 ## Zweck
 
-Dieser Skill transformiert umfassende Unterrichtsreihenplanungen in professionelle PowerPoint-Präsentationen im strukturierten TXT-Format, die für den Einsatz im Unterricht geeignet sind. Nach Abschluss einer vollständigen Unterrichtsreihenplanung (unter Verwendung des 11-Schritte-Planungsprozesses) erstellt dieser Skill eine strukturierte Präsentation, die didaktischen Prinzipien folgt, Inhalte aus allen Planungsphasen integriert und klare visuelle Orientierung für die Unterrichtsdurchführung bietet.
+Dieser Skill transformiert umfassende Unterrichtsreihenplanungen in professionelle PowerPoint-Präsentationen im strukturierten Markdown-Format, die für den Einsatz im Unterricht geeignet sind. Nach Abschluss einer vollständigen Unterrichtsreihenplanung (unter Verwendung des 11-Schritte-Planungsprozesses) erstellt dieser Skill eine strukturierte Präsentation, die didaktischen Prinzipien folgt, Inhalte aus allen Planungsphasen integriert und klare visuelle Orientierung für die Unterrichtsdurchführung bietet.
 
 ## Wann dieser Skill verwendet werden sollte
 
@@ -64,8 +64,8 @@ Behandle alle Grafiken, Diagramme und Bilder mit expliziten Platzhaltern:
 
 Präsentationen werden geliefert als:
 
-- **Dateiformat**: TXT (strukturiertes Text-Format zur Weiterverarbeitung in PPTX)
-- **Dateiendung**: `.txt`
+- **Dateiformat**: Markdown (strukturiertes Text-Format zur Weiterverarbeitung in PPTX)
+- **Dateiendung**: `.md`
 - **Notizen für Vortragende**: Umfassende Notizen auf jeder Folie mit:
   - Detaillierter Erklärung des Folieninhalts
   - Vorgeschlagenen Gesprächspunkten und Übergängen
@@ -117,14 +117,14 @@ Vor Erstellung der vollständigen Präsentation:
 
 ### Phase 4: Präsentationserstellung
 
-Erstelle die Präsentation im TXT-Format mit:
+Erstelle die Präsentation im Markdown-Format mit:
 
 1. **Strukturiertem Inhalt**: Folge dem Unterrichtsverlauf exakt
 2. **Klaren Titeln**: Inhaltsorientierte Titel für jede Folie
 3. **Aufgabenintegration**: Zeige Aufgaben auf angemessenen Ebenen auf Arbeitsphasenfolien
 4. **Visuellen Platzhaltern**: Markiere alle benötigten Grafiken in GROSSBUCHSTABEN
 5. **Notizen für Vortragende**: Umfassende Notizen auf jeder Folie
-6. **TXT-Formatierung**: Professionelles, übersichtliches TXT-Layout zur Unterstützung der Lesbarkeit
+6. **Markdown-Formatierung**: Professionelles, übersichtliches Markdown-Layout zur Unterstützung der Lesbarkeit
 
 ### Phase 5: Iterative Verfeinerung
 
@@ -140,78 +140,72 @@ Implementiere Nutzerfeedback:
 
 Referenziere diese Ressourcen vom MCP Filesystem Server, wenn verfügbar:
 
-- **`2_Zentrale_Ressourcen/Templates/praesentation-master.txt`**: Richtlinien für TXT-Formatierung, Layoutstandards und Designkonsistenz
+- **`2_Zentrale_Ressourcen/Templates/praesentation-master.md`**: Richtlinien für Markdown-Formatierung, Layoutstandards und Designkonsistenz
 - **Ausgaben der Unterrichtsreihenplanung**: Inhalte aus den Ausgaben der Skills 01-11, gespeichert im Projektkontext
 
-## TXT-Formatierungsregeln für Präsentationen
+## Markdown-Formatierungsregeln für Präsentationen
 
-WICHTIG: Alle Outputs MÜSSEN im strukturierten TXT-Format erstellt werden. KEINE Markdown-Syntax verwenden!
+WICHTIG: Alle Outputs MÜSSEN im strukturierten Markdown-Format erstellt werden.
 
 **Folienseparator:**
-```
-================================================================================
-FOLIE [NUMMER]: [FOLIENTITEL]
-================================================================================
+```markdown
+---
+
+# Folie [NUMMER]: [FOLIENTITEL]
+
 ```
 
 **Folieninhalt:**
-```
-INHALT:
--------
+```markdown
+## Inhalt
+
 - Stichpunkt 1
 - Stichpunkt 2
 
-NOTIZEN FÜR VORTRAGENDE:
-------------------------
+## Notizen für Vortragende
+
 Detaillierte Erklärungen, Hinweise, Timing-Tipps...
 ```
 
 **Überschriften auf Folien:**
-```
-HAUPTPUNKT (GROSSBUCHSTABEN)
-----------------------------
+```markdown
+### Hauptpunkt
 ```
 
 **Listen:**
-```
+```markdown
 - Listenpunkt 1
 - Listenpunkt 2
   - Unterpunkt (2 Leerzeichen Einrückung)
 ```
 
 **Hervorhebungen:**
-```
-WICHTIG: Dieser Punkt ist zentral.
+```markdown
+**WICHTIG:** Dieser Punkt ist zentral.
 *Dieser Text ist betont*
 ```
 
 **Visuelle Platzhalter:**
-```
-[GRAFIK: Beschreibung des Bildes]
-[SCHAUBILD: Beschreibung des Diagramms]
+```markdown
+![GRAFIK: Beschreibung des Bildes]()
+![SCHAUBILD: Beschreibung des Diagramms]()
 ```
 
-**VERBOTEN - NICHT VERWENDEN:**
-- KEINE Markdown Heading-Syntax (#, ##, ###)
-- KEINE Markdown Bold/Italic (**text**, _text_)
-- KEINE Code-Blöcke (```)
-- KEINE Markdown-Links ([text](url))
-
-**Dateiendung:** Alle generierten Präsentationen erhalten die Endung `.txt`
+**Dateiendung:** Alle generierten Präsentationen erhalten die Endung `.md`
 
 ## Qualitätscheckliste
 
 Vor Auslieferung der Präsentationen überprüfen:
 
 - [ ] Jede Folie hat einen inhaltsorientierten Titel (keinen Phasennamen)
-- [ ] Alle visuellen Bedarfe sind mit GROSSBUCHSTABEN-Platzhaltern markiert
+- [ ] Alle visuellen Bedarfe sind mit Bild-Platzhaltern markiert
 - [ ] Notizen für Vortragende sind umfassend und umsetzbar
 - [ ] Differenzierungsebenen erscheinen auf Aufgabenfolien
 - [ ] Unterrichtsverlauf fließt logisch durch die Präsentation
 - [ ] Alle Inhalte der Unterrichtsreihe sind repräsentiert
-- [ ] Dateiformat ist TXT mit strukturierter Formatierung
+- [ ] Dateiformat ist Markdown (.md) mit strukturierter Formatierung
 - [ ] Präsentationsstruktur entspricht den Unterrichtsverlaufsphasen
-- [ ] KEINE Markdown-Syntax verwendet (siehe TXT-Formatierungsregeln)
+- [ ] Markdown-Syntax korrekt verwendet (siehe Markdown-Formatierungsregeln)
 
 ## Häufige Szenarien
 
@@ -235,8 +229,8 @@ Vor Auslieferung der Präsentationen überprüfen:
 - Dieser Skill wird typischerweise **nach** dem vollständigen 11-Schritte-Planungsprozess verwendet
 - Integration mit Skills 05 (Lernziele), 06 (Mindmap) und 07 (Unterrichtsverlauf) gewährleistet Inhaltsgenauigkeit
 - Nutzer benötigen Zugang zu Grafikerstellungswerkzeugen oder -ressourcen zur Finalisierung visueller Elemente
-- Präsentationen im TXT-Format müssen vom Nutzer in PPTX konvertiert werden
-- TXT-Ausgaben sind strukturiert zur einfachen Konvertierung in PowerPoint
+- Präsentationen im Markdown-Format müssen vom Nutzer in PPTX konvertiert werden
+- Markdown-Ausgaben sind strukturiert zur einfachen Konvertierung in PowerPoint
 - Konsistenz mit vorhandenen Schul-/Bezirkspräsentationsstandards wahren, die im Projektkontext referenziert sind
 
 ## Resources

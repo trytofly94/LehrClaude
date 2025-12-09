@@ -9,7 +9,7 @@ description: "Dieser Skill sollte verwendet werden, wenn Arbeitsblätter erstell
 
 Dieser Skill erstellt vollständige, professionell formatierte Arbeitsblätter für den Unterricht. Er nimmt bestehendes Unterrichtsmaterial und verwandelt es in strukturierte Arbeitsblätter, die evidenzbasierten pädagogischen Designprinzipien folgen, einschließlich differenzierter Lernwege für Schüler auf verschiedenen Kompetenzstufen (Wembers Differenzierungsmodell: Basisstufe, Unterstützungsstufe, Erweiterungsstufe).
 
-Der Skill generiert drei Arten von Materialien im strukturierten TXT-Format:
+Der Skill generiert drei Arten von Materialien im strukturierten Markdown-Format:
 1. **Schüler-Arbeitsblätter** - Strukturierte Lernmaterialien mit progressiven Aufgaben
 2. **Gestufte Lernhilfen** - Gestaffelte Unterstützung auf drei Kompetenzstufen
 3. **Unterrichtsmaterial** - Dokumentation des Unterrichtsverlaufs mit Lehrerlösungen
@@ -140,13 +140,13 @@ Erstelle umfassende Unterrichtsdokumentation mit dieser Struktur:
 
 Greife auf diese Referenzmaterialien vom MCP Filesystem Server unter `2_Zentrale_Ressourcen/` zu:
 
-- **arbeitsblatt-vorlage.txt** - Standard-Arbeitsblatt-Layout-Vorlage
-  - TXT-Formatierungsrichtlinien
+- **arbeitsblatt-vorlage.md** - Standard-Arbeitsblatt-Layout-Vorlage
+  - Markdown-Formatierungsrichtlinien
   - Standards zur Abschnittsorganisation
   - Typografie- und Abstandskonventionen
   - Beispiele fertiggestellter Arbeitsblätter
 
-Verwende diese Vorlage, um konsistente TXT-Formatierung und professionelles Erscheinungsbild über alle Arbeitsblätter hinweg sicherzustellen.
+Verwende diese Vorlage, um konsistente Markdown-Formatierung und professionelles Erscheinungsbild über alle Arbeitsblätter hinweg sicherzustellen.
 
 ## Qualitätsstandards für Inhalte
 
@@ -190,55 +190,49 @@ Folge diesem Prozess: Lies zuerst die gesamte Anfrage, optimiere den Ansatz, pr�
 ## Integrations-Hinweise
 
 Dieser Skill arbeitet koordiniert mit:
-- **05-lernziele-operationalisieren** - Lernziele sollten operationalisiert werden, bevor Arbeitsblätter erstellt werden
-- **mat-01-texterstellung** - Inhaltliche Textaufbereitung geht oft der Arbeitsblatt-Formatierung voraus
-- **08-lernzielkontrolle** - Lernkontrollen können in Arbeitsblätter integriert werden
-- **export-pdf, export-docx** - Finaler Export in professionelle Formate
+- **export-md** - Export als Markdown
+- **export-pdf** - Finaler Export als PDF
+- **export-docx** - Finaler Export als DOCX
+- **export-pptx** - Export als PowerPoint
 
 ---
 
 **Skill-Typ**: Materialerstellung
 **Lerntheoretische Basis**: Wembers Differenzierungsmodell, Bloom-Taxonomie, Leisens Phasenmodell
-**Ausgabeformat**: TXT-strukturierte Arbeitsblätter (zur weiteren Verarbeitung in Word/anderen Tools)
+**Ausgabeformat**: Markdown-strukturierte Arbeitsblätter (.md Format)
 
-## TXT-Formatierungsregeln
+## Markdown-Formatierungsregeln
 
-WICHTIG: Alle Outputs MÜSSEN im strukturierten TXT-Format erstellt werden. KEINE Markdown-Syntax verwenden!
+WICHTIG: Alle Outputs MÜSSEN im strukturierten Markdown-Format erstellt werden.
 
 **Formatierungsregeln:**
 
 **Überschriften:**
-```
-HAUPTÜBERSCHRIFT (GROSSBUCHSTABEN)
-==================================
+```markdown
+# Hauptüberschrift
 
-Unterüberschrift (Grossbuchstaben)
-----------------------------------
+## Unterüberschrift
+
+### Abschnittsüberschrift
 ```
 
 **Listen:**
-```
+```markdown
 - Listenpunkt 1
 - Listenpunkt 2
   - Unterpunkt (2 Leerzeichen Einrückung)
 ```
 
 **Hervorhebungen:**
-```
-WICHTIG: Dieser Text ist wichtig.
-*Dieser Text ist betont*
+```markdown
+**Fett gedruckt** für wichtige Begriffe
+*Kursiv* für betonte Texte
 ```
 
 **Abschnitte:**
-Verwende klare Trennlinien und Leerzeilen zwischen Abschnitten.
+Verwende klare Überschriften und Leerzeilen zwischen Abschnitten.
 
-**VERBOTEN - NICHT VERWENDEN:**
-- KEINE Markdown Heading-Syntax (#, ##, ###)
-- KEINE Markdown Bold/Italic (**text**, _text_)
-- KEINE Code-Blöcke (```)
-- KEINE Markdown-Links ([text](url))
-
-**Dateiendung:** Alle generierten Dateien erhalten die Endung `.txt`
+**Dateiendung:** Alle generierten Dateien erhalten die Endung `.md`
 
 ## Resources
 

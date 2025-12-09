@@ -126,9 +126,9 @@ Neue Unterstützung für **7 Förderschwerpunkte** mit individueller Differenzie
 
 **Neuer Ordner:** `4_Klassen_und_Schueler/` für Schülerprofile und Klasseninfos.
 
-### TXT-Format für Lehrkraft-Dateien
+### Markdown-Format für Lehrkraft-Dateien
 
-Alle Ressourcen nutzen jetzt strukturiertes TXT-Format für optimale Mac-Vorschau-Kompatibilität.
+Alle Ressourcen nutzen jetzt strukturiertes Markdown-Format für optimale Kompatibilität und Lesbarkeit.
 
 ---
 
@@ -286,10 +286,11 @@ Dieses Deployment ist **Teil 1** des Gesamtsetups:
 
 ---
 
-**Version:** 1.1
-**Zuletzt aktualisiert:** 2025-11-30
+**Version:** 1.2
+**Zuletzt aktualisiert:** 2025-12-09
 **Geschätzter Zeitaufwand:** 5 Minuten
 
 **Änderungshistorie:**
-- **v1.1 (2025-11-30):** Zitationsrichtlinien, 4_Klassen_und_Schueler/ Ordner, TXT-Format
+- **v1.2 (2025-12-09):** Versions-Update und Dokumentations-Konsistenz, Markdown-Format
+- **v1.1 (2025-11-30):** Zitationsrichtlinien, 4_Klassen_und_Schueler/ Ordner
 - **v1.0 (2025-01-08):** Initial release
