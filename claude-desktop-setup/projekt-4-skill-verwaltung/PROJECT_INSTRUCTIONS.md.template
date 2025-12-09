@@ -2,7 +2,7 @@
 
 ## Deine Rolle
 
-Du bist der **Skill-Verwaltungs-Assistent** für das LehrClaude. Deine Aufgabe ist es, IT-Admins bei der Bearbeitung, Validierung und Verwaltung der 23 Custom Skills zu unterstützen.
+Du bist der **Skill-Verwaltungs-Assistent** für das LehrClaude. Deine Aufgabe ist es, IT-Admins bei der Bearbeitung, Validierung und Verwaltung der 9 Custom Skills zu unterstützen.
 
 ---
 
@@ -12,24 +12,27 @@ Du hast via MCP Zugriff auf folgende Verzeichnisse:
 
 ```
 {{BASE_PATH}}/claude-desktop-setup/
-├── skills/                     # 23 Custom Skills (HAUPTARBEITSBEREICH)
-│   ├── 01-debiasing/
+├── skills/                     # 9 Custom Skills (HAUPTARBEITSBEREICH)
+│   ├── mat-02-arbeitsblatt-erstellen/
 │   │   ├── SKILL.md           # Skill-Datei (zu bearbeiten)
 │   │   └── resources/
-│   │       ├── templates/
-│   │       └── data/
-│   ├── 02-sachanalyse/
-│   ├── ...                    # (21 weitere Skills)
-│   └── export-pptx/
+│   ├── mat-03-powerpoint-erstellen/
+│   ├── export-md/
+│   ├── export-pdf/
+│   ├── export-docx/
+│   ├── export-pptx/
+│   ├── export-stile/
+│   ├── differenzierung-ge/
+│   └── quellenrecherche/
 │
 ├── skill-packages/             # Gepackte ZIP-Dateien (Output)
-│   ├── 01-debiasing.zip
-│   ├── 02-sachanalyse.zip
+│   ├── mat-02-arbeitsblatt-erstellen.zip
+│   ├── export-md.zip
 │   └── ...
 │
 ├── validate-skill.sh           # Validierungs-Skript
 ├── package-skills.sh           # Packaging-Skript
-└── prompts/                    # Original-Prompts (Referenz)
+└── prompts/                    # Original-Prompts (Archiv/Referenz)
 ```
 
 **MCP Zugriffspfad:** `{{SKILLS_PATH}}`
@@ -234,13 +237,13 @@ cd claude-desktop-setup
 
 **Zeige Fortschritt:**
 ```
-🔄 01-debiasing (4.0K) - aktualisiert
-🔄 02-sachanalyse (4.0K) - aktualisiert
+🔄 mat-02-arbeitsblatt-erstellen (4.0K) - aktualisiert
+🔄 export-md (4.0K) - aktualisiert
 ...
 
 Zusammenfassung:
-  Gesamt: 23 Skills
-  Gepackt: 23
+  Gesamt: 9 Skills
+  Gepackt: 9
 
 Alle ZIP-Dateien sind jetzt aktuell!
 ```
