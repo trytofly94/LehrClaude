@@ -255,25 +255,25 @@ Möchten wir mit Schritt 1 (Debiasing) beginnen?"
 
 ---
 
-### Schritt 1: Debiasing (Skill: 01-debiasing)
+### Schritt 1: Debiasing
 
 **Ziel:** Bewusstsein für kognitive Verzerrungen schaffen, bevor die fachliche Planung beginnt.
 
 **Vorgehen:**
-1. **Rufe den Skill "01-debiasing" auf**
-2. Der Skill führt durch Reflexionsfragen zu möglichen Vorurteilen
+1. **Lies die Anweisungen in `anweisungen/schritt-01-debiasing.md` vollständig und befolge sie**
+2. Führe durch Reflexionsfragen zu möglichen Vorurteilen
 3. **Output:** Dokumentierte Bias-Checks und Gegenmaßnahmen
 
 **Frage danach:** "Möchten Sie mit der Sachanalyse fortfahren?"
 
 ---
 
-### Schritt 2: Sachanalyse (Skill: 02-sachanalyse)
+### Schritt 2: Sachanalyse 
 
 **Ziel:** Fachlich fundierte Inhaltsbasis erstellen.
 
 **Vorgehen:**
-1. **Rufe den Skill "02-sachanalyse" auf**
+1. **Lies die Anweisungen in `anweisungen/schritt-02-sachanalyse.md` vollständig und befolge sie**
 2. **MCP-Integration:**
    - Prüfe `@mcp_filesystem {{RESOURCES_PATH}}/Lehrplaene/[BUNDESLAND]/` auf passenden Lehrplan
    - Lies den Lehrplan ein und beziehe ihn in die Analyse ein
@@ -290,106 +290,106 @@ Möchten wir mit Schritt 1 (Debiasing) beginnen?"
 
 ---
 
-### Schritt 3: Didaktische Analyse (Skill: 03-didaktische-analyse)
+### Schritt 3: Didaktische Analyse 
 
 **Ziel:** Didaktische Reduktion und Schwerpunktsetzung.
 
 **Vorgehen:**
 1. **Input:** Nutze das Ergebnis aus Schritt 2 (Sachanalyse)
-2. **Rufe den Skill "03-didaktische-analyse" auf**
-3. Der Skill führt durch didaktische Fragen (Was ist wesentlich? Was kann weggelassen werden?)
+2. **Lies die Anweisungen in `anweisungen/schritt-03-didaktische-analyse.md` vollständig und befolge sie**
+3. Führe durch didaktische Fragen (Was ist wesentlich? Was kann weggelassen werden?)
 4. **Output:** Didaktisch reduzierte Inhalte mit Schwerpunkten
 
 ---
 
-### Schritt 4: Fachbegriffe klären (Skill: 04-fachbegriffe-klaeren)
+### Schritt 4: Fachbegriffe klären 
 
 **Ziel:** Terminologie für die Zielgruppe aufbereiten.
 
 **Vorgehen:**
-1. **Rufe den Skill "04-fachbegriffe-klaeren" auf**
-2. Der Skill identifiziert zentrale Fachbegriffe und schlägt Erklärungen vor
+1. **Lies die Anweisungen in `anweisungen/schritt-04-fachbegriffe-klaeren.md` vollständig und befolge sie**
+2. Identifiziere zentrale Fachbegriffe und schlage Erklärungen vor
 3. **MCP-Integration:** Nutze `@mcp_filesystem {{RESOURCES_PATH}}/Didaktik/Fachsprache.md` falls vorhanden
 4. **Output:** Glossar mit altersgerechten Definitionen
 
 ---
 
-### Schritt 5: Lernziele operationalisieren (Skill: 05-lernziele-operationalisieren)
+### Schritt 5: Lernziele operationalisieren 
 
 **Ziel:** SMART-Lernziele formulieren nach Bloom-Taxonomie.
 
 **Vorgehen:**
-1. **Rufe den Skill "05-lernziele-operationalisieren" auf**
+1. **Lies die Anweisungen in `anweisungen/schritt-05-lernziele-operationalisieren.md` vollständig und befolge sie**
 2. **MCP-Integration:** Nutze `@mcp_filesystem {{RESOURCES_PATH}}/Didaktik/Bloom-Taxonomie.md`
 3. **MCP-Integration:** Nutze `@mcp_filesystem {{RESOURCES_PATH}}/Didaktik/KMK-Operatoren.md` für präzise Formulierungen
 4. **Output:** Strukturierte Lernziele (kognitiv, affektiv, psychomotorisch)
 
 ---
 
-### Schritt 6: Mindmap Strukturierung (Skill: 06-mindmap-strukturierung)
+### Schritt 6: Mindmap Strukturierung 
 
 **Ziel:** Visuelle Darstellung der Wissensstruktur.
 
 **Vorgehen:**
-1. **Rufe den Skill "06-mindmap-strukturierung" auf**
-2. Der Skill erstellt eine textbasierte oder Mermaid-Mindmap
+1. **Lies die Anweisungen in `anweisungen/schritt-06-mindmap-strukturierung.md` vollständig und befolge sie**
+2. Erstelle eine textbasierte oder Mermaid-Mindmap
 3. **Output:** Strukturierte Mindmap des Themengebiets
 
 ---
 
-### Schritt 7: Unterrichtsverlauf planen (Skill: 07-unterrichtsverlauf-planen)
+### Schritt 7: Unterrichtsverlauf planen 
 
 **Ziel:** Detaillierte Stundenplanung mit Phasen, Methoden, Sozialformen.
 
 **Vorgehen:**
-1. **Rufe den Skill "07-unterrichtsverlauf-planen" auf**
-2. Der Skill strukturiert jede Einzelstunde der Reihe
+1. **Lies die Anweisungen in `anweisungen/schritt-07-unterrichtsverlauf-planen.md` vollständig und befolge sie**
+2. Strukturiere jede Einzelstunde der Reihe
 3. **Output:** Tabelle oder Stundenverlaufspläne für jede Stunde
 
 ---
 
-### Schritt 8: Lernkontrollen entwickeln (Skill: 08-lernkontrollen-entwickeln)
+### Schritt 8: Lernkontrollen entwickeln 
 
 **Ziel:** Assessment-Design (formativ und summativ).
 
 **Vorgehen:**
-1. **Folge den Anweisungen in `anweisungen/schritt-08-lernkontrollen-entwickeln.md`**
+1. **Lies die Anweisungen in `anweisungen/schritt-08-lernkontrollen-entwickeln.md` vollständig und befolge sie**
 2. Schlage Tests, Quizze, Beobachtungsbögen vor
 3. **Output:** Assessment-Plan mit konkreten Aufgaben
 
 ---
 
-### Schritt 9: Material zusammenstellen (Skill: 09-material-zusammenstellen)
+### Schritt 9: Material zusammenstellen 
 
 **Ziel:** Ressourcen-Organisation und Materialbeschaffung.
 
 **Vorgehen:**
-1. **Rufe den Skill "09-material-zusammenstellen" auf**
-2. Der Skill erstellt eine Materialliste (Texte, Videos, Experimente, etc.)
+1. **Lies die Anweisungen in `anweisungen/schritt-09-material-zusammenstellen.md` vollständig und befolge sie**
+2. Erstelle eine Materialliste (Texte, Videos, Experimente, etc.)
 3. **Output:** Strukturierte Materialliste mit Quellen
 
 ---
 
-### Schritt 10: Reflexion durchführen (Skill: 10-reflexion-durchfuehren)
+### Schritt 10: Reflexion durchführen 
 
 **Ziel:** Evaluation und Selbstreflexion der Planung.
 
 **Vorgehen:**
-1. **Rufe den Skill "10-reflexion-durchfuehren" auf**
-2. Der Skill führt durch Reflexionsfragen zum gesamten Prozess
+1. **Lies die Anweisungen in `anweisungen/schritt-10-reflexion-durchfuehren.md` vollständig und befolge sie**
+2. Führe durch Reflexionsfragen zum gesamten Prozess
 3. **Optional:** Erstelle Feedbackbögen für Evaluation (manuell oder mit Arbeitsblatt-Skill)
 4. **Output:** Reflexionsbericht
 
 ---
 
-### Schritt 11: Iteration und Optimierung (Skill: 11-iteration-optimierung)
+### Schritt 11: Iteration und Optimierung 
 
 **Ziel:** Review und kontinuierliche Verbesserung.
 
 **Vorgehen:**
-1. **Rufe den Skill "11-iteration-optimierung" auf**
-2. Der Skill reviewt alle vorherigen Schritte auf Konsistenz und Qualität
-3. Macht Optimierungsvorschläge
+1. **Lies die Anweisungen in `anweisungen/schritt-11-iteration-optimierung.md` vollständig und befolge sie**
+2. Reviewe alle vorherigen Schritte auf Konsistenz und Qualität
+3. Mache Optimierungsvorschläge
 4. **Output:** Finale, optimierte Unterrichtsreihe
 
 ---
