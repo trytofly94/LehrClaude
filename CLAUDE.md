@@ -75,7 +75,9 @@ cd claude-desktop-setup
 
 ### Neue Architektur: 9 Custom Skills + Workflow-Anweisungen
 
-**Wichtige Änderung:** Die alten 27 Skills wurden durch eine hybride Architektur ersetzt:
+**Wichtige Änderung:** Das System nutzt eine hybride Architektur:
+
+Für Details zur Architektur-Entwicklung siehe [CHANGELOG.md](CHANGELOG.md).
 
 **Custom Skills (9):**
 
@@ -100,7 +102,7 @@ cd claude-desktop-setup
 
 **Workflow-Anweisungen (in `projekt-*/anweisungen/`):**
 Alle Planungs- und Prozess-Funktionen sind jetzt als direkte Anweisungen in den PROJECT_INSTRUCTIONS.md integriert:
-- **Projekt 1 (Unterrichtsreihe):** 11-Schritte-Prozess in `anweisungen/01-debiasing.md` bis `11-iteration.md`
+- **Projekt 1 (Unterrichtsreihe):** 11-Schritte-Prozess in `anweisungen/schritt-01-debiasing.md` bis `schritt-11-iteration-optimierung.md`
 - **Projekt 2 (Arbeitsblatt):** Arbeitsblatt-Workflow in `anweisungen/`
 - **Projekt 3 (Präsentation):** Präsentations-Workflow in `anweisungen/`
 - **Projekt 5 (Klassenverwaltung):** Förderschul-Workflows für Schülerprofile und Differenzierung
@@ -522,6 +524,6 @@ Dies ermöglicht nahtloses Weiterarbeiten über mehrere Chat-Sessions hinweg.
 
 ---
 
-**Version:** 2.0
-**Stand:** 2025-12-06
+**Version:** 2.2
+**Stand:** 2025-12-09
 **Zielgruppe:** IT-Admins, Claude Code Nutzer, Entwickler

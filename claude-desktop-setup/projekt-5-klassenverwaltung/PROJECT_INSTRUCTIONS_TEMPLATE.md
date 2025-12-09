@@ -98,7 +98,7 @@ Dieses Projekt nutzt **4 spezialisierte Klassenverwaltungs-Skills**:
 Das System greift auf folgende zentrale Ressourcen zu:
 
 ```
-{{INSTALLATION_PATH}}/2_Zentrale_Ressourcen/
+{{WORKSPACE_BASE}}/2_Zentrale_Ressourcen/
 ├── Didaktik/
 │   ├── Wember-Differenzierung.md       # 3-Stufen-Modell
 │   └── Bloom-Taxonomie.md              # Für Lernziel-Anpassung
@@ -111,7 +111,7 @@ Das System greift auf folgende zentrale Ressourcen zu:
 Alle Schülerprofile und Klassenübersichten werden hier gespeichert:
 
 ```
-{{INSTALLATION_PATH}}/1_Exportierte_Ergebnisse/Klassenverwaltung/
+{{WORKSPACE_BASE}}/1_Exportierte_Ergebnisse/Klassenverwaltung/
 ├── Schuelerprofile/
 │   ├── Schueler_A.md
 │   ├── Schueler_B.md
@@ -203,7 +203,7 @@ Der Skill prüft:
 **Nach erfolgreicher Validierung:**
 ```
 Schülerprofil wurde erfolgreich erstellt und gespeichert:
-{{INSTALLATION_PATH}}/1_Exportierte_Ergebnisse/Klassenverwaltung/Schuelerprofile/Schueler_A.md
+{{WORKSPACE_BASE}}/1_Exportierte_Ergebnisse/Klassenverwaltung/Schuelerprofile/Schueler_A.md
 ```
 
 ---
@@ -223,7 +223,7 @@ Schülerprofil wurde erfolgreich erstellt und gespeichert:
 
 Der Skill liest alle Schülerprofile aus dem Ordner:
 ```
-{{INSTALLATION_PATH}}/1_Exportierte_Ergebnisse/Klassenverwaltung/Schuelerprofile/
+{{WORKSPACE_BASE}}/1_Exportierte_Ergebnisse/Klassenverwaltung/Schuelerprofile/
 ```
 
 **Output:**
@@ -361,7 +361,7 @@ Der Skill:
 
 **Speicherung:**
 ```
-{{INSTALLATION_PATH}}/1_Exportierte_Ergebnisse/Klassenverwaltung/Differenzierungsplaene/
+{{WORKSPACE_BASE}}/1_Exportierte_Ergebnisse/Klassenverwaltung/Differenzierungsplaene/
 Klasse_7a_Photosynthese_Differenzierung.md
 ```
 
@@ -431,7 +431,7 @@ Klasse_7a_Photosynthese_Differenzierung.md
 > Das Schülerprofil ist vollständig und konsistent.
 >
 > **Gespeichert unter:**
-> `{{INSTALLATION_PATH}}/1_Exportierte_Ergebnisse/Klassenverwaltung/Schuelerprofile/Schueler_M.md`
+> `{{WORKSPACE_BASE}}/1_Exportierte_Ergebnisse/Klassenverwaltung/Schuelerprofile/Schueler_M.md`
 >
 > Möchtest du:
 > - [1] Ein weiteres Schülerprofil erstellen
@@ -454,7 +454,7 @@ In der `claude_desktop_config.json` muss der MCP Filesystem Server konfiguriert 
       "args": [
         "-y",
         "@modelcontextprotocol/server-filesystem",
-        "{{INSTALLATION_PATH}}"
+        "{{WORKSPACE_BASE}}"
       ]
     }
   }
@@ -476,9 +476,9 @@ In Claude Desktop:
 Stelle sicher, dass folgende Ordner existieren:
 
 ```bash
-mkdir -p {{INSTALLATION_PATH}}/1_Exportierte_Ergebnisse/Klassenverwaltung/Schuelerprofile
-mkdir -p {{INSTALLATION_PATH}}/1_Exportierte_Ergebnisse/Klassenverwaltung/Klassenuebersichten
-mkdir -p {{INSTALLATION_PATH}}/1_Exportierte_Ergebnisse/Klassenverwaltung/Differenzierungsplaene
+mkdir -p {{WORKSPACE_BASE}}/1_Exportierte_Ergebnisse/Klassenverwaltung/Schuelerprofile
+mkdir -p {{WORKSPACE_BASE}}/1_Exportierte_Ergebnisse/Klassenverwaltung/Klassenuebersichten
+mkdir -p {{WORKSPACE_BASE}}/1_Exportierte_Ergebnisse/Klassenverwaltung/Differenzierungsplaene
 ```
 
 ---
@@ -532,7 +532,7 @@ mkdir -p {{INSTALLATION_PATH}}/1_Exportierte_Ergebnisse/Klassenverwaltung/Differ
 
 **Lösung:**
 ```bash
-chmod -R 755 {{INSTALLATION_PATH}}/1_Exportierte_Ergebnisse/Klassenverwaltung
+chmod -R 755 {{WORKSPACE_BASE}}/1_Exportierte_Ergebnisse/Klassenverwaltung
 ```
 
 ### Problem: Schülerprofil wird nicht gefunden
@@ -546,7 +546,7 @@ chmod -R 755 {{INSTALLATION_PATH}}/1_Exportierte_Ergebnisse/Klassenverwaltung
 ## Version & Lizenz
 
 **Version:** 1.0
-**Stand:** 2025-01-10
+**Stand:** 2025-12-09
 **Lizenz:** CC BY-SA 4.0
 **Datenschutz:** DSGVO-konform (bei Einhaltung der Hinweise)
 

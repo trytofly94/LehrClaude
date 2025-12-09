@@ -6,19 +6,12 @@ Diese Checklist dient als Referenz für alle Skills im System. Sie wird von Clau
 
 ---
 
-## Wichtige Änderung: Neue Architektur (Version 2.0)
+## Skill-Architektur
 
-**Alte Architektur (veraltet):** 23 Skills (11 Planungs-Skills + 8 Material-Skills + 4 Export-Skills)
+Das System nutzt **9 Custom Skills** für Material-Erstellung, Differenzierung, Design und Export.
+Workflow-Anweisungen sind direkt in den PROJECT_INSTRUCTIONS.md der jeweiligen Projekte integriert.
 
-**Neue Architektur (aktuell):**
-- **9 Custom Skills** für Material-Erstellung, Differenzierung, Design und Export
-- **Workflow-Anweisungen** direkt in PROJECT_INSTRUCTIONS.md integriert (in `projekt-*/anweisungen/`)
-
-**Warum diese Änderung?**
-- Skills sind teuer und langsam beim Laden
-- Direkte Anweisungen in PROJECT_INSTRUCTIONS.md sind schneller und flexibler
-- Skills nur noch für wiederverwendbare Material-Generierung
-- Planungs- und Prozess-Schritte sind jetzt Anweisungen, keine Skills
+Für Details zur Architektur-Entwicklung siehe [CHANGELOG.md](../../../CHANGELOG.md).
 
 ---
 
@@ -255,30 +248,10 @@ Was kommt als nächstes?
 - Tracking von Änderungen
 - Übersicht über System-Architektur
 - Dokumentation der Skill-Beziehungen
-- Migration Guide (Alt → Neu)
 
 ---
 
-## Migration Guide: Von 23 Skills zu 9 Skills
-
-**Was wurde entfernt:**
-- 11 Planungs-Skills (01-11) → Jetzt in `anweisungen/`
-- 6 Material-Skills (mat-01, mat-04 bis mat-08) → Workflow-Anweisungen
-- 4 Klassenverwaltungs-Skills (klasse-01 bis klasse-04) → Workflow-Anweisungen
-
-**Was wurde behalten:**
-- 2 Material-Skills (mat-02, mat-03) - Wiederverwendbare Material-Generierung
-- 4 Export-Skills - Technische Export-Funktionen
-
-**Neue Dateien:**
-- `projekt-1-unterrichtsreihe/anweisungen/*.md` (11 Dateien)
-- `projekt-2-arbeitsblatt/anweisungen/*.md`
-- `projekt-3-praesentation/anweisungen/*.md`
-- `projekt-5-klassenverwaltung/anweisungen/*.md`
-
----
-
-**Version:** 2.1
+**Version:** 2.2
 **Zuletzt aktualisiert:** 2025-12-09
-**Anzahl Skills:** 9 (reduziert von 23)
-**Anzahl Workflow-Anweisungen:** ~20+ (in projekt-*/anweisungen/)
+**Anzahl Skills:** 9
+**Anzahl Workflow-Anweisungen:** ~25 (in projekt-*/anweisungen/)

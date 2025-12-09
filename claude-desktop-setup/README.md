@@ -649,11 +649,12 @@ nano skills/02-sachanalyse/SKILL.md        # nano
 
 ---
 
-**Version:** 2.3
-**Zuletzt aktualisiert:** 2025-12-06
+**Version:** 2.4
+**Zuletzt aktualisiert:** 2025-12-09
 **Geschätzter Zeitaufwand:** 45-60 Minuten (Setup + 9 Skills)
 
 **Änderungshistorie:**
+- **v2.4 (2025-12-09):** Versions-Update und Dokumentations-Konsistenz
 - **v2.3 (2025-12-06):** Kontext-Laden bei bestehenden Projekten, Markdown-Migration, Dokumentations-Update
 - **v2.2 (2025-11-30):** Neue Skills: quellenrecherche, differenzierung-ge; Piktogramme-Ordner für METACOM
 - **v2.1 (2025-11-30):** 3-Phasen-Workflow, Quellenbasierter Ansatz, Zitationsrichtlinien

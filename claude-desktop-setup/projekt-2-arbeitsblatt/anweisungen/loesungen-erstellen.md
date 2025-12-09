@@ -188,14 +188,14 @@ Liefere alle Musterlösungen in einem strukturierten Dokument, das Folgendes ent
 - Bewertungskriterien, die für den Unterrichtseinsatz praktikabel sind
 - Sprache, die ansprechend und angemessen für die Zielgruppe ist
 
-## Integration mit anderen Skills
+## Integration mit anderen Workflow-Elementen
 
-Dieser Skill arbeitet in Verbindung mit:
-- **mat-04-aufgaben-generieren**: Liefert die Aufgaben, für die Lösungen benötigt werden
-- **05-lernziele-operationalisieren**: Etabliert Lernziele, die die Lösungsentwicklung leiten
-- **mat-08-lernzielkontrolle**: Verwendet Lösungen zur Erstellung von Bewertungsrastern
+Diese Anweisung arbeitet in Verbindung mit:
+- **aufgaben-generieren.md**: Liefert die Aufgaben, für die Lösungen benötigt werden
+- **mat-02-arbeitsblatt-erstellen**: Integriert Lösungen ins finale Arbeitsblatt
+- **Export-Skills**: Exportiert die fertigen Lösungen in verschiedene Formate
 
-Beziehe dich auf die Ausgaben dieser Skills beim Erstellen umfassender, aufeinander abgestimmter Lösungen.
+Beziehe dich auf die Ausgaben anderer Workflow-Schritte beim Erstellen umfassender, aufeinander abgestimmter Lösungen.
 
 ## Resources
 

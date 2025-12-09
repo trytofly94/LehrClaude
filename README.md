@@ -145,6 +145,10 @@ LehrClaude/
 │   │   ├── skills-checklist.md
 │   │   └── anweisungen/               # 3 Workflow-Anweisungen
 │   │
+│   ├── projekt-4-skill-verwaltung/
+│   │   ├── PROJECT_INSTRUCTIONS.md
+│   │   └── skills-checklist.md
+│   │
 │   ├── projekt-5-klassenverwaltung/
 │   │   ├── PROJECT_INSTRUCTIONS.md
 │   │   ├── skills-checklist.md
@@ -186,7 +190,7 @@ LehrClaude/
 └── prompts/                           # Original-Prompts (Basis für Skills)
     ├── 01_debiasing_prompt.md
     ├── 02_sachanalyse_prompt.md
-    ├── ... (Insgesamt 30 Prompts)
+    ├── ... (Insgesamt 29 Prompts)
     └── mat_08_lernzielkontrolle.md
 ```
 
@@ -250,7 +254,7 @@ open README.md  # Folge der Anleitung
 
 ## 📦 Was dieses System bietet
 
-### 3 Spezialisierte Projekte
+### 5 Projekte im Detail
 
 #### 1. Unterrichtsreihe planen
 **11-Schritte-Prozess** basierend auf Klafki, Leisen, Wember:
@@ -290,7 +294,7 @@ open README.md  # Folge der Anleitung
 - Lösungen erstellen (optional)
 - Export (MD, PDF, DOCX)
 
-**Skills:** 1 Material-Skill + 3 Export-Skills
+**Skills:** 1 Material-Skill + 4 Export-Skills
 **Workflow:** 4 Anweisungen in `anweisungen/`
 
 ---
@@ -303,14 +307,34 @@ open README.md  # Folge der Anleitung
 - Visuelle Elemente vorschlagen (Bilder, Diagramme)
 - Export (MD für manuelle Übernahme, oder PPTX)
 
-**Skills:** 1 Material-Skill + 2 Export-Skills
+**Skills:** 1 Material-Skill + 4 Export-Skills
 **Workflow:** 3 Anweisungen in `anweisungen/`
+
+---
+
+#### 4. Skill-Verwaltung (für IT-Admins)
+
+**Zweck:** Skills direkt in Claude Desktop bearbeiten, validieren und verpacken.
+
+**Zielgruppe:** IT-Administratoren
+
+**Skills:** Keine (arbeitet MIT den Skills, nutzt sie nicht)
+
+---
+
+#### 5. Klassenverwaltung
+
+**Zweck:** Schülerprofile erfassen und förderschwerpunkt-spezifische Differenzierung erstellen.
+
+**Workflow:** 7 Anweisungen in `anweisungen/`
+
+**Skills:** Export-Skills (optional), differenzierung-ge (für GE-Materialien)
 
 ---
 
 ### 9 Custom Skills + Workflow-Anweisungen
 
-**Neue Architektur:** Statt 27 Skills nutzt das System jetzt eine hybride Architektur:
+Das System nutzt eine hybride Architektur aus 9 Custom Skills + Workflow-Anweisungen:
 
 | Komponente | Anzahl | Beispiele |
 |------------|--------|-----------|
@@ -709,8 +733,8 @@ Vollständiger Lizenztext: [CC BY-SA 4.0](https://creativecommons.org/licenses/b
 
 ---
 
-**Version:** 2.1
-**Stand:** 2025-12-06
+**Version:** 2.2
+**Stand:** 2025-12-09
 **Kompatibilität:** macOS 11+, Claude Desktop (aktuell)
 **Architektur:** 9 Skills + Workflow-Anweisungen (unter 20-Skill-Limit)
 

@@ -13,18 +13,12 @@ Diese Checkliste zeigt, welche Skills im Claude Desktop Projekt **"Unterrichtsre
 
 ---
 
-## Wichtige Änderung: Neue Architektur
+## Skill-Architektur
 
-**Alte Architektur (veraltet):** 11 Planungs-Skills + 3 Material-Skills + 3 Export-Skills
+Das System nutzt **9 Custom Skills** für Material-Erstellung, Differenzierung, Design und Export.
+Alle Workflow-Schritte sind als Anweisungen in `anweisungen/` integriert.
 
-**Neue Architektur (aktuell):**
-- **Workflow-Anweisungen** in `anweisungen/` (11 Schritte direkt in PROJECT_INSTRUCTIONS.md integriert)
-- **9 Custom Skills** für Material-Erstellung, Differenzierung, Design und Export
-
-**Warum diese Änderung?**
-- Skills sind teuer und langsam beim Laden
-- Direkte Anweisungen in PROJECT_INSTRUCTIONS.md sind schneller und flexibler
-- Skills nur noch für wiederverwendbare Material-Generierung
+Für Details zur Architektur-Entwicklung siehe [CHANGELOG.md](../../../CHANGELOG.md).
 
 ---
 

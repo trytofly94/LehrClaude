@@ -339,7 +339,7 @@ Optionen:
 ### Phase 10: Speicherung
 
 **Bei Bestätigung:**
-1. Automatische Validierung starten (Skill klasse-02-schuelerprofil-validieren)
+1. Automatische Validierung starten (siehe schuelerprofil-validieren.md)
 2. Falls Validierung erfolgreich:
    - Datei speichern im MCP Filesystem
    - Pfad: `/Users/lennart/Schul-Materialien/4_Klassen_und_Schueler/[Klassenname]/Schuelerprofile/[Pseudonym].md`
@@ -407,7 +407,7 @@ Zusammenfassung anzeigen
   ↓
 Bestätigung einholen
   ↓
-Validierung starten (klasse-02-schuelerprofil-validieren)
+Validierung starten (siehe schuelerprofil-validieren.md)
   ↓
 Bei Erfolg: Speichern via MCP Filesystem
   ↓
@@ -424,16 +424,16 @@ Das Schülerprofil wird als **Markdown-Datei** gespeichert:
 
 **Struktur:** Siehe Phase 9 (Zusammenfassung)
 
-## Integration mit anderen Skills
+## Integration mit anderen Workflow-Elementen
 
 ```
-klasse-01-schuelerprofil-erstellen [DIESER SKILL]
+schuelerprofil-erstellen.md [DIESE ANWEISUNG]
     ↓
-klasse-02-schuelerprofil-validieren (automatisch aufgerufen)
+schuelerprofil-validieren.md (automatische Validierung)
     ↓
-klasse-03-klasse-verwalten (nutzt gespeicherte Profile)
+Verwendung in Projekten 1-3 (für Differenzierung)
     ↓
-klasse-04-differenzierungs-empfehlung (nutzt gespeicherte Profile)
+differenzierung-ge Skill (bei Förderschwerpunkt GE)
 ```
 
 ## Fehlerbehandlung
@@ -484,7 +484,7 @@ Dieser Skill nutzt folgende Ressourcen:
 ## Next Steps
 
 Nach Erstellung eines Schülerprofils:
-- Automatische Validierung (klasse-02-schuelerprofil-validieren)
+- Automatische Validierung (schuelerprofil-validieren.md)
 - Weitere Profile erstellen
-- Klassenübersicht anzeigen (klasse-03-klasse-verwalten)
-- Differenzierungs-Empfehlungen erstellen (klasse-04-differenzierungs-empfehlung)
+- Verwendung in Unterrichtsplanung (Projekte 1-3)
+- Differenzierung mit differenzierung-ge Skill (bei GE)

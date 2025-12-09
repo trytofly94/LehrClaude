@@ -95,11 +95,10 @@ Vor der Abgabe wird überprüft:
 
 ## Zusammenarbeit mit anderen Skills
 
-- **Skill 05-lernziele-operationalisieren**: Liefert SMART-Ziele und Bloom-Klassifikationen
-- **Skill 06-mindmap-strukturierung**: Kann Kernthemen und Feinziele strukturieren
-- **Skill mat-01-texterstellung**: Schreibt anspruchsvollere Aufgabenformulierungen aus
 - **Skill mat-02-arbeitsblatt-erstellen**: Integriert die generierten Aufgaben ins Layout
-- **Skill mat-08-lernzielkontrolle**: Nutzt Aufgaben als Kontrollmechanismus
+- **Skill export-md**: Exportiert als Markdown
+- **Skill export-pdf**: Exportiert als PDF
+- **Skill export-docx**: Exportiert als DOCX
 
 ## Wichtige Hinweise
 

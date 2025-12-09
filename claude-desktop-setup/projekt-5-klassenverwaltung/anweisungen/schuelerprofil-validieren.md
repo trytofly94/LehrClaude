@@ -15,7 +15,7 @@ Dieser Skill führt eine **automatische Qualitätskontrolle** von Schülerprofil
 ## Wann wird dieser Skill verwendet?
 
 Dieser Skill wird verwendet:
-- **Automatisch** nach Erstellung eines Schülerprofils (durch klasse-01-schuelerprofil-erstellen)
+- **Automatisch** nach Erstellung eines Schülerprofils
 - **Manuell** bei Aktualisierung bestehender Profile
 - **Vor** Verwendung in Differenzierungs-Empfehlungen
 
@@ -30,7 +30,7 @@ Dieser Skill wird verwendet:
 
 **Eingabe:**
 - Pseudonym des Schülerprofils (z.B. "Schüler_A")
-- ODER: Direktes Profil-Objekt (wenn von klasse-01 aufgerufen)
+- ODER: Direktes Profil-Objekt (wenn manuell übergeben)
 
 **Aktion:**
 1. Falls Pseudonym gegeben: Profil aus MCP Filesystem laden

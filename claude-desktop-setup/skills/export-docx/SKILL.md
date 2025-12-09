@@ -212,10 +212,10 @@ Beispiele:
 ## Integration mit anderen Skills
 
 Dieser Skill arbeitet zusammen mit:
-- **Material Skills (mat-01 bis mat-08):** Stellen Inhalte zur Formatierung bereit
-- **Planungs-Skills (01-11):** Empfangen strukturierte Ausgabe aus Unterrichtsplanungs-Workflow
-- **Export Markdown:** Kann Markdown-Ausgabe in DOCX konvertieren (Alternative zum direkten PDF-Export)
-- **Export PDF:** Komplementärer Export für druckfertige Verteilung
+- **Material Skills (mat-02, mat-03):** Stellen Inhalte zur Formatierung bereit
+- **Workflow-Anweisungen:** Empfangen strukturierte Ausgabe aus Unterrichtsplanungs-Workflow
+- **export-md:** Kann Markdown-Ausgabe in DOCX konvertieren (Alternative zum direkten PDF-Export)
+- **export-pdf:** Komplementärer Export für druckfertige Verteilung
 
 Lehrkräfte verwenden typischerweise DOCX-Export für:
 1. **Bearbeitungsflexibilität:** Vor Verwendung in Word modifizieren

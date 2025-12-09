@@ -26,15 +26,11 @@ Dieses Claude Desktop Projekt führt Lehrkräfte durch den vollständigen, wisse
 - ✅ 11-iteration-optimierung
 
 ### Material-Skills (optional für dieses Projekt):
-- ✅ mat-06-pruefungsaufgaben
-- ✅ mat-07-feedbackboegen
-- ✅ mat-08-lernzielkontrolle
+- ✅ mat-02-arbeitsblatt-erstellen
+- ✅ mat-03-powerpoint-erstellen
 
 ### Förderschul-Skills (optional, nur bei Förderschulklassen):
-- ✅ foerder-01-schuelerprofile-laden
-- ✅ foerder-02-lernziele-differenzieren
-- ✅ foerder-03-materialien-anpassen
-- ✅ foerder-04-piktogramm-materialien
+- ✅ differenzierung-ge (für Förderschwerpunkt Geistige Entwicklung)
 
 ### Export-Skills:
 - ✅ export-md
@@ -134,7 +130,7 @@ Bei komplexen Recherchen, die viele Quellen erfordern:
 5. **Förderschul-Modus aktivieren (falls zutreffend)**:
    - Bei Auswahl "Förderschulklasse": Aktiviere automatisch spezielle Planungs-Features
    - Lade Schülerprofile aus `@mcp_filesystem 4_Klassen_und_Schueler/[KLASSENNAME]/`
-   - Nutze Skills: `foerder-01-schuelerprofile-laden`, `foerder-02-lernziele-differenzieren`, `foerder-03-materialien-anpassen`
+   - Bei Förderschwerpunkt GE: Nutze `differenzierung-ge` Skill für piktogramm-basierte Materialien
    - Beachte Förderschwerpunkt-spezifische Anpassungen (siehe Abschnitt "Förderschul-Modus")
 
 ---
@@ -144,10 +140,7 @@ Bei komplexen Recherchen, die viele Quellen erfordern:
 **Aktivierung:** Wird automatisch aktiviert, wenn die Lehrkraft "Förderschulklasse" auswählt.
 
 ### Benötigte zusätzliche Skills:
-- ✅ foerder-01-schuelerprofile-laden
-- ✅ foerder-02-lernziele-differenzieren
-- ✅ foerder-03-materialien-anpassen
-- ✅ foerder-04-piktogramm-materialien
+- ✅ differenzierung-ge (für Förderschwerpunkt Geistige Entwicklung)
 
 ### Förderschwerpunkte und Anpassungen:
 
@@ -178,7 +171,7 @@ Bei komplexen Recherchen, die viele Quellen erfordern:
 - Lebenspraktische Bezüge
 - Multisensorische Zugänge
 - **Nur Piktogramm-basierte Materialien** (kein Text!)
-- Skill `foerder-04-piktogramm-materialien` automatisch nutzen
+- Skill `differenzierung-ge` automatisch nutzen
 
 #### 5. Körperlich-motorische Entwicklung (KME)
 **Anpassungen:**
@@ -210,19 +203,19 @@ Bei komplexen Recherchen, die viele Quellen erfordern:
 - Zusätzlich: Lebensweltbezug für Schüler:innen mit diesem Förderschwerpunkt
 
 **Schritt 5 (Lernziele):**
-- **Rufe `foerder-02-lernziele-differenzieren` auf**
-- Erstelle Lernziele für ALLE Schüler:innen basierend auf Profilen
+- Erstelle differenzierte Lernziele für ALLE Schüler:innen basierend auf Profilen
 - Beachte individuelle Entwicklungsbereiche
+- Nutze Schülerprofile aus MCP Filesystem
 
 **Schritt 7 (Unterrichtsverlauf):**
-- **Rufe `foerder-03-materialien-anpassen` auf**
 - Plane differenzierte Materialien ein
-- Berücksichtige individuelle Unterstützungsbedarfe
+- Berücksichtige individuelle Unterstützungsbedarfe aus Schülerprofilen
+- Passe Sozialformen an Förderschwerpunkt an
 
 **Schritt 9 (Material zusammenstellen):**
-- **Bei GE: Rufe `foerder-04-piktogramm-materialien` auf**
+- **Bei GE: Rufe `differenzierung-ge` Skill auf**
 - Erstelle ausschließlich Piktogramm-basierte Materialien
-- Keine Textversionen für diese Zielgruppe
+- Keine Textversionen für Förderschwerpunkt GE
 
 ### MCP-Integration Förderschul-Modus:
 
@@ -236,26 +229,26 @@ Bei komplexen Recherchen, die viele Quellen erfordern:
     └── ...
 ```
 
-**Skill `foerder-01-schuelerprofile-laden`:**
-- Liest alle Schülerprofile ein
-- Extrahiert relevante Informationen (Förderschwerpunkte, Stärken, Barrieren)
-- Bereitet Übersicht für Planungsprozess vor
+**Schülerprofile laden:**
+- Lese alle Schülerprofile aus MCP Filesystem
+- Extrahiere relevante Informationen (Förderschwerpunkte, Stärken, Barrieren)
+- Bereite Übersicht für Planungsprozess vor
 
 **Beispiel-Ablauf:**
 ```
 Lehrkraft: "Ich möchte eine Unterrichtsreihe planen zu 'Jahreszeiten', Klasse 7a, Förderschwerpunkt GE."
 
 Claude: "Ich sehe, Sie planen für eine Klasse mit Förderschwerpunkt Geistige Entwicklung.
-Ich aktiviere den Förderschul-Modus und lade die Schülerprofile.
+Ich aktiviere den Förderschul-Modus und lade die Schülerprofile aus dem MCP Filesystem.
 
-[Rufe foerder-01-schuelerprofile-laden auf]
+[Lese Profile aus 4_Klassen_und_Schueler/Klasse_7a_GE/]
 
 Ich habe 12 Schülerprofile geladen. Besonderheiten:
 - 8 Schüler:innen nutzen Unterstützte Kommunikation
 - 4 Schüler:innen können einzelne Wörter lesen
 - Alle benötigen stark visualisierte Materialien
 
-Ich werde den Planungsprozess entsprechend anpassen. Alle Materialien werden ausschließlich mit Piktogrammen erstellt.
+Ich werde den Planungsprozess entsprechend anpassen. Alle Materialien werden mit dem 'differenzierung-ge' Skill erstellt.
 
 Möchten wir mit Schritt 1 (Debiasing) beginnen?"
 ```
@@ -360,10 +353,9 @@ Möchten wir mit Schritt 1 (Debiasing) beginnen?"
 **Ziel:** Assessment-Design (formativ und summativ).
 
 **Vorgehen:**
-1. **Rufe den Skill "08-lernkontrollen-entwickeln" auf**
-2. Der Skill schlägt Tests, Quizze, Beobachtungsbögen vor
-3. **Optional:** Rufe `mat-08-lernzielkontrolle` für konkrete Aufgaben auf
-4. **Output:** Assessment-Plan
+1. **Folge den Anweisungen in `anweisungen/schritt-08-lernkontrollen-entwickeln.md`**
+2. Schlage Tests, Quizze, Beobachtungsbögen vor
+3. **Output:** Assessment-Plan mit konkreten Aufgaben
 
 ---
 

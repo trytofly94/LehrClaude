@@ -362,5 +362,5 @@ Klasse_5a_LE/Schuelerprofile/
 ---
 
 **Version:** 1.0
-**Stand:** 2025-01-10
+**Stand:** 2025-12-09
 **Zielgruppe:** IT-Admins, Förderschul-Lehrkräfte
