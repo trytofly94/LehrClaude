@@ -12,7 +12,7 @@ Diese Checkliste zeigt, welche Skills im Claude Desktop Projekt **"Klassenverwal
 
 **Neue Architektur (aktuell):**
 - **Workflow-Anweisungen** in `anweisungen/` (Klassenverwaltungs-Workflow direkt in PROJECT_INSTRUCTIONS.md integriert)
-- **6 Custom Skills** nur für Material-Export (optional)
+- **9 Custom Skills** für Material-Erstellung, Differenzierung, Design und Export (optional)
 
 **Warum diese Änderung?**
 - Skills sind teuer und langsam beim Laden

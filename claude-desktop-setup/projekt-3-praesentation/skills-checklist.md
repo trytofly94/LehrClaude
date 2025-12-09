@@ -12,7 +12,7 @@ Diese Checkliste zeigt, welche Skills im Claude Desktop Projekt **"Präsentation
 
 **Neue Architektur (aktuell):**
 - **Workflow-Anweisungen** in `anweisungen/` (Präsentations-Workflow direkt in PROJECT_INSTRUCTIONS.md integriert)
-- **6 Custom Skills** nur für Material-Erstellung und Export
+- **9 Custom Skills** für Material-Erstellung, Differenzierung, Design und Export
 
 **Warum diese Änderung?**
 - Skills sind teuer und langsam beim Laden

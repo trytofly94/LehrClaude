@@ -1,6 +1,6 @@
 # Skills-Checklist - Lehrkraft-Copilot-System
 
-## Übersicht: 6 Custom Skills
+## Übersicht: 9 Custom Skills
 
 Diese Checklist dient als Referenz für alle Skills im System. Sie wird von Claude im Projekt "Skill-Verwaltung" verwendet.
 
@@ -11,7 +11,7 @@ Diese Checklist dient als Referenz für alle Skills im System. Sie wird von Clau
 **Alte Architektur (veraltet):** 23 Skills (11 Planungs-Skills + 8 Material-Skills + 4 Export-Skills)
 
 **Neue Architektur (aktuell):**
-- **6 Custom Skills** nur für Material-Erstellung und Export
+- **9 Custom Skills** für Material-Erstellung, Differenzierung, Design und Export
 - **Workflow-Anweisungen** direkt in PROJECT_INSTRUCTIONS.md integriert (in `projekt-*/anweisungen/`)
 
 **Warum diese Änderung?**
@@ -43,6 +43,30 @@ Werden in allen Projekten verwendet.
 | 4 | **export-pdf** | Export nach PDF via Pandoc | `skills/export-pdf/` | ✅ Aktiv, scripts/ vorhanden |
 | 5 | **export-docx** | Export nach Word (.docx) | `skills/export-docx/` | ✅ Aktiv, scripts/ vorhanden |
 | 6 | **export-pptx** | Export nach PowerPoint (.pptx) | `skills/export-pptx/` | ✅ Aktiv, scripts/ vorhanden |
+
+---
+
+## Design-Skills (1 Skill)
+
+| # | Skill-Name | Zweck | Pfad | Besonderheit |
+|---|------------|-------|------|--------------|
+| 7 | **export-stile** | Schulfarben, Themes, PowerPoint-Vorlagen | `skills/export-stile/` | ✅ Aktiv |
+
+---
+
+## Differenzierungs-Skills (1 Skill)
+
+| # | Skill-Name | Zweck | Pfad | Besonderheit |
+|---|------------|-------|------|--------------|
+| 8 | **differenzierung-ge** | Piktogramm-unterstützte Materialien für GE | `skills/differenzierung-ge/` | ✅ Aktiv |
+
+---
+
+## Recherche-Skills (1 Skill)
+
+| # | Skill-Name | Zweck | Pfad | Besonderheit |
+|---|------------|-------|------|--------------|
+| 9 | **quellenrecherche** | Quellenvalidierung und Zitationsformatierung | `skills/quellenrecherche/` | ✅ Aktiv
 
 ---
 
@@ -235,7 +259,7 @@ Was kommt als nächstes?
 
 ---
 
-## Migration Guide: Von 23 Skills zu 6 Skills
+## Migration Guide: Von 23 Skills zu 9 Skills
 
 **Was wurde entfernt:**
 - 11 Planungs-Skills (01-11) → Jetzt in `anweisungen/`
@@ -254,7 +278,7 @@ Was kommt als nächstes?
 
 ---
 
-**Version:** 2.0
-**Zuletzt aktualisiert:** 2025-11-30
-**Anzahl Skills:** 6 (reduziert von 23)
+**Version:** 2.1
+**Zuletzt aktualisiert:** 2025-12-09
+**Anzahl Skills:** 9 (reduziert von 23)
 **Anzahl Workflow-Anweisungen:** ~20+ (in projekt-*/anweisungen/)

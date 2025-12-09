@@ -19,7 +19,7 @@ Diese Checkliste zeigt, welche Skills im Claude Desktop Projekt **"Unterrichtsre
 
 **Neue Architektur (aktuell):**
 - **Workflow-Anweisungen** in `anweisungen/` (11 Schritte direkt in PROJECT_INSTRUCTIONS.md integriert)
-- **6 Custom Skills** nur für Material-Erstellung und Export
+- **9 Custom Skills** für Material-Erstellung, Differenzierung, Design und Export
 
 **Warum diese Änderung?**
 - Skills sind teuer und langsam beim Laden
@@ -54,13 +54,33 @@ Diese Skills ermöglichen den Export der fertigen Unterrichtsreihe:
 
 ---
 
-### ✅ Spezial-Skills (OPTIONAL)
+### ✅ Design-Skills (OPTIONAL)
+
+Diese Skills ermöglichen einheitliches Design:
+
+- [ ] **export-stile** - Schulfarben, Themes, PowerPoint-Vorlagen
+
+**Status:** [ ] Design-Skills aktiviert (OPTIONAL)
+
+---
+
+### ✅ Differenzierungs-Skills (FÜR FÖRDERSCHULEN)
+
+Diese Skills ermöglichen förderschwerpunkt-spezifische Materialien:
+
+- [ ] **differenzierung-ge** - Piktogramm-unterstützte Materialien für Förderschwerpunkt GE
+
+**Status:** [ ] Differenzierungs-Skills aktiviert (bei Förderschulklassen)
+
+---
+
+### ✅ Recherche-Skills (OPTIONAL)
 
 Diese Skills bieten erweiterte Funktionalität:
 
 - [ ] **quellenrecherche** - Validiert Quellen per Web-Suche und formatiert Zitationen (für akademische Abgaben)
 
-**Status:** [ ] Spezial-Skills aktiviert (OPTIONAL)
+**Status:** [ ] Recherche-Skills aktiviert (OPTIONAL)
 
 ---
 
@@ -95,7 +115,7 @@ Diese werden automatisch durch PROJECT_INSTRUCTIONS.md orchestriert - keine manu
 - [ ] Beide Material-Skills (für Material-Erstellung während der Planung)
 
 **Vollständige Konfiguration:**
-- [ ] Alle 6 Skills aktiviert
+- [ ] Alle 9 Skills aktiviert
 
 ---
 
@@ -136,7 +156,7 @@ Diese werden automatisch durch PROJECT_INSTRUCTIONS.md orchestriert - keine manu
 3. **Phase 3:** mat-02, mat-03 (für Material-Erstellung)
 4. **Phase 4:** export-pptx (optional)
 
-**Zeitaufwand:** Ca. 10 Minuten für alle 6 Skills
+**Zeitaufwand:** Ca. 10 Minuten für alle 9 Skills
 
 ---
 

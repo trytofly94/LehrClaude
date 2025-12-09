@@ -45,7 +45,7 @@
 - **Anpassbarkeit:** Lehrkräfte können Materialien direkt ohne Übersetzung bearbeiten
 - **Durchgängigkeit:** Vom Planungsprozess bis zum fertigen Arbeitsblatt - alles auf Deutsch
 
-Dies gilt für alle 6 Skills, Workflow-Anweisungen, Project Instructions und alle generierten Inhalte.
+Dies gilt für alle 9 Skills, Workflow-Anweisungen, Project Instructions und alle generierten Inhalte.
 
 ---
 
@@ -80,7 +80,7 @@ Statt eines monolithischen Tools bietet dieses System **5 spezialisierte Claude 
 4. **Skill-Verwaltung** – Für IT-Admins zur Skill-Bearbeitung
 5. **Klassenverwaltung** – Schülerprofile & Förderschul-Differenzierung
 
-Jedes Projekt nutzt **6 Custom Skills** (Material & Export) + **Workflow-Anweisungen** und greift via **MCP Filesystem Server** auf zentrale Ressourcen zu.
+Jedes Projekt nutzt **9 Custom Skills** (Material, Differenzierung, Design & Export) + **Workflow-Anweisungen** und greift via **MCP Filesystem Server** auf zentrale Ressourcen zu.
 
 ### Neue Features (2025-11)
 - **Interaktiver 3-Phasen-Workflow:** Jeder Planungsschritt folgt A (Sammeln) → B (Erarbeiten) → C (Abschluss)
@@ -102,7 +102,7 @@ Jedes Projekt nutzt **6 Custom Skills** (Material & Export) + **Workflow-Anweisu
 │ Claude Desktop      │               │ Lokales Dateisystem  │
 │                     │               │                      │
 │ • 5 Projekte        │◄──MCP────────►│ Schul-Materialien/   │
-│ • 6 Custom Skills   │   Server      │ ├─ Lehrpläne         │
+│ • 9 Custom Skills   │   Server      │ ├─ Lehrpläne         │
 │ • Workflow-Anweisungen│              │ ├─ Frameworks        │
 └─────────────────────┘               │ └─ Exportierte       │
                                       │    Ergebnisse        │
@@ -150,13 +150,16 @@ LehrClaude/
 │   │   ├── skills-checklist.md
 │   │   └── anweisungen/               # 7 Workflow-Anweisungen
 │   │
-│   └── skills/                        # 6 Custom Skills (Material & Export)
+│   └── skills/                        # 9 Custom Skills (Material, Differenzierung, Design & Export)
 │       ├── mat-02-arbeitsblatt-erstellen/
 │       ├── mat-03-powerpoint-erstellen/
 │       ├── export-md/
 │       ├── export-pdf/
 │       ├── export-docx/
-│       └── export-pptx/
+│       ├── export-pptx/
+│       ├── export-stile/
+│       ├── differenzierung-ge/
+│       └── quellenrecherche/
 │
 ├── lehrkraft-deployment/              # DEPLOYMENT AUF LEHRKRAFT-MAC
 │   ├── README.md                      # Deployment-Anleitung
@@ -214,7 +217,7 @@ open README.md  # Folge der Anleitung
 **→ Manuelles Setup:**
 1. MCP Filesystem Server konfigurieren
 2. 5 Projekte erstellen (Instructions copy-pasten)
-3. 6 Skills hochladen (fertige ZIPs in `skill-packages/`)
+3. 9 Skills hochladen (fertige ZIPs in `skill-packages/`)
 
 ### Gesamtzeit: 30-60 Minuten
 
@@ -305,7 +308,7 @@ open README.md  # Folge der Anleitung
 
 ---
 
-### 6 Custom Skills + Workflow-Anweisungen
+### 9 Custom Skills + Workflow-Anweisungen
 
 **Neue Architektur:** Statt 27 Skills nutzt das System jetzt eine hybride Architektur:
 
@@ -313,6 +316,9 @@ open README.md  # Folge der Anleitung
 |------------|--------|-----------|
 | **Material-Skills** | 2 | Arbeitsblatt erstellen, PowerPoint erstellen |
 | **Export-Skills** | 4 | Markdown (Haupt-Export), PDF, DOCX, PPTX |
+| **Design-Skills** | 1 | Export-Stile (Schulfarben, Themes) |
+| **Differenzierungs-Skills** | 1 | differenzierung-ge (Piktogramm-Material) |
+| **Recherche-Skills** | 1 | quellenrecherche (Quellenvalidierung) |
 | **Workflow-Anweisungen** | 25 | In `anweisungen/`-Ordnern der Projekte |
 
 **Vorteile:**
@@ -481,8 +487,8 @@ A: Alle Daten bleiben lokal auf dem Rechner der Lehrkraft. Claude Desktop nutzt 
 **F: Kann ich die Skills anpassen?**
 A: Ja! Die SKILL.md-Dateien sind editierbar. Einfach ZIP neu erstellen und erneut hochladen.
 
-**F: Brauche ich alle 6 Skills?**
-A: Ja, alle 6 werden empfohlen. Die Workflow-Anweisungen sind bereits in den Projekten integriert.
+**F: Brauche ich alle 9 Skills?**
+A: Die 4 Export-Skills sind essentiell. Die anderen 5 (Material, Design, Differenzierung, Recherche) sind empfohlen aber optional je nach Bedarf. Die Workflow-Anweisungen sind bereits in den Projekten integriert.
 
 ---
 
@@ -684,7 +690,7 @@ Vollständiger Lizenztext: [CC BY-SA 4.0](https://creativecommons.org/licenses/b
 **Transformation (2025):**
 - Von Prompt-Katalog zum modularen System
 - Förderschul-Integration mit 7 Förderschwerpunkten
-- 6 Custom Skills + Workflow-Anweisungen für Claude Desktop
+- 9 Custom Skills + Workflow-Anweisungen für Claude Desktop
 - Automatisierte Deployment-Workflows
 
 **Erweitert um:**
