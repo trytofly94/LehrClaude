@@ -73,9 +73,9 @@ cd claude-desktop-setup
 
 ## Skill-Architektur
 
-### Neue Architektur: 9 Custom Skills + Workflow-Anweisungen
+### 9 Custom Skills + Workflow-Anweisungen
 
-**Wichtige Änderung:** Das System nutzt eine hybride Architektur:
+Das System nutzt eine hybride Architektur:
 
 Für Details zur Architektur-Entwicklung siehe [CHANGELOG.md](CHANGELOG.md).
 
@@ -274,7 +274,7 @@ Für Planungs- und Prozess-Schritte nutze die `anweisungen/` Ordner:
 
 ### Neues Projekt hinzufügen
 1. Erstelle `claude-desktop-setup/projekt-5-neue-aufgabe/`
-2. Erstelle `PROJECT_INSTRUCTIONS_TEMPLATE.md` (nutze Platzhalter wie `{{INSTALLATION_PATH}}`)
+2. Erstelle `PROJECT_INSTRUCTIONS_TEMPLATE.md` (nutze Platzhalter wie `{{REPO_BASE}}`, `{{WORKSPACE_BASE}}`, `{{RESOURCES_PATH}}`)
 3. Erstelle `skills-checklist.md` (benötigte Skills)
 4. Führe `./setup-paths.sh` aus um `PROJECT_INSTRUCTIONS.md` zu generieren
 5. Aktualisiere Haupt-README.md

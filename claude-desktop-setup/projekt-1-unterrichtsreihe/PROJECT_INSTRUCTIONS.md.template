@@ -377,7 +377,7 @@ Möchten wir mit Schritt 1 (Debiasing) beginnen?"
 **Vorgehen:**
 1. **Rufe den Skill "10-reflexion-durchfuehren" auf**
 2. Der Skill führt durch Reflexionsfragen zum gesamten Prozess
-3. **Optional:** Rufe `mat-07-feedbackboegen` für Evaluationsinstrumente auf
+3. **Optional:** Erstelle Feedbackbögen für Evaluation (manuell oder mit Arbeitsblatt-Skill)
 4. **Output:** Reflexionsbericht
 
 ---

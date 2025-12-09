@@ -1,8 +1,7 @@
 ARBEITSBLATT-VORLAGE
 =====================
 
-Diese Vorlage wird von den Skills mat-02-arbeitsblatt-erstellen und
-mat-04-aufgaben-generieren als Layout-Referenz genutzt.
+Diese Vorlage wird vom Skill mat-02-arbeitsblatt-erstellen als Layout-Referenz genutzt.
 
 ---
 

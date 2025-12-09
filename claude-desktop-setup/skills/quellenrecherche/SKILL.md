@@ -170,7 +170,7 @@ Bevorzuge peer-reviewed Quellen und aktuelle Publikationen (2015-2025)."
 ## MCP-Integration
 
 Dieser Skill nutzt die Zitationsrichtlinien aus:
-`2_Zentrale_Ressourcen/Didaktik/Zitationsrichtlinien.txt`
+`2_Zentrale_Ressourcen/Didaktik/Zitationsrichtlinien.md`
 
 Bei Bedarf kann Claude diese Datei lesen, um das korrekte Format zu bestätigen.
 

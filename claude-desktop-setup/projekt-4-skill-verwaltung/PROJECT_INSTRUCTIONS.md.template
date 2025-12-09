@@ -133,9 +133,9 @@ Wenn Admin sagt: "Ich möchte einen neuen Skill erstellen":
 ```
 "Wie soll der neue Skill heißen?
 Format:
-  - Planungs-Skills: 01-name bis 11-name
-  - Material-Skills: mat-01-name bis mat-08-name
-  - Export-Skills: export-name"
+  - Material-Skills: mat-XX-name (z.B. mat-02-arbeitsblatt-erstellen)
+  - Export-Skills: export-name (z.B. export-pdf)
+  - Spezial-Skills: name (z.B. quellenrecherche, differenzierung-ge)"
 ```
 
 ### **Schritt 2: Grundstruktur erstellen**
@@ -177,22 +177,20 @@ ls claude-desktop-setup/skills/
 **Kategorisiere und zeige:**
 
 ```markdown
-## Planungs-Skills (11)
-1. 01-debiasing - Bias-Vermeidung
-2. 02-sachanalyse - Fachliche Sachanalyse
-3. 03-didaktische-analyse - Klafki's Didaktische Analyse
-4. ...
-
-## Material-Skills (8)
-1. mat-01-texterstellung - Texterstellung für Unterricht
-2. mat-02-arbeitsblatt-erstellen - Arbeitsblätter generieren
-3. ...
+## Material-Skills (2)
+1. mat-02-arbeitsblatt-erstellen - Arbeitsblätter generieren
+2. mat-03-powerpoint-erstellen - PowerPoint-Präsentationen
 
 ## Export-Skills (4)
 1. export-md - Markdown-Export
 2. export-pdf - PDF-Export
 3. export-docx - Word-Export
 4. export-pptx - PowerPoint-Export
+
+## Spezial-Skills (3)
+1. quellenrecherche - Wissenschaftliche Quellen validieren
+2. differenzierung-ge - Piktogramm-Materialien für GE
+3. export-stile - Schulfarben und Design-Templates
 ```
 
 ---

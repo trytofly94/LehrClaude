@@ -2,12 +2,24 @@
 
 Alle wichtigen Änderungen am LehrClaude Projekt werden hier dokumentiert.
 
-## [2.1.0] - 2025-12-09
+## [2.2.0] - 2025-12-09
 
 ### Geändert
-- Skill-Anzahl von 6 auf 9 korrigiert in allen Dokumentationen
+- Skill-Anzahl-Dokumentation von 6 auf 9 korrigiert
 - Alle Dateien verwenden jetzt Markdown-Format (.md) statt TXT
-- Alt/Neu-Architektur-Vergleiche aus Dokumentation entfernt
+- Alt/Neu-Architektur-Vergleiche aus Dokumentation entfernt (nur noch in CHANGELOG)
+- Nicht-existierende Skill-Referenzen entfernt (mat-01, mat-04-08, klasse-*, foerder-*)
+- Projekt-3 und Projekt-5 Templates auf Workflow-Anweisungen umgestellt
+- Alle Versionen auf 2.2 und Daten auf 2025-12-09 vereinheitlicht
+
+### Behoben
+- Template-Platzhalter `{{INSTALLATION_PATH}}` durch `{{WORKSPACE_BASE}}` ersetzt
+- TXT-Format-Referenzen zu Markdown korrigiert
+- Zitationsrichtlinien-Pfad von .txt auf .md aktualisiert
+
+---
+
+## [2.1.0] - 2025-12-06
 
 ### Hinzugefügt
 - Kontext-Laden für bestehende Unterrichtsreihen in PROJECT_INSTRUCTIONS

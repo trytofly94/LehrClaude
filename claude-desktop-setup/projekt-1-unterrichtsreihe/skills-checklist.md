@@ -154,6 +154,6 @@ Diese werden automatisch durch PROJECT_INSTRUCTIONS.md orchestriert - keine manu
 
 ---
 
-**Version:** 2.1
-**Zuletzt aktualisiert:** 2025-12-06
-**Änderungen:** quellenrecherche hinzugefügt, Kontext-Laden dokumentiert
+**Version:** 2.2
+**Zuletzt aktualisiert:** 2025-12-09
+**Änderungen:** Architektur-Dokumentation vereinheitlicht

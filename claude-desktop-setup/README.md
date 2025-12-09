@@ -299,7 +299,7 @@ Der Model Context Protocol (MCP) Filesystem Server ermöglicht Claude Desktop de
 
 Custom Skills sind wiederverwendbare "Fähigkeiten", die Claude in verschiedenen Projekten nutzen kann.
 
-**Wichtige Änderung:** Statt 23 Skills nutzen wir jetzt nur noch **9 Skills** für Material-Erstellung, Differenzierung, Design und Export. Alle Planungs- und Workflow-Schritte sind jetzt direkt in den PROJECT_INSTRUCTIONS.md integriert.
+Das System nutzt **9 spezialisierte Skills** für Material-Erstellung, Differenzierung, Design und Export. Alle Planungs- und Workflow-Schritte sind direkt in den PROJECT_INSTRUCTIONS.md integriert.
 
 **Die 9 Skills:**
 

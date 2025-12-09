@@ -57,37 +57,37 @@ Dieses Claude Desktop Projekt ist ein **Klassenverwaltungs-Assistent**, der För
 
 ---
 
-## Benötigte Skills
+## Workflow-Anweisungen (keine separaten Skills!)
 
-Dieses Projekt nutzt **4 spezialisierte Klassenverwaltungs-Skills**:
+Die Klassenverwaltungs-Funktionen sind als **Workflow-Anweisungen** in `anweisungen/` integriert:
 
-### Kern-Skills (alle 4 erforderlich)
+### Verfügbare Workflows
 
-1. **klasse-01-schuelerprofil-erstellen**
+1. **Schülerprofil erstellen** (`anweisungen/schuelerprofil-erstellen.md`)
    - Strukturierte Erfassung von Schülerprofilen
    - Interaktiver Fragebogen-Ansatz
    - Output: Validiertes Schülerprofil (Markdown)
 
-2. **klasse-02-schuelerprofil-validieren**
+2. **Schülerprofil validieren** (`anweisungen/schuelerprofil-validieren.md`)
    - Automatische Qualitätskontrolle
    - Konsistenzprüfung
    - Verbesserungsvorschläge
 
-3. **klasse-03-klasse-verwalten**
+3. **Klassenübersicht generieren** (`anweisungen/klassenübersicht-generieren.md`)
    - Übersicht über alle Schülerprofile einer Klasse
    - Gruppierungsfunktionen (nach Förderbedarf, Leistungsniveau)
    - Export von Klassenübersichten
 
-4. **klasse-04-differenzierungs-empfehlung**
+4. **Differenzierungs-Empfehlung** (`anweisungen/differenzierungs-empfehlung.md`)
    - Generiert unterrichtsbezogene Differenzierungs-Empfehlungen
    - Basiert auf Schülerprofilen und Unterrichtsthema
    - Output: Konkrete Differenzierungsvorschläge (nach Wember)
 
-### Unterstützende Skills (optional, aus anderen Projekten)
+### Export-Skills (optional)
 
-- **05-lernziele-operationalisieren** - Für adaptive Lernziele pro Schülergruppe
 - **export-md** - Schülerprofile als Markdown speichern
 - **export-pdf** - Klassenübersichten als PDF exportieren
+- **export-docx** - Differenzierungspläne als Word-Dokument
 
 ---
 
@@ -134,11 +134,11 @@ Alle Schülerprofile und Klassenübersichten werden hier gespeichert:
 "Ich möchte ein neues Schülerprofil erstellen."
 ```
 
-**Claude startet Skill:** `klasse-01-schuelerprofil-erstellen`
+**Claude führt Workflow aus:** `anweisungen/schuelerprofil-erstellen.md`
 
 ### Schritt 2: Interaktive Erfassung
 
-Der Skill fragt folgende Informationen ab:
+Der Workflow fragt folgende Informationen ab:
 
 #### A. Basisdaten
 - **Pseudonym** (z.B. "Schüler_A", "Lernende_7")
@@ -186,9 +186,9 @@ Der Skill fragt folgende Informationen ab:
 
 ### Schritt 3: Validierung
 
-**Claude startet automatisch:** `klasse-02-schuelerprofil-validieren`
+**Claude führt automatisch aus:** Workflow `anweisungen/schuelerprofil-validieren.md`
 
-Der Skill prüft:
+Der Workflow prüft:
 - Sind alle Pflichtfelder ausgefüllt?
 - Passt der Förderschwerpunkt zu den Unterstützungsbedarfen?
 - Ist die Differenzierungsstufe plausibel zum Lernstand?
@@ -217,11 +217,11 @@ Schülerprofil wurde erfolgreich erstellt und gespeichert:
 "Zeige mir eine Übersicht meiner Klasse 7a."
 ```
 
-**Claude startet:** `klasse-03-klasse-verwalten`
+**Claude führt Workflow aus:** `anweisungen/klassenübersicht-generieren.md`
 
 ### Schritt 2: Übersicht generieren
 
-Der Skill liest alle Schülerprofile aus dem Ordner:
+Der Workflow liest alle Schülerprofile aus dem Ordner:
 ```
 {{WORKSPACE_BASE}}/1_Exportierte_Ergebnisse/Klassenverwaltung/Schuelerprofile/
 ```
@@ -290,11 +290,11 @@ Der Skill liest alle Schülerprofile aus dem Ordner:
 Erstelle Differenzierungs-Empfehlungen."
 ```
 
-**Claude startet:** `klasse-04-differenzierungs-empfehlung`
+**Claude führt Workflow aus:** `anweisungen/differenzierungs-empfehlung.md`
 
 ### Schritt 2: Schülerprofile analysieren
 
-Der Skill:
+Der Workflow:
 1. Liest alle Schülerprofile der Klasse 7a
 2. Gruppiert nach Differenzierungsstufe (Basis/Unterstützung/Erweiterung)
 3. Berücksichtigt individuelle Unterstützungsbedarfe
@@ -372,7 +372,7 @@ Klasse_7a_Photosynthese_Differenzierung.md
 **Lehrkraft:**
 > "Ich möchte ein neues Schülerprofil erstellen."
 
-**Claude (klasse-01-schuelerprofil-erstellen):**
+**Claude (Workflow: schuelerprofil-erstellen):**
 > Gerne! Ich helfe dir dabei, ein strukturiertes Schülerprofil zu erstellen.
 >
 > **1. Basisdaten**
@@ -425,7 +425,7 @@ Klasse_7a_Photosynthese_Differenzierung.md
 
 [... weitere Fragen ...]
 
-**Claude (nach Abschluss, startet klasse-02-schuelerprofil-validieren):**
+**Claude (nach Abschluss, führt Validierungs-Workflow aus):**
 > ✅ **Validierung erfolgreich**
 >
 > Das Schülerprofil ist vollständig und konsistent.
@@ -461,15 +461,16 @@ In der `claude_desktop_config.json` muss der MCP Filesystem Server konfiguriert 
 }
 ```
 
-### Skills aktivieren
+### Export-Skills aktivieren (optional)
 
 In Claude Desktop:
 1. Settings > Capabilities > Skills
-2. Aktiviere alle 4 Klassenverwaltungs-Skills:
-   - klasse-01-schuelerprofil-erstellen
-   - klasse-02-schuelerprofil-validieren
-   - klasse-03-klasse-verwalten
-   - klasse-04-differenzierungs-empfehlung
+2. Optional: Aktiviere Export-Skills für zusätzliche Formate:
+   - export-md (Markdown-Export)
+   - export-pdf (PDF-Export)
+   - export-docx (Word-Export)
+
+**Hinweis:** Die Klassenverwaltungs-Workflows sind direkt in den PROJECT_INSTRUCTIONS integriert - keine separaten Skills erforderlich!
 
 ### Ordnerstruktur vorbereiten
 
@@ -522,11 +523,11 @@ mkdir -p {{WORKSPACE_BASE}}/1_Exportierte_Ergebnisse/Klassenverwaltung/Differenz
 
 ## Troubleshooting
 
-### Problem: Skill wird nicht aufgerufen
+### Problem: Workflow funktioniert nicht
 
 **Lösung:**
-1. Prüfe, ob alle 4 Skills in Claude Desktop aktiviert sind
-2. Teste manuell: "Bitte nutze den Skill klasse-01-schuelerprofil-erstellen"
+1. Prüfe, ob die Anweisungen in `anweisungen/` vorhanden sind
+2. Starte den Workflow mit: "Ich möchte ein neues Schülerprofil erstellen"
 
 ### Problem: MCP Permission Denied
 
@@ -545,7 +546,7 @@ chmod -R 755 {{WORKSPACE_BASE}}/1_Exportierte_Ergebnisse/Klassenverwaltung
 
 ## Version & Lizenz
 
-**Version:** 1.0
+**Version:** 2.2
 **Stand:** 2025-12-09
 **Lizenz:** CC BY-SA 4.0
 **Datenschutz:** DSGVO-konform (bei Einhaltung der Hinweise)

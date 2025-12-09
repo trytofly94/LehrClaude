@@ -231,9 +231,8 @@ Die `MCP_CONFIG.json` muss den Ordner `Schul-Materialien/` freigeben (bereits in
 ### Automatische Aktivierung
 
 **Wenn die Lehrkraft "Förderschulklasse" auswählt:**
-1. Claude aktiviert automatisch die 4 Förderschul-Skills
-2. Skill `foerder-01-schuelerprofile-laden` liest `4_Klassen_und_Schueler/[KLASSENNAME]/`
-3. Alle Schülerprofile werden in den Planungsprozess einbezogen
+1. Claude liest automatisch den Ordner `4_Klassen_und_Schueler/[KLASSENNAME]/`
+2. Alle Schülerprofile werden in den Planungsprozess einbezogen
 
 ### Manuelle Nutzung
 
@@ -241,7 +240,7 @@ Die `MCP_CONFIG.json` muss den Ordner `Schul-Materialien/` freigeben (bereits in
 ```
 "Lade die Schülerprofile meiner Klasse 5a."
 ```
-→ Claude ruft `foerder-01-schuelerprofile-laden` auf
+→ Claude liest die Profile direkt via MCP Filesystem
 
 ---
 
@@ -312,11 +311,11 @@ Klasse_5a_LE/Schuelerprofile/
 2. Prüfe Schreibrechte: `chmod -R 755 /Users/[LEHRKRAFT]/Schul-Materialien/`
 3. Prüfe Klassenname-Format: Muss `Klasse_[X]_[Y]` sein
 
-### Problem: Skill wird nicht aufgerufen
+### Problem: Profile werden nicht geladen
 
 **Lösung:**
-- Stelle sicher, dass Förderschul-Skills im Projekt aktiviert sind (siehe `skills-checklist.md`)
-- Manuell aufrufen: "Bitte nutze den Skill foerder-01-schuelerprofile-laden für Klasse 5a."
+- Prüfe ob MCP Filesystem korrekt konfiguriert ist
+- Teste manuell: "Zeige mir den Inhalt von 4_Klassen_und_Schueler/"
 
 ### Problem: Zu viele Schülerprofile, Claude ist überfordert
 

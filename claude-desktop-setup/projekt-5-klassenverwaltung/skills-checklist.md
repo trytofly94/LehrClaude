@@ -161,6 +161,6 @@ Nach Installation alle Workflows testen:
 
 ---
 
-**Version:** 2.0
-**Zuletzt aktualisiert:** 2025-11-30
-**Änderungen:** Umstellung auf Workflow-Anweisungen, nur noch 3 Export-Skills (optional)
+**Version:** 2.2
+**Zuletzt aktualisiert:** 2025-12-09
+**Änderungen:** Architektur-Dokumentation vereinheitlicht
