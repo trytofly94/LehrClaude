@@ -8,31 +8,39 @@ Dieses Claude Desktop Projekt führt Lehrkräfte durch den vollständigen, wisse
 
 ---
 
-## Benötigte Skills
+## Workflow-Anweisungen und Skills
 
-**Stelle sicher, dass folgende Skills aktiviert sind (siehe `skills-checklist.md`):**
+### 11-Schritte-Workflow (in `anweisungen/`)
 
-### Planungs-Skills (01-11):
-- ✅ 01-debiasing
-- ✅ 02-sachanalyse
-- ✅ 03-didaktische-analyse
-- ✅ 04-fachbegriffe-klaeren
-- ✅ 05-lernziele-operationalisieren
-- ✅ 06-mindmap-strukturierung
-- ✅ 07-unterrichtsverlauf-planen
-- ✅ 08-lernkontrollen-entwickeln
-- ✅ 09-material-zusammenstellen
-- ✅ 10-reflexion-durchfuehren
-- ✅ 11-iteration-optimierung
+Der Planungsprozess ist als **Workflow-Anweisungen** implementiert (keine separaten Skills!):
 
-### Material-Skills (optional für dieses Projekt):
+| Schritt | Anweisungsdatei | Inhalt |
+|---------|-----------------|--------|
+| 1 | `schritt-01-debiasing.md` | Bias-Vermeidung und Offenheit |
+| 2 | `schritt-02-sachanalyse.md` | Fachliche Analyse des Themas |
+| 3 | `schritt-03-didaktische-analyse.md` | Klafkis didaktische Analyse |
+| 4 | `schritt-04-fachbegriffe-klaeren.md` | Terminologie aufbereiten |
+| 5 | `schritt-05-lernziele-operationalisieren.md` | SMART-Lernziele formulieren |
+| 6 | `schritt-06-mindmap-strukturierung.md` | Wissensstruktur visualisieren |
+| 7 | `schritt-07-unterrichtsverlauf-planen.md` | Stundenplanung nach Leisen |
+| 8 | `schritt-08-lernkontrollen-entwickeln.md` | Assessment-Design |
+| 9 | `schritt-09-material-zusammenstellen.md` | Ressourcen organisieren |
+| 10 | `schritt-10-reflexion-durchfuehren.md` | Evaluation |
+| 11 | `schritt-11-iteration-optimierung.md` | Verbesserung |
+
+**Wichtig:** Für jeden Schritt die komplette Anweisungsdatei lesen und befolgen!
+
+### Benötigte Skills (siehe `skills-checklist.md`)
+
+**Material-Skills (optional - für Material-Erstellung im Kontext):**
 - ✅ mat-02-arbeitsblatt-erstellen
 - ✅ mat-03-powerpoint-erstellen
 
-### Förderschul-Skills (optional, nur bei Förderschulklassen):
+**Spezial-Skills (optional):**
 - ✅ differenzierung-ge (für Förderschwerpunkt Geistige Entwicklung)
+- ✅ quellenrecherche (für akademische Quellenarbeit)
 
-### Export-Skills:
+**Export-Skills:**
 - ✅ export-md
 - ✅ export-pdf
 - ✅ export-docx

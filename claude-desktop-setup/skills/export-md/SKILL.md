@@ -325,7 +325,7 @@ Vor Fertigstellung des Markdown-Exports überprüfe:
 
 Dieser Skill arbeitet zusammen mit:
 
-- **Planungs-Skills** (in Projekt-Anweisungen): Sammelt fertiggestellte Ausgabe zur Formatierung
+- **Planungs-Workflows** (in `anweisungen/`): Sammelt fertiggestellte Ausgabe zur Formatierung
 - **Material-Skills** (mat-02, mat-03): Exportiert generierte Arbeitsblätter, Präsentationen
 - **Export-Skills** (export-pdf, export-docx, export-pptx): Markdown kann als Basis für andere Formate dienen
 
