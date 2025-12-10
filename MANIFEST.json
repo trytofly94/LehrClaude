@@ -1,0 +1,94 @@
+{
+  "version": "2.3.0",
+  "releaseDate": "2025-12-10",
+  "architecture": {
+    "projects": 5,
+    "skills": 9,
+    "templates": 9
+  },
+  "skills": [
+    {
+      "name": "mat-02-arbeitsblatt-erstellen",
+      "category": "material",
+      "description": "Erstellt professionelle Arbeitsblätter mit Differenzierung"
+    },
+    {
+      "name": "mat-03-powerpoint-erstellen",
+      "category": "material",
+      "description": "Erstellt PowerPoint-Präsentationen für Unterrichtsreihen"
+    },
+    {
+      "name": "export-md",
+      "category": "export",
+      "description": "Exportiert Materialien als Markdown"
+    },
+    {
+      "name": "export-pdf",
+      "category": "export",
+      "description": "Exportiert Materialien als PDF"
+    },
+    {
+      "name": "export-docx",
+      "category": "export",
+      "description": "Exportiert Materialien als DOCX"
+    },
+    {
+      "name": "export-pptx",
+      "category": "export",
+      "description": "Exportiert Materialien als PPTX"
+    },
+    {
+      "name": "quellenrecherche",
+      "category": "academic",
+      "description": "Validiert wissenschaftliche Quellen und formatiert Zitationen"
+    },
+    {
+      "name": "differenzierung-ge",
+      "category": "differentiation",
+      "description": "Erstellt piktogramm-unterstützte Materialien für Förderschwerpunkt GE"
+    },
+    {
+      "name": "export-stile",
+      "category": "design",
+      "description": "Definiert Schulfarben, Themes und PowerPoint-Vorlagen"
+    }
+  ],
+  "templates": [
+    {
+      "source": "claude-desktop-setup/CONFIG.sh.template",
+      "target": "claude-desktop-setup/CONFIG.sh"
+    },
+    {
+      "source": "claude-desktop-setup/MCP_CONFIG.json.template",
+      "target": "claude-desktop-setup/MCP_CONFIG.json"
+    },
+    {
+      "source": "claude-desktop-setup/validate-skill.sh.template",
+      "target": "claude-desktop-setup/validate-skill.sh"
+    },
+    {
+      "source": "claude-desktop-setup/package-skills.sh.template",
+      "target": "claude-desktop-setup/package-skills.sh"
+    },
+    {
+      "source": "claude-desktop-setup/projekt-1-unterrichtsreihe/PROJECT_INSTRUCTIONS.md.template",
+      "target": "claude-desktop-setup/projekt-1-unterrichtsreihe/PROJECT_INSTRUCTIONS.md"
+    },
+    {
+      "source": "claude-desktop-setup/projekt-2-arbeitsblatt/PROJECT_INSTRUCTIONS.md.template",
+      "target": "claude-desktop-setup/projekt-2-arbeitsblatt/PROJECT_INSTRUCTIONS.md"
+    },
+    {
+      "source": "claude-desktop-setup/projekt-3-praesentation/PROJECT_INSTRUCTIONS.md.template",
+      "target": "claude-desktop-setup/projekt-3-praesentation/PROJECT_INSTRUCTIONS.md"
+    },
+    {
+      "source": "claude-desktop-setup/projekt-4-skill-verwaltung/PROJECT_INSTRUCTIONS.md.template",
+      "target": "claude-desktop-setup/projekt-4-skill-verwaltung/PROJECT_INSTRUCTIONS.md"
+    },
+    {
+      "source": "claude-desktop-setup/projekt-5-klassenverwaltung/PROJECT_INSTRUCTIONS.md.template",
+      "target": "claude-desktop-setup/projekt-5-klassenverwaltung/PROJECT_INSTRUCTIONS.md"
+    }
+  ]
+}

@@ -48,12 +48,25 @@ if [ -f "$SCRIPT_DIR/CONFIG.sh" ]; then
     echo "Möchtest du die Pfade neu konfigurieren?"
     echo "Dies überschreibt alle bisherigen Einstellungen."
     echo ""
-    read -p "Fortfahren? (j/n): " confirm
+    while true; do
+        read -p "Fortfahren? (j/n): " confirm
 
-    if [[ ! "$confirm" =~ ^[jJ]$ ]]; then
-        echo -e "${BLUE}ℹ️  Abbruch. Keine Änderungen vorgenommen.${NC}"
-        exit 0
-    fi
+        case "$confirm" in
+            [jJ]|[jJ][aA])
+                break
+                ;;
+            [nN]|[nN][eE][iI][nN])
+                echo -e "${BLUE}ℹ️  Abbruch. Keine Änderungen vorgenommen.${NC}"
+                exit 0
+                ;;
+            "")
+                echo -e "${YELLOW}⚠️  Bitte Eingabe machen (j oder n)${NC}"
+                ;;
+            *)
+                echo -e "${YELLOW}⚠️  Ungültige Eingabe. Nutze 'j' für Ja oder 'n' für Nein.${NC}"
+                ;;
+        esac
+    done
 
     echo ""
 fi
@@ -82,8 +95,27 @@ else
     REPO_BASE="$user_repo_path"
 fi
 
-# Entferne trailing slash falls vorhanden
-REPO_BASE="${REPO_BASE%/}"
+# Normalisiere Pfad
+REPO_BASE="${REPO_BASE%/}"  # Entferne trailing slash
+
+# Expandiere ~ zu $HOME
+if [[ "$REPO_BASE" == "~"* ]]; then
+    REPO_BASE="${REPO_BASE/#\~/$HOME}"
+fi
+
+# Konvertiere zu absolutem Pfad
+if [[ "$REPO_BASE" != /* ]]; then
+    # Relativer Pfad → absolut machen
+    local original_dir=$(pwd)
+    if cd "$REPO_BASE" 2>/dev/null; then
+        REPO_BASE=$(pwd)
+        cd "$original_dir"
+    else
+        echo -e "${RED}✗ Fehler: Ungültiger Pfad: $REPO_BASE${NC}"
+        echo "Der Pfad existiert nicht oder ist nicht zugänglich."
+        exit 1
+    fi
+fi
 
 echo ""
 echo -e "${BLUE}➜ Repository-Pfad: $REPO_BASE${NC}"
@@ -176,17 +208,38 @@ if [ ! -d "$WORKSPACE_BASE" ]; then
     echo "      ├── Didaktik/"
     echo "      └── Templates/"
     echo ""
-    read -p "Verzeichnisstruktur erstellen? (j/n): " create_workspace
+    while true; do
+        read -p "Verzeichnisstruktur erstellen? (j/n): " create_workspace
+
+        case "$create_workspace" in
+            [jJ]|[jJ][aA])
+                break
+                ;;
+            [nN]|[nN][eE][iI][nN])
+                echo -e "${YELLOW}⚠️  Verzeichnis wurde nicht erstellt.${NC}"
+                echo "   Du musst es manuell anlegen, bevor du das System nutzen kannst."
+                create_workspace="n"
+                break
+                ;;
+            "")
+                echo -e "${YELLOW}⚠️  Bitte Eingabe machen (j oder n)${NC}"
+                ;;
+            *)
+                echo -e "${YELLOW}⚠️  Ungültige Eingabe. Nutze 'j' für Ja oder 'n' für Nein.${NC}"
+                ;;
+        esac
+    done
 
     if [[ "$create_workspace" =~ ^[jJ]$ ]]; then
-        mkdir -p "$WORKSPACE_BASE/1_Exportierte_Ergebnisse"
-        mkdir -p "$WORKSPACE_BASE/2_Zentrale_Ressourcen/Lehrplaene"
-        mkdir -p "$WORKSPACE_BASE/2_Zentrale_Ressourcen/Didaktik"
-        mkdir -p "$WORKSPACE_BASE/2_Zentrale_Ressourcen/Templates"
+        if ! mkdir -p "$WORKSPACE_BASE/1_Exportierte_Ergebnisse" \
+                       "$WORKSPACE_BASE/2_Zentrale_Ressourcen/Lehrplaene" \
+                       "$WORKSPACE_BASE/2_Zentrale_Ressourcen/Didaktik" \
+                       "$WORKSPACE_BASE/2_Zentrale_Ressourcen/Templates" 2>/dev/null; then
+            echo -e "${RED}✗ Fehler beim Erstellen der Verzeichnisstruktur${NC}"
+            echo "Möglicherweise fehlen Berechtigungen für: $WORKSPACE_BASE"
+            exit 1
+        fi
         echo -e "${GREEN}✓ Verzeichnisstruktur erstellt${NC}"
-    else
-        echo -e "${YELLOW}⚠️  Verzeichnis wurde nicht erstellt.${NC}"
-        echo "   Du musst es manuell anlegen, bevor du das System nutzen kannst."
     fi
 else
     echo -e "${GREEN}✓ Arbeitsverzeichnis existiert bereits${NC}"
@@ -232,6 +285,58 @@ process_template() {
 
     echo -e "    ${BLUE}➜${NC} $(basename "$template_file")"
 
+    # Prüfe ob Output-Datei existiert und neuer ist als Template
+    if [ -f "$output_file" ]; then
+        if [ "$output_file" -nt "$template_file" ]; then
+            echo -e "      ${YELLOW}⚠️  Warnung: $(basename "$output_file") ist neuer als Template${NC}"
+            echo -e "      ${YELLOW}   Möglicherweise wurde die Datei manuell bearbeitet.${NC}"
+            echo ""
+            echo -e "      ${BLUE}Optionen:${NC}"
+            echo "        j - Überschreiben (manuelle Änderungen gehen verloren)"
+            echo "        n - Überspringen (Template-Änderungen werden nicht angewendet)"
+            echo "        d - Diff anzeigen (Unterschiede zwischen Template und Datei)"
+            echo ""
+
+            while true; do
+                read -p "      Wählen (j/n/d): " choice
+                case "$choice" in
+                    [jJ]|[jJ][aA])
+                        echo -e "      ${YELLOW}→ Überschreibe Datei...${NC}"
+                        break
+                        ;;
+                    [nN]|[nN][eE][iI][nN])
+                        echo -e "      ${YELLOW}→ Überspringe Datei${NC}"
+                        return 0
+                        ;;
+                    [dD])
+                        echo ""
+                        echo -e "      ${BLUE}Unterschiede (Template vs. Datei):${NC}"
+                        echo ""
+                        # Zeige Diff zwischen Template (mit ersetzten Platzhaltern) und existierender Datei
+                        diff -u <(sed -e "s|{{REPO_BASE}}|$REPO_BASE|g" \
+                                      -e "s|{{WORKSPACE_BASE}}|$WORKSPACE_BASE|g" \
+                                      -e "s|{{BASE_PATH}}|$REPO_BASE|g" \
+                                      -e "s|{{SKILLS_PATH}}|$REPO_BASE/skills|g" \
+                                      -e "s|{{PACKAGES_PATH}}|$REPO_BASE/skill-packages|g" \
+                                      -e "s|{{RESOURCES_PATH}}|$WORKSPACE_BASE/2_Zentrale_Ressourcen|g" \
+                                      -e "s|{{EXPORT_PATH}}|$WORKSPACE_BASE/1_Exportierte_Ergebnisse|g" \
+                                      -e "s|{{KLASSEN_PATH}}|$WORKSPACE_BASE/4_Klassen_und_Schueler|g" \
+                                      -e "s|{{STILE_PATH}}|$WORKSPACE_BASE/5_Export_Stile|g" \
+                                      "$template_file") \
+                                 "$output_file" | head -50 || true
+                        echo ""
+                        ;;
+                    "")
+                        echo -e "      ${YELLOW}⚠️  Bitte Eingabe machen (j, n oder d)${NC}"
+                        ;;
+                    *)
+                        echo -e "      ${YELLOW}⚠️  Ungültige Eingabe${NC}"
+                        ;;
+                esac
+            done
+        fi
+    fi
+
     # Ersetze alle Platzhalter
     sed -e "s|{{REPO_BASE}}|$REPO_BASE|g" \
         -e "s|{{WORKSPACE_BASE}}|$WORKSPACE_BASE|g" \
@@ -240,6 +345,8 @@ process_template() {
         -e "s|{{PACKAGES_PATH}}|$REPO_BASE/skill-packages|g" \
         -e "s|{{RESOURCES_PATH}}|$WORKSPACE_BASE/2_Zentrale_Ressourcen|g" \
         -e "s|{{EXPORT_PATH}}|$WORKSPACE_BASE/1_Exportierte_Ergebnisse|g" \
+        -e "s|{{KLASSEN_PATH}}|$WORKSPACE_BASE/4_Klassen_und_Schueler|g" \
+        -e "s|{{STILE_PATH}}|$WORKSPACE_BASE/5_Export_Stile|g" \
         "$template_file" > "$output_file"
 
     # Wenn .sh Datei, mache ausführbar

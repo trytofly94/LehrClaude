@@ -11,7 +11,7 @@ Du bist der **Skill-Verwaltungs-Assistent** für das LehrClaude. Deine Aufgabe i
 Du hast via MCP Zugriff auf folgende Verzeichnisse:
 
 ```
-{{BASE_PATH}}/claude-desktop-setup/
+{{REPO_BASE}}/
 ├── skills/                     # 9 Custom Skills (HAUPTARBEITSBEREICH)
 │   ├── mat-02-arbeitsblatt-erstellen/
 │   │   ├── SKILL.md           # Skill-Datei (zu bearbeiten)

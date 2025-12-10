@@ -11,6 +11,76 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Deutsche Lehrkräfte**: Endnutzer des Systems
 - **WICHTIG**: Alle Skills, Materialien und Outputs MÜSSEN auf Deutsch erstellt werden
 
+## KRITISCHE KOHÄRENZ-REGELN (ZWINGEND!)
+
+Diese Regeln MÜSSEN bei JEDER Änderung beachtet werden.
+
+### 1. Version-Synchronisierung (PFLICHT)
+
+**Single Source of Truth:** `MANIFEST.json`
+
+Bei Version-Änderung:
+1. Bearbeite `MANIFEST.json` (version + releaseDate)
+2. Führe `./claude-desktop-setup/sync-versions.sh <version> <datum>` aus
+3. Aktualisiere `CHANGELOG.md` mit neuem Eintrag
+4. Committe ALLE geänderten Dateien zusammen
+
+**Prüfung:** `./claude-desktop-setup/validate-versions.sh`
+
+### 2. Template-System (NIEMALS GENERIERTE DATEIEN EDITIEREN!)
+
+**Editierbare Templates:** `*.template` Dateien (9 Stück)
+**Generierte Dateien (READ-ONLY):** CONFIG.sh, MCP_CONFIG.json, PROJECT_INSTRUCTIONS.md (5x), validate-skill.sh, package-skills.sh
+
+**Korrekter Workflow:**
+1. Bearbeite AUSSCHLIESSLICH Template-Datei
+2. Führe aus: `cd claude-desktop-setup && ./setup-paths.sh`
+3. Committe BEIDE (Template + generiert)
+
+**Prüfung:** `./claude-desktop-setup/validate-template-integrity.sh`
+
+### 3. Skill-Naming-Convention
+
+**Regel:** Ordnername = YAML name in SKILL.md (exakte Übereinstimmung!)
+
+**Kategorien:**
+- Export-Skills: `export-<format>`
+- Material-Skills: `mat-<nummer>-<funktion>`
+- Spezial-Skills: `<funktion>-<qualifier>`
+
+**Prüfung:** `./claude-desktop-setup/validate-skill.sh <skill-name>`
+
+### 4. Cross-Reference-Konsistenz
+
+Alle Skill-Referenzen in skills-checklist.md und PROJECT_INSTRUCTIONS.md müssen existierende Skills referenzieren.
+
+**Prüfung:** `./claude-desktop-setup/validate-cross-references.sh`
+**Auto-Fix:** `./claude-desktop-setup/fix-skill-references.sh`
+
+### 5. Gesamtprüfung vor Commit
+
+**Befehl:** `./claude-desktop-setup/coherence-check.sh`
+
+Prüft automatisch:
+- Template-Integrität
+- Version-Konsistenz
+- Cross-Referenzen
+- Dokumentations-Drift
+- Skill-Struktur
+
+**Git Hook installieren:**
+```bash
+cp claude-desktop-setup/pre-commit-hook.sh .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
+```
+
+### 6. Commit-Richtlinien (erweitert)
+
+Zusätzlich zu bestehenden Konventionen:
+- `chore(version):` - Version-Bump
+- `fix(coherence):` - Kohärenz-Fix
+- `chore(templates):` - Template-Regenerierung
+
 ## Repository-Architektur
 
 ### Zwei-Ordner-Prinzip
@@ -212,6 +282,30 @@ Schul-Materialien/
 - Template: `claude-desktop-setup/MCP_CONFIG_TEMPLATE.json`
 - Wird von `setup-paths.sh` automatisch zu `MCP_CONFIG.json` generiert mit korrekten Pfaden
 - Manuell anpassen falls Deployment-Pfad sich ändert
+
+## Naming Convention für Skills
+
+### Standard-Format (PFLICHT)
+
+**Regel:** Ordnername = YAML name in SKILL.md
+
+**Kategorien:**
+1. **Export-Skills:** `export-<format>` (z.B. export-pdf, export-md)
+2. **Material-Skills:** `mat-<nummer>-<funktion>` (z.B. mat-02-arbeitsblatt-erstellen)
+3. **Spezial-Skills:** `<funktion>-<qualifier>` (z.B. differenzierung-ge)
+
+**Format-Regeln:**
+- Nur Kleinbuchstaben
+- Bindestriche (keine Underscores)
+- Keine Leerzeichen oder Sonderzeichen
+- Kurz, funktional, filesystem-freundlich
+
+**Validierung:**
+```bash
+./validate-skill.sh <skill-name>  # Prüft Name-Konsistenz automatisch
+```
+
+**Bei Mismatch:** YAML `name:` in SKILL.md muss mit Ordnername identisch sein.
 
 ## Markdown-Format für alle Dateien
 
@@ -524,6 +618,6 @@ Dies ermöglicht nahtloses Weiterarbeiten über mehrere Chat-Sessions hinweg.
 
 ---
 
-**Version:** 2.2
-**Stand:** 2025-12-09
+**Version:** 2.3.0
+**Stand:** 2025-12-10
 **Zielgruppe:** IT-Admins, Claude Code Nutzer, Entwickler

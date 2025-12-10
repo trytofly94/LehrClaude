@@ -134,7 +134,7 @@ description: |
   Was macht der Skill?
   Wann wird er verwendet?
   Trigger-Keywords für Discovery.
-version: 1.0.0                  # Optional
+version: 2.3.0                  # Optional
 ---
 ```
 

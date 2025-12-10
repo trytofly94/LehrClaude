@@ -30,6 +30,7 @@
 - [FAQ](#-faq)
 - [Weiterführende Dokumentation](#-weiterführende-dokumentation)
 - [Roadmap](#-roadmap)
+- [Kohärenz-Sicherung](#-kohärenz-sicherung)
 - [Updates & Wartung](#-updates--wartung)
 - [Support & Community](#-support--community)
 - [Lizenz](#-lizenz)
@@ -336,6 +337,8 @@ open README.md  # Folge der Anleitung
 
 Das System nutzt eine hybride Architektur aus 9 Custom Skills + Workflow-Anweisungen:
 
+> **Version 2.3 Update:** Skill-Namen wurden vereinheitlicht für Konsistenz zwischen Ordnername und Claude Desktop UI. Alte ZIPs funktionieren weiterhin, neue ZIPs haben aktualisierte Namen.
+
 | Komponente | Anzahl | Beispiele |
 |------------|--------|-----------|
 | **Material-Skills** | 2 | Arbeitsblatt erstellen, PowerPoint erstellen |
@@ -565,6 +568,201 @@ Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 Inter
 
 ---
 
+## 🔐 Kohärenz-Sicherung
+
+**Für Entwickler und IT-Admins:** Das Repository nutzt ein automatisiertes Kohärenz-System, um langfristige Konsistenz zu gewährleisten.
+
+### 🎯 Was ist das Kohärenz-System?
+
+Dieses komplexe Projekt besteht aus:
+- **5 Projekten** mit individuellen Instructions
+- **9 Skills** mit Metadaten
+- **9 Templates** die automatisch generiert werden
+- **13+ Dateien** die Versionsinformationen enthalten
+
+Das Kohärenz-System verhindert, erkennt und behebt Inkonsistenzen automatisch.
+
+### 📋 Single Source of Truth: MANIFEST.json
+
+Alle zentralen Fakten sind in `/MANIFEST.json` definiert:
+- Version-Nummer (z.B. `2.3.0`)
+- Release-Datum (z.B. `2025-12-10`)
+- Architektur-Fakten (Anzahl Projekte, Skills, Templates)
+- Skill-Liste mit Kategorien
+- Template-Mappings
+
+**WICHTIG:** Bei Änderungen IMMER `MANIFEST.json` als Single Source of Truth nutzen!
+
+### 🛠️ Kohärenz-Tools
+
+#### Validierungs-Scripts
+
+```bash
+cd claude-desktop-setup
+
+# Master-Check (führt alle Sub-Checks aus)
+./coherence-check.sh
+
+# Einzelne Checks
+./validate-versions.sh           # Version-Konsistenz über alle Dateien
+./validate-cross-references.sh   # Skill-Referenzen und Anzahlen
+./validate-template-integrity.sh # Template vs. generierte Dateien
+./validate-doc-consistency.sh    # README.md ≠ CLAUDE.md Drift
+./validate-all-skills.sh         # Batch-Validierung aller Skills
+```
+
+#### Auto-Fix Scripts
+
+```bash
+# Version-Bump propagieren (von MANIFEST.json zu allen Dateien)
+./sync-versions.sh 2.4.0 2025-12-11
+
+# Skill-Anzahl in Dokumentation reparieren
+./fix-skill-references.sh
+
+# Generierte Dateien aus Templates neu erstellen
+./regenerate-from-templates.sh
+```
+
+### 🔒 Template-System (KRITISCH!)
+
+**NIEMALS generierte Dateien manuell bearbeiten!**
+
+**Editierbare Templates** (9 Stück):
+- `CONFIG.sh.template`
+- `MCP_CONFIG.json.template`
+- `PROJECT_INSTRUCTIONS.md.template` (in jedem Projekt-Ordner)
+- `validate-skill.sh.template`
+- `package-skills.sh.template`
+
+**Generierte Dateien** (READ-ONLY):
+- `CONFIG.sh`
+- `MCP_CONFIG.json`
+- `PROJECT_INSTRUCTIONS.md` (5x)
+- `validate-skill.sh`
+- `package-skills.sh`
+
+**Korrekter Workflow:**
+1. Bearbeite AUSSCHLIESSLICH Template-Datei (`*.template`)
+2. Führe aus: `cd claude-desktop-setup && ./setup-paths.sh`
+3. Prüfe generierte Datei
+4. Committe BEIDE (Template + generiert)
+
+### 🪝 Git Pre-Commit Hook (Empfohlen)
+
+Automatische Kohärenz-Validierung vor jedem Commit:
+
+```bash
+# Hook installieren
+cp claude-desktop-setup/pre-commit-hook.sh .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
+
+# Test
+git commit -m "test"  # Hook führt coherence-check.sh aus
+```
+
+**Verhalten:**
+- ✅ **Alle Checks grün:** Commit erlaubt
+- ⚠️ **Nur Warnungen:** Commit erlaubt (mit Hinweis)
+- ❌ **Fehler gefunden:** Commit blockiert
+
+**Bypass (NICHT empfohlen):**
+```bash
+git commit --no-verify -m "message"
+```
+
+### 🔄 Version-Änderungs-Workflow
+
+**Bei JEDER Version-Änderung:**
+
+```bash
+# 1. Aktualisiere MANIFEST.json
+vim MANIFEST.json  # version + releaseDate ändern
+
+# 2. Propagiere zu allen Dateien
+cd claude-desktop-setup
+./sync-versions.sh 2.4.0 2025-12-11
+
+# 3. Aktualisiere CHANGELOG.md manuell
+vim CHANGELOG.md  # Neuen Eintrag hinzufügen
+
+# 4. Prüfe Ergebnis
+./coherence-check.sh
+
+# 5. Committe alles zusammen
+cd ..
+git add .
+git commit -m "chore(version): bump to 2.4.0"
+```
+
+### ⚠️ Häufige Fehler vermeiden
+
+| Problem | Ursache | Lösung |
+|---------|---------|--------|
+| **"Template-Integrität: Fehler"** | Generierte Datei manuell bearbeitet | `./regenerate-from-templates.sh` |
+| **"Version-Inkonsistenz"** | Nicht alle Dateien aktualisiert | `./sync-versions.sh <version> <datum>` |
+| **"Cross-Reference-Fehler"** | Skill-Anzahl in Doku falsch | `./fix-skill-references.sh` |
+| **"Platzhalter gefunden"** | `setup-paths.sh` nicht ausgeführt | `cd claude-desktop-setup && ./setup-paths.sh` |
+
+### 📊 Exit-Codes der Validierungs-Scripts
+
+- **0:** ✅ Alle Checks bestanden
+- **1:** ❌ Fehler gefunden (Inkohärenz)
+- **2:** ⚠️ Warnungen (nicht-kritisch)
+
+### 🎓 Für Entwickler: CLAUDE.md beachten!
+
+Die Datei `/CLAUDE.md` enthält **KRITISCHE KOHÄRENZ-REGELN** die bei JEDER Code-Änderung beachtet werden müssen. Claude Code liest diese Datei automatisch.
+
+**Wichtigste Regeln:**
+1. ✅ **Version-Sync:** IMMER `sync-versions.sh` nutzen
+2. ✅ **Templates:** Generierte Dateien NIEMALS direkt bearbeiten
+3. ✅ **Pre-Commit:** `coherence-check.sh` vor jedem Commit
+4. ✅ **Skill-Naming:** Ordnername = YAML `name` in SKILL.md
+
+### 🆘 Troubleshooting Kohärenz-Fehler
+
+**Bei blockiertem Commit:**
+
+```bash
+# 1. Prüfe Details
+cd claude-desktop-setup
+./coherence-check.sh
+
+# 2. Nutze Auto-Fix wo möglich
+./sync-versions.sh <version> <datum>     # Version-Fehler
+./fix-skill-references.sh                 # Cross-Reference-Fehler
+./regenerate-from-templates.sh            # Template-Fehler
+
+# 3. Prüfe erneut
+./coherence-check.sh
+
+# 4. Wenn alle grün: Commit erneut
+cd ..
+git commit -m "fix(coherence): resolve inconsistencies"
+```
+
+**Bei Template-Konflikten:**
+
+```bash
+# Zeige Unterschiede zwischen Template und generierter Datei
+diff -u <TEMPLATE_FILE> <GENERATED_FILE>
+
+# Option 1: Template hat Recht → regenerieren
+./regenerate-from-templates.sh
+
+# Option 2: Generierte Datei hat manuelle Fixes → ins Template übernehmen
+# Dann: ./setup-paths.sh
+```
+
+### 📚 Weitere Informationen
+
+- **Vollständiger Plan:** `.claude/plans/swift-percolating-clock.md`
+- **CLAUDE.md:** Kohärenz-Regeln für Claude Code
+- **CHANGELOG.md:** Version-Historie mit Kohärenz-Verbesserungen
+
+---
+
 ## 🔄 Updates & Wartung
 
 ### Update-Strategie für Lehrkräfte
@@ -733,8 +931,8 @@ Vollständiger Lizenztext: [CC BY-SA 4.0](https://creativecommons.org/licenses/b
 
 ---
 
-**Version:** 2.2
-**Stand:** 2025-12-09
+**Version:** 2.3.0
+**Stand:** 2025-12-10
 **Kompatibilität:** macOS 11+, Claude Desktop (aktuell)
 **Architektur:** 9 Skills + Workflow-Anweisungen (unter 20-Skill-Limit)
 
