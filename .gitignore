@@ -11,3 +11,5 @@
 
 # Skill packages (ZIP-Dateien sind zu groß für Git)
 claude-desktop-setup/skill-packages/*.zip
+# Archive (nicht versioniert)
+archive/
