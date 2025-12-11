@@ -1,5 +1,5 @@
 ---
-name: docx-export-microsoft-word
+name: export-docx
 description: Dieser Skill konvertiert Bildungsinhalte (Unterrichtsreihen, Arbeitsblätter, Präsentationen) von Markdown in professionell formatierte Microsoft Word-Dokumente (.docx) mit angemessenem Styling, Seitenlayouts und lehrerfreundlichen Bearbeitungsfunktionen.
 ---
 

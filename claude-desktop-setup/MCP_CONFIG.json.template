@@ -5,7 +5,10 @@
       "args": [
         "-y",
         "@modelcontextprotocol/server-filesystem",
-        "{{RESOURCES_PATH}}"
+        "{{EXPORT_PATH}}",
+        "{{RESOURCES_PATH}}",
+        "{{KLASSEN_PATH}}",
+        "{{STILE_PATH}}"
       ],
       "env": {}
     }

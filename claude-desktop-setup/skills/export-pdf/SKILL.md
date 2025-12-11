@@ -1,5 +1,5 @@
 ---
-name: pdf-export-via-pandoc
+name: export-pdf
 description: Konvertiert strukturierte Unterrichtsmaterialien in professionelle PDF-Dokumente mit A4-Formatierung, Inhaltsverzeichnis, Seitenzahlen und Fußzeilen. Nutzt Pandoc für die Konvertierung und MCP für die Speicherung in der zentralen Ergebnisbibliothek.
 ---
 

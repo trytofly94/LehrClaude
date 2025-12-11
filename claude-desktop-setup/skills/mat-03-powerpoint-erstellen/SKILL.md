@@ -1,5 +1,5 @@
 ---
-name: powerpoint-praesentation-erstellen
+name: mat-03-powerpoint-erstellen
 description: Dieser Skill erstellt professionelle, didaktisch strukturierte PowerPoint-Präsentationen für vollständige Unterrichtsreihen. Er transformiert Planungsinhalte (Lernziele, Unterrichtsverläufe, Aufgaben und Materialien) in kohärente Foliensätze mit Notizen für Vortragende. Der Skill sollte ausgelöst werden, wenn eine Präsentation für eine vollständige Unterrichtsreihe erstellt werden soll, die bereits geplant wurde (z.B. nach Abschluss des 11-Schritte-Planungsprozesses). Bei Anforderung der Präsentationserstellung sind die vollständigen Inhalte der Unterrichtsreihe, aktuelle Lernziele, Details zum Unterrichtsverlauf und spezifische Designanforderungen anzugeben.
 ---
 

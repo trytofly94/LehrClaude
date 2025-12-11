@@ -2,6 +2,72 @@
 
 Alle wichtigen Änderungen am LehrClaude Projekt werden hier dokumentiert.
 
+## [2.3.0] - 2025-12-10
+
+### Behoben
+- **Skill-Namens-Konsistenz:** 5 Skills hatten Mismatches zwischen Ordnername und YAML-Name
+  - `export-pdf`: pdf-export-via-pandoc → export-pdf
+  - `export-docx`: docx-export-microsoft-word → export-docx
+  - `export-pptx`: pptx-export-powerpoint → export-pptx
+  - `mat-02-arbeitsblatt-erstellen`: arbeitsblatt-erstellen-und-formatieren → mat-02-arbeitsblatt-erstellen
+  - `mat-03-powerpoint-erstellen`: powerpoint-praesentation-erstellen → mat-03-powerpoint-erstellen
+
+### Geändert
+- **validate-skill.sh:** Prüft jetzt automatisch auf Name-Konsistenz zwischen Ordner und YAML
+- **Naming Convention dokumentiert:** Neue Regeln in CLAUDE.md für zukünftige Skills
+
+### Update-Anleitung für IT-Administratoren
+
+**Zusammenfassung:** Nur kosmetische Änderung - Skills funktionieren identisch. Update ist OPTIONAL.
+
+#### Was wurde geändert?
+- 5 SKILL.md Dateien haben neue YAML-Namen (kürzer, konsistent mit Ordnernamen)
+- validate-skill.sh prüft jetzt automatisch auf Name-Konsistenz
+- Neue ZIPs in `skill-packages/` mit aktualisierten Namen
+
+#### Sicherer Update-Prozess (falls gewünscht)
+
+**Option A: Vollständiges Update (empfohlen)**
+```bash
+# 1. Repository aktualisieren
+cd /pfad/zum/claude-desktop-setup
+git pull
+
+# 2. Neue Skill-ZIPs an Lehrkraft weitergeben
+# ZIPs befinden sich in: skill-packages/*.zip
+# Lehrkraft lädt diese manuell in Claude Desktop hoch
+
+# 3. Fertig - keine weiteren Schritte erforderlich
+```
+
+**Option B: Kein Update (weiterhin funktionsfähig)**
+- Alte Skills funktionieren unverändert weiter
+- Nur UI-Namen in Claude Desktop sind unterschiedlich
+- Kein Handlungsbedarf
+
+#### Was muss NICHT getan werden?
+- ❌ Keine MCP-Konfiguration ändern
+- ❌ Keine Ordnerstruktur anpassen
+- ❌ Keine Scripts neu ausführen
+- ❌ Kein Zwang zum Update
+
+#### Testen nach Update (optional)
+```bash
+cd claude-desktop-setup
+
+# Prüfe alle Skills auf Konsistenz
+for skill in skills/*/; do
+    ./validate-skill.sh $(basename "$skill")
+done
+
+# Erwartung: Alle Skills bestehen ohne Warnungen
+```
+
+#### Support
+Bei Fragen zum Update: Siehe README.md Abschnitt "Troubleshooting"
+
+---
+
 ## [2.2.0] - 2025-12-09
 
 ### Geändert

@@ -26,6 +26,7 @@ PROJECT_1_PATH="$REPO_BASE/projekt-1-unterrichtsreihe"
 PROJECT_2_PATH="$REPO_BASE/projekt-2-arbeitsblatt"
 PROJECT_3_PATH="$REPO_BASE/projekt-3-praesentation"
 PROJECT_4_PATH="$REPO_BASE/projekt-4-skill-verwaltung"
+PROJECT_5_PATH="$REPO_BASE/projekt-5-klassenverwaltung"
 
 # Script-Pfade (im Repository)
 VALIDATE_SCRIPT="$REPO_BASE/validate-skill.sh"
@@ -41,6 +42,8 @@ WORKSPACE_BASE="{{WORKSPACE_BASE}}"
 # Arbeitsverzeichnis-Pfade (für MCP-Zugriff)
 RESOURCES_PATH="$WORKSPACE_BASE/2_Zentrale_Ressourcen"
 EXPORT_PATH="$WORKSPACE_BASE/1_Exportierte_Ergebnisse"
+KLASSEN_PATH="$WORKSPACE_BASE/4_Klassen_und_Schueler"
+STILE_PATH="$WORKSPACE_BASE/5_Export_Stile"
 
 # ============================================================================
 # LEGACY-KOMPATIBILITÄT
@@ -55,8 +58,8 @@ BASE_PATH="$REPO_BASE"
 
 # Export aller Pfade für Nutzung in anderen Scripts
 export REPO_BASE WORKSPACE_BASE BASE_PATH
-export SKILLS_PATH PACKAGES_PATH RESOURCES_PATH EXPORT_PATH
-export PROJECT_1_PATH PROJECT_2_PATH PROJECT_3_PATH PROJECT_4_PATH
+export SKILLS_PATH PACKAGES_PATH RESOURCES_PATH EXPORT_PATH KLASSEN_PATH STILE_PATH
+export PROJECT_1_PATH PROJECT_2_PATH PROJECT_3_PATH PROJECT_4_PATH PROJECT_5_PATH
 export VALIDATE_SCRIPT PACKAGE_SCRIPT
 
 # Hilfsfunktion zum Anzeigen aller Pfade (für Debugging)
@@ -74,6 +77,7 @@ show_paths() {
     echo "     - Projekt 2:  $PROJECT_2_PATH"
     echo "     - Projekt 3:  $PROJECT_3_PATH"
     echo "     - Projekt 4:  $PROJECT_4_PATH"
+    echo "     - Projekt 5:  $PROJECT_5_PATH"
     echo ""
     echo "   Scripts:"
     echo "     - Validierung: $VALIDATE_SCRIPT"
@@ -84,6 +88,8 @@ show_paths() {
     echo ""
     echo "   Ressourcen:     $RESOURCES_PATH"
     echo "   Export:         $EXPORT_PATH"
+    echo "   Klassen:        $KLASSEN_PATH"
+    echo "   Stile:          $STILE_PATH"
     echo ""
 }
 
