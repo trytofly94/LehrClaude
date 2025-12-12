@@ -545,26 +545,23 @@ Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 Inter
 
 ---
 
-## 🔮 Roadmap
+## 🔮 Roadmap & Projektplanung
 
-**Nächste Schritte:**
+**Siehe [PROJEKTPLANUNG.md](PROJEKTPLANUNG.md)** für die vollständige, aktuelle Planung.
 
-### Erweiterung der Skills
-- [ ] Weitere Planungs-Skills für spezifische Unterrichtsmethoden
-- [ ] Zusätzliche Material-Skills (z.B. Klausuren, Lernstandserhebungen)
-- [ ] Skills für Elternkommunikation und Zeugniserstellung
+### Aktueller Fokus (2025)
 
-### Neue Module für Lehrkräfte
-- [ ] Modul: Jahresplanung & Stoffverteilungsplan
-- [ ] Modul: Leistungsbewertung & Notenverwaltung
-- [ ] Modul: Individualisierung & Förderplanung
-- [ ] Modul: Fächerübergreifende Projekte
+**Sofort:**
+1. ✅ **Automatisierte Tests** für Kohärenz-System (Stabilität)
+2. ✅ **Skill-Versionierung** (Kompatibilität & Wartbarkeit)
 
-### Automatisierungs-Tools
-- [ ] Batch-Verarbeitung: Mehrere Arbeitsblätter auf einmal erstellen
-- [ ] Batch-Export: Automatischer Export in verschiedene Formate
-- [ ] Vorlagen-Management: Eigene Templates verwalten und wiederverwenden
-- [ ] Curriculum-Synchronisation: Automatisches Update von Lehrplan-Ressourcen
+**Niedrige Priorität (später):**
+- KI-Feedback-Loop für Material-Qualität
+- CI/CD Pipeline mit GitHub Actions
+
+**Status:** Privates Entwicklungsprojekt - kein Fokus auf Marketing, Community-Building oder professionelle Dokumentation.
+
+Feature-Erweiterungen (zusätzliche Skills, Module, Automatisierungs-Tools) werden erst bei größerer Nutzerbasis oder externem Interesse umgesetzt. Details siehe [PROJEKTPLANUNG.md](PROJEKTPLANUNG.md).
 
 ---
 

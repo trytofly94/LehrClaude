@@ -11,6 +11,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Deutsche Lehrkräfte**: Endnutzer des Systems
 - **WICHTIG**: Alle Skills, Materialien und Outputs MÜSSEN auf Deutsch erstellt werden
 
+## Projektplanung & Roadmap
+
+**Siehe [PROJEKTPLANUNG.md](PROJEKTPLANUNG.md)** für:
+- Aktuelle Prioritäten (was wird JETZT umgesetzt)
+- Niedrige Priorität (was kommt später)
+- Nicht geplant (was wird NICHT umgesetzt)
+- Entscheidungs-Kriterien für Feature-Requests
+
+**Aktueller Fokus:**
+1. ✅ **Goal 1.1:** Automatisierte Tests für Kohärenz-System
+2. ✅ **Goal 3.3:** Skill-Versionierung
+
+**Status:** Privates Entwicklungsprojekt - kein Fokus auf Marketing, Community oder öffentliche Dokumentation.
+
 ## KRITISCHE KOHÄRENZ-REGELN (ZWINGEND!)
 
 Diese Regeln MÜSSEN bei JEDER Änderung beachtet werden.
