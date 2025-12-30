@@ -42,14 +42,26 @@ echo ""
 # Sammle alle Templates mit neuerem Output
 MANUAL_EDITS=()
 while IFS= read -r -d '' template_file; do
-    generated_file="${template_file%.template}"
+    local filename=$(basename "$template_file")
+    local dir=$(dirname "$template_file")
+
+    # Bestimme generierte Datei basierend auf Template-Format
+    if [[ "$filename" == *.template.* ]]; then
+        # Neues Format: NAME.template.EXT -> NAME.EXT
+        local generated_filename="${filename/.template./.}"
+    else
+        # Altes Format: NAME.EXT.template -> NAME.EXT
+        local generated_filename="${filename%.template}"
+    fi
+
+    generated_file="$dir/$generated_filename"
 
     if [ -f "$generated_file" ]; then
         if [ "$generated_file" -nt "$template_file" ]; then
             MANUAL_EDITS+=("$generated_file")
         fi
     fi
-done < <(find "$SCRIPT_DIR" -name "*.template" -type f -print0)
+done < <(find "$SCRIPT_DIR" \( -name "*.template.*" -o -name "*.template" \) -type f -print0)
 
 # 2. Warne bei manuellen Edits
 if [ ${#MANUAL_EDITS[@]} -gt 0 ]; then

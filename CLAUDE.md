@@ -43,7 +43,7 @@ Bei Version-Änderung:
 
 ### 2. Template-System (NIEMALS GENERIERTE DATEIEN EDITIEREN!)
 
-**Editierbare Templates:** `*.template` Dateien (9 Stück)
+**Editierbare Templates:** `*.template.*` Dateien (9 Stück, z.B. `CONFIG.template.sh`, `PROJECT_INSTRUCTIONS.template.md`)
 **Generierte Dateien (READ-ONLY):** CONFIG.sh, MCP_CONFIG.json, PROJECT_INSTRUCTIONS.md (5x), validate-skill.sh, package-skills.sh
 
 **Korrekter Workflow:**
@@ -293,7 +293,7 @@ Schul-Materialien/
 ```
 
 ### MCP-Konfiguration
-- Template: `claude-desktop-setup/MCP_CONFIG_TEMPLATE.json`
+- Template: `claude-desktop-setup/MCP_CONFIG.template.json`
 - Wird von `setup-paths.sh` automatisch zu `MCP_CONFIG.json` generiert mit korrekten Pfaden
 - Manuell anpassen falls Deployment-Pfad sich ändert
 
@@ -369,7 +369,7 @@ Diese werden vom `export-stile` Skill automatisch aus den Originaldateien generi
 3. Validiere: `./validate-skill.sh neue-funktion`
 4. Packe: `./package-skills.sh`
 5. Aktualisiere entsprechende `skills-checklist.md` in Projekt-Ordnern
-6. Füge Skill zu `PROJECT_INSTRUCTIONS_TEMPLATE.md` hinzu
+6. Füge Skill zu `PROJECT_INSTRUCTIONS.template.md` hinzu
 7. Führe `./setup-paths.sh` aus um `PROJECT_INSTRUCTIONS.md` neu zu generieren
 
 ### Neuen Workflow hinzufügen (empfohlen!)
@@ -377,12 +377,12 @@ Für Planungs- und Prozess-Schritte nutze die `anweisungen/` Ordner:
 
 1. Erstelle `projekt-X/anweisungen/neue-anweisung.md`
 2. Schreibe klare, schrittweise Anweisungen in Markdown
-3. Referenziere die Anweisung in `PROJECT_INSTRUCTIONS_TEMPLATE.md`
+3. Referenziere die Anweisung in `PROJECT_INSTRUCTIONS.template.md`
 4. Führe `./setup-paths.sh` aus
 
 ### Neues Projekt hinzufügen
 1. Erstelle `claude-desktop-setup/projekt-5-neue-aufgabe/`
-2. Erstelle `PROJECT_INSTRUCTIONS_TEMPLATE.md` (nutze Platzhalter wie `{{REPO_BASE}}`, `{{WORKSPACE_BASE}}`, `{{RESOURCES_PATH}}`)
+2. Erstelle `PROJECT_INSTRUCTIONS.template.md` (nutze Platzhalter wie `{{REPO_BASE}}`, `{{WORKSPACE_BASE}}`, `{{RESOURCES_PATH}}`)
 3. Erstelle `skills-checklist.md` (benötigte Skills)
 4. Führe `./setup-paths.sh` aus um `PROJECT_INSTRUCTIONS.md` zu generieren
 5. Aktualisiere Haupt-README.md
@@ -391,10 +391,10 @@ Für Planungs- und Prozess-Schritte nutze die `anweisungen/` Ordner:
 **Wichtig:** Generierte Dateien NIEMALS manuell bearbeiten!
 
 **Templates (manuell editieren):**
-- `MCP_CONFIG_TEMPLATE.json`
-- `PROJECT_INSTRUCTIONS_TEMPLATE.md` (in jedem Projekt-Ordner)
-- `validate-skill_TEMPLATE.sh`
-- `package-skills_TEMPLATE.sh`
+- `MCP_CONFIG.template.json`
+- `PROJECT_INSTRUCTIONS.template.md` (in jedem Projekt-Ordner)
+- `validate-skill.template.sh`
+- `package-skills.template.sh`
 
 **Generierte Dateien (von setup-paths.sh):**
 - `MCP_CONFIG.json`
@@ -403,7 +403,7 @@ Für Planungs- und Prozess-Schritte nutze die `anweisungen/` Ordner:
 - `package-skills.sh`
 
 **Änderungen vornehmen:**
-1. Bearbeite `*_TEMPLATE.*` Datei
+1. Bearbeite `*.template.*` Datei
 2. Führe `./setup-paths.sh` aus
 3. Prüfe generierte Datei
 
@@ -564,7 +564,7 @@ chmod -R 755 /Users/[LEHRKRAFT]/Schul-Materialien
 ### Problem: setup-paths.sh funktioniert nicht
 **Lösungen:**
 - Stelle sicher du bist im `claude-desktop-setup/` Verzeichnis
-- Prüfe ob Template-Dateien vorhanden sind (`*_TEMPLATE.*`)
+- Prüfe ob Template-Dateien vorhanden sind (`*.template.*`)
 - Prüfe ob `CONFIG.sh` erstellt wurde: `ls -la CONFIG.sh`
 
 ### Problem: Generierte Dateien veraltet
@@ -577,7 +577,7 @@ chmod -R 755 /Users/[LEHRKRAFT]/Schul-Materialien
 - `claude-desktop-setup/README.md` - Setup-Anleitung für IT-Admins
 - `claude-desktop-setup/CONFIG.sh` - Generierte Pfad-Konfiguration
 - `lehrkraft-deployment/README.md` - Deployment-Details
-- Alle `*_TEMPLATE.*` Dateien - Basis für Code-Generierung
+- Alle `*.template.*` Dateien - Basis für Code-Generierung
 
 ## Lizenz & Credits
 
@@ -595,7 +595,7 @@ chmod -R 755 /Users/[LEHRKRAFT]/Schul-Materialien
 | **Skills packen** | `cd claude-desktop-setup && ./package-skills.sh` |
 | **Skills force repacken** | `cd claude-desktop-setup && ./package-skills.sh --force` |
 | **Config prüfen** | `cd claude-desktop-setup && ./CONFIG.sh` |
-| **Template ändern** | 1. Bearbeite `*_TEMPLATE.*`, 2. Führe `./setup-paths.sh` aus |
+| **Template ändern** | 1. Bearbeite `*.template.*`, 2. Führe `./setup-paths.sh` aus |
 
 ## Wichtige Hinweise für Claude Code
 

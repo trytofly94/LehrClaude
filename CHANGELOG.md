@@ -2,6 +2,9 @@
 
 Alle wichtigen Änderungen am LehrClaude Projekt werden hier dokumentiert.
 
+**Format:** Neueste Version oben (Reverse Chronological Order)
+**Template für neue Releases:** Siehe `claude-desktop-setup/RELEASE_TEMPLATE.md`
+
 ## [2.3.0] - 2025-12-10
 
 ### Behoben

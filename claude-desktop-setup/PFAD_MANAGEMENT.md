@@ -17,7 +17,7 @@ Beide Pfade werden einmal festgelegt, und alle anderen Pfade werden automatisch 
 
 ## Komponenten
 
-### 1. CONFIG.sh.template
+### 1. CONFIG.template.sh
 
 **Zweck:** Vorlage für die zentrale Konfigurationsdatei
 
@@ -54,17 +54,23 @@ Beide Pfade werden einmal festgelegt, und alle anderen Pfade werden automatisch 
 
 ### 3. Template-Dateien
 
-**Erkennungsmerkmal:** `.template` Suffix
+**Erkennungsmerkmal:** `.template.*` Format (Extension am Ende für Editor-Support)
 
 **Liste der Templates:**
-- CONFIG.sh.template
-- MCP_CONFIG.json.template
-- validate-skill.sh.template
-- package-skills.sh.template
-- projekt-1-unterrichtsreihe/PROJECT_INSTRUCTIONS.md.template
-- projekt-2-arbeitsblatt/PROJECT_INSTRUCTIONS.md.template
-- projekt-3-praesentation/PROJECT_INSTRUCTIONS.md.template
-- projekt-4-skill-verwaltung/PROJECT_INSTRUCTIONS.md.template
+- CONFIG.template.sh
+- MCP_CONFIG.template.json
+- validate-skill.template.sh
+- package-skills.template.sh
+- projekt-1-unterrichtsreihe/PROJECT_INSTRUCTIONS.template.md
+- projekt-2-arbeitsblatt/PROJECT_INSTRUCTIONS.template.md
+- projekt-3-praesentation/PROJECT_INSTRUCTIONS.template.md
+- projekt-4-skill-verwaltung/PROJECT_INSTRUCTIONS.template.md
+- projekt-5-klassenverwaltung/PROJECT_INSTRUCTIONS.template.md
+
+**Warum `.template.EXT` statt `.EXT.template`?**
+- Editoren erkennen Extension am Ende und aktivieren Syntax-Highlighting
+- Markdown-Vorschau funktioniert für `.template.md` Dateien
+- Trotzdem klar als Template erkennbar
 
 ### 4. Platzhalter
 
@@ -168,7 +174,7 @@ Nach Bestätigung werden alle Pfade neu generiert.
 - Keine vergessenen Platzhalter möglich
 
 ### ✅ Wartbarkeit
-- Neue Pfade zentral in CONFIG.sh.template definieren
+- Neue Pfade zentral in CONFIG.template.sh definieren
 - Automatische Aktualisierung aller Dateien
 
 ### ✅ Testbarkeit
@@ -199,7 +205,7 @@ PROJECT_INSTRUCTIONS.md
 ### Was ist im Git?
 
 **Vorhanden:**
-- Alle `.template` Dateien
+- Alle `.template.*` Dateien (z.B. CONFIG.template.sh, PROJECT_INSTRUCTIONS.template.md)
 - setup-paths.sh
 - README.md mit Anweisungen
 
@@ -223,16 +229,16 @@ chmod +x setup-paths.sh
 
 **Symptom:** Setup meldet "0 Template-Dateien verarbeitet"
 
-**Lösung:** Prüfe ob `.template` Dateien existieren:
+**Lösung:** Prüfe ob `.template.*` Dateien existieren:
 ```bash
-find . -name "*.template"
+find . -name "*.template.*"
 ```
 
 ### Problem: Pfade doppelt (z.B. `/path/claude-desktop-setup/claude-desktop-setup/skills`)
 
-**Ursache:** CONFIG.sh.template enthält noch redundante Pfadteile
+**Ursache:** CONFIG.template.sh enthält noch redundante Pfadteile
 
-**Lösung:** Öffne CONFIG.sh.template und korrigiere:
+**Lösung:** Öffne CONFIG.template.sh und korrigiere:
 ```bash
 # Falsch:
 SKILLS_PATH="$BASE_PATH/claude-desktop-setup/skills"
@@ -260,15 +266,15 @@ Dann `setup-paths.sh` erneut ausführen.
 
 Wenn du einen Platzhalter in einem neuen Dokument verwenden willst:
 
-1. **Template-Datei erstellen** (mit `.template` Suffix)
+1. **Template-Datei erstellen** (mit `.template.EXT` Format, z.B. `meinfile.template.md`)
 2. **Platzhalter einfügen** (`{{BASE_PATH}}`, etc.)
 3. **setup-paths.sh ausführen**
 
-Das Skript findet automatisch alle `.template` Dateien und verarbeitet sie.
+Das Skript findet automatisch alle `.template.*` Dateien und verarbeitet sie.
 
 ### Neue Platzhalter hinzufügen
 
-1. **CONFIG.sh.template bearbeiten:**
+1. **CONFIG.template.sh bearbeiten:**
    ```bash
    NEW_PATH="$BASE_PATH/neuer/pfad"
    export NEW_PATH
@@ -295,14 +301,14 @@ Das Skript findet automatisch alle `.template` Dateien und verarbeitet sie.
 
 - Immer setup-paths.sh als ersten Schritt ausführen
 - CONFIG.sh prüfen nach Installation
-- .template Dateien in Git committen
+- `.template.*` Dateien in Git committen
 - Generierte Dateien NICHT committen
 
 ### ❌ DON'T
 
 - CONFIG.sh manuell bearbeiten (wird überschrieben!)
 - Pfade direkt in Dateien hardcoden
-- .template Dateien löschen
+- `.template.*` Dateien löschen
 - Generierte Dateien committen
 
 ---

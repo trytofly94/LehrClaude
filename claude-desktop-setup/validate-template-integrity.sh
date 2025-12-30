@@ -32,8 +32,20 @@ print_header() {
 # Prüfe ob generierte Datei neuer ist als Template
 check_timestamp() {
     local template_file="$1"
-    local generated_file="${template_file%.template}"
+    local filename=$(basename "$template_file")
+    local dir=$(dirname "$template_file")
     local errors=0
+
+    # Bestimme generierte Datei basierend auf Template-Format
+    if [[ "$filename" == *.template.* ]]; then
+        # Neues Format: NAME.template.EXT -> NAME.EXT
+        local generated_filename="${filename/.template./.}"
+    else
+        # Altes Format: NAME.EXT.template -> NAME.EXT
+        local generated_filename="${filename%.template}"
+    fi
+
+    local generated_file="$dir/$generated_filename"
 
     # Überspringe wenn generierte Datei nicht existiert
     if [ ! -f "$generated_file" ]; then
@@ -89,13 +101,13 @@ warnings=0
 echo -e "${BLUE}1. Zeitstempel-Prüfung${NC}"
 echo ""
 
-# Finde alle .template Dateien
+# Finde alle .template Dateien (beide Formate: *.template.* und *.template)
 while IFS= read -r -d '' template_file; do
     ((total++))
     check_timestamp "$template_file"
     result=$?
     errors=$((errors + result))
-done < <(find "$SCRIPT_DIR" -name "*.template" -type f -print0)
+done < <(find "$SCRIPT_DIR" \( -name "*.template.*" -o -name "*.template" \) -type f -print0)
 
 if [ $errors -eq 0 ]; then
     echo ""

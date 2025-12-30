@@ -254,8 +254,8 @@ echo ""
 echo -e "${GREEN}Schritt 5/5: Konfigurationsdateien generieren${NC}"
 echo ""
 
-if [ ! -f "$SCRIPT_DIR/CONFIG.sh.template" ]; then
-    echo -e "${RED}✗ Fehler: CONFIG.sh.template nicht gefunden${NC}"
+if [ ! -f "$SCRIPT_DIR/CONFIG.template.sh" ]; then
+    echo -e "${RED}✗ Fehler: CONFIG.template.sh nicht gefunden${NC}"
     exit 1
 fi
 
@@ -263,7 +263,7 @@ fi
 sed -e "s|{{REPO_BASE}}|$REPO_BASE|g" \
     -e "s|{{WORKSPACE_BASE}}|$WORKSPACE_BASE|g" \
     -e "s|{{BASE_PATH}}|$REPO_BASE|g" \
-    "$SCRIPT_DIR/CONFIG.sh.template" > "$SCRIPT_DIR/CONFIG.sh"
+    "$SCRIPT_DIR/CONFIG.template.sh" > "$SCRIPT_DIR/CONFIG.sh"
 
 # Mache ausführbar
 chmod +x "$SCRIPT_DIR/CONFIG.sh"
@@ -281,7 +281,21 @@ echo ""
 # Funktion zum Ersetzen von Platzhaltern
 process_template() {
     local template_file="$1"
-    local output_file="${template_file%.template}"
+    local filename=$(basename "$template_file")
+    local dir=$(dirname "$template_file")
+
+    # Bestimme Output-Datei basierend auf Template-Format
+    # Neues Format: file.template.ext -> file.ext
+    # Altes Format: file.ext.template -> file.ext (für Rückwärtskompatibilität)
+    if [[ "$filename" == *.template.* ]]; then
+        # Neues Format: NAME.template.EXT -> NAME.EXT
+        local output_filename="${filename/.template./.}"
+    else
+        # Altes Format: NAME.EXT.template -> NAME.EXT
+        local output_filename="${filename%.template}"
+    fi
+
+    local output_file="$dir/$output_filename"
 
     echo -e "    ${BLUE}➜${NC} $(basename "$template_file")"
 
@@ -356,11 +370,12 @@ process_template() {
 }
 
 # Finde alle .template Dateien (rekursiv)
+# Unterstützt beide Formate: *.template.* (neu) und *.template (alt)
 template_count=0
 while IFS= read -r -d '' template_file; do
     process_template "$template_file"
     ((template_count++))
-done < <(find "$SCRIPT_DIR" -name "*.template" -type f -print0)
+done < <(find "$SCRIPT_DIR" \( -name "*.template.*" -o -name "*.template" \) -type f -print0)
 
 echo ""
 echo -e "${GREEN}✓ $template_count Template-Dateien verarbeitet${NC}"
